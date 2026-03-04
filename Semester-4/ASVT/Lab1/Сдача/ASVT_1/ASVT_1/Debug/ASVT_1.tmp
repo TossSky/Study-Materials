@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\avrasm\inc\m32def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\Debug\ASVT_1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>ASVT_1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>ASVT_1.map</FILE>
+  <FILE>ASVT_1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <reset><FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</FILE><LINE>35</LINE></reset>
+  <delay><FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</FILE><LINE>19</LINE></delay>
+  <delay_sub><FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</FILE><LINE>22</LINE></delay_sub>
+  <loop><FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</FILE><LINE>60</LINE></loop>
+  <task9_label><FILE>T:\GitRepo\ASVT_1\Сдача_ЛР1\ASVT_1\ASVT_1\main.asm</FILE><LINE>86</LINE></task9_label>
+ </LABELS>
+</ASSEMBLER_INFO>
