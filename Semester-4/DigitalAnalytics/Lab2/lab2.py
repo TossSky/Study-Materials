@@ -1,122 +1,60 @@
-import argparse
 import requests
-import matplotlib.pyplot as plt
+
+BASE = "https://ruz.spbstu.ru/api/v1/ruz"
 
 
-BASE_URL = "https://ruz.spbstu.ru/api/v1/ruz"
-
-WEEKDAYS = {
-    1: "Понедельник",
-    2: "Вторник",
-    3: "Среда",
-    4: "Четверг",
-    5: "Пятница",
-    6: "Суббота",
-    7: "Воскресенье",
-}
+def _get(url, **params):
+    return requests.get(url, params=params).json()
 
 
-def search_group(query):
-    url = f"{BASE_URL}/search/groups"
-    response = requests.get(url, params={"q": query})
-    response.raise_for_status()
-    data = response.json()
-    groups = data.get("groups", [])
-    if not groups:
-        print(f"[-] Группа '{query}' не найдена")
+def _lessons(data, date):
+    for d in data.get("days", []):
+        if d.get("date") == date:
+            return d.get("lessons", [])
+    return []
+
+
+def _fmt(lessons):
+    if not lessons:
         return None
-    group = groups[0]
-    print(f"[+] Найдена группа: {group['name']} (id={group['id']})")
-    return group
+    r = ""
+    for l in lessons:
+        ts = ",".join(t.get("full_name", "") for t in (l.get("teachers") or []))
+        gs = ",".join(g.get("name", "") for g in (l.get("groups") or []))
+        ps = ",".join(a.get("name", "") for a in (l.get("auditories") or []))
+        r += f"Time:{l.get('time_start', '')}-{l.get('time_end', '')}\n"
+        r += f"Subject:{l.get('subject', '')}\n"
+        r += f"Type:{(l.get('typeObj') or {}).get('name', '')}\n"
+        r += f"Teacher:{ts or 'None'}\n"
+        r += f"Groups:{gs or 'None'}\n"
+        r += f"Place:{ps or 'None'}\n"
+    return r
 
 
-def get_schedule(group_id):
-    url = f"{BASE_URL}/scheduler/{group_id}"
-    response = requests.get(url)
-    response.raise_for_status()
-    return response.json()
+def get_group_schedule(group, date):
+    groups = _get(f"{BASE}/search/groups", q=group).get("groups") or []
+    if not groups:
+        return None
+    gid = next((g["id"] for g in groups if g.get("name") == group), groups[0]["id"])
+    return _fmt(_lessons(_get(f"{BASE}/scheduler/{gid}", date=date), date))
 
 
-def print_schedule(schedule):
-    week = schedule.get("week", {})
-    is_odd = week.get("is_odd", False)
-    week_type = "нечётная" if is_odd else "чётная"
-    print(f"\nНеделя: {week_type} ({week.get('date_start', '')} — {week.get('date_end', '')})")
-    print("=" * 80)
-
-    for day in schedule.get("days", []):
-        weekday = WEEKDAYS.get(day["weekday"], str(day["weekday"]))
-        date = day.get("date", "")
-        lessons = day.get("lessons", [])
-        if not lessons:
-            continue
-        print(f"\n{weekday} ({date}):")
-        print("-" * 60)
-        for lesson in lessons:
-            subject = lesson.get("subject", "—")
-            time_start = lesson.get("time_start", "")
-            time_end = lesson.get("time_end", "")
-            lesson_type = lesson.get("typeObj", {}).get("name", "")
-            teachers = ", ".join(
-                t.get("full_name", "") for t in (lesson.get("teachers") or [])
-            )
-            auditories = ", ".join(
-                f"{a.get('name', '')} ({a.get('building', {}).get('abbr', '')})"
-                for a in (lesson.get("auditories") or [])
-            )
-            parity = lesson.get("parity", 0)
-            parity_str = ""
-            if parity == 1:
-                parity_str = " [нечёт.]"
-            elif parity == 2:
-                parity_str = " [чёт.]"
-
-            print(f"  {time_start}–{time_end} | {subject} ({lesson_type}){parity_str}")
-            print(f"    Преподаватель: {teachers or '—'}")
-            print(f"    Аудитория: {auditories or '—'}")
+def get_teacher_schedule(teacher, date):
+    q = teacher.split()[0] if teacher.strip() else teacher
+    teachers = _get(f"{BASE}/search/teachers", q=q).get("teachers") or []
+    if not teachers:
+        return None
+    tid = next((t["id"] for t in teachers if t.get("full_name") == teacher), teachers[0]["id"])
+    return _fmt(_lessons(_get(f"{BASE}/teachers/{tid}/scheduler", date=date), date))
 
 
-def plot_schedule(schedule):
-    day_counts = {}
-    for day in schedule.get("days", []):
-        weekday = day["weekday"]
-        day_name = WEEKDAYS.get(weekday, str(weekday))
-        day_counts[day_name] = len(day.get("lessons", []))
-
-    ordered_days = []
-    ordered_counts = []
-    for wd in sorted(WEEKDAYS.keys()):
-        name = WEEKDAYS[wd]
-        if name in day_counts:
-            ordered_days.append(name)
-            ordered_counts.append(day_counts[name])
-
-    plt.figure(figsize=(10, 6))
-    plt.bar(ordered_days, ordered_counts, color="steelblue")
-    plt.xlabel("День недели")
-    plt.ylabel("Количество занятий")
-    plt.title("Расписание занятий по дням недели")
-    plt.tight_layout()
-    plt.savefig("schedule.png", dpi=150)
-    print("\n[+] График сохранён в schedule.png")
-    plt.show()
-
-
-def main():
-    parser = argparse.ArgumentParser(
-        description="Получение расписания по номеру группы с ruz.spbstu.ru"
-    )
-    parser.add_argument("group", type=str, help="Номер группы (например, 5151003/40001)")
-    args = parser.parse_args()
-
-    group = search_group(args.group)
-    if group is None:
-        return
-
-    schedule = get_schedule(group["id"])
-    print_schedule(schedule)
-    plot_schedule(schedule)
-
-
-if __name__ == "__main__":
-    main()
+def get_room_schedule(building, room, date):
+    buildings = _get(f"{BASE}/buildings").get("buildings") or []
+    bid = next((b["id"] for b in buildings if building in (b.get("name"), b.get("abbr"))), None)
+    if bid is None:
+        return None
+    rooms = _get(f"{BASE}/buildings/{bid}/rooms").get("rooms") or []
+    rid = next((r["id"] for r in rooms if r.get("name") == room), None)
+    if rid is None:
+        return None
+    return _fmt(_lessons(_get(f"{BASE}/buildings/{bid}/rooms/{rid}/scheduler", date=date), date))
