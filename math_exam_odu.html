@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Билеты 1-20 — ОДУ и системы</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-code: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #7ee787;
+    --accent3: #d2a8ff;
+    --accent4: #ffa657;
+    --warn: #f85149;
+    --tip: #3fb950;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    padding: 0;
+  }
+
+  /* Toggle button */
+  .nav-toggle {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 200;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+
+  .nav-toggle:hover {
+    background: var(--border);
+  }
+
+  body.nav-open .nav-toggle {
+    left: 292px;
+  }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 20px 0;
+    z-index: 100;
+    transition: left 0.3s ease;
+  }
+
+  body.nav-open .nav {
+    left: 0;
+  }
+
+  .nav h2 {
+    color: var(--accent);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    margin-bottom: 16px;
+  }
+
+  .nav-group {
+    margin-bottom: 8px;
+  }
+
+  .nav-group-title {
+    color: var(--text-dim);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 20px 4px;
+    font-weight: 600;
+  }
+
+  .nav a {
+    display: block;
+    color: var(--text-dim);
+    text-decoration: none;
+    padding: 6px 20px 6px 28px;
+    font-size: 13px;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+  }
+
+  .nav a:hover {
+    color: var(--text);
+    background: rgba(88, 166, 255, 0.1);
+    border-left-color: var(--accent);
+  }
+
+  /* Main */
+  .main {
+    margin-left: 0;
+    max-width: none;
+    padding: 40px 80px 80px;
+    transition: margin-left 0.3s ease;
+  }
+
+  body.nav-open .main {
+    margin-left: 280px;
+    padding-right: 80px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-subtitle {
+    color: var(--text-dim);
+    font-size: 17px;
+    margin-bottom: 48px;
+  }
+
+  /* Ticket card */
+  .ticket {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 44px;
+    margin-bottom: 32px;
+    scroll-margin-top: 24px;
+    max-width: none;
+  }
+
+  .ticket-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .ticket-num {
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    color: #0d1117;
+    font-weight: 700;
+    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ticket h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .ticket h4 {
+    color: var(--accent);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ticket p, .ticket li {
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .ticket ul, .ticket ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
+
+  .formula {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 17px;
+    color: var(--accent2);
+    overflow-x: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  .formula.main-formula {
+    border-color: var(--accent);
+    background: rgba(88, 166, 255, 0.06);
+    color: var(--accent);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  code {
+    background: var(--bg-code);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--accent4);
+  }
+
+  .note {
+    background: rgba(88, 166, 255, 0.08);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .note.warn {
+    background: rgba(248, 81, 73, 0.08);
+    border-left-color: var(--warn);
+  }
+
+  .note.tip {
+    background: rgba(63, 185, 80, 0.08);
+    border-left-color: var(--tip);
+  }
+
+  .example {
+    background: rgba(210, 168, 255, 0.06);
+    border: 1px solid rgba(210, 168, 255, 0.2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .example-title {
+    color: var(--accent3);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    background: var(--accent);
+    color: var(--bg);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+  }
+
+  .group-divider {
+    text-align: center;
+    margin: 48px 0 32px;
+    position: relative;
+  }
+
+  .group-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .group-divider span {
+    position: relative;
+    background: var(--bg);
+    padding: 0 20px;
+    color: var(--accent3);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .main { padding: 24px 16px 60px; }
+    .ticket { padding: 20px; }
+    .page-title { font-size: 24px; }
+
+    body.nav-open .main {
+      margin-left: 0;
+    }
+
+    .nav {
+      width: 260px;
+      left: -260px;
+    }
+
+    body.nav-open .nav {
+      left: 0;
+      box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+    }
+
+    body.nav-open .nav-toggle {
+      left: 272px;
+    }
+
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 50;
+    }
+
+    body.nav-open .nav-overlay {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+
+<button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')" title="Toggle sidebar">&#9776;</button>
+<div class="nav-overlay" onclick="document.body.classList.remove('nav-open')"></div>
+
+<nav class="nav">
+  <h2>Билеты ОДУ</h2>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Введение</div>
+    <a href="#t1">1. Задачи, приводящие к ДУ</a>
+    <a href="#t2">2. ОДУ 1-го порядка, задача Коши</a>
+    <a href="#t3">3. Геом. интерпретация, изоклины</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Типы ДУ 1-го порядка</div>
+    <a href="#t4">4. С разделяющимися переменными</a>
+    <a href="#t5">5. Однородные</a>
+    <a href="#t6">6. Линейные</a>
+    <a href="#t7">7. Уравнения Бернулли</a>
+    <a href="#t8">8. В полных дифференциалах</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">ДУ высших порядков</div>
+    <a href="#t9">9. Основы, задача Коши</a>
+    <a href="#t10">10. Понижение порядка</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">ЛОДУ n-го порядка — теория</div>
+    <a href="#t11">11. ЛОДУ (теорема 3.2)</a>
+    <a href="#t12">12. Вронскиан (теорема 4.1)</a>
+    <a href="#t13">13. ФСР (теоремы 4.2, 4.3)</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">ЛОДУ n-го порядка — методы</div>
+    <a href="#t14">14. С постоянными коэфф. (теорема 5.2)</a>
+    <a href="#t15">15. Метод Лагранжа</a>
+    <a href="#t16">16. ЛНДУ, Pm(x)·e^(γx)</a>
+    <a href="#t17">17. ЛНДУ, cos/sin</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Системы ДУ</div>
+    <a href="#t18">18. Векторная функция</a>
+    <a href="#t19">19. СДУ, задача Коши</a>
+    <a href="#t20">20. Методы решения СДУ</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<h1 class="page-title">Билеты 1–20: ОДУ и системы</h1>
+<p class="page-subtitle">Высшая математика, 3 семестр ИКНК — подготовка к экзамену</p>
+
+<!-- ===== ВВЕДЕНИЕ ===== -->
+
+<div class="group-divider"><span>Введение</span></div>
+
+<!-- Билет 1 -->
+<div class="ticket" id="t1">
+  <div class="ticket-header">
+    <div class="ticket-num">1</div>
+    <h3>Задачи, приводящие к дифференциальным уравнениям</h3>
+  </div>
+
+  <h4>Что такое дифференциальное уравнение</h4>
+  <p><strong>Определение 1.1.</strong> Обыкновенное дифференциальное уравнение (ОДУ) n-го порядка — это уравнение вида:</p>
+  <div class="formula main-formula">F(x, y, y', y'', ..., y⁽ⁿ⁾) = 0</div>
+  <p>где <code>x</code> — независимая переменная, <code>y(x)</code> — неизвестная функция, <code>y', ..., y⁽ⁿ⁾</code> — её производные. Слово «обыкновенное» означает, что функция зависит от <em>одной</em> переменной (в отличие от уравнений в частных производных).</p>
+
+  <p><strong>Определение 1.2.</strong> Решение ДУ — функция <code>y = φ(x)</code>, определённая на интервале (a, b), имеющая производные до порядка n включительно и удовлетворяющая уравнению <strong>тождественно</strong> при всех x из (a, b).</p>
+
+  <p><strong>Определение 1.3.</strong> График решения y = φ(x) на плоскости (x, y) называется <em>интегральной кривой</em>.</p>
+
+  <h4>Откуда берутся ДУ</h4>
+  <p>Многие законы природы описывают <em>скорость изменения</em> величины — а скорость изменения это производная. Формулируя закон математически, получаем ДУ.</p>
+
+  <h4>Классические примеры</h4>
+
+  <p><strong>1. Радиоактивный распад:</strong> скорость распада пропорциональна количеству вещества:</p>
+  <div class="formula">dN/dt = −λN  →  N(t) = N₀ · e^(−λt)</div>
+  <p>ДУ 1-го порядка. Решение — экспоненциальный закон убывания.</p>
+
+  <p><strong>2. Закон охлаждения Ньютона:</strong> скорость изменения температуры тела пропорциональна разности температур тела и среды:</p>
+  <div class="formula">dT/dt = −k(T − T_окр)</div>
+  <p>ДУ 1-го порядка с разделяющимися переменными.</p>
+
+  <p><strong>3. Второй закон Ньютона:</strong> F = ma = m·x'', где x(t) — координата. Для пружины (F = −kx):</p>
+  <div class="formula">mx'' + kx = 0  →  x'' + ω²x = 0,  ω² = k/m</div>
+  <p>ДУ 2-го порядка. Решение: гармонические колебания <code>x = A cos(ωt + φ)</code>.</p>
+
+  <p><strong>4. Рост популяции (модель Мальтуса):</strong></p>
+  <div class="formula">dP/dt = rP  →  P(t) = P₀ · e^(rt)</div>
+
+  <p><strong>5. Геометрическая задача:</strong> найти кривую, у которой длина подкасательной постоянна. Подкасательная = y/y', отсюда:</p>
+  <div class="formula">y / y' = a  →  y' = y/a</div>
+
+  <div class="note tip">Вывод: задачи физики, химии, биологии, геометрии формулируются через производные и приводят к дифференциальным уравнениям. Решить ДУ — значит найти функцию по информации о её производных.</div>
+</div>
+
+<!-- Билет 2 -->
+<div class="ticket" id="t2">
+  <div class="ticket-header">
+    <div class="ticket-num">2</div>
+    <h3>ОДУ 1-го порядка: общее/частное решение, задача Коши, теорема существования и единственности</h3>
+  </div>
+
+  <h4>Общий вид ДУ 1-го порядка</h4>
+  <div class="formula">F(x, y, y') = 0</div>
+  <p>Если можно разрешить относительно y', получаем <strong>нормальную форму</strong> (Определение 2.2):</p>
+  <div class="formula main-formula">y' = f(x, y)</div>
+  <p>Порядок = 1, потому что старшая производная — <code>y'</code>.</p>
+
+  <h4>Общий интеграл (Определение 2.1)</h4>
+  <p>Соотношение <code>Ф(x, y, C) = 0</code> называется <strong>общим интегралом</strong> ДУ, если при дифференцировании по x и исключении произвольной постоянной C получается исходное ДУ.</p>
+  <p><strong>Теорема 2.1.</strong> Если Ф разрешимо относительно C, т.е. <code>C = Ψ(x, y)</code>, то все решения ДУ содержатся в общем интеграле.</p>
+
+  <h4>Общее решение</h4>
+  <div class="formula">y = φ(x, C)</div>
+  <p>Семейство кривых с одной произвольной постоянной <code>C</code>. Каждому значению C соответствует одна <em>интегральная кривая</em>.</p>
+
+  <h4>Частное решение</h4>
+  <p>Получается из общего при конкретном C. Пример: <code>y = Ce^x</code> — общее, <code>y = 3e^x</code> — частное (C = 3).</p>
+
+  <h4>Особое решение</h4>
+  <p>Решение, которое НЕ получается из общего ни при каком C. Может возникать при делении на выражение, равное нулю. Пример: для <code>y' = 2√y</code> общее решение <code>y = (x+C)²</code>, но <code>y = 0</code> — особое решение.</p>
+
+  <h4>Задача Коши (Определение 1.5)</h4>
+  <p>Найти решение ДУ, удовлетворяющее начальному условию:</p>
+  <div class="formula main-formula">y' = f(x, y),   y(x₀) = y₀</div>
+  <p>Геометрически: из всего семейства интегральных кривых выбрать ту, которая проходит через точку (x₀, y₀).</p>
+
+  <h4>Теорема 2.2 (существования и единственности)</h4>
+  <p>Пусть функция f(x, y) и её частная производная f'_y непрерывны в некоторой области G на плоскости (x, y). Тогда для любой точки (x₀, y₀) ∈ G задача Коши имеет решение, и притом <strong>единственное</strong>.</p>
+  <p>Иными словами: через каждую точку области G проходит ровно одна интегральная кривая.</p>
+
+  <div class="note warn">Если условия теоремы 2.2 нарушены (например, f'_y не существует или не непрерывна), решение может быть не единственным. Классический пример: <code>y' = y^(1/3)</code> — через точку (0, 0) проходят бесконечно много решений, т.к. f'_y = (1/3)y^(-2/3) → ∞ при y → 0.</div>
+
+  <div class="note tip">На экзамене часто просят: «Сформулируйте теорему существования и единственности». Нужно чётко назвать условия (непрерывность f и f'_y) и заключение (единственное решение задачи Коши).</div>
+</div>
+
+<!-- Билет 3 -->
+<div class="ticket" id="t3">
+  <div class="ticket-header">
+    <div class="ticket-num">3</div>
+    <h3>Геометрическая интерпретация ДУ 1-го порядка. Метод изоклин</h3>
+  </div>
+
+  <h4>Поле направлений</h4>
+  <p>Уравнение <code>y' = f(x, y)</code> задаёт в каждой точке (x, y) плоскости значение производной — то есть <strong>наклон касательной</strong> к интегральной кривой, проходящей через эту точку.</p>
+  <p>Рисуем в каждой точке маленький отрезок с наклоном f(x, y) — получаем <em>поле направлений</em>. Интегральные кривые — линии, которые в каждой точке касаются этих отрезков.</p>
+  <p>Если условия теоремы 2.2 выполнены, интегральные кривые <strong>не пересекаются</strong> (единственность решения задачи Коши).</p>
+
+  <h4>Определение изоклины</h4>
+  <p><strong>Изоклина</strong> — кривая на плоскости, во всех точках которой наклон поля направлений одинаков.</p>
+  <div class="formula main-formula">f(x, y) = k   (k = const)</div>
+  <p>Во всех точках изоклины касательные к интегральным кривым имеют один и тот же угловой коэффициент k. Семейство изоклин (при различных k) позволяет восстановить качественную картину поля направлений.</p>
+
+  <h4>Метод изоклин — построение интегральных кривых</h4>
+  <ol class="steps">
+    <li>Задаём набор значений k: 0, ±1, ±2, 1/2, ...</li>
+    <li>Для каждого k строим кривую f(x, y) = k — это изоклина</li>
+    <li>На каждой изоклине рисуем короткие отрезки с наклоном k</li>
+    <li>Проводим интегральные кривые, «следуя» полю направлений от изоклины к изоклине</li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример: y' = x + y</div>
+    <p>Изоклины: <code>x + y = k</code> — семейство прямых <code>y = −x + k</code></p>
+    <p>k = 0: прямая y = −x → горизонтальные отрезки (наклон 0)</p>
+    <p>k = 1: прямая y = −x + 1 → отрезки с наклоном 1 (под 45°)</p>
+    <p>k = −1: прямая y = −x − 1 → отрезки с наклоном −1</p>
+    <p>Соединяя, видим, что интегральные кривые «закручиваются» вверх и вправо.</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример: y' = −x/y (окружности)</div>
+    <p>Изоклины: <code>−x/y = k</code> → <code>y = −x/k</code> — прямые через начало координат.</p>
+    <p>Интегральные кривые: окружности x² + y² = C² (центр в начале).</p>
+  </div>
+
+  <h4>Особые точки</h4>
+  <p>Точки, где f(x, y) не определена или разрывна — особые точки поля. Через них теорема единственности может не работать, и интегральные кривые могут «сливаться» или «расходиться».</p>
+
+  <div class="note tip">Метод изоклин даёт <em>качественную</em> картину решений без аналитического решения ДУ. На экзамене могут попросить нарисовать поле направлений и несколько интегральных кривых для конкретного уравнения.</div>
+</div>
+
+<!-- ===== ТИПЫ ДУ 1-ГО ПОРЯДКА ===== -->
+
+<div class="group-divider"><span>Типы ДУ 1-го порядка</span></div>
+
+<!-- Билет 4 -->
+<div class="ticket" id="t4">
+  <div class="ticket-header">
+    <div class="ticket-num">4</div>
+    <h3>ДУ с разделяющимися переменными</h3>
+  </div>
+
+  <h4>Определение (параграф 2, тип I)</h4>
+  <p>ДУ с разделяющимися переменными — уравнение, правая часть которого есть произведение функции от x на функцию от y:</p>
+  <div class="formula main-formula">y' = g₁(x) · g₂(y)</div>
+  <p>В дифференциальной форме: <code>M(x)·N(y)dx + P(x)·Q(y)dy = 0</code></p>
+  <p>Ключевой признак: переменные x и y можно «развести» по разным сторонам равенства.</p>
+
+  <h4>Метод решения</h4>
+  <ol class="steps">
+    <li>Если g₂(y) ≠ 0, делим обе части на g₂(y): <code>dy/g₂(y) = g₁(x)dx</code></li>
+    <li>Интегрируем обе части: <code>∫ dy/g₂(y) = ∫ g₁(x)dx + C</code></li>
+    <li>Если возможно, выражаем y явно через x</li>
+  </ol>
+
+  <h4>Общее решение (общий интеграл)</h4>
+  <div class="formula main-formula">∫ dy/g₂(y) = ∫ g₁(x)dx + C</div>
+
+  <h4>Дополнительные (особые) решения</h4>
+  <p>Если g₂(c*) = 0 для некоторого c*, то <code>y = c*</code> — постоянное решение (стационарная точка). Оно может быть особым (не получается из общего интеграла ни при каком C).</p>
+
+  <div class="note warn">При разделении переменных мы делим на g₂(y). Нужно отдельно проверить корни g₂(y) = 0 — они дают дополнительные решения, которые легко потерять!</div>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y' = 2x · y²</code></p>
+    <p>Разделяем: <code>dy/y² = 2x dx</code> (при y ≠ 0)</p>
+    <p>Интегрируем: <code>−1/y = x² + C</code></p>
+    <p>Общее решение: <code>y = −1/(x² + C)</code></p>
+    <p>Особое решение: <code>y = 0</code> (потеряли при делении на y²)</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: задача Коши</div>
+    <p><code>y' = y·sin x</code>, y(0) = 1</p>
+    <p>Разделяем: <code>dy/y = sin x dx</code></p>
+    <p>Интегрируем: <code>ln|y| = −cos x + C</code> → <code>y = A·e^(−cos x)</code></p>
+    <p>Из y(0) = 1: <code>1 = A·e^(−1)</code> → A = e</p>
+    <p>Ответ: <code>y = e^(1 − cos x)</code></p>
+  </div>
+</div>
+
+<!-- Билет 5 -->
+<div class="ticket" id="t5">
+  <div class="ticket-header">
+    <div class="ticket-num">5</div>
+    <h3>Однородные ДУ 1-го порядка</h3>
+  </div>
+
+  <h4>Однородная функция</h4>
+  <p>Функция f(x, y) называется <strong>однородной степени k</strong>, если:</p>
+  <div class="formula">f(tx, ty) = t^k · f(x, y)   для любого t > 0</div>
+  <p>Например: <code>f(x,y) = x² + xy</code> — однородная степени 2, т.к. <code>f(tx,ty) = t²x² + t²xy = t²·f(x,y)</code>.</p>
+
+  <h4>Вид однородного ДУ</h4>
+  <p>ДУ <code>y' = f(x, y)</code> называется однородным, если f(x, y) — однородная функция степени 0:</p>
+  <div class="formula main-formula">y' = φ(y/x)</div>
+  <p>Как распознать: если заменить y на ty, x на tx, правая часть не изменится. Эквивалентно: в дроби все слагаемые числителя и знаменателя имеют одинаковую суммарную степень по x и y.</p>
+
+  <h4>Метод решения — замена t = y/x</h4>
+  <ol class="steps">
+    <li>Замена: <code>t = y/x</code>, тогда <code>y = t·x</code>, <code>y' = t + t'·x</code></li>
+    <li>Подставляем в ДУ: <code>t + t'·x = φ(t)</code></li>
+    <li>Выражаем: <code>t'·x = φ(t) − t</code></li>
+    <li>Разделяем переменные: <code>dt / (φ(t) − t) = dx / x</code></li>
+    <li>Интегрируем обе части</li>
+    <li>Обратная замена: <code>t = y/x</code></li>
+  </ol>
+
+  <h4>Общий интеграл</h4>
+  <div class="formula main-formula">∫ dt/(φ(t) − t) = ln|x| + C,   затем t = y/x</div>
+
+  <div class="note">После замены t = y/x <strong>всегда</strong> получаем ДУ с разделяющимися переменными. Не забудь проверить: если φ(t₀) − t₀ = 0, то t = t₀ (т.е. y = t₀·x) — дополнительное решение.</div>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y' = (x² + y²) / (2xy)</code></p>
+    <p>Проверка однородности: степень числителя = 2, степень знаменателя = 2 → однородное ДУ.</p>
+    <p>Замена t = y/x: <code>t + t'x = (1 + t²) / (2t)</code></p>
+    <p><code>t'x = (1 + t²)/(2t) − t = (1 + t² − 2t²)/(2t) = (1 − t²)/(2t)</code></p>
+    <p>Разделяем: <code>2t·dt / (1 − t²) = dx/x</code></p>
+    <p>Интегрируем: <code>−ln|1 − t²| = ln|x| + C₁</code></p>
+    <p>Упрощаем: <code>|x| / |1 − t²| = C</code> → <code>x / (1 − y²/x²) = C</code> → <code>x² − y² = Cx</code></p>
+  </div>
+
+  <div class="note tip">Формула для быстрой проверки: в уравнении <code>M(x,y)dx + N(x,y)dy = 0</code>, если M и N однородны одной и той же степени — уравнение однородное.</div>
+</div>
+
+<!-- Билет 6 -->
+<div class="ticket" id="t6">
+  <div class="ticket-header">
+    <div class="ticket-num">6</div>
+    <h3>Линейные ДУ 1-го порядка</h3>
+  </div>
+
+  <h4>Определение (параграф 2, тип II)</h4>
+  <div class="formula main-formula">y' + p(x)·y = q(x)</div>
+  <p><strong>Линейность:</strong> y и y' входят в первой степени и не перемножаются друг с другом. Коэффициенты p(x) и q(x) зависят только от x.</p>
+  <p>Если q(x) ≡ 0 — <em>линейное однородное</em> (ЛОДУ). Если q(x) ≢ 0 — <em>линейное неоднородное</em> (ЛНДУ).</p>
+
+  <h4>Решение ЛОДУ: y' + p(x)·y = 0</h4>
+  <p>Это ДУ с разделяющимися переменными:</p>
+  <div class="formula">dy/y = −p(x)dx  →  ln|y| = −∫p(x)dx + C₁</div>
+  <div class="formula main-formula">y_одн = C · e^(−∫p(x)dx) = C · e^(Φ(x)),  где Φ(x) = −∫p(x)dx</div>
+
+  <h4>Решение ЛНДУ: метод вариации постоянной (Лагранж)</h4>
+  <p>Знаем решение однородного: <code>y_одн = C·e^(Φ(x))</code>. Заменяем C на функцию C(x):</p>
+  <ol class="steps">
+    <li>Пусть <code>y = C(x) · e^(Φ(x))</code></li>
+    <li>Подставляем в ЛНДУ: <code>C'(x)·e^Φ + C(x)·Φ'·e^Φ + p(x)·C(x)·e^Φ = q(x)</code></li>
+    <li>Поскольку Φ' = −p(x), два последних слагаемых сокращаются: <code>C'(x)·e^Φ = q(x)</code></li>
+    <li><code>C'(x) = q(x)·e^(−Φ(x)) = q(x)·e^(∫p(x)dx)</code></li>
+    <li>Интегрируем: <code>C(x) = ∫ q(x)·e^(∫p dx) dx + C*</code></li>
+  </ol>
+
+  <h4>Общее решение ЛНДУ</h4>
+  <div class="formula main-formula">y(x) = e^(−∫p dx) · ( ∫ q·e^(∫p dx) dx + C* )</div>
+  <p>Или эквивалентно: <code>y = (F(x) + C*) · e^(Φ(x))</code>, где F(x) = ∫ q·e^(−Φ) dx.</p>
+
+  <h4>Метод Бернулли (подстановка y = u·v)</h4>
+  <p>Альтернативный способ — ищем решение как произведение двух функций:</p>
+  <ol class="steps">
+    <li>Пусть <code>y = u·v</code>, тогда <code>y' = u'v + uv'</code></li>
+    <li>Подставляем: <code>u'v + u(v' + p(x)·v) = q(x)</code></li>
+    <li>Выбираем v из условия <code>v' + p(x)·v = 0</code> → <code>v = e^(−∫p dx)</code></li>
+    <li>Остаётся: <code>u'·v = q(x)</code> → <code>u' = q(x)/v</code> → интегрируем</li>
+    <li>Ответ: <code>y = u · v</code></li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y' − 2y = x</code> (p = −2, q = x)</p>
+    <p>Однородное: <code>y_одн = C·e^(2x)</code></p>
+    <p>Вариация: y = C(x)·e^(2x), подставляем: <code>C'(x)·e^(2x) = x</code> → <code>C'(x) = x·e^(−2x)</code></p>
+    <p>Интегрируем по частям: <code>C(x) = −x·e^(−2x)/2 − e^(−2x)/4 + C*</code></p>
+    <p>Ответ: <code>y = (−x·e^(−2x)/2 − e^(−2x)/4 + C*)·e^(2x) = −x/2 − 1/4 + C*·e^(2x)</code></p>
+  </div>
+
+  <div class="note warn">Не путай с разделением переменных! Слагаемое p(x)·y содержит y, поэтому переменные не разделяются (кроме однородного случая q = 0).</div>
+</div>
+
+<!-- Билет 7 -->
+<div class="ticket" id="t7">
+  <div class="ticket-header">
+    <div class="ticket-num">7</div>
+    <h3>Уравнения Бернулли</h3>
+  </div>
+
+  <h4>Определение</h4>
+  <div class="formula main-formula">y' + P(x)·y = Q(x)·yⁿ   (n ≠ 0, n ≠ 1)</div>
+  <p>При n = 0 получаем линейное ДУ. При n = 1 получаем ДУ с разделяющимися переменными. Уравнение Бернулли — обобщение линейного ДУ, где правая часть содержит степень неизвестной функции.</p>
+
+  <h4>Метод решения — замена z = y^(1−n)</h4>
+  <ol class="steps">
+    <li>Делим обе части на yⁿ (при y ≠ 0): <code>y⁻ⁿ·y' + P(x)·y^(1−n) = Q(x)</code></li>
+    <li>Замена: <code>z = y^(1−n)</code>, тогда <code>z' = (1−n)·y⁻ⁿ·y'</code>, значит <code>y⁻ⁿ·y' = z'/(1−n)</code></li>
+    <li>Получаем <strong>линейное</strong> ДУ: <code>z'/(1−n) + P(x)·z = Q(x)</code></li>
+    <li>Т.е.: <code>z' + (1−n)·P(x)·z = (1−n)·Q(x)</code> — решаем по билету 6</li>
+    <li>Обратная замена: <code>y = z^(1/(1−n))</code></li>
+  </ol>
+
+  <div class="note">При делении на yⁿ мы предполагаем y ≠ 0. Нужно отдельно проверить, является ли y = 0 решением исходного уравнения (это так при n > 0).</div>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y' + y = y²</code> (P = 1, Q = 1, n = 2)</p>
+    <p>Делим на y²: <code>y⁻²·y' + y⁻¹ = 1</code></p>
+    <p>Замена z = y⁻¹ = y^(1−2), z' = −y⁻²·y': <code>−z' + z = 1</code> → <code>z' − z = −1</code></p>
+    <p>Линейное ДУ: z_одн = Ce^x. Вариация → частное: z* = 1.</p>
+    <p>Общее: <code>z = Ce^x + 1</code></p>
+    <p>Обратная замена: <code>y = 1/z = 1/(Ce^x + 1)</code></p>
+    <p>Дополнительно: y = 0 — тоже решение (получается при C → ∞).</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2</div>
+    <p><code>y' − y/x = x·y³</code> (P = −1/x, Q = x, n = 3)</p>
+    <p>Замена z = y^(−2), z' = −2y⁻³y'.</p>
+    <p>Линейное: <code>z' + 2z/x = −2x</code></p>
+    <p>Решаем методом вариации постоянной.</p>
+  </div>
+
+  <div class="note tip">Схема: Бернулли → делим на yⁿ → замена z = y^(1−n) → линейное ДУ → решаем → обратная замена.</div>
+</div>
+
+<!-- Билет 8 -->
+<div class="ticket" id="t8">
+  <div class="ticket-header">
+    <div class="ticket-num">8</div>
+    <h3>ДУ в полных дифференциалах</h3>
+  </div>
+
+  <h4>Определение (параграф 2, тип III)</h4>
+  <div class="formula main-formula">P(x, y)dx + Q(x, y)dy = 0</div>
+  <p>Уравнение называется уравнением в полных дифференциалах, если левая часть является <strong>полным дифференциалом</strong> некоторой функции F(x, y), т.е. dF = P·dx + Q·dy.</p>
+
+  <h4>Критерий полного дифференциала (Лемма 2.1)</h4>
+  <p><strong>Лемма 2.1.</strong> В односвязной области D выражение P·dx + Q·dy является полным дифференциалом тогда и только тогда, когда:</p>
+  <div class="formula main-formula">∂P/∂y = ∂Q/∂x</div>
+  <p>при условии, что P, Q и их частные производные непрерывны в D.</p>
+
+  <h4>Почему это работает</h4>
+  <p>Если ∃ F(x, y) такая, что ∂F/∂x = P и ∂F/∂y = Q, то по теореме о равенстве смешанных производных:</p>
+  <div class="formula">∂²F/∂y∂x = ∂P/∂y = ∂Q/∂x = ∂²F/∂x∂y</div>
+  <p>Решение уравнения dF = 0 — это <code>F(x, y) = C</code>.</p>
+
+  <h4>Метод нахождения F(x, y)</h4>
+  <ol class="steps">
+    <li>Из условия ∂F/∂x = P интегрируем по x: <code>F = ∫ P(x, y) dx + φ(y)</code> (φ(y) — «постоянная» интегрирования, зависящая от y)</li>
+    <li>Дифференцируем полученное F по y: <code>∂F/∂y = ∂/∂y(∫P dx) + φ'(y)</code></li>
+    <li>Приравниваем к Q: <code>∂/∂y(∫P dx) + φ'(y) = Q</code> → находим φ'(y)</li>
+    <li>Интегрируем φ'(y) → φ(y)</li>
+    <li>Ответ: <code>F(x, y) = C</code></li>
+  </ol>
+
+  <div class="note">Можно начать и с Q: <code>F = ∫ Q dy + ψ(x)</code>, затем определить ψ(x) из условия ∂F/∂x = P. Результат будет тот же.</div>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>(3x² + y)dx + (x + 2y)dy = 0</code></p>
+    <p>Проверка: ∂P/∂y = 1, ∂Q/∂x = 1 → равны, это полный дифференциал.</p>
+    <p><code>F = ∫(3x² + y)dx = x³ + xy + φ(y)</code></p>
+    <p><code>∂F/∂y = x + φ'(y) = x + 2y</code> → <code>φ'(y) = 2y</code> → <code>φ(y) = y²</code></p>
+    <p>Ответ: <code>x³ + xy + y² = C</code></p>
+  </div>
+
+  <h4>Интегрирующий множитель</h4>
+  <p>Если условие ∂P/∂y ≠ ∂Q/∂x, можно попытаться найти функцию μ(x, y) такую, что уравнение <code>μP·dx + μQ·dy = 0</code> будет в полных дифференциалах.</p>
+  <p>Частные случаи:</p>
+  <ul>
+    <li>Если <code>(∂P/∂y − ∂Q/∂x) / Q</code> зависит только от x → μ = μ(x)</li>
+    <li>Если <code>(∂Q/∂x − ∂P/∂y) / P</code> зависит только от y → μ = μ(y)</li>
+  </ul>
+
+  <div class="note tip">На экзамене: сначала проверь условие ∂P/∂y = ∂Q/∂x. Если не выполнено — это НЕ уравнение в полных дифференциалах (может потребоваться интегрирующий множитель или другой метод).</div>
+</div>
+
+<!-- ===== ДУ ВЫСШИХ ПОРЯДКОВ ===== -->
+
+<div class="group-divider"><span>ДУ высших порядков</span></div>
+
+<!-- Билет 9 -->
+<div class="ticket" id="t9">
+  <div class="ticket-header">
+    <div class="ticket-num">9</div>
+    <h3>ДУ высшего порядка: основные понятия, задача Коши, теорема существования</h3>
+  </div>
+
+  <h4>Общий вид (Определение 1.1 для n-го порядка)</h4>
+  <div class="formula main-formula">F(x, y, y', y'', ..., y⁽ⁿ⁾) = 0</div>
+  <p>Порядок ДУ = порядок старшей производной.</p>
+  <p>В разрешённом (нормальном) виде:</p>
+  <div class="formula">y⁽ⁿ⁾ = f(x, y, y', ..., y⁽ⁿ⁻¹⁾)</div>
+
+  <h4>Общее решение</h4>
+  <div class="formula">y = φ(x, C₁, C₂, ..., Cₙ)</div>
+  <p>Содержит n произвольных постоянных — столько же, каков порядок ДУ.</p>
+
+  <h4>Частное решение</h4>
+  <p>Получается из общего при конкретных значениях C₁, ..., Cₙ.</p>
+
+  <h4>Задача Коши (Определение 1.5)</h4>
+  <p>Найти решение ДУ n-го порядка, удовлетворяющее начальным условиям:</p>
+  <div class="formula main-formula">y(x₀) = y₀,   y'(x₀) = y₁,   ...,   y⁽ⁿ⁻¹⁾(x₀) = yₙ₋₁</div>
+  <p>Всего n условий — ровно столько, чтобы определить n произвольных постоянных.</p>
+
+  <h4>Теорема 3.1 (существования и единственности)</h4>
+  <p>Пусть функция f(x, y, y', ..., y⁽ⁿ⁻¹⁾) и все её частные производные ∂f/∂y, ∂f/∂y', ..., ∂f/∂y⁽ⁿ⁻¹⁾ непрерывны в окрестности точки (x₀, y₀, y₁, ..., yₙ₋₁). Тогда задача Коши имеет решение, и притом <strong>единственное</strong>.</p>
+
+  <div class="note">Это прямое обобщение теоремы 2.2 (билет 2) на случай n-го порядка. Условия: непрерывность f и всех ∂f/∂y⁽ᵏ⁾.</div>
+
+  <h4>Теорема 3.2 (для линейных ДУ)</h4>
+  <p>Для линейного ДУ <code>y⁽ⁿ⁾ + aₙ₋₁(x)y⁽ⁿ⁻¹⁾ + ... + a₀(x)y = q(x)</code> с непрерывными коэффициентами aₖ(x) и правой частью q(x) на интервале (a, b), решение задачи Коши <strong>существует и единственно на всём интервале (a, b)</strong>.</p>
+
+  <div class="note tip">Ключевое отличие от нелинейного случая: для линейных ДУ решение существует на ВСЁМ промежутке непрерывности коэффициентов, а не только в окрестности начальной точки.</div>
+</div>
+
+<!-- Билет 10 -->
+<div class="ticket" id="t10">
+  <div class="ticket-header">
+    <div class="ticket-num">10</div>
+    <h3>Понижение порядка ДУ (3 типа)</h3>
+  </div>
+
+  <h4>Тип 1: y⁽ⁿ⁾ = f(x)</h4>
+  <p>В уравнении нет y, y', ..., y⁽ⁿ⁻¹⁾ — только x.</p>
+  <p><strong>Метод:</strong> последовательно интегрируем n раз, на каждом шаге добавляя произвольную постоянную.</p>
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y'' = 6x</code></p>
+    <p>Первое интегрирование: <code>y' = 3x² + C₁</code></p>
+    <p>Второе интегрирование: <code>y = x³ + C₁x + C₂</code></p>
+  </div>
+
+  <hr class="divider">
+
+  <h4>Тип 2: F(x, y⁽ᵏ⁾, y⁽ᵏ⁺¹⁾, ..., y⁽ⁿ⁾) = 0 — нет младших производных</h4>
+  <p>Уравнение не содержит y, y', ..., y⁽ᵏ⁻¹⁾ (нет функции и её младших производных).</p>
+  <p><strong>Метод:</strong> замена <code>p = y⁽ᵏ⁾</code>. Тогда <code>y⁽ᵏ⁺¹⁾ = p'</code>, <code>y⁽ᵏ⁺²⁾ = p''</code>, и т.д. Порядок снижается с n до n − k.</p>
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>x·y'' = y' + x³</code> (нет y явно → тип 2, k = 1)</p>
+    <p>Замена p = y', p' = y'': <code>x·p' = p + x³</code> → <code>p' − p/x = x²</code></p>
+    <p>Это линейное ДУ 1-го порядка относительно p(x). Решаем методом вариации:</p>
+    <p>p_одн = Cx. Вариация: p = C(x)·x, C'(x)·x = x², C'(x) = x, C(x) = x²/2 + C₁.</p>
+    <p><code>p = y' = (x²/2 + C₁)·x = x³/2 + C₁x</code></p>
+    <p>Интегрируем: <code>y = x⁴/8 + C₁x²/2 + C₂</code></p>
+  </div>
+
+  <hr class="divider">
+
+  <h4>Тип 3: F(y, y', y'', ..., y⁽ⁿ⁾) = 0 — нет x явно</h4>
+  <p>Независимая переменная x не входит явно.</p>
+  <p><strong>Метод:</strong> замена <code>y' = p(y)</code> — считаем p функцией от y (а не от x). Тогда:</p>
+  <div class="formula">y'' = dp/dx = (dp/dy)·(dy/dx) = p · dp/dy</div>
+  <p>Для третьей производной: <code>y''' = (p·p'' + (p')²)·p</code>, где штрих означает d/dy. Порядок снижается на 1.</p>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>y·y'' = (y')²</code> (нет x → тип 3)</p>
+    <p>Замена y' = p, y'' = p·dp/dy: <code>y·p·dp/dy = p²</code></p>
+    <p>При p ≠ 0 сокращаем на p: <code>y·dp/dy = p</code></p>
+    <p>Разделяем: <code>dp/p = dy/y</code> → <code>ln|p| = ln|y| + C₁</code> → <code>p = C₁·y</code></p>
+    <p>Т.е. y' = C₁·y → <code>dy/y = C₁dx</code> → <code>y = A·e^(C₁x)</code></p>
+    <p>Проверка p = 0 → y' = 0 → y = const (тоже решение).</p>
+  </div>
+
+  <div class="note tip"><strong>Как определить тип:</strong> нет y и младших производных → тип 1 или 2; нет x → тип 3. Тип 1 — частный случай типа 2 при k = n.</div>
+</div>
+
+<!-- ===== ЛОДУ ТЕОРИЯ ===== -->
+
+<div class="group-divider"><span>Линейные ДУ n-го порядка — теория</span></div>
+
+<!-- Билет 11 -->
+<div class="ticket" id="t11">
+  <div class="ticket-header">
+    <div class="ticket-num">11</div>
+    <h3>ЛОДУ n-го порядка. Свойства решений (теорема 3.2)</h3>
+  </div>
+
+  <h4>Общий вид ЛОДУ</h4>
+  <div class="formula main-formula">y⁽ⁿ⁾ + aₙ₋₁(x)·y⁽ⁿ⁻¹⁾ + ... + a₁(x)·y' + a₀(x)·y = 0</div>
+  <p>Все коэффициенты aₖ(x) непрерывны на интервале (a, b). Запишем кратко: <code>L[y] = 0</code>, где L — линейный дифференциальный оператор.</p>
+
+  <h4>Теорема 3.2 (существование и единственность для ЛДУ)</h4>
+  <p>Если коэффициенты aₖ(x) и правая часть q(x) непрерывны на (a, b), то для любой точки x₀ ∈ (a, b) и любых начальных данных y₀, y₁, ..., yₙ₋₁ задача Коши имеет единственное решение, определённое на <strong>всём</strong> интервале (a, b).</p>
+
+  <h4>Принцип суперпозиции</h4>
+  <p>Оператор L линеен, поэтому:</p>
+  <ul>
+    <li>Если y₁ — решение L[y] = 0 и y₂ — решение L[y] = 0, то <code>y = α·y₁ + β·y₂</code> — тоже решение L[y] = 0 при любых константах α, β.</li>
+    <li>В общем виде: линейная комбинация <code>y = α₁y₁ + α₂y₂ + ... + αₖyₖ</code> любого числа решений ЛОДУ — тоже решение.</li>
+  </ul>
+
+  <p><strong>Доказательство:</strong> L[α₁y₁ + α₂y₂] = α₁·L[y₁] + α₂·L[y₂] = α₁·0 + α₂·0 = 0 (по линейности оператора L).</p>
+
+  <div class="note warn">Принцип суперпозиции <strong>не выполняется</strong> для неоднородных уравнений! Если y₁ и y₂ — решения L[y] = q(x), то y₁ + y₂ — НЕ решение (т.к. L[y₁ + y₂] = 2q(x) ≠ q(x)).</div>
+
+  <h4>Множество решений ЛОДУ</h4>
+  <p>Множество всех решений ЛОДУ образует <strong>линейное пространство</strong> (подпространство пространства всех функций). Его размерность равна n (порядку уравнения) — это будет доказано в теореме о существовании ФСР (билет 13).</p>
+
+  <div class="note tip">Принцип суперпозиции — фундаментальное свойство линейных уравнений. Именно оно позволяет строить общее решение как линейную комбинацию базисных решений.</div>
+</div>
+
+<!-- Билет 12 -->
+<div class="ticket" id="t12">
+  <div class="ticket-header">
+    <div class="ticket-num">12</div>
+    <h3>Линейная зависимость. Определитель Вронского (теорема 4.1)</h3>
+  </div>
+
+  <h4>Линейная зависимость функций (Определение 4.1)</h4>
+  <p>Функции φ₁, φ₂, ..., φₙ называются <strong>линейно зависимыми</strong> (ЛЗ) на (a, b), если существуют числа α₁, ..., αₙ, <em>не все равные нулю</em>, такие что:</p>
+  <div class="formula">α₁φ₁(x) + α₂φ₂(x) + ... + αₙφₙ(x) ≡ 0   на (a, b)</div>
+  <p><strong>Линейно независимы</strong> (ЛНЗ) — если такое тождество возможно только при α₁ = α₂ = ... = αₙ = 0.</p>
+  <p>Эквивалентно: функции ЛЗ ⟺ одна из них выражается через остальные.</p>
+
+  <h4>Определитель Вронского (Определение 4.3)</h4>
+  <p>Для n функций φ₁, ..., φₙ, имеющих производные до (n−1)-го порядка:</p>
+  <div class="formula main-formula">W(x) = det | φ₁      φ₂     ... φₙ       |
+           | φ₁'     φ₂'    ... φₙ'      |
+           | ...                           |
+           | φ₁⁽ⁿ⁻¹⁾ φ₂⁽ⁿ⁻¹⁾... φₙ⁽ⁿ⁻¹⁾  |</div>
+  <p>Матрица размера n×n, строки — производные возрастающих порядков (от 0 до n−1).</p>
+
+  <h4>Теорема 4.1 (основная теорема о вронскиане)</h4>
+  <p>Пусть φ₁, ..., φₙ — решения ЛОДУ на (a, b). Тогда следующие три утверждения <strong>равносильны</strong>:</p>
+  <ol>
+    <li>{φ₁, ..., φₙ} — ФСР (система из n ЛНЗ решений)</li>
+    <li>W(x) ≢ 0, т.е. существует хотя бы одна точка x₀ ∈ (a, b), где W(x₀) ≠ 0</li>
+    <li>W(x) ≠ 0 для <strong>всех</strong> x ∈ (a, b)</li>
+  </ol>
+
+  <p><strong>Следствие:</strong> для решений ЛОДУ вронскиан либо тождественно равен нулю (ЛЗ), либо не обращается в ноль нигде на (a, b) (ЛНЗ). «Промежуточного» варианта нет.</p>
+
+  <div class="note warn">Важно: это свойство «всё или ничего» верно ТОЛЬКО для решений ЛОДУ! Для произвольных функций вронскиан может обращаться в ноль в отдельных точках при ЛНЗ функциях.</div>
+
+  <div class="example">
+    <div class="example-title">Пример: проверка ЛНЗ</div>
+    <p>Функции: φ₁ = e^x, φ₂ = e^(2x). Вронскиан:</p>
+    <p><code>W(x) = |e^x    e^(2x)  | = e^x·2e^(2x) − e^(2x)·e^x = 2e^(3x) − e^(3x) = e^(3x)</code></p>
+    <p><code>       |e^x    2e^(2x) |</code></p>
+    <p>W(x) = e^(3x) ≠ 0 при всех x → функции ЛНЗ.</p>
+  </div>
+
+  <div class="note tip">Формула Лиувилля–Остроградского: <code>W(x) = W(x₀)·exp(−∫_{x₀}^{x} aₙ₋₁(t) dt)</code>. Отсюда видно, что W либо всегда ≠ 0, либо тождественно 0.</div>
+</div>
+
+<!-- Билет 13 -->
+<div class="ticket" id="t13">
+  <div class="ticket-header">
+    <div class="ticket-num">13</div>
+    <h3>ФСР. Существование ФСР. Структура общего решения (теоремы 4.2, 4.3)</h3>
+  </div>
+
+  <h4>Фундаментальная система решений (Определение 4.2)</h4>
+  <p><strong>ФСР</strong> — набор из n линейно независимых решений ЛОДУ n-го порядка: {φ₁, φ₂, ..., φₙ}.</p>
+  <p>Эквивалентно (по теореме 4.1): набор n решений, для которых <code>W(φ₁, ..., φₙ) ≠ 0</code>.</p>
+
+  <h4>Теорема 4.2 (существование ФСР)</h4>
+  <p><strong>Утверждение:</strong> ФСР существует для любого ЛОДУ с непрерывными коэффициентами.</p>
+  <p><strong>Доказательство (идея):</strong> Фиксируем точку x₀ ∈ (a, b). Решаем n задач Коши с начальными условиями, образующими единичную матрицу:</p>
+  <div class="formula">φ₁: y(x₀)=1, y'(x₀)=0, ..., y⁽ⁿ⁻¹⁾(x₀)=0
+φ₂: y(x₀)=0, y'(x₀)=1, ..., y⁽ⁿ⁻¹⁾(x₀)=0
+...
+φₙ: y(x₀)=0, y'(x₀)=0, ..., y⁽ⁿ⁻¹⁾(x₀)=1</div>
+  <p>Каждая задача Коши имеет единственное решение (по теореме 3.2). Вычисляем вронскиан в точке x₀:</p>
+  <div class="formula">W(x₀) = det(E) = 1 ≠ 0</div>
+  <p>где E — единичная матрица (по построению). По теореме 4.1, W(x₀) ≠ 0 ⟹ φ₁, ..., φₙ — ЛНЗ ⟹ это ФСР.</p>
+
+  <h4>Теорема 4.3 (структура общего решения ЛОДУ)</h4>
+  <p><strong>Утверждение:</strong> если {φ₁, ..., φₙ} — ФСР уравнения L[y] = 0, то:</p>
+  <div class="formula main-formula">y = C₁φ₁ + C₂φ₂ + ... + Cₙφₙ</div>
+  <p>является <strong>общим решением</strong>, т.е. любое решение ЛОДУ представимо в таком виде при подходящих C₁, ..., Cₙ.</p>
+  <p><strong>Доказательство (идея):</strong> Пусть ψ(x) — произвольное решение. Покажем, что существуют C₁, ..., Cₙ такие, что ψ = C₁φ₁ + ... + Cₙφₙ. Приравниваем значения и производные в точке x₀:</p>
+  <div class="formula">C₁φ₁(x₀) + ... + Cₙφₙ(x₀) = ψ(x₀)
+C₁φ₁'(x₀) + ... + Cₙφₙ'(x₀) = ψ'(x₀)
+...
+C₁φ₁⁽ⁿ⁻¹⁾(x₀) + ... + Cₙφₙ⁽ⁿ⁻¹⁾(x₀) = ψ⁽ⁿ⁻¹⁾(x₀)</div>
+  <p>Это система n линейных уравнений с определителем W(x₀) ≠ 0 → однозначно определяются C₁, ..., Cₙ. Функция y = C₁φ₁ + ... + Cₙφₙ — решение ЛОДУ с теми же начальными условиями, что и ψ. По теореме единственности: y ≡ ψ.</p>
+
+  <h4>Для ЛНДУ (неоднородного)</h4>
+  <p><strong>Теорема 6.1.</strong> Общее решение ЛНДУ L[y] = q(x):</p>
+  <div class="formula main-formula">y = C₁φ₁ + C₂φ₂ + ... + Cₙφₙ + y*</div>
+  <p>где {φ₁, ..., φₙ} — ФСР однородного L[y] = 0, а y* — <em>любое</em> частное решение неоднородного уравнения.</p>
+
+  <div class="note">Принцип: общее решение ЛНДУ = общее решение ЛОДУ + частное решение ЛНДУ. Сначала решаем однородное (находим ФСР), потом ищем одно частное неоднородного.</div>
+
+  <div class="note tip">На экзамене: если просят «доказать теорему о структуре общего решения», нужно показать оба факта — (1) каждая линейная комбинация ФСР является решением; (2) каждое решение является такой комбинацией.</div>
+</div>
+
+<!-- ===== ЛОДУ МЕТОДЫ ===== -->
+
+<div class="group-divider"><span>Линейные ДУ n-го порядка — методы</span></div>
+
+<!-- Билет 14 -->
+<div class="ticket" id="t14">
+  <div class="ticket-header">
+    <div class="ticket-num">14</div>
+    <h3>ЛОДУ с постоянными коэффициентами (теоремы 5.2, 5.3)</h3>
+  </div>
+
+  <h4>Вид уравнения (Параграф 5)</h4>
+  <div class="formula main-formula">y⁽ⁿ⁾ + pₙ₋₁·y⁽ⁿ⁻¹⁾ + ... + p₁·y' + p₀·y = 0</div>
+  <p>Все коэффициенты p₀, p₁, ..., pₙ₋₁ — <strong>вещественные константы</strong>.</p>
+
+  <h4>Характеристический многочлен (Определение 5.2)</h4>
+  <p>Ищем решение в виде <code>y = e^(λx)</code>. Подставляем: <code>λⁿe^(λx) + pₙ₋₁λⁿ⁻¹e^(λx) + ... = 0</code>. Сокращаем на e^(λx) ≠ 0:</p>
+  <div class="formula main-formula">D(λ) = λⁿ + pₙ₋₁·λⁿ⁻¹ + ... + p₁·λ + p₀ = 0</div>
+  <p>Это <strong>характеристическое уравнение</strong>. Его корни определяют ФСР.</p>
+
+  <h4>Теорема 5.2 (основная теорема — построение ФСР)</h4>
+  <p>Пусть λ₁, λ₂, ..., λₘ — различные корни характеристического многочлена D(λ) кратностей k₁, k₂, ..., kₘ (k₁ + k₂ + ... + kₘ = n). Тогда ФСР состоит из функций:</p>
+  <div class="formula main-formula">{x^r · e^(λⱼx)},   r = 0, 1, ..., kⱼ−1,   j = 1, 2, ..., m</div>
+  <p>Каждому корню λⱼ кратности kⱼ соответствует kⱼ функций.</p>
+
+  <h4>Разбор по случаям</h4>
+
+  <p><strong>Случай 1: вещественный простой корень λ (кратность 1):</strong></p>
+  <div class="formula">→  e^(λx)</div>
+
+  <p><strong>Случай 2: вещественный корень λ кратности r:</strong></p>
+  <div class="formula">→  e^(λx),  x·e^(λx),  x²·e^(λx),  ...,  x^(r−1)·e^(λx)</div>
+  <p>(r функций в ФСР)</p>
+
+  <h4>Теорема 5.3 (вещественная ФСР при вещественных коэффициентах)</h4>
+  <p>Если все коэффициенты уравнения вещественные, то комплексные корни характеристического уравнения идут парами: α ± βi. Для каждой такой пары вместо комплексных экспонент берём вещественные функции:</p>
+
+  <p><strong>Случай 3: комплексные корни α ± βi, кратность 1:</strong></p>
+  <div class="formula">→  e^(αx)·cos(βx),   e^(αx)·sin(βx)</div>
+  <p>(2 вещественные функции вместо 2 комплексных)</p>
+
+  <p><strong>Случай 4: комплексные корни α ± βi, кратность r:</strong></p>
+  <div class="formula">→  x^j·e^(αx)·cos(βx),   x^j·e^(αx)·sin(βx)   (j = 0, 1, ..., r−1)</div>
+  <p>(2r вещественных функций)</p>
+
+  <div class="example">
+    <div class="example-title">Пример 1: различные вещественные корни</div>
+    <p><code>y'' − 5y' + 6y = 0</code></p>
+    <p>Хар. ур-е: <code>λ² − 5λ + 6 = 0</code> → λ₁ = 2, λ₂ = 3</p>
+    <p>ФСР: {e^(2x), e^(3x)}. Ответ: <code>y = C₁e^(2x) + C₂e^(3x)</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: кратный корень</div>
+    <p><code>y'' − 4y' + 4y = 0</code></p>
+    <p>Хар. ур-е: <code>λ² − 4λ + 4 = (λ − 2)² = 0</code> → λ = 2 кратности 2</p>
+    <p>ФСР: {e^(2x), x·e^(2x)}. Ответ: <code>y = (C₁ + C₂x)·e^(2x)</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: комплексные корни</div>
+    <p><code>y'' + 2y' + 5y = 0</code></p>
+    <p>Хар. ур-е: <code>λ² + 2λ + 5 = 0</code> → λ = −1 ± 2i (α = −1, β = 2)</p>
+    <p>ФСР: {e^(−x)cos 2x, e^(−x)sin 2x}. Ответ: <code>y = e^(−x)(C₁cos 2x + C₂sin 2x)</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 4: 4-й порядок</div>
+    <p><code>y⁽⁴⁾ + 2y'' + y = 0</code></p>
+    <p>Хар. ур-е: <code>λ⁴ + 2λ² + 1 = (λ² + 1)² = 0</code> → λ = ±i, кратность 2</p>
+    <p>α = 0, β = 1, r = 2. ФСР: {cos x, sin x, x·cos x, x·sin x}</p>
+    <p>Ответ: <code>y = (C₁ + C₂x)cos x + (C₃ + C₄x)sin x</code></p>
+  </div>
+
+  <div class="note tip">Алгоритм: (1) составить хар. уравнение, (2) найти все корни с кратностями, (3) по таблице выписать ФСР, (4) общее решение = линейная комбинация ФСР.</div>
+</div>
+
+<!-- Билет 15 -->
+<div class="ticket" id="t15">
+  <div class="ticket-header">
+    <div class="ticket-num">15</div>
+    <h3>Метод Лагранжа (вариация постоянных) для ЛНДУ n-го порядка</h3>
+  </div>
+
+  <h4>Для чего нужен</h4>
+  <p>Нахождение общего решения ЛНДУ: <code>L[y] = q(x)</code>, т.е.:</p>
+  <div class="formula">y⁽ⁿ⁾ + aₙ₋₁(x)y⁽ⁿ⁻¹⁾ + ... + a₀(x)y = q(x)</div>
+  <p>Метод работает для <strong>любой</strong> правой части q(x) — в отличие от метода неопределённых коэффициентов!</p>
+
+  <h4>Идея метода (Параграф 6)</h4>
+  <p>Знаем ФСР однородного уравнения: {φ₁, ..., φₙ}. Общее решение ЛОДУ: <code>y = C₁φ₁ + ... + Cₙφₙ</code>. Заменяем постоянные C₁, ..., Cₙ на <strong>функции</strong> C₁(x), ..., Cₙ(x):</p>
+  <div class="formula main-formula">y = C₁(x)·φ₁ + C₂(x)·φ₂ + ... + Cₙ(x)·φₙ</div>
+
+  <h4>Система для нахождения C₁'(x), ..., Cₙ'(x)</h4>
+  <p>Чтобы y удовлетворяло неоднородному уравнению и чтобы производные y имели «правильный» вид (без производных Cₖ(x) в промежуточных формулах), накладываем n условий:</p>
+  <div class="formula">C₁'·φ₁     + C₂'·φ₂     + ... + Cₙ'·φₙ       = 0
+C₁'·φ₁'    + C₂'·φ₂'    + ... + Cₙ'·φₙ'      = 0
+...
+C₁'·φ₁⁽ⁿ⁻²⁾ + C₂'·φ₂⁽ⁿ⁻²⁾ + ... + Cₙ'·φₙ⁽ⁿ⁻²⁾ = 0
+C₁'·φ₁⁽ⁿ⁻¹⁾ + C₂'·φ₂⁽ⁿ⁻¹⁾ + ... + Cₙ'·φₙ⁽ⁿ⁻¹⁾ = q(x)</div>
+  <p>Первые (n−1) уравнений: условия, что промежуточные производные y имеют вид без C'. Последнее уравнение: подстановка в исходное ДУ.</p>
+
+  <p>Определитель этой системы = <code>W(x) ≠ 0</code> (т.к. φ₁, ..., φₙ — ФСР). Значит, система имеет единственное решение для C₁', ..., Cₙ' (например, по формулам Крамера).</p>
+
+  <h4>Алгоритм</h4>
+  <ol class="steps">
+    <li>Решить ЛОДУ → найти ФСР {φ₁, ..., φₙ}</li>
+    <li>Составить и решить систему для C₁', ..., Cₙ'</li>
+    <li>Проинтегрировать: Cₖ(x) = ∫ Cₖ'(x) dx (без произвольных констант — они входят через общее решение ЛОДУ)</li>
+    <li>Общее решение: y = C₁(x)φ₁ + ... + Cₙ(x)φₙ + D₁φ₁ + ... + Dₙφₙ (где Dₖ — произвольные константы)</li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример: y'' + y = 1/cos x</div>
+    <p>ЛОДУ: y'' + y = 0 → λ² + 1 = 0 → λ = ±i</p>
+    <p>ФСР: φ₁ = cos x, φ₂ = sin x</p>
+    <p>Система:</p>
+    <p><code>C₁'·cos x + C₂'·sin x = 0</code></p>
+    <p><code>−C₁'·sin x + C₂'·cos x = 1/cos x</code></p>
+    <p>Вронскиан: W = cos²x + sin²x = 1.</p>
+    <p>По Крамеру: C₁' = −sin x / cos x = −tan x, C₂' = 1.</p>
+    <p>Интегрируем: C₁ = ln|cos x|, C₂ = x.</p>
+    <p>Частное решение: y* = cos x · ln|cos x| + x · sin x</p>
+    <p>Общее: <code>y = D₁cos x + D₂sin x + cos x · ln|cos x| + x · sin x</code></p>
+  </div>
+
+  <div class="note tip">Метод Лагранжа универсален, но может приводить к сложным интегралам. Если правая часть имеет специальный вид (многочлен, экспонента, синус/косинус) — проще использовать метод неопределённых коэффициентов (билеты 16–17).</div>
+</div>
+
+<!-- Билет 16 -->
+<div class="ticket" id="t16">
+  <div class="ticket-header">
+    <div class="ticket-num">16</div>
+    <h3>ЛНДУ: правая часть вида P<sub>m</sub>(x)·e<sup>γx</sup></h3>
+  </div>
+
+  <h4>Вид уравнения</h4>
+  <p>ЛНДУ с постоянными коэффициентами:</p>
+  <div class="formula">y⁽ⁿ⁾ + pₙ₋₁y⁽ⁿ⁻¹⁾ + ... + p₀y = Pₘ(x) · e^(γx)</div>
+  <p>где <code>Pₘ(x) = aₘxᵐ + aₘ₋₁xᵐ⁻¹ + ... + a₀</code> — многочлен степени m, γ — вещественное (или комплексное) число.</p>
+
+  <h4>Вид частного решения (метод неопределённых коэффициентов)</h4>
+  <div class="formula main-formula">y* = x^s · Qₘ(x) · e^(γx)</div>
+  <ul>
+    <li><code>Qₘ(x) = bₘxᵐ + bₘ₋₁xᵐ⁻¹ + ... + b₀</code> — многочлен <strong>той же</strong> степени m с неизвестными коэффициентами</li>
+    <li><code>s</code> — кратность числа γ как корня характеристического уравнения D(λ) = 0</li>
+    <li>Если γ НЕ является корнем характеристического уравнения → s = 0</li>
+  </ul>
+
+  <h4>Алгоритм</h4>
+  <ol class="steps">
+    <li>Решаем характеристическое уравнение D(λ) = 0 → находим все корни</li>
+    <li>Определяем s: является ли γ корнем D(λ) = 0? Если да — какой кратности?</li>
+    <li>Записываем y* = x^s · Qₘ(x) · e^(γx) с неизвестными коэффициентами b₀, ..., bₘ</li>
+    <li>Подставляем y* в уравнение, раскрываем и приравниваем коэффициенты при одинаковых степенях x</li>
+    <li>Получаем систему для b₀, ..., bₘ → решаем → частное решение найдено</li>
+  </ol>
+
+  <div class="note">Почему работает множитель x^s? Если γ — корень D(λ) кратности s, то подстановка Qₘ·e^(γx) даст 0 (из-за кратности). Множитель x^s «сдвигает» на s степеней и делает систему разрешимой.</div>
+
+  <div class="example">
+    <div class="example-title">Пример 1: γ не корень (s = 0)</div>
+    <p><code>y'' − 3y' + 2y = e^(3x)</code></p>
+    <p>Хар. ур-е: λ² − 3λ + 2 = 0 → λ₁ = 1, λ₂ = 2. γ = 3 — не корень → s = 0</p>
+    <p>Подбор: y* = A·e^(3x) (m = 0, Q₀ = A)</p>
+    <p>Подставляем: 9A·e^(3x) − 9A·e^(3x) + 2A·e^(3x) = e^(3x) → 2A = 1 → A = 1/2</p>
+    <p>Общее: <code>y = C₁e^x + C₂e^(2x) + e^(3x)/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: γ — простой корень (s = 1)</div>
+    <p><code>y'' − 3y' + 2y = e^(2x)</code></p>
+    <p>γ = 2 — корень кратности 1 → s = 1</p>
+    <p>Подбор: y* = x·A·e^(2x)</p>
+    <p>Подставляем, упрощаем: A(2e^(2x) + 4xe^(2x)) − 3A(e^(2x) + 2xe^(2x)) + 2A·x·e^(2x) = e^(2x)</p>
+    <p>Коэффициент при e^(2x): 2A − 3A = −A = 1 → A = −1</p>
+    <p>Ответ: y* = −x·e^(2x)</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: многочлен правая часть (γ = 0)</div>
+    <p><code>y'' − y = 2x² + 1</code></p>
+    <p>γ = 0, Pₘ(x) = 2x² + 1, m = 2. Хар. корни: λ = ±1. γ = 0 не корень → s = 0</p>
+    <p>Подбор: y* = ax² + bx + c</p>
+    <p>y*'' = 2a. Подставляем: 2a − (ax² + bx + c) = 2x² + 1</p>
+    <p>−a = 2 → a = −2; −b = 0 → b = 0; 2a − c = 1 → c = −5</p>
+    <p>y* = −2x² − 5</p>
+  </div>
+
+  <div class="note tip">Главное — правильно определить s. Мнемоника: s = «сколько раз γ входит как корень». Если не входит — s = 0, подбираем «как есть».</div>
+</div>
+
+<!-- Билет 17 -->
+<div class="ticket" id="t17">
+  <div class="ticket-header">
+    <div class="ticket-num">17</div>
+    <h3>ЛНДУ: правая часть вида e<sup>γx</sup>(P<sub>n</sub>cos βx + Q<sub>m</sub>sin βx)</h3>
+  </div>
+
+  <h4>Вид правой части</h4>
+  <div class="formula">q(x) = e^(γx) · (Pₙ(x)·cos βx + Qₘ(x)·sin βx)</div>
+  <p>где Pₙ(x) — многочлен степени n, Qₘ(x) — многочлен степени m (один из них может быть нулевым).</p>
+
+  <h4>Вид частного решения</h4>
+  <div class="formula main-formula">y* = x^s · e^(γx) · (Rₗ(x)·cos βx + Tₗ(x)·sin βx)</div>
+  <p>где:</p>
+  <ul>
+    <li><code>l = max(n, m)</code> — степень многочленов Rₗ и Tₗ</li>
+    <li><code>Rₗ(x), Tₗ(x)</code> — многочлены степени l с неизвестными коэффициентами</li>
+    <li><code>s</code> — кратность числа <code>γ + βi</code> как корня характеристического уравнения</li>
+  </ul>
+
+  <div class="note warn">Оба многочлена Rₗ и Tₗ берутся степени l = max(n, m), даже если один из Pₙ, Qₘ отсутствует (нулевой). Это критически важно! Нельзя брать R и T разных степеней.</div>
+
+  <h4>Связь с предыдущим билетом</h4>
+  <p>Билет 16 — частный случай при β = 0 (нет тригонометрии). Формально: правая часть Pₘ·e^(γx) = e^(γx)·(Pₘ·cos 0x + 0·sin 0x), и γ + 0i = γ.</p>
+
+  <h4>Алгоритм</h4>
+  <ol class="steps">
+    <li>Определяем γ, β, n, m из правой части</li>
+    <li>Составляем число γ + βi и проверяем: является ли оно корнем хар. уравнения? Если да — кратности s.</li>
+    <li>Вычисляем l = max(n, m)</li>
+    <li>Записываем y* = x^s · e^(γx) · (Rₗ·cos βx + Tₗ·sin βx)</li>
+    <li>Подставляем в уравнение, приравниваем коэффициенты → находим все неизвестные коэффициенты Rₗ и Tₗ</li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример 1: y'' + y = cos x</div>
+    <p>Хар. ур-е: λ² + 1 = 0 → λ = ±i</p>
+    <p>Правая часть: e^(0x)·(1·cos x + 0·sin x) → γ = 0, β = 1, n = 0, m = 0</p>
+    <p>Число γ + βi = 0 + i = i — корень кратности 1 → s = 1</p>
+    <p>l = max(0, 0) = 0. Подбор: y* = x¹ · (A·cos x + B·sin x)</p>
+    <p>y* = x(A cos x + B sin x)</p>
+    <p>y*' = A cos x + B sin x + x(−A sin x + B cos x)</p>
+    <p>y*'' = −A sin x + B cos x + (−A sin x + B cos x) + x(−A cos x − B sin x)</p>
+    <p>y*'' = −2A sin x + 2B cos x − x(A cos x + B sin x)</p>
+    <p>y*'' + y* = −2A sin x + 2B cos x = cos x</p>
+    <p>Отсюда: B = 1/2, A = 0.</p>
+    <p>Ответ: <code>y = C₁cos x + C₂sin x + (x sin x)/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: y'' − 2y' + y = e^x · sin x</div>
+    <p>Хар. ур-е: (λ − 1)² = 0 → λ = 1 (кратность 2)</p>
+    <p>Правая часть: e^(1·x)·(0·cos x + 1·sin x) → γ = 1, β = 1</p>
+    <p>γ + βi = 1 + i — НЕ корень хар. уравнения (корень только 1, а не 1+i) → s = 0</p>
+    <p>l = max(0, 0) = 0. Подбор: y* = e^x(A cos x + B sin x)</p>
+    <p>Подставляем, находим A и B.</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: y'' + 4y = x · sin 2x</div>
+    <p>Хар. ур-е: λ² + 4 = 0 → λ = ±2i</p>
+    <p>Правая часть: e^(0x)·(0·cos 2x + x·sin 2x) → γ = 0, β = 2, n = 0, m = 1</p>
+    <p>γ + βi = 2i — корень кратности 1 → s = 1</p>
+    <p>l = max(0, 1) = 1. Подбор: y* = x · ((ax + b)cos 2x + (cx + d)sin 2x)</p>
+  </div>
+
+  <div class="note tip">Частый источник ошибок: неправильное определение s. Запомни: проверяем не γ, а число γ + βi! Например, если γ = 0 и β = 1, проверяем, является ли i корнем характеристического уравнения.</div>
+</div>
+
+<!-- ===== СИСТЕМЫ ДУ ===== -->
+
+<div class="group-divider"><span>Системы ДУ</span></div>
+
+<!-- Билет 18 -->
+<div class="ticket" id="t18">
+  <div class="ticket-header">
+    <div class="ticket-num">18</div>
+    <h3>Векторная функция скалярного аргумента</h3>
+  </div>
+
+  <h4>Определение</h4>
+  <p>Векторная функция скалярного аргумента — это функция, ставящая в соответствие каждому значению скалярного параметра t вектор:</p>
+  <div class="formula main-formula">r(t) = x(t)·i + y(t)·j + z(t)·k</div>
+  <p>где x(t), y(t), z(t) — скалярные функции (компоненты), i, j, k — единичные орты.</p>
+
+  <h4>Годограф</h4>
+  <p>Кривая в пространстве, которую описывает конец вектора r(t) при изменении параметра t. Если начало вектора зафиксировано в начале координат, годограф — это траектория движения точки.</p>
+
+  <h4>Предел</h4>
+  <p>Предел векторной функции берётся <strong>покомпонентно</strong>:</p>
+  <div class="formula">lim_{t→t₀} r(t) = (lim x(t))·i + (lim y(t))·j + (lim z(t))·k</div>
+  <p>Предел существует тогда и только тогда, когда существуют пределы каждой компоненты.</p>
+
+  <h4>Непрерывность</h4>
+  <p>r(t) непрерывна в t₀ ⟺ все компоненты x(t), y(t), z(t) непрерывны в t₀.</p>
+
+  <h4>Производная</h4>
+  <div class="formula">r'(t) = x'(t)·i + y'(t)·j + z'(t)·k</div>
+  <p>Геометрический смысл: r'(t) — вектор, касательный к годографу в точке r(t), направленный в сторону возрастания t.</p>
+
+  <h4>Свойства дифференцирования</h4>
+  <ul>
+    <li><code>(r₁ ± r₂)' = r₁' ± r₂'</code></li>
+    <li><code>(φ(t)·r)' = φ'·r + φ·r'</code> (скалярная функция на вектор)</li>
+    <li><code>(r₁ · r₂)' = r₁'·r₂ + r₁·r₂'</code> (скалярное произведение)</li>
+    <li><code>(r₁ × r₂)' = r₁'×r₂ + r₁×r₂'</code> (векторное произведение — порядок важен!)</li>
+  </ul>
+
+  <h4>Интеграл</h4>
+  <div class="formula">∫ r(t) dt = (∫ x(t) dt)·i + (∫ y(t) dt)·j + (∫ z(t) dt)·k</div>
+  <p>Интегрирование тоже покомпонентное.</p>
+
+  <div class="note tip">Все операции с векторной функцией выполняются покомпонентно. Это основа для записи систем ДУ в векторной форме (следующие билеты).</div>
+</div>
+
+<!-- Билет 19 -->
+<div class="ticket" id="t19">
+  <div class="ticket-header">
+    <div class="ticket-num">19</div>
+    <h3>Системы ДУ: определения, задача Коши, сведение к одному ДУ</h3>
+  </div>
+
+  <h4>Определение нормальной системы (Определение 7.1)</h4>
+  <p>Нормальная система ДУ — система, разрешённая относительно производных:</p>
+  <div class="formula main-formula">y₁' = f₁(x, y₁, y₂, ..., yₙ)
+y₂' = f₂(x, y₁, y₂, ..., yₙ)
+...
+yₙ' = fₙ(x, y₁, y₂, ..., yₙ)</div>
+  <p>В векторной записи: <code>Y'(x) = F(x, Y)</code>, где Y = (y₁, ..., yₙ)ᵀ.</p>
+
+  <h4>Решение системы</h4>
+  <ul>
+    <li><strong>Общее решение:</strong> yᵢ = φᵢ(x, C₁, ..., Cₙ) — n функций, содержащих n произвольных постоянных</li>
+    <li><strong>Частное решение:</strong> при конкретных значениях C₁, ..., Cₙ</li>
+  </ul>
+
+  <h4>Задача Коши</h4>
+  <p>Найти решение системы, удовлетворяющее начальным условиям:</p>
+  <div class="formula main-formula">y₁(x₀) = y₁⁰,   y₂(x₀) = y₂⁰,   ...,   yₙ(x₀) = yₙ⁰</div>
+
+  <h4>Теорема 7.1 (существования и единственности для системы)</h4>
+  <p>Если функции fᵢ и все их частные производные ∂fᵢ/∂yⱼ непрерывны в окрестности начальной точки, то задача Коши имеет единственное решение.</p>
+
+  <h4>Линейная система (Определение 7.3)</h4>
+  <p>Система линейных ДУ (СЛДУ):</p>
+  <div class="formula main-formula">Y' = A(x)·Y + B(x)</div>
+  <p>где A(x) — матрица коэффициентов n×n, B(x) — вектор правых частей. Если B(x) ≡ 0 — <em>однородная</em> СЛДУ.</p>
+
+  <h4>Сведение ДУ n-го порядка к системе</h4>
+  <p>Из <code>y⁽ⁿ⁾ = f(x, y, y', ..., y⁽ⁿ⁻¹⁾)</code> вводим замену:</p>
+  <div class="formula">y₁ = y,   y₂ = y',   y₃ = y'',   ...,   yₙ = y⁽ⁿ⁻¹⁾</div>
+  <p>Получаем эквивалентную систему:</p>
+  <div class="formula">y₁' = y₂
+y₂' = y₃
+...
+yₙ₋₁' = yₙ
+yₙ' = f(x, y₁, y₂, ..., yₙ)</div>
+
+  <h4>Сведение системы к одному ДУ</h4>
+  <p>Обратный процесс: из системы можно исключить все неизвестные, кроме одного, и получить одно ДУ высокого порядка. Метод: дифференцируем одно уравнение и подставляем другое, пока не останется одна функция.</p>
+
+  <div class="note">Сведение ДУ ↔ система — это две стороны одной медали. Любое ДУ n-го порядка эквивалентно системе n уравнений 1-го порядка, и наоборот.</div>
+</div>
+
+<!-- Билет 20 -->
+<div class="ticket" id="t20">
+  <div class="ticket-header">
+    <div class="ticket-num">20</div>
+    <h3>Методы решения линейных систем ДУ с постоянными коэффициентами</h3>
+  </div>
+
+  <h4>Вид системы</h4>
+  <div class="formula main-formula">X' = A · X</div>
+  <p>где A — матрица постоянных коэффициентов размера n×n, X = (x₁, ..., xₙ)ᵀ — вектор неизвестных функций.</p>
+
+  <h4>Метод 1: Метод исключения</h4>
+  <p>Сводим систему к одному ДУ высокого порядка:</p>
+  <ol class="steps">
+    <li>Из одного уравнения выражаем y₂ через y₁ и y₁'</li>
+    <li>Дифференцируем это выражение</li>
+    <li>Подставляем во второе уравнение → получаем одно ДУ n-го порядка для y₁</li>
+    <li>Решаем это ДУ → находим y₁ → обратно подставляем → y₂</li>
+  </ol>
+
+  <div class="note">При методе исключения возникают «лишние» постоянные. Не все C₁, ..., Cₙ независимы — часть из них связана соотношениями из исходной системы. Нужно проверить!</div>
+
+  <h4>Метод 2: Метод собственных значений (основной)</h4>
+  <p>Ищем решение в виде <code>X = h · e^(λx)</code>, где h — постоянный вектор, λ — число.</p>
+  <p>Подставляем в X' = AX: <code>λh·e^(λx) = A·h·e^(λx)</code> → <code>(A − λE)·h = 0</code></p>
+  <p>Это задача на собственные значения матрицы A.</p>
+
+  <ol class="steps">
+    <li>Характеристическое уравнение: <code>det(A − λE) = 0</code> → находим собственные числа λ₁, ..., λₙ</li>
+    <li>Для каждого λᵢ находим собственный вектор hᵢ: решаем <code>(A − λᵢE)·hᵢ = 0</code></li>
+    <li>Каждая пара (λᵢ, hᵢ) даёт частное решение: <code>Xᵢ = hᵢ · e^(λᵢx)</code></li>
+  </ol>
+
+  <h4>Общее решение (случай различных собственных значений)</h4>
+  <div class="formula main-formula">X = C₁·h₁·e^(λ₁x) + C₂·h₂·e^(λ₂x) + ... + Cₙ·hₙ·e^(λₙx)</div>
+
+  <h4>Особый случай: кратные собственные значения</h4>
+  <p>Если λ — корень кратности r, а геометрическая кратность (число ЛНЗ собственных векторов) меньше r, используем <strong>присоединённые (обобщённые) собственные вектора</strong>:</p>
+  <p>Для кратности 2 с одним собственным вектором h₁ ищем h₂ из <code>(A − λE)·h₂ = h₁</code>.</p>
+  <p>Второе частное решение:</p>
+  <div class="formula">X₂ = (h₁·x + h₂) · e^(λx)</div>
+
+  <h4>Особый случай: комплексные собственные значения</h4>
+  <p>При вещественной матрице A комплексные корни идут парами: λ = α ± βi. Пусть h = u + iv — собственный вектор для λ = α + βi. Тогда два вещественных решения:</p>
+  <div class="formula">X₁ = e^(αx)·(u·cos βx − v·sin βx)
+X₂ = e^(αx)·(u·sin βx + v·cos βx)</div>
+  <p>Это действительная и мнимая части комплексного решения (u + iv)·e^((α+βi)x).</p>
+
+  <div class="example">
+    <div class="example-title">Пример: различные вещественные корни</div>
+    <p>Система: x' = 3x + y, y' = x + 3y</p>
+    <p>Матрица A = |3 1| / |1 3|</p>
+    <p>det(A − λE) = (3−λ)² − 1 = λ² − 6λ + 8 = 0 → λ₁ = 2, λ₂ = 4</p>
+    <p>λ₁ = 2: (A − 2E)h = 0 → |1 1|·h = 0 → h₁ = (1, −1)ᵀ</p>
+    <p>λ₂ = 4: (A − 4E)h = 0 → |−1 1|·h = 0 → h₂ = (1, 1)ᵀ</p>
+    <p>Ответ:</p>
+    <div class="formula">x = C₁e^(2t) + C₂e^(4t)
+y = −C₁e^(2t) + C₂e^(4t)</div>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример: комплексные корни</div>
+    <p>Система: x' = −y, y' = x. Матрица A = |0 −1| / |1  0|</p>
+    <p>det(A − λE) = λ² + 1 = 0 → λ = ±i (α = 0, β = 1)</p>
+    <p>Для λ = i: (A − iE)h = 0 → h = (1, i)ᵀ = (1, 0)ᵀ + i·(0, 1)ᵀ</p>
+    <p>u = (1, 0)ᵀ, v = (0, 1)ᵀ</p>
+    <p>Ответ: x = C₁cos t + C₂sin t, y = −C₁sin t + C₂cos t (вращение!)</p>
+  </div>
+
+  <h4>Неоднородная система X' = AX + B(x)</h4>
+  <p>Общее решение = общее решение однородной + частное неоднородной. Частное можно искать методом вариации постоянных (аналог метода Лагранжа для систем).</p>
+
+  <div class="note tip">Метод собственных значений — основной на экзамене. Алгоритм: (1) хар. уравнение, (2) собственные значения, (3) собственные вектора, (4) записать общее решение.</div>
+</div>
+
+</main>
+
+<script>
+  // Close sidebar when clicking a nav link on mobile
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        document.body.classList.remove('nav-open');
+      }
+    });
+  });
+
+  // Open sidebar by default on wide screens
+  if (window.innerWidth > 768) {
+    document.body.classList.add('nav-open');
+  }
+</script>
+</body>
+</html>

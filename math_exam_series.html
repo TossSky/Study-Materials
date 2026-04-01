@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Билеты 21-40 — Ряды</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-code: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #7ee787;
+    --accent3: #d2a8ff;
+    --accent4: #ffa657;
+    --warn: #f85149;
+    --tip: #3fb950;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; padding: 0; }
+
+  .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 200; background: var(--bg-card); border: 1px solid var(--border); color: var(--text); width: 40px; height: 40px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.3s; }
+  .nav-toggle:hover { background: var(--border); }
+  body.nav-open .nav-toggle { left: 292px; }
+
+  .nav { position: fixed; top: 0; left: -280px; width: 280px; height: 100vh; background: var(--bg-card); border-right: 1px solid var(--border); overflow-y: auto; padding: 20px 0; z-index: 100; transition: left 0.3s ease; }
+  body.nav-open .nav { left: 0; }
+  .nav h2 { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 0 20px; margin-bottom: 16px; }
+  .nav-group { margin-bottom: 8px; }
+  .nav-group-title { color: var(--text-dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 20px 4px; font-weight: 600; }
+  .nav a { display: block; color: var(--text-dim); text-decoration: none; padding: 6px 20px 6px 28px; font-size: 13px; transition: all 0.2s; border-left: 2px solid transparent; }
+  .nav a:hover { color: var(--text); background: rgba(88, 166, 255, 0.1); border-left-color: var(--accent); }
+
+  .main { margin-left: 0; max-width: none; padding: 40px 80px 80px; transition: margin-left 0.3s ease; }
+  body.nav-open .main { margin-left: 280px; padding-right: 80px; }
+
+  .page-title { font-size: 36px; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .page-subtitle { color: var(--text-dim); font-size: 17px; margin-bottom: 48px; }
+
+  .ticket { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 36px 44px; margin-bottom: 32px; scroll-margin-top: 24px; max-width: none; }
+  .ticket-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .ticket-num { background: linear-gradient(135deg, var(--accent), var(--accent3)); color: #0d1117; font-weight: 700; font-size: 14px; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ticket h3 { font-size: 24px; font-weight: 600; color: var(--text); }
+  .ticket h4 { color: var(--accent); font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .ticket p, .ticket li { font-size: 17px; color: var(--text); margin-bottom: 10px; }
+  .ticket ul, .ticket ol { padding-left: 20px; margin-bottom: 12px; }
+
+  .formula { background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 17px; color: var(--accent2); overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; }
+  .formula.main-formula { border-color: var(--accent); background: rgba(88, 166, 255, 0.06); color: var(--accent); font-size: 18px; font-weight: 500; }
+
+  code { background: var(--bg-code); padding: 2px 7px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent4); }
+
+  .note { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 15px; color: var(--text-dim); }
+  .note.warn { background: rgba(248, 81, 73, 0.08); border-left-color: var(--warn); }
+  .note.tip { background: rgba(63, 185, 80, 0.08); border-left-color: var(--tip); }
+
+  .example { background: rgba(210, 168, 255, 0.06); border: 1px solid rgba(210, 168, 255, 0.2); border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .example-title { color: var(--accent3); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 8px; }
+
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: step; padding-left: 32px; position: relative; margin-bottom: 10px; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; background: var(--accent); color: var(--bg); width: 22px; height: 22px; border-radius: 50%; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; top: 2px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  .group-divider { text-align: center; margin: 48px 0 32px; position: relative; }
+  .group-divider::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--border); }
+  .group-divider span { position: relative; background: var(--bg); padding: 0 20px; color: var(--accent3); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+  @media (max-width: 768px) {
+    .main { padding: 24px 16px 60px; }
+    .ticket { padding: 20px; }
+    .page-title { font-size: 24px; }
+    body.nav-open .main { margin-left: 0; }
+    .nav { width: 260px; left: -260px; }
+    body.nav-open .nav { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
+    body.nav-open .nav-toggle { left: 272px; }
+    .nav-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 50; }
+    body.nav-open .nav-overlay { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')" title="Toggle sidebar">&#9776;</button>
+<div class="nav-overlay" onclick="document.body.classList.remove('nav-open')"></div>
+
+<nav class="nav">
+  <h2>Билеты: Ряды</h2>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Числовые ряды</div>
+    <a href="#t21">21. Понятие ряда, сходимость</a>
+    <a href="#t22">22. Свойства сходящихся рядов</a>
+    <a href="#t23">23. Признаки сравнения</a>
+    <a href="#t24">24. Коши, Д'Аламбер, интегральный</a>
+    <a href="#t25">25. Знакочередующиеся ряды</a>
+    <a href="#t26">26. Абсолютная/условная сходимость</a>
+    <a href="#t27">27. Признаки знакопеременных</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Функциональные ряды</div>
+    <a href="#t28">28. Область сходимости</a>
+    <a href="#t29">29. Больцано-Коши, Вейерштрасс</a>
+    <a href="#t30">30. Непрерывность суммы</a>
+    <a href="#t31">31. Почленное интегрирование</a>
+    <a href="#t32">32. Почленное дифференцирование</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Степенные ряды</div>
+    <a href="#t33">33. Теорема Абеля, радиус</a>
+    <a href="#t34">34. Равномерная сходимость</a>
+    <a href="#t35">35. Ряд Тейлора/Маклорена</a>
+    <a href="#t36">36. Разложение элем. функций</a>
+    <a href="#t37">37. Приближенные вычисления</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Ряды Фурье</div>
+    <a href="#t38">38. Тригонометрические ряды</a>
+    <a href="#t39">39. Ряды Фурье, Дирихле</a>
+    <a href="#t40">40. Чётные/нечётные, [-l,l]</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<h1 class="page-title">Билеты 21-40: Числовые и функциональные ряды</h1>
+<p class="page-subtitle">Высшая математика, 3 семестр ИКНК -- подготовка к экзамену (Лекции 8-13)</p>
+
+<!-- ===== ЧИСЛОВЫЕ РЯДЫ ===== -->
+
+<div class="group-divider"><span>Числовые ряды (Лекции 8-10)</span></div>
+
+<!-- Билет 21 -->
+<div class="ticket" id="t21">
+  <div class="ticket-header">
+    <div class="ticket-num">21</div>
+    <h3>Понятие числового ряда. Сходимость. Необходимое условие</h3>
+  </div>
+
+  <h4>Определение 1.1. Числовой ряд</h4>
+  <p><strong>Числовой ряд</strong> -- формальная бесконечная сумма членов числовой последовательности {a<sub>n</sub>}:</p>
+  <div class="formula main-formula">∑ aₙ = a₁ + a₂ + a₃ + ... + aₙ + ...  (n = 1, 2, 3, ...)</div>
+  <p>Здесь a<sub>n</sub> -- <em>общий (n-й) член ряда</em>.</p>
+
+  <h4>Частичная сумма</h4>
+  <p><strong>n-я частичная сумма</strong> -- сумма первых n членов ряда:</p>
+  <div class="formula">Sₙ = a₁ + a₂ + ... + aₙ = ∑(k=1..n) aₖ</div>
+  <p>Последовательность {S<sub>n</sub>} -- ключевой объект для изучения сходимости.</p>
+
+  <h4>Определение сходимости</h4>
+  <p>Ряд <strong>сходится</strong>, если существует конечный предел последовательности частичных сумм:</p>
+  <div class="formula main-formula">S = lim(n→∞) Sₙ  (конечный)</div>
+  <p>Число S называется <em>суммой ряда</em>. Если предел не существует или равен ±∞ -- ряд <strong>расходится</strong>.</p>
+
+  <h4>Лемма 1.1. Гармонический ряд</h4>
+  <p>Для частичных сумм гармонического ряда ∑1/n справедлива <strong>асимптотическая формула</strong>:</p>
+  <div class="formula main-formula">Sₙ = 1 + 1/2 + 1/3 + ... + 1/n = c + ln n + εₙ</div>
+  <p>где <code>c = 0.5772...</code> -- <strong>постоянная Эйлера</strong> (Euler-Mascheroni constant), εₙ → 0 при n → ∞.</p>
+  <p><strong>Следствие:</strong> S<sub>n</sub> → ∞ (т.к. ln n → ∞), поэтому гармонический ряд <strong>расходится</strong>.</p>
+
+  <div class="note">Идея доказательства расходимости (без формулы): группируем члены: (1) + (1/2) + (1/3+1/4) + (1/5+...+1/8) + ... Каждая группа ≥ 1/2, а таких групп бесконечно много.</div>
+
+  <h4>Определение 1.2. Остаток ряда</h4>
+  <div class="formula">rₘ = aₘ₊₁ + aₘ₊₂ + ... = ∑(n=m+1..∞) aₙ = S − Sₘ</div>
+  <p>Для сходящегося ряда: <code>lim(m→∞) rₘ = 0</code>.</p>
+
+  <h4>Теорема 1.3. Ряд и его остаток</h4>
+  <p>Ряд ∑a<sub>n</sub> и его остаток r<sub>m</sub> = ∑(n=m+1..∞) a<sub>n</sub> <strong>сходятся или расходятся одновременно</strong>.</p>
+  <p><em>Суть:</em> отбрасывание конечного числа первых членов не влияет на сходимость (влияет только на сумму).</p>
+
+  <h4>Теорема 1.4. Необходимый признак сходимости</h4>
+  <div class="formula main-formula">Если ∑aₙ сходится, то lim(n→∞) aₙ = 0</div>
+  <p><strong>Доказательство:</strong> a<sub>n</sub> = S<sub>n</sub> − S<sub>n−1</sub>. Если ∑a<sub>n</sub> сходится, то lim S<sub>n</sub> = S и lim S<sub>n−1</sub> = S. Значит lim a<sub>n</sub> = S − S = 0.</p>
+
+  <div class="note warn">Обратное НЕВЕРНО! lim aₙ = 0 НЕ гарантирует сходимость. Гармонический ряд ∑1/n: lim(1/n) = 0, но ряд расходится. Это типичная экзаменационная ловушка!</div>
+
+  <div class="note tip">Следствие (контрапозиция): если lim aₙ ≠ 0 или предел не существует, то ряд точно расходится. Это самая быстрая первая проверка на экзамене.</div>
+</div>
+
+<!-- Билет 22 -->
+<div class="ticket" id="t22">
+  <div class="ticket-header">
+    <div class="ticket-num">22</div>
+    <h3>Свойства сходящихся числовых рядов</h3>
+  </div>
+
+  <h4>Теорема 1.2. Линейность</h4>
+  <p>Если ∑a<sub>n</sub> = A и ∑b<sub>n</sub> = B (оба сходятся), то для любых констант α, β:</p>
+  <div class="formula main-formula">∑(α·aₙ + β·bₙ) = α·A + β·B</div>
+  <p><strong>Доказательство:</strong> частичная сумма нового ряда: σ<sub>n</sub> = α·S<sub>n</sub><sup>(a)</sup> + β·S<sub>n</sub><sup>(b)</sup>. Переходим к пределу: lim σ<sub>n</sub> = α·A + β·B.</p>
+
+  <h4>Теорема 1.1. Группировка членов</h4>
+  <p>Если ряд ∑a<sub>n</sub> сходится, то его члены можно <strong>группировать в скобки</strong> (не переставляя!) -- новый ряд тоже сходится и имеет ту же сумму.</p>
+  <p><em>Идея доказательства:</em> частичные суммы нового ряда -- подпоследовательность {S<sub>n</sub>}, а подпоследовательность сходящейся последовательности сходится к тому же пределу.</p>
+
+  <div class="note warn">Обратное НЕВЕРНО! Из сходимости ряда со скобками не следует сходимость без скобок. Пример: (1−1)+(1−1)+... = 0 сходится, но 1−1+1−1+... расходится.</div>
+
+  <h4>Отбрасывание/добавление конечного числа членов</h4>
+  <p>Сходимость ряда не зависит от конечного числа первых членов (это следует из теоремы 1.3 об остатке).</p>
+
+  <h4>Сходящийся + расходящийся</h4>
+  <p><strong>Если ∑a<sub>n</sub> сходится и ∑b<sub>n</sub> расходится, то ∑(a<sub>n</sub> + b<sub>n</sub>) расходится.</strong></p>
+  <p><em>Доказательство от противного:</em> если бы ∑(a<sub>n</sub> + b<sub>n</sub>) сходился, то ∑b<sub>n</sub> = ∑(a<sub>n</sub>+b<sub>n</sub>) − ∑a<sub>n</sub> тоже сходился бы (линейность). Противоречие.</p>
+
+  <div class="note warn">Сумма двух расходящихся рядов может быть любой! Пример: aₙ = 1/n и bₙ = −1/n -- оба расходятся, но ∑(aₙ + bₙ) = 0.</div>
+</div>
+
+<!-- Билет 23 -->
+<div class="ticket" id="t23">
+  <div class="ticket-header">
+    <div class="ticket-num">23</div>
+    <h3>Признаки сравнения для рядов с неотрицательными членами</h3>
+  </div>
+
+  <h4>Теорема 2.1. Критерий сходимости</h4>
+  <p>Ряд с неотрицательными членами (a<sub>n</sub> ≥ 0) сходится тогда и только тогда, когда последовательность частичных сумм {S<sub>n</sub>} <strong>ограничена сверху</strong>.</p>
+  <p><em>Доказательство:</em> {S<sub>n</sub>} монотонно не убывает (т.к. S<sub>n+1</sub> = S<sub>n</sub> + a<sub>n+1</sub> ≥ S<sub>n</sub>). По теореме Вейерштрасса монотонная ограниченная последовательность имеет предел.</p>
+
+  <h4>Теорема 2.2. Первый признак сравнения</h4>
+  <p>Пусть <code>0 ≤ aₙ ≤ bₙ</code> для всех n (начиная с некоторого N):</p>
+  <div class="formula main-formula">∑bₙ сходится → ∑aₙ сходится
+∑aₙ расходится → ∑bₙ расходится</div>
+  <p><strong>Доказательство (первая часть):</strong> S<sub>n</sub><sup>(a)</sup> ≤ S<sub>n</sub><sup>(b)</sup> ≤ B (ограничена). Значит {S<sub>n</sub><sup>(a)</sup>} ограничена сверху, а по Теореме 2.1 ряд ∑a<sub>n</sub> сходится.</p>
+  <p>Мнемоника: <em>меньшее сходится с большим, большее расходится с меньшим</em>.</p>
+
+  <h4>Теорема 2.2 (продолжение). Второй признак сравнения (предельный)</h4>
+  <div class="formula main-formula">lim(n→∞) (aₙ / bₙ) = L,  0 < L < ∞  →  ряды ведут себя одинаково</div>
+  <p>Оба сходятся или оба расходятся.</p>
+  <p><strong>Доказательство:</strong> из определения предела: при больших n выполнено (L/2)·b<sub>n</sub> ≤ a<sub>n</sub> ≤ (3L/2)·b<sub>n</sub>. Дальше применяем первый признак сравнения.</p>
+
+  <p>Частные случаи:</p>
+  <ul>
+    <li><code>L = 0</code>: сходимость ∑b<sub>n</sub> → сходимость ∑a<sub>n</sub> (a<sub>n</sub> «мала» по сравнению с b<sub>n</sub>)</li>
+    <li><code>L = ∞</code>: расходимость ∑b<sub>n</sub> → расходимость ∑a<sub>n</sub></li>
+  </ul>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p>Исследовать <code>∑ 1/(n² + n)</code></p>
+    <p>Сравниваем с эталоном <code>∑ 1/n²</code> (сходится, p = 2 > 1):</p>
+    <p><code>lim [1/(n²+n)] / [1/n²] = lim n²/(n²+n) = lim 1/(1+1/n) = 1</code></p>
+    <p>0 &lt; 1 &lt; ∞ → ряд сходится.</p>
+  </div>
+
+  <div class="note tip">Эталонные ряды, которые нужно знать наизусть:
+    (1) Обобщённый гармонический ∑1/nᵖ: сходится при p > 1, расходится при p ≤ 1.
+    (2) Геометрический ∑qⁿ: сходится при |q| < 1 (сумма = 1/(1−q)).</div>
+</div>
+
+<!-- Билет 24 -->
+<div class="ticket" id="t24">
+  <div class="ticket-header">
+    <div class="ticket-num">24</div>
+    <h3>Признаки Даламбера, Коши, интегральный. Признак Раабе. Оценка остатка</h3>
+  </div>
+
+  <h4>Теоремы 2.3-2.4. Признак Даламбера</h4>
+  <p>Пусть a<sub>n</sub> > 0. Рассмотрим предел:</p>
+  <div class="formula main-formula">q = lim(n→∞) (aₙ₊₁ / aₙ)</div>
+  <ul>
+    <li><code>q &lt; 1</code> → ряд <strong>сходится</strong> (абсолютно)</li>
+    <li><code>q &gt; 1</code> → ряд <strong>расходится</strong> (а<sub>n</sub> → ∞)</li>
+    <li><code>q = 1</code> → <strong>признак не работает</strong> (нужны другие методы)</li>
+  </ul>
+  <p><strong>Идея доказательства (q &lt; 1):</strong> выбираем r: q &lt; r &lt; 1. Начиная с некоторого N: a<sub>n+1</sub>/a<sub>n</sub> &lt; r, т.е. a<sub>n+1</sub> &lt; r·a<sub>n</sub>. По индукции: a<sub>N+k</sub> &lt; r<sup>k</sup>·a<sub>N</sub>. Сравниваем с геометрической прогрессией ∑r<sup>k</sup>, которая сходится при r &lt; 1.</p>
+
+  <h4>Теоремы 2.5-2.6. Радикальный признак Коши</h4>
+  <div class="formula main-formula">q = lim(n→∞) ⁿ√aₙ = lim aₙ^(1/n)</div>
+  <ul>
+    <li><code>q &lt; 1</code> → ряд <strong>сходится</strong></li>
+    <li><code>q &gt; 1</code> → ряд <strong>расходится</strong></li>
+    <li><code>q = 1</code> → <strong>признак не работает</strong></li>
+  </ul>
+  <p><strong>Идея доказательства:</strong> если q &lt; 1, берём r: q &lt; r &lt; 1. Тогда при больших n: a<sub>n</sub><sup>1/n</sup> &lt; r, т.е. a<sub>n</sub> &lt; r<sup>n</sup>. Сравнение с ∑r<sup>n</sup>.</p>
+
+  <div class="note">Признак Коши «сильнее» Даламбера: если Даламбер даёт ответ, то Коши тоже, но не наоборот. Однако на практике Даламбер удобнее вычислять.</div>
+
+  <h4>Теорема 2.7. Интегральный признак Коши-Маклорена</h4>
+  <p>Пусть f(x) ≥ 0, непрерывна и монотонно убывает на [1, ∞), и a<sub>n</sub> = f(n). Тогда:</p>
+  <div class="formula main-formula">∑(n=1..∞) f(n)  и  ∫₁^∞ f(x)dx  сходятся или расходятся одновременно</div>
+  <p><strong>Идея доказательства:</strong> f убывает, поэтому f(n+1) ≤ ∫<sub>n</sub><sup>n+1</sup> f(x)dx ≤ f(n). Суммируем: S<sub>n</sub> − a<sub>1</sub> ≤ ∫<sub>1</sub><sup>n+1</sup> f(x)dx ≤ S<sub>n</sub>.</p>
+
+  <h4>Оценка остатка (через интеграл)</h4>
+  <div class="formula">∫ₙ₊₁^∞ f(x)dx ≤ rₙ ≤ ∫ₙ^∞ f(x)dx</div>
+
+  <h4>Следствие. Обобщённый гармонический ряд</h4>
+  <div class="formula main-formula">∑ 1/nᵖ : сходится при p > 1, расходится при p ≤ 1</div>
+  <p><strong>Доказательство:</strong> f(x) = 1/x<sup>p</sup> удовлетворяет условиям. ∫<sub>1</sub><sup>∞</sup> dx/x<sup>p</sup> = [x<sup>1−p</sup>/(1−p)]<sub>1</sub><sup>∞</sup>. При p > 1: сходится (= 1/(p−1)). При p &lt; 1: расходится. При p = 1: ∫dx/x = ln x → ∞.</p>
+
+  <h4>Признак Раабе</h4>
+  <p>Если признак Даламбера даёт q = 1 (неопределённость), применяем <strong>признак Раабе</strong>:</p>
+  <div class="formula main-formula">R = lim(n→∞) n · (aₙ/aₙ₊₁ − 1)</div>
+  <ul>
+    <li><code>R &gt; 1</code> → ряд <strong>сходится</strong></li>
+    <li><code>R &lt; 1</code> → ряд <strong>расходится</strong></li>
+    <li><code>R = 1</code> → признак не работает</li>
+  </ul>
+
+  <div class="example">
+    <div class="example-title">Пример (Даламбер)</div>
+    <p><code>∑ n!/nⁿ</code></p>
+    <p><code>aₙ₊₁/aₙ = (n+1)!·nⁿ / ((n+1)ⁿ⁺¹·n!) = nⁿ/(n+1)ⁿ = (n/(n+1))ⁿ = (1 − 1/(n+1))ⁿ → 1/e</code></p>
+    <p>q = 1/e &lt; 1 → ряд сходится.</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Когда какой признак</div>
+    <p><strong>Д'Аламбер:</strong> ряды с факториалами, степенями n. Пример: ∑n!/3ⁿ, ∑nⁿ/n!.</p>
+    <p><strong>Коши (радикальный):</strong> ряды вида ∑a<sub>n</sub><sup>n</sup>. Пример: ∑(n/(2n+1))ⁿ.</p>
+    <p><strong>Интегральный:</strong> когда f(n) легко интегрируется. Пример: ∑1/(n·ln²n).</p>
+    <p><strong>Раабе:</strong> когда Даламбер даёт 1. Пример: ∑1·3·5·...·(2n−1) / (2·4·6·...·(2n)).</p>
+  </div>
+</div>
+
+<!-- Билет 25 -->
+<div class="ticket" id="t25">
+  <div class="ticket-header">
+    <div class="ticket-num">25</div>
+    <h3>Знакочередующиеся ряды. Признак Лейбница. Оценка остатка</h3>
+  </div>
+
+  <h4>Определение</h4>
+  <p><strong>Знакочередующийся ряд</strong> -- ряд, в котором знаки строго чередуются:</p>
+  <div class="formula main-formula">∑ (−1)ⁿ⁺¹ · bₙ = b₁ − b₂ + b₃ − b₄ + ...  (bₙ > 0)</div>
+
+  <h4>Теорема 3.3. Признак Лейбница</h4>
+  <p>Знакочередующийся ряд ∑(−1)<sup>n+1</sup>b<sub>n</sub> (b<sub>n</sub> > 0) <strong>сходится</strong>, если выполнены два условия:</p>
+  <ol class="steps">
+    <li><code>bₙ₊₁ ≤ bₙ</code> -- члены монотонно убывают по модулю (b<sub>n</sub>↓)</li>
+    <li><code>lim(n→∞) bₙ = 0</code></li>
+  </ol>
+
+  <h4>Доказательство сходимости</h4>
+  <p><strong>Шаг 1.</strong> Рассматриваем S<sub>2n</sub> (чётные частичные суммы):</p>
+  <div class="formula">S₂ₙ = (b₁ − b₂) + (b₃ − b₄) + ... + (b₂ₙ₋₁ − b₂ₙ)</div>
+  <p>Каждая скобка ≥ 0 (т.к. b<sub>k</sub>↓), значит S<sub>2n</sub> монотонно не убывает.</p>
+
+  <p><strong>Шаг 2.</strong> Перегруппировка:</p>
+  <div class="formula">S₂ₙ = b₁ − (b₂ − b₃) − (b₄ − b₅) − ... − b₂ₙ ≤ b₁</div>
+  <p>Значит S<sub>2n</sub> ограничена сверху. По теореме Вейерштрасса ∃ lim S<sub>2n</sub> = S.</p>
+
+  <p><strong>Шаг 3.</strong> S<sub>2n+1</sub> = S<sub>2n</sub> + b<sub>2n+1</sub> → S + 0 = S.</p>
+  <p>Итого: lim S<sub>n</sub> = S -- ряд сходится.</p>
+
+  <h4>Оценка остатка</h4>
+  <div class="formula main-formula">|rₘ| = |S − Sₘ| ≤ bₘ₊₁</div>
+  <p>Погрешность не превышает <strong>первого отброшенного члена</strong> (по модулю).</p>
+
+  <p><strong>Доказательство оценки:</strong></p>
+  <p>Остаток: r<sub>m</sub> = b<sub>m+1</sub> − b<sub>m+2</sub> + b<sub>m+3</sub> − ...</p>
+  <p>Группируем: r<sub>m</sub> = (b<sub>m+1</sub> − b<sub>m+2</sub>) + (b<sub>m+3</sub> − b<sub>m+4</sub>) + ... ≥ 0</p>
+  <p>Группируем иначе: r<sub>m</sub> = b<sub>m+1</sub> − (b<sub>m+2</sub> − b<sub>m+3</sub>) − ... ≤ b<sub>m+1</sub></p>
+  <p>Итого: <code>0 ≤ rₘ ≤ bₘ₊₁</code></p>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>∑ (−1)ⁿ⁺¹/n = 1 − 1/2 + 1/3 − 1/4 + ...</code></p>
+    <p>b<sub>n</sub> = 1/n: убывает, lim = 0 → сходится (сумма = ln 2).</p>
+    <p>Берём S₃ = 1 − 1/2 + 1/3 = 5/6: погрешность |r₃| ≤ b₄ = 1/4 = 0.25.</p>
+  </div>
+</div>
+
+<!-- Билет 26 -->
+<div class="ticket" id="t26">
+  <div class="ticket-header">
+    <div class="ticket-num">26</div>
+    <h3>Знакопеременные ряды. Абсолютная и условная сходимость</h3>
+  </div>
+
+  <h4>Знакопеременный ряд</h4>
+  <p>Ряд ∑a<sub>n</sub>, члены которого имеют <strong>произвольные знаки</strong> (не обязательно чередуются). Знакочередующийся ряд -- частный случай.</p>
+
+  <h4>Теорема 3.1. Абсолютная сходимость → сходимость</h4>
+  <div class="formula main-formula">∑|aₙ| сходится  →  ∑aₙ сходится</div>
+  <p><strong>Доказательство:</strong> Пусть ∑|a<sub>n</sub>| сходится. По критерию Больцано-Коши для ∑|a<sub>n</sub>|: для ∀ε > 0 ∃N: |a<sub>n+1</sub>| + ... + |a<sub>n+p</sub>| &lt; ε при n > N. Но по неравенству треугольника: |a<sub>n+1</sub> + ... + a<sub>n+p</sub>| ≤ |a<sub>n+1</sub>| + ... + |a<sub>n+p</sub>| &lt; ε. Значит критерий Больцано-Коши выполнен и для ∑a<sub>n</sub>.</p>
+
+  <h4>Определение 3.1. Типы сходимости</h4>
+  <div class="formula main-formula">Абсолютная сходимость: ∑aₙ сходится и ∑|aₙ| сходится
+Условная сходимость: ∑aₙ сходится, но ∑|aₙ| расходится</div>
+
+  <div class="example">
+    <div class="example-title">Примеры</div>
+    <p><code>∑ (−1)ⁿ⁺¹/n²</code> — <strong>абсолютно</strong> сходится (т.к. ∑1/n² сходится, p=2 > 1)</p>
+    <p><code>∑ (−1)ⁿ⁺¹/n</code> — <strong>условно</strong> сходится (сам сходится по Лейбницу, но ∑1/n расходится)</p>
+  </div>
+
+  <h4>Теорема 3.4. Произведение рядов (по Коши)</h4>
+  <p>Если ∑a<sub>n</sub> = A и ∑b<sub>n</sub> = B сходятся <strong>абсолютно</strong>, то их произведение по Коши:</p>
+  <div class="formula">c₁ = a₁b₁, c₂ = a₁b₂+a₂b₁, c₃ = a₁b₃+a₂b₂+a₃b₁, ...
+cₙ = ∑(k=1..n) aₖ·bₙ₋ₖ₊₁</div>
+  <p>сходится абсолютно и ∑c<sub>n</sub> = A·B.</p>
+
+  <h4>Теорема Римана (о перестановке)</h4>
+  <p>Если ряд сходится <strong>условно</strong>, то перестановкой его членов можно получить ряд с <strong>любой</strong> наперёд заданной суммой (или расходящийся ряд).</p>
+
+  <div class="note warn">Вот почему абсолютная сходимость важна: в абсолютно сходящихся рядах перестановка членов не меняет сумму. В условно сходящихся -- сумма зависит от порядка!</div>
+</div>
+
+<!-- Билет 27 -->
+<div class="ticket" id="t27">
+  <div class="ticket-header">
+    <div class="ticket-num">27</div>
+    <h3>Признаки сходимости знакопеременных рядов. Дирихле, Абель</h3>
+  </div>
+
+  <h4>Основной метод: через абсолютную сходимость</h4>
+  <div class="formula main-formula">∑|aₙ| сходится → ∑aₙ сходится (абсолютно)</div>
+  <p>Сначала исследуем ∑|a<sub>n</sub>| признаками для рядов с положительными членами (Даламбер, Коши, сравнение, интегральный). Если он сходится -- готово.</p>
+
+  <h4>Теорема 3.2. Признак Дирихле</h4>
+  <p>Ряд <code>∑ aₙ·bₙ</code> <strong>сходится</strong>, если:</p>
+  <ol class="steps">
+    <li>Частичные суммы ∑b<sub>n</sub> <strong>ограничены</strong>: |B<sub>n</sub>| = |b₁ + b₂ + ... + bₙ| ≤ M для всех n</li>
+    <li>Последовательность {a<sub>n</sub>} <strong>монотонно стремится к нулю</strong>: a<sub>n</sub>↓0 (или a<sub>n</sub>↑0)</li>
+  </ol>
+
+  <h4>Следствие. Признак Абеля</h4>
+  <p>Ряд <code>∑ aₙ·bₙ</code> <strong>сходится</strong>, если:</p>
+  <ol class="steps">
+    <li>Ряд ∑b<sub>n</sub> <strong>сходится</strong></li>
+    <li>Последовательность {a<sub>n</sub>} <strong>монотонна и ограничена</strong></li>
+  </ol>
+  <p><em>Почему это следствие Дирихле:</em> если ∑b<sub>n</sub> сходится, то его частичные суммы автоматически ограничены. Монотонная ограниченная последовательность имеет предел c, и a<sub>n</sub> − c → 0 монотонно. Разбиваем: ∑a<sub>n</sub>b<sub>n</sub> = ∑(a<sub>n</sub>−c)b<sub>n</sub> + c·∑b<sub>n</sub>.</p>
+
+  <h4>Связь Лейбница и Дирихле</h4>
+  <p><strong>Признак Лейбница -- частный случай Дирихле</strong> при b<sub>n</sub> = (−1)<sup>n</sup>:</p>
+  <p>Частичные суммы ∑(−1)<sup>k</sup> ограничены (колеблются между −1 и 0), а a<sub>n</sub> = b<sub>n</sub> монотонно стремится к 0.</p>
+
+  <h4>Критерий Больцано-Коши для числовых рядов</h4>
+  <p>Ряд ∑a<sub>n</sub> сходится ⟺ для ∀ε > 0 ∃N: для всех n > N и ∀p ≥ 1:</p>
+  <div class="formula">|aₙ₊₁ + aₙ₊₂ + ... + aₙ₊ₚ| < ε</div>
+  <p>Любая «хвостовая» сумма сколь угодно мала. Этот критерий используется при доказательстве теорем (Дирихле, Абеля), но редко для конкретных рядов.</p>
+
+  <div class="note tip">Алгоритм на экзамене: (1) Проверить необходимый признак lim aₙ = 0. (2) Проверить абсолютную сходимость через ∑|aₙ|. (3) Если ∑|aₙ| расходится -- попробовать Лейбниц/Дирихле/Абель для условной сходимости.</div>
+</div>
+
+<!-- ===== ФУНКЦИОНАЛЬНЫЕ РЯДЫ ===== -->
+
+<div class="group-divider"><span>Функциональные ряды (Лекции 10-11)</span></div>
+
+<!-- Билет 28 -->
+<div class="ticket" id="t28">
+  <div class="ticket-header">
+    <div class="ticket-num">28</div>
+    <h3>Функциональный ряд. Область сходимости. Равномерная сходимость</h3>
+  </div>
+
+  <h4>Определения 4.1-4.2</h4>
+  <p><strong>Функциональный ряд</strong> -- ряд, членами которого являются функции:</p>
+  <div class="formula">∑ uₙ(x) = u₁(x) + u₂(x) + u₃(x) + ...</div>
+  <p>При каждом фиксированном x<sub>0</sub> получаем обычный числовой ряд ∑u<sub>n</sub>(x<sub>0</sub>).</p>
+
+  <p><strong>Область сходимости</strong> Ω -- множество всех x, при которых числовой ряд сходится.</p>
+  <p><strong>Сумма ряда</strong>: S(x) = lim S<sub>n</sub>(x), x ∈ Ω.</p>
+
+  <h4>Поточечная сходимость</h4>
+  <p>∀x ∈ Ω, ∀ε > 0 ∃N = N(ε, <strong>x</strong>): при n > N выполнено |S(x) − S<sub>n</sub>(x)| &lt; ε.</p>
+  <p>N зависит от x -- для разных точек может потребоваться разное число членов.</p>
+
+  <h4>Определение 4.3. Равномерная сходимость</h4>
+  <p>∑u<sub>n</sub>(x) сходится <strong>равномерно</strong> на Ω, если:</p>
+  <div class="formula main-formula">∀ε > 0 ∃N (НЕ зависящий от x): ∀n > N, ∀x ∈ Ω:
+|S(x) − Sₙ(x)| < ε</div>
+  <p><strong>Ключевое отличие:</strong> одно и то же N работает для <strong>всех x сразу</strong>!</p>
+  <p>Обозначение: ∑u<sub>n</sub>(x) ⇒ S(x) на Ω (двойная стрелка).</p>
+
+  <h4>Теорема 4.1. Необходимый признак</h4>
+  <p>Если ∑u<sub>n</sub>(x) ⇒ на Ω, то u<sub>n</sub>(x) ⇒ 0 на Ω (равномерно стремится к нулю).</p>
+
+  <h4>Геометрическая интерпретация</h4>
+  <p>Равномерная сходимость означает, что графики S<sub>n</sub>(x) «равномерно приближаются» к S(x) -- при больших n <strong>весь</strong> график S<sub>n</sub>(x) лежит в ε-полосе вокруг S(x).</p>
+
+  <div class="note">Равномерная сходимость -- ключевое условие для переноса свойств (непрерывность, интегрируемость, дифференцируемость) с членов ряда на его сумму. Без неё эти свойства могут нарушаться.</div>
+</div>
+
+<!-- Билет 29 -->
+<div class="ticket" id="t29">
+  <div class="ticket-header">
+    <div class="ticket-num">29</div>
+    <h3>Критерий Больцано-Коши. Признак Вейерштрасса</h3>
+  </div>
+
+  <h4>Критерий Больцано-Коши (равномерная сходимость)</h4>
+  <p>∑u<sub>n</sub>(x) сходится <strong>равномерно</strong> на X ⟺</p>
+  <p>∀ε > 0 ∃N: для всех n > N, ∀p ≥ 1, <strong>∀x ∈ X</strong>:</p>
+  <div class="formula main-formula">|uₙ₊₁(x) + uₙ₊₂(x) + ... + uₙ₊ₚ(x)| < ε</div>
+  <p>Аналог числового критерия, но с требованием <strong>одновременно для всех x</strong>.</p>
+
+  <div class="note">Критерий Больцано-Коши полезен для <strong>доказательства неравномерной</strong> сходимости: достаточно предъявить последовательности x<sub>n</sub>, n<sub>k</sub>, p<sub>k</sub>, при которых частичная сумма не стремится к нулю.</div>
+
+  <h4>Теорема 4.3. Признак Вейерштрасса (мажорантный)</h4>
+  <p>Если существует сходящийся <strong>числовой</strong> ряд ∑c<sub>n</sub> (c<sub>n</sub> ≥ 0) такой, что:</p>
+  <div class="formula main-formula">|uₙ(x)| ≤ cₙ  для всех x ∈ X и всех n ≥ 1</div>
+  <p>то ∑u<sub>n</sub>(x) <strong>сходится равномерно и абсолютно</strong> на X.</p>
+  <p>Ряд ∑c<sub>n</sub> называется <em>мажорантным рядом</em> (мажорантой).</p>
+
+  <p><strong>Доказательство:</strong> по критерию Больцано-Коши: |u<sub>n+1</sub>(x) + ... + u<sub>n+p</sub>(x)| ≤ |u<sub>n+1</sub>(x)| + ... + |u<sub>n+p</sub>(x)| ≤ c<sub>n+1</sub> + ... + c<sub>n+p</sub> &lt; ε (т.к. ∑c<sub>n</sub> сходится). Причём N не зависит от x.</p>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p>Ряд <code>∑ sin(nx)/n²</code></p>
+    <p><code>|sin(nx)/n²| ≤ 1/n²</code> для всех x</p>
+    <p>∑1/n² сходится (p = 2 > 1) → по Вейерштрассу ряд сходится равномерно на всей R.</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример: когда Вейерштрасс не работает</div>
+    <p>Ряд <code>∑ (−1)ⁿ·xⁿ/n</code> на (−1, 1).</p>
+    <p>Попытка: |x<sup>n</sup>/n| ≤ 1/n -- но ∑1/n расходится! Вейерштрасс не применим.</p>
+    <p>Ряд всё же сходится равномерно на [−r, r] при r &lt; 1 (мажоранта ∑rⁿ/n сходится).</p>
+  </div>
+
+  <div class="note tip">Признак Вейерштрасса -- самый простой и частый способ доказать равномерную сходимость. Найди мажоранту -- числовой ряд, которым можно «зажать» функциональный!</div>
+</div>
+
+<!-- Билет 30 -->
+<div class="ticket" id="t30">
+  <div class="ticket-header">
+    <div class="ticket-num">30</div>
+    <h3>Непрерывность суммы функционального ряда</h3>
+  </div>
+
+  <h4>Теорема 5.1 (о непрерывности суммы)</h4>
+  <p>Если:</p>
+  <ul>
+    <li>Все u<sub>n</sub>(x) <strong>непрерывны</strong> на [a, b]</li>
+    <li>∑u<sub>n</sub>(x) сходится <strong>равномерно</strong> на [a, b]</li>
+  </ul>
+  <p>то сумма S(x) = ∑u<sub>n</sub>(x) тоже <strong>непрерывна</strong> на [a, b].</p>
+  <div class="formula main-formula">uₙ непрерывны + равномерная сходимость → S(x) непрерывна</div>
+
+  <p><strong>Эквивалентная формулировка</strong> (почленный предельный переход):</p>
+  <div class="formula">lim(x→x₀) ∑uₙ(x) = ∑ lim(x→x₀) uₙ(x) = ∑uₙ(x₀)</div>
+  <p>Можно менять местами знак предела и знак суммы ряда.</p>
+
+  <h4>Идея доказательства</h4>
+  <p>|S(x) − S(x₀)| ≤ |S(x) − S<sub>n</sub>(x)| + |S<sub>n</sub>(x) − S<sub>n</sub>(x₀)| + |S<sub>n</sub>(x₀) − S(x₀)|</p>
+  <p>Первое и третье слагаемое &lt; ε/3 (равномерная сходимость, N не зависит от x). Второе &lt; ε/3 (непрерывность S<sub>n</sub> как конечной суммы непрерывных).</p>
+
+  <div class="note warn">Без равномерной сходимости непрерывность может нарушаться! Классический пример: ∑(xⁿ − xⁿ⁻¹) на [0,1] сходится поточечно к разрывной функции (0 при 0 ≤ x &lt; 1, −1 при x = 1), хотя каждый член непрерывен.</div>
+
+  <div class="note">Следствие: если сумма ряда непрерывных функций разрывна, то сходимость точно неравномерна. Это удобный способ <strong>опровергнуть</strong> равномерную сходимость.</div>
+</div>
+
+<!-- Билет 31 -->
+<div class="ticket" id="t31">
+  <div class="ticket-header">
+    <div class="ticket-num">31</div>
+    <h3>Почленное интегрирование функционального ряда</h3>
+  </div>
+
+  <h4>Теорема 5.2</h4>
+  <p>Если:</p>
+  <ul>
+    <li>Все u<sub>n</sub>(x) <strong>непрерывны</strong> на [a, b]</li>
+    <li>∑u<sub>n</sub>(x) сходится <strong>равномерно</strong> на [a, b]</li>
+  </ul>
+  <p>то ряд можно <strong>интегрировать почленно</strong>:</p>
+  <div class="formula main-formula">∫ₐᵇ S(x)dx = ∫ₐᵇ [∑uₙ(x)] dx = ∑ ∫ₐᵇ uₙ(x) dx</div>
+  <p>Знак суммы ряда и знак интеграла можно менять местами.</p>
+
+  <h4>Идея доказательства</h4>
+  <p>|∫<sub>a</sub><sup>b</sup> S(x)dx − ∫<sub>a</sub><sup>b</sup> S<sub>n</sub>(x)dx| = |∫<sub>a</sub><sup>b</sup> [S(x) − S<sub>n</sub>(x)]dx| ≤ ∫<sub>a</sub><sup>b</sup> |S(x) − S<sub>n</sub>(x)|dx ≤ ε·(b−a)</p>
+  <p>Последнее неравенство -- из определения равномерной сходимости (|S − S<sub>n</sub>| &lt; ε для всех x).</p>
+
+  <div class="note tip">На практике: если доказана равномерная сходимость (например, по Вейерштрассу), можно смело интегрировать каждый член отдельно и сложить результаты.</div>
+
+  <div class="note">Интегрирование «сглаживает», поэтому условия для почленного интегрирования мягче, чем для дифференцирования. Достаточно равномерной сходимости самого ряда.</div>
+</div>
+
+<!-- Билет 32 -->
+<div class="ticket" id="t32">
+  <div class="ticket-header">
+    <div class="ticket-num">32</div>
+    <h3>Почленное дифференцирование функционального ряда</h3>
+  </div>
+
+  <h4>Теорема 5.3</h4>
+  <p>Если:</p>
+  <ol class="steps">
+    <li>Все u<sub>n</sub>(x) имеют <strong>непрерывные производные</strong> u<sub>n</sub>'(x) на [a, b]</li>
+    <li>Ряд ∑u<sub>n</sub>(x) <strong>сходится хотя бы в одной точке</strong> x₀ ∈ [a, b]</li>
+    <li>Ряд производных ∑u<sub>n</sub>'(x) сходится <strong>равномерно</strong> на [a, b]</li>
+  </ol>
+  <p>то:</p>
+  <div class="formula main-formula">S'(x) = (∑uₙ(x))' = ∑ uₙ'(x)  на [a, b]</div>
+  <p>Причём ∑u<sub>n</sub>(x) тоже сходится равномерно на [a, b].</p>
+
+  <h4>Идея доказательства</h4>
+  <p>Положим φ(x) = ∑u<sub>n</sub>'(x) (сходится равномерно по условию 3). По теореме о почленном интегрировании:</p>
+  <div class="formula">∫ₓ₀ˣ φ(t)dt = ∑ ∫ₓ₀ˣ uₙ'(t)dt = ∑ [uₙ(x) − uₙ(x₀)] = S(x) − S(x₀)</div>
+  <p>Дифференцируя: S'(x) = φ(x) = ∑u<sub>n</sub>'(x).</p>
+
+  <div class="note warn">Ключевое отличие от интегрирования: здесь нужна равномерная сходимость ряда ПРОИЗВОДНЫХ ∑uₙ'(x), а не самого ряда! Это более жёсткое условие.</div>
+
+  <div class="note">Мнемоника: интегрирование «сглаживает» (мягкие условия), дифференцирование «обостряет» (жёсткие условия). Для дифференцирования нужно контролировать производные.</div>
+</div>
+
+<!-- ===== СТЕПЕННЫЕ РЯДЫ ===== -->
+
+<div class="group-divider"><span>Степенные ряды (Лекция 13)</span></div>
+
+<!-- Билет 33 -->
+<div class="ticket" id="t33">
+  <div class="ticket-header">
+    <div class="ticket-num">33</div>
+    <h3>Степенной ряд. Теорема Абеля. Радиус сходимости</h3>
+  </div>
+
+  <h4>Определение</h4>
+  <div class="formula main-formula">∑(n=0..∞) cₙ(x − x₀)ⁿ = c₀ + c₁(x−x₀) + c₂(x−x₀)² + ...</div>
+  <p>x₀ -- <em>центр</em> ряда, c<sub>n</sub> -- <em>коэффициенты</em>. При x₀ = 0: ∑c<sub>n</sub>x<sup>n</sup>.</p>
+
+  <h4>Теорема 6.1 (Абеля). Структура области сходимости</h4>
+  <p><strong>Часть 1.</strong> Если степенной ряд сходится при x = x₁ ≠ x₀, то он сходится <strong>абсолютно</strong> для всех x таких, что |x − x₀| &lt; |x₁ − x₀|.</p>
+  <p><strong>Часть 2.</strong> Если ряд расходится при x = x₂, то он расходится для всех x: |x − x₀| > |x₂ − x₀|.</p>
+
+  <h4>Доказательство (часть 1)</h4>
+  <p>Ряд сходится при x₁ → c<sub>n</sub>(x₁−x₀)<sup>n</sup> → 0 → |c<sub>n</sub>(x₁−x₀)<sup>n</sup>| ≤ M для всех n.</p>
+  <p>Пусть |x−x₀| &lt; |x₁−x₀|. Обозначим q = |x−x₀|/|x₁−x₀| &lt; 1.</p>
+  <div class="formula">|cₙ(x−x₀)ⁿ| = |cₙ(x₁−x₀)ⁿ| · |(x−x₀)/(x₁−x₀)|ⁿ ≤ M·qⁿ</div>
+  <p>Ряд ∑M·q<sup>n</sup> -- сходящаяся геометрическая прогрессия (q &lt; 1). По признаку сравнения ∑|c<sub>n</sub>(x−x₀)<sup>n</sup>| сходится.</p>
+
+  <h4>Радиус сходимости R</h4>
+  <p>Существует число R ∈ [0, +∞] такое, что:</p>
+  <ul>
+    <li>|x − x₀| &lt; R → ряд <strong>сходится абсолютно</strong></li>
+    <li>|x − x₀| > R → ряд <strong>расходится</strong></li>
+    <li>|x − x₀| = R → нужно проверять <strong>отдельно</strong> (может быть и так, и так)</li>
+  </ul>
+  <p>Интервал (x₀ − R, x₀ + R) -- <em>интервал сходимости</em>. Область сходимости = интервал + проверка концов.</p>
+
+  <h4>Формулы для вычисления R</h4>
+  <div class="formula main-formula">R = lim(n→∞) |cₙ / cₙ₊₁|  (формула Даламбера, если предел существует)</div>
+  <div class="formula">1/R = lim sup(n→∞) |cₙ|^(1/n)  (формула Коши-Адамара, всегда работает)</div>
+  <p>Соглашения: R = ∞ означает сходимость при всех x; R = 0 означает сходимость только при x = x₀.</p>
+
+  <h4>Равномерная сходимость</h4>
+  <p>Степенной ряд сходится <strong>равномерно</strong> на любом отрезке [x₀−r, x₀+r], где 0 &lt; r &lt; R.</p>
+  <p><em>Доказательство:</em> |c<sub>n</sub>(x−x₀)<sup>n</sup>| ≤ |c<sub>n</sub>|·r<sup>n</sup>, а ∑|c<sub>n</sub>|r<sup>n</sup> сходится (т.к. r &lt; R). По Вейерштрассу.</p>
+
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>∑ xⁿ/n!</code></p>
+    <p><code>|cₙ/cₙ₊₁| = |1/n!| / |1/(n+1)!| = (n+1)! / n! = n+1 → ∞</code></p>
+    <p>R = ∞ -- ряд сходится при всех x (это e<sup>x</sup>).</p>
+  </div>
+</div>
+
+<!-- Билет 34 -->
+<div class="ticket" id="t34">
+  <div class="ticket-header">
+    <div class="ticket-num">34</div>
+    <h3>Свойства суммы степенного ряда. Теорема Абеля о непрерывности на конце</h3>
+  </div>
+
+  <h4>Теорема 6.3. Почленное интегрирование степенного ряда</h4>
+  <p>Если S(x) = ∑c<sub>n</sub>(x−x₀)<sup>n</sup> с радиусом R, то:</p>
+  <div class="formula main-formula">∫ₓ₀ˣ S(t)dt = ∑ cₙ(x−x₀)ⁿ⁺¹/(n+1)</div>
+  <p><strong>Радиус сходимости не меняется</strong> (остаётся R).</p>
+
+  <h4>Теорема 6.4. Почленное дифференцирование степенного ряда</h4>
+  <div class="formula main-formula">S'(x) = ∑ n·cₙ(x−x₀)ⁿ⁻¹</div>
+  <p><strong>Радиус сходимости не меняется</strong> (остаётся R).</p>
+
+  <p><em>Доказательство сохранения R при дифференцировании:</em> для ряда ∑n·c<sub>n</sub>·t<sup>n−1</sup> применим Коши-Адамара: lim sup (n|c<sub>n</sub>|)<sup>1/n</sup> = lim sup |c<sub>n</sub>|<sup>1/n</sup> · lim n<sup>1/n</sup> = 1/R · 1 = 1/R. Значит R' = R.</p>
+
+  <div class="note tip">Степенные ряды можно дифференцировать и интегрировать почленно <strong>сколько угодно раз</strong>! Радиус R при этом сохраняется. Может измениться только поведение на концах интервала.</div>
+
+  <h4>Непрерывность суммы</h4>
+  <p>Сумма S(x) = ∑c<sub>n</sub>(x−x₀)<sup>n</sup> <strong>непрерывна</strong> на (x₀−R, x₀+R). Это следует из равномерной сходимости на каждом [x₀−r, x₀+r] (r &lt; R) и теоремы 5.1.</p>
+
+  <h4>Теорема 6.2 (Абеля, о непрерывности на конце)</h4>
+  <p>Если степенной ряд ∑c<sub>n</sub>x<sup>n</sup> сходится при x = R (на правом конце интервала), то:</p>
+  <div class="formula main-formula">lim(x→R⁻) S(x) = S(R) = ∑ cₙRⁿ</div>
+  <p>То есть сумма ряда <strong>непрерывна слева</strong> в точке x = R. Аналогично для левого конца x = −R (непрерывна справа).</p>
+
+  <div class="example">
+    <div class="example-title">Применение теоремы Абеля</div>
+    <p>Ряд <code>∑(−1)ⁿ⁺¹xⁿ/n</code> имеет R = 1. При x = 1 получаем ∑(−1)<sup>n+1</sup>/n = ln 2 (сходится по Лейбницу).</p>
+    <p>Сумма ряда: S(x) = ln(1+x) на (−1, 1).</p>
+    <p>По теореме Абеля: lim(x→1⁻) ln(1+x) = S(1), т.е. ln 2 = ∑(−1)<sup>n+1</sup>/n.</p>
+  </div>
+</div>
+
+<!-- Билет 35 -->
+<div class="ticket" id="t35">
+  <div class="ticket-header">
+    <div class="ticket-num">35</div>
+    <h3>Ряд Тейлора. Ряд Маклорена. Достаточное условие разложимости</h3>
+  </div>
+
+  <h4>Ряд Тейлора</h4>
+  <p>Если f(x) бесконечно дифференцируема в окрестности точки x₀, то ей можно <strong>формально</strong> сопоставить степенной ряд:</p>
+  <div class="formula main-formula">∑(n=0..∞) f⁽ⁿ⁾(x₀)/n! · (x − x₀)ⁿ</div>
+
+  <h4>Ряд Маклорена</h4>
+  <p>Частный случай при x₀ = 0:</p>
+  <div class="formula main-formula">f(x) = f(0) + f'(0)·x + f''(0)·x²/2! + f'''(0)·x³/3! + ...</div>
+
+  <h4>Формула Тейлора с остатком</h4>
+  <div class="formula">f(x) = Sₙ(x) + Rₙ(x)</div>
+  <p>где S<sub>n</sub>(x) = ∑(k=0..n) f<sup>(k)</sup>(x₀)/k! · (x−x₀)<sup>k</sup> -- многочлен Тейлора степени n.</p>
+
+  <p><strong>Остаток в форме Лагранжа:</strong></p>
+  <div class="formula">Rₙ(x) = f⁽ⁿ⁺¹⁾(ξ)/(n+1)! · (x − x₀)ⁿ⁺¹,  где ξ между x₀ и x</div>
+
+  <h4>Критерий разложимости</h4>
+  <div class="formula main-formula">f(x) = ∑ f⁽ⁿ⁾(x₀)/n! · (x−x₀)ⁿ  ⟺  lim(n→∞) Rₙ(x) = 0</div>
+  <p>Ряд Тейлора сходится к f(x), если и только если остаток стремится к нулю.</p>
+
+  <h4>Теорема 6.5. Достаточное условие</h4>
+  <p>Если существует M > 0 такое, что <code>|f⁽ⁿ⁾(x)| ≤ M</code> для <strong>всех n</strong> и всех x из некоторой окрестности x₀, то ряд Тейлора сходится к f(x).</p>
+  <p><strong>Доказательство:</strong> используем остаток Лагранжа. Пусть |x − x₀| ≤ H. Тогда:</p>
+  <div class="formula">|Rₙ(x)| ≤ M · Hⁿ⁺¹/(n+1)! → 0  при n → ∞</div>
+  <p>Потому что факториал растёт быстрее любой степени: H<sup>n</sup>/n! → 0 для любого H.</p>
+
+  <div class="note warn">Не всякая бесконечно дифференцируемая функция разложима в ряд Тейлора! Контрпример: f(x) = e<sup>−1/x²</sup> при x≠0, f(0) = 0. Все производные в нуле равны 0, ряд Маклорена = 0, но f(x) ≠ 0 при x ≠ 0.</div>
+</div>
+
+<!-- Билет 36 -->
+<div class="ticket" id="t36">
+  <div class="ticket-header">
+    <div class="ticket-num">36</div>
+    <h3>Разложение основных элементарных функций в ряд Маклорена</h3>
+  </div>
+
+  <h4>Таблица разложений (знать наизусть!)</h4>
+
+  <div class="formula main-formula">eˣ = ∑(n=0..∞) xⁿ/n! = 1 + x + x²/2! + x³/3! + ...     R = ∞</div>
+
+  <div class="formula main-formula">sin x = ∑(n=0..∞) (−1)ⁿ · x²ⁿ⁺¹/(2n+1)! = x − x³/3! + x⁵/5! − ...     R = ∞</div>
+
+  <div class="formula main-formula">cos x = ∑(n=0..∞) (−1)ⁿ · x²ⁿ/(2n)! = 1 − x²/2! + x⁴/4! − ...     R = ∞</div>
+
+  <div class="formula main-formula">ch x = ∑(n=0..∞) x²ⁿ/(2n)! = 1 + x²/2! + x⁴/4! + ...     R = ∞</div>
+
+  <div class="formula main-formula">sh x = ∑(n=0..∞) x²ⁿ⁺¹/(2n+1)! = x + x³/3! + x⁵/5! + ...     R = ∞</div>
+
+  <div class="formula main-formula">ln(1+x) = ∑(n=1..∞) (−1)ⁿ⁺¹ · xⁿ/n = x − x²/2 + x³/3 − ...     R = 1, включая x = 1</div>
+
+  <div class="formula main-formula">1/(1−x) = ∑(n=0..∞) xⁿ = 1 + x + x² + x³ + ...     R = 1</div>
+
+  <div class="formula main-formula">(1+x)ᵅ = ∑(n=0..∞) C(α,n)·xⁿ = 1 + αx + α(α−1)x²/2! + ...     R = 1</div>
+  <p>где C(α,n) = α(α−1)...(α−n+1)/n! -- обобщённые биномиальные коэффициенты.</p>
+
+  <div class="formula main-formula">arctg x = ∑(n=0..∞) (−1)ⁿ · x²ⁿ⁺¹/(2n+1) = x − x³/3 + x⁵/5 − ...     R = 1, включая x = ±1</div>
+
+  <h4>Вывод разложения e<sup>x</sup></h4>
+  <p>f(x) = e<sup>x</sup> → f<sup>(n)</sup>(x) = e<sup>x</sup> → f<sup>(n)</sup>(0) = 1 для всех n.</p>
+  <p>Ряд Маклорена: e<sup>x</sup> = ∑ x<sup>n</sup>/n!</p>
+  <p>Проверка сходимости к f: |f<sup>(n+1)</sup>(ξ)| = e<sup>ξ</sup> ≤ e<sup>|x|</sup>. Тогда |R<sub>n</sub>| ≤ e<sup>|x|</sup>·|x|<sup>n+1</sup>/(n+1)! → 0 для любого x.</p>
+
+  <h4>Вывод разложения sin x</h4>
+  <p>f<sup>(n)</sup>(0): последовательность 0, 1, 0, −1, 0, 1, ... (цикл с периодом 4). Ненулевые только при нечётных степенях.</p>
+  <p>|f<sup>(n)</sup>(x)| ≤ 1 для всех n и x → по Теореме 6.5 ряд сходится к sin x при всех x.</p>
+
+  <h4>Вывод разложения ln(1+x)</h4>
+  <p>Начинаем с 1/(1+x) = ∑(−1)<sup>n</sup>x<sup>n</sup> (|x| &lt; 1). Интегрируем почленно:</p>
+  <div class="formula">∫₀ˣ dt/(1+t) = ln(1+x) = ∑(−1)ⁿ · xⁿ⁺¹/(n+1) = ∑(−1)ⁿ⁺¹ · xⁿ/n</div>
+  <p>При x = 1 ряд сходится (по Лейбницу), и по теореме Абеля ln 2 = 1 − 1/2 + 1/3 − ...</p>
+
+  <div class="note tip">Из базовых разложений можно получать новые подстановкой, дифференцированием, интегрированием. Например: e<sup>−x²</sup> = ∑(−1)<sup>n</sup>x<sup>2n</sup>/n! (подставили −x² вместо x в e<sup>x</sup>).</div>
+</div>
+
+<!-- Билет 37 -->
+<div class="ticket" id="t37">
+  <div class="ticket-header">
+    <div class="ticket-num">37</div>
+    <h3>Применение рядов Тейлора для приближённых вычислений</h3>
+  </div>
+
+  <h4>Идея метода</h4>
+  <p>Заменяем функцию частичной суммой ряда Тейлора: f(x) ≈ S<sub>n</sub>(x). Остаточный член R<sub>n</sub>(x) даёт оценку погрешности.</p>
+
+  <h4>Оценка погрешности</h4>
+  <ul>
+    <li><strong>Для знакочередующихся рядов</strong> (Лейбниц): |R<sub>n</sub>| ≤ |a<sub>n+1</sub>| -- первый отброшенный член</li>
+    <li><strong>Для знакоположительных</strong>: остаток Лагранжа |R<sub>n</sub>| ≤ M·|x|<sup>n+1</sup>/(n+1)!</li>
+  </ul>
+
+  <h4>Вычисление значений функций</h4>
+  <div class="example">
+    <div class="example-title">Пример: вычислить e с точностью 0.001</div>
+    <p>e = e<sup>1</sup> = ∑ 1/n! = 1 + 1 + 1/2! + 1/3! + ...</p>
+    <p>Ряд знакоположительный. Используем оценку: R<sub>n</sub> &lt; e·1<sup>n+1</sup>/(n+1)! ≤ 3/(n+1)!.</p>
+    <p>3/7! = 3/5040 ≈ 0.0006 &lt; 0.001 → достаточно 7 членов (n=0..6).</p>
+    <p>e ≈ 1 + 1 + 0.5 + 0.1667 + 0.0417 + 0.0083 + 0.0014 = 2.7181</p>
+  </div>
+
+  <h4>Вычисление интегралов, не берущихся аналитически</h4>
+  <div class="example">
+    <div class="example-title">Пример: ∫₀¹ e^(−x²) dx</div>
+    <p>Первообразная не выражается через элементарные функции. Разлагаем:</p>
+    <p><code>e^(−x²) = 1 − x² + x⁴/2! − x⁶/3! + x⁸/4! − ...</code></p>
+    <p>Интегрируем почленно (равномерная сходимость на [0,1]):</p>
+    <p><code>∫₀¹ = [x − x³/3 + x⁵/(5·2!) − x⁷/(7·3!) + ...]₀¹</code></p>
+    <p><code>= 1 − 1/3 + 1/10 − 1/42 + 1/216 − ...</code></p>
+    <p>Знакочередующийся ряд. С точностью 0.01: |a₄| = 1/216 ≈ 0.005 &lt; 0.01.</p>
+    <p><code>∫₀¹ e^(−x²)dx ≈ 1 − 0.333 + 0.1 − 0.024 = 0.743</code> (точное ≈ 0.7468)</p>
+  </div>
+
+  <h4>Вычисление пределов</h4>
+  <div class="example">
+    <div class="example-title">Пример</div>
+    <p><code>lim(x→0) (sin x − x)/x³</code></p>
+    <p>sin x = x − x³/6 + x⁵/120 − ...</p>
+    <p>(sin x − x)/x³ = (−x³/6 + x⁵/120 − ...)/x³ = −1/6 + x²/120 − ... → −1/6</p>
+  </div>
+
+  <div class="note tip">Ряды Тейлора -- мощный инструмент для: (1) вычисления значений, (2) вычисления интегралов, (3) нахождения пределов, (4) решения дифференциальных уравнений.</div>
+</div>
+
+<!-- ===== РЯДЫ ФУРЬЕ ===== -->
+
+<div class="group-divider"><span>Ряды Фурье (Лекция 13)</span></div>
+
+<!-- Билет 38 -->
+<div class="ticket" id="t38">
+  <div class="ticket-header">
+    <div class="ticket-num">38</div>
+    <h3>Тригонометрические ряды. Ортогональность. Коэффициенты Фурье</h3>
+  </div>
+
+  <h4>Тригонометрический ряд</h4>
+  <div class="formula main-formula">a₀/2 + ∑(n=1..∞) (aₙ·cos(nx) + bₙ·sin(nx))</div>
+  <p>Множитель 1/2 при a₀ -- для единообразия формул коэффициентов.</p>
+
+  <h4>Ортогональная тригонометрическая система</h4>
+  <p>Система функций <code>{1, cos x, sin x, cos 2x, sin 2x, cos 3x, sin 3x, ...}</code> <strong>ортогональна</strong> на [−π, π].</p>
+  <p>Это означает, что интеграл произведения любых двух <em>различных</em> функций системы равен нулю:</p>
+  <div class="formula">∫₋π^π cos(nx)·cos(mx)dx = 0  при n ≠ m
+∫₋π^π sin(nx)·sin(mx)dx = 0  при n ≠ m
+∫₋π^π cos(nx)·sin(mx)dx = 0  для ВСЕХ n, m (в т.ч. n = m)</div>
+
+  <h4>Нормы (квадраты «длин»)</h4>
+  <div class="formula">∫₋π^π 1² dx = 2π
+∫₋π^π cos²(nx) dx = π   (n ≥ 1)
+∫₋π^π sin²(nx) dx = π   (n ≥ 1)</div>
+  <p><em>Доказательство:</em> используем формулы cos²α = (1+cos 2α)/2 и sin²α = (1−cos 2α)/2.</p>
+
+  <h4>Коэффициенты Фурье (вывод)</h4>
+  <p>Пусть f(x) = a₀/2 + ∑(a<sub>n</sub>cos nx + b<sub>n</sub>sin nx). Чтобы найти a<sub>m</sub>, умножаем обе части на cos(mx) и интегрируем по [−π, π]:</p>
+  <div class="formula">∫₋π^π f(x)·cos(mx)dx = aₘ · ∫₋π^π cos²(mx)dx = aₘ · π</div>
+  <p>Все остальные слагаемые обнулились благодаря ортогональности!</p>
+
+  <div class="formula main-formula">a₀ = 1/π · ∫₋π^π f(x) dx
+
+aₙ = 1/π · ∫₋π^π f(x)·cos(nx) dx   (n = 1, 2, 3, ...)
+
+bₙ = 1/π · ∫₋π^π f(x)·sin(nx) dx   (n = 1, 2, 3, ...)</div>
+
+  <div class="note">Формулы получены при предположении, что ряд можно интегрировать почленно. Это предположение -- формальный вывод. Строгое обоснование даёт теорема Дирихле.</div>
+</div>
+
+<!-- Билет 39 -->
+<div class="ticket" id="t39">
+  <div class="ticket-header">
+    <div class="ticket-num">39</div>
+    <h3>Ряды Фурье. Условия Дирихле. Теорема Дирихле</h3>
+  </div>
+
+  <h4>Ряд Фурье функции f(x)</h4>
+  <p>Для 2π-периодической функции f(x) записываем ряд с коэффициентами Фурье:</p>
+  <div class="formula">f(x) ~ a₀/2 + ∑(n=1..∞) (aₙ·cos(nx) + bₙ·sin(nx))</div>
+  <p>Знак <code>~</code> означает «соответствует» (формально сопоставляем), а не «равно». Равенство нужно доказать отдельно.</p>
+
+  <h4>Условия Дирихле</h4>
+  <p>Функция f(x) удовлетворяет <strong>условиям Дирихле</strong> на [−π, π], если:</p>
+  <ol class="steps">
+    <li>f(x) <strong>ограничена</strong> и абсолютно интегрируема на [−π, π]</li>
+    <li>f(x) имеет конечное число <strong>точек разрыва 1-го рода</strong> (существуют конечные левый и правый пределы)</li>
+    <li>f(x) имеет конечное число <strong>экстремумов</strong> (кусочно-монотонна)</li>
+  </ol>
+  <p><em>Кратко:</em> кусочно-непрерывная и кусочно-монотонная функция.</p>
+
+  <h4>Теорема Дирихле (о поточечной сходимости ряда Фурье)</h4>
+  <p>Если f(x) удовлетворяет условиям Дирихле на [−π, π], то её ряд Фурье <strong>сходится</strong> в каждой точке:</p>
+
+  <div class="formula main-formula">В точках непрерывности:
+  ряд Фурье = f(x)
+
+В точках разрыва:
+  ряд Фурье = (f(x−0) + f(x+0)) / 2</div>
+
+  <p>В точках разрыва сумма ряда равна <strong>среднему арифметическому</strong> левого и правого пределов.</p>
+
+  <h4>На концах периода</h4>
+  <p>Для 2π-периодической функции на концах интервала (x = ±π):</p>
+  <div class="formula">S(±π) = (f(−π + 0) + f(π − 0)) / 2</div>
+  <p>Это среднее между значением «слева от π» и «справа от −π» (периодическое продолжение).</p>
+
+  <div class="example">
+    <div class="example-title">Пример: f(x) = |x| на [−π, π]</div>
+    <p>Функция непрерывна, кусочно-монотонна → условия Дирихле выполнены.</p>
+    <p>Чётная функция → b<sub>n</sub> = 0.</p>
+    <p>a₀ = 2/π · ∫₀<sup>π</sup> x dx = 2/π · π²/2 = π</p>
+    <p>a<sub>n</sub> = 2/π · ∫₀<sup>π</sup> x·cos(nx) dx = 2/(πn²) · (cos(nπ) − 1) = 2/(πn²) · ((−1)<sup>n</sup> − 1)</p>
+    <p>При чётном n: a<sub>n</sub> = 0. При нечётном n: a<sub>n</sub> = −4/(πn²).</p>
+    <p><code>|x| = π/2 − (4/π)·(cos x + cos 3x/9 + cos 5x/25 + ...)</code></p>
+    <p>При x = 0: 0 = π/2 − (4/π)·(1 + 1/9 + 1/25 + ...) → π²/8 = 1 + 1/9 + 1/25 + ...</p>
+  </div>
+</div>
+
+<!-- Билет 40 -->
+<div class="ticket" id="t40">
+  <div class="ticket-header">
+    <div class="ticket-num">40</div>
+    <h3>Ряды Фурье чётных/нечётных функций. Произвольный промежуток [-l, l]</h3>
+  </div>
+
+  <h4>Чётная функция: f(−x) = f(x)</h4>
+  <p>Ряд Фурье содержит <strong>только косинусы</strong> (b<sub>n</sub> = 0):</p>
+  <div class="formula main-formula">f(x) = a₀/2 + ∑(n=1..∞) aₙ·cos(nx)</div>
+  <p>Коэффициенты (интегрируем только по [0, π], удвоив):</p>
+  <div class="formula">a₀ = 2/π · ∫₀^π f(x) dx
+aₙ = 2/π · ∫₀^π f(x)·cos(nx) dx
+bₙ = 0</div>
+
+  <hr class="divider">
+
+  <h4>Нечётная функция: f(−x) = −f(x)</h4>
+  <p>Ряд Фурье содержит <strong>только синусы</strong> (a₀ = 0, a<sub>n</sub> = 0):</p>
+  <div class="formula main-formula">f(x) = ∑(n=1..∞) bₙ·sin(nx)</div>
+  <p>Коэффициенты:</p>
+  <div class="formula">aₙ = 0
+bₙ = 2/π · ∫₀^π f(x)·sin(nx) dx</div>
+
+  <h4>Почему так работает</h4>
+  <p>cos(nx) -- чётная функция, sin(nx) -- нечётная. Произведение:</p>
+  <ul>
+    <li>чётная × нечётная = нечётная → ∫<sub>−π</sub><sup>π</sup> = 0 → b<sub>n</sub> = 0 для чётной f</li>
+    <li>нечётная × чётная = нечётная → ∫<sub>−π</sub><sup>π</sup> = 0 → a<sub>n</sub> = 0 для нечётной f</li>
+    <li>чётная × чётная = чётная → ∫<sub>−π</sub><sup>π</sup> = 2·∫<sub>0</sub><sup>π</sup> (вот откуда множитель 2)</li>
+  </ul>
+
+  <hr class="divider">
+
+  <h4>Разложение на полупериоде [0, π]</h4>
+  <p>Если f(x) задана только на [0, π], можно продолжить её на [−π, 0]:</p>
+  <ul>
+    <li><strong>Чётное продолжение</strong>: f(−x) = f(x) → получаем ряд по <strong>косинусам</strong></li>
+    <li><strong>Нечётное продолжение</strong>: f(−x) = −f(x) → получаем ряд по <strong>синусам</strong></li>
+  </ul>
+
+  <div class="example">
+    <div class="example-title">Пример: f(x) = x на [−π, π]</div>
+    <p>f(x) = x -- нечётная → только синусы, a<sub>n</sub> = 0.</p>
+    <p>b<sub>n</sub> = 2/π · ∫₀<sup>π</sup> x·sin(nx)dx</p>
+    <p>Интегрируем по частям: = 2/π · [−x·cos(nx)/n + sin(nx)/n²]₀<sup>π</sup></p>
+    <p>= 2/π · (−π·cos(nπ)/n) = −2·cos(nπ)/n = 2·(−1)<sup>n+1</sup>/n</p>
+    <p><code>x = 2·(sin x − sin 2x/2 + sin 3x/3 − sin 4x/4 + ...)</code></p>
+  </div>
+
+  <hr class="divider">
+
+  <h4>Произвольный промежуток [−l, l]</h4>
+  <p>Если функция имеет период <strong>2l</strong> (а не 2π), делаем замену t = πx/l:</p>
+  <div class="formula main-formula">f(x) = a₀/2 + ∑(n=1..∞) (aₙ·cos(nπx/l) + bₙ·sin(nπx/l))</div>
+
+  <p>Коэффициенты Фурье на [−l, l]:</p>
+  <div class="formula main-formula">a₀ = 1/l · ∫₋ₗˡ f(x) dx
+
+aₙ = 1/l · ∫₋ₗˡ f(x)·cos(nπx/l) dx
+
+bₙ = 1/l · ∫₋ₗˡ f(x)·sin(nπx/l) dx</div>
+
+  <p><em>Мнемоника:</em> везде заменяем nx → nπx/l и 1/π → 1/l.</p>
+
+  <h4>Теорема Дирихле на [−l, l]</h4>
+  <p>Формулировка та же: в точках непрерывности ряд Фурье = f(x), в точках разрыва = (f(x−0)+f(x+0))/2.</p>
+
+  <div class="example">
+    <div class="example-title">Пример: f(x) = x на [−1, 1], l = 1</div>
+    <p>f(x) = x -- нечётная → a<sub>n</sub> = 0, только синусы.</p>
+    <p>b<sub>n</sub> = 1/1 · ∫<sub>−1</sub><sup>1</sup> x·sin(nπx) dx = 2 · ∫<sub>0</sub><sup>1</sup> x·sin(nπx) dx</p>
+    <p>= 2·[−x·cos(nπx)/(nπ) + sin(nπx)/(n²π²)]₀<sup>1</sup> = −2·cos(nπ)/(nπ) = 2·(−1)<sup>n+1</sup>/(nπ)</p>
+    <p><code>x = (2/π)·∑(−1)ⁿ⁺¹·sin(nπx)/n</code></p>
+  </div>
+
+  <div class="note tip">Определи чётность функции первым делом -- это сразу убирает половину коэффициентов и упрощает вычисления вдвое! На [−l,l] формулы аналогичны: множитель 2/l вместо 2/π, аргумент nπx/l вместо nx.</div>
+</div>
+
+</main>
+
+<script>
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) document.body.classList.remove('nav-open');
+    });
+  });
+  if (window.innerWidth > 768) document.body.classList.add('nav-open');
+</script>
+</body>
+</html>
