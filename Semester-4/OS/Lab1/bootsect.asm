@@ -25,6 +25,8 @@ clo:
     mov ah, 0x00
     int 0x16                 ; Ожидание нажатия клавиши (ah = скан-код)
 
+    cmp ah, 0x1C             ; Enter — переход к ядру
+    je load_kernel
     cmp ah, 0x48             ; Стрелка вверх
     je go_up
     cmp ah, 0x50             ; Стрелка вниз
