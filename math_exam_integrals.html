@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Билеты 41-50 — Кратные интегралы</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0d1117;
+    --bg-card: #161b22;
+    --bg-code: #1c2129;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #7ee787;
+    --accent3: #d2a8ff;
+    --accent4: #ffa657;
+    --warn: #f85149;
+    --tip: #3fb950;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 17px; line-height: 1.75; padding: 0; }
+
+  .nav-toggle { position: fixed; top: 12px; left: 12px; z-index: 200; background: var(--bg-card); border: 1px solid var(--border); color: var(--text); width: 40px; height: 40px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.3s; }
+  .nav-toggle:hover { background: var(--border); }
+  body.nav-open .nav-toggle { left: 292px; }
+
+  .nav { position: fixed; top: 0; left: -280px; width: 280px; height: 100vh; background: var(--bg-card); border-right: 1px solid var(--border); overflow-y: auto; padding: 20px 0; z-index: 100; transition: left 0.3s ease; }
+  body.nav-open .nav { left: 0; }
+  .nav h2 { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; padding: 0 20px; margin-bottom: 16px; }
+  .nav-group { margin-bottom: 8px; }
+  .nav-group-title { color: var(--text-dim); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding: 8px 20px 4px; font-weight: 600; }
+  .nav a { display: block; color: var(--text-dim); text-decoration: none; padding: 6px 20px 6px 28px; font-size: 13px; transition: all 0.2s; border-left: 2px solid transparent; }
+  .nav a:hover { color: var(--text); background: rgba(88, 166, 255, 0.1); border-left-color: var(--accent); }
+
+  .main { margin-left: 0; max-width: none; padding: 40px 80px 80px; transition: margin-left 0.3s ease; }
+  body.nav-open .main { margin-left: 280px; padding-right: 80px; }
+
+  .page-title { font-size: 36px; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .page-subtitle { color: var(--text-dim); font-size: 17px; margin-bottom: 48px; }
+
+  .ticket { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 36px 44px; margin-bottom: 32px; scroll-margin-top: 24px; max-width: none; }
+  .ticket-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .ticket-num { background: linear-gradient(135deg, var(--accent), var(--accent3)); color: #0d1117; font-weight: 700; font-size: 14px; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ticket h3 { font-size: 24px; font-weight: 600; color: var(--text); }
+  .ticket h4 { color: var(--accent); font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .ticket p, .ticket li { font-size: 17px; color: var(--text); margin-bottom: 10px; }
+  .ticket ul, .ticket ol { padding-left: 20px; margin-bottom: 12px; }
+
+  .formula { background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-family: 'JetBrains Mono', monospace; font-size: 17px; color: var(--accent2); overflow-x: auto; word-wrap: break-word; white-space: pre-wrap; }
+  .formula.main-formula { border-color: var(--accent); background: rgba(88, 166, 255, 0.06); color: var(--accent); font-size: 18px; font-weight: 500; }
+
+  code { background: var(--bg-code); padding: 2px 7px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent4); }
+
+  .note { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 15px; color: var(--text-dim); }
+  .note.warn { background: rgba(248, 81, 73, 0.08); border-left-color: var(--warn); }
+  .note.tip { background: rgba(63, 185, 80, 0.08); border-left-color: var(--tip); }
+
+  .example { background: rgba(210, 168, 255, 0.06); border: 1px solid rgba(210, 168, 255, 0.2); border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .example-title { color: var(--accent3); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 8px; }
+
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: step; padding-left: 32px; position: relative; margin-bottom: 10px; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; background: var(--accent); color: var(--bg); width: 22px; height: 22px; border-radius: 50%; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; top: 2px; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  .group-divider { text-align: center; margin: 48px 0 32px; position: relative; }
+  .group-divider::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--border); }
+  .group-divider span { position: relative; background: var(--bg); padding: 0 20px; color: var(--accent3); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+  @media (max-width: 768px) {
+    .main { padding: 24px 16px 60px; }
+    .ticket { padding: 20px; }
+    .page-title { font-size: 24px; }
+    body.nav-open .main { margin-left: 0; }
+    .nav { width: 260px; left: -260px; }
+    body.nav-open .nav { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,0.5); }
+    body.nav-open .nav-toggle { left: 272px; }
+    .nav-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 50; }
+    body.nav-open .nav-overlay { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')" title="Toggle sidebar">&#9776;</button>
+<div class="nav-overlay" onclick="document.body.classList.remove('nav-open')"></div>
+
+<nav class="nav">
+  <h2>Кратные интегралы</h2>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Теория площади</div>
+    <a href="#t-area">Площадь плоской фигуры (§1)</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Двойные интегралы</div>
+    <a href="#t41">41. Определение, смысл, свойства</a>
+    <a href="#t42">42. Теорема существования</a>
+    <a href="#t43">43. Повторный интеграл, замена</a>
+    <a href="#t44">44. Вычисление</a>
+    <a href="#t45">45. Геом. и физ. приложения</a>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-title">Тройные интегралы</div>
+    <a href="#t46">46. Определение, смысл, свойства</a>
+    <a href="#t47">47. Теорема существования</a>
+    <a href="#t48">48. Повторный интеграл, замена</a>
+    <a href="#t49">49. Вычисление</a>
+    <a href="#t50">50. Геом. и физ. приложения</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<h1 class="page-title">Билеты 41–50: Кратные интегралы</h1>
+<p class="page-subtitle">Высшая математика, 3 семестр ИКНК — подготовка к экзамену (подробный конспект лекций)</p>
+
+<!-- ===== ТЕОРИЯ ПЛОЩАДИ ===== -->
+
+<div class="group-divider"><span>§1. Площадь плоской фигуры (фундамент теории)</span></div>
+
+<div class="ticket" id="t-area">
+  <div class="ticket-header">
+    <div class="ticket-num">§1</div>
+    <h3>Площадь плоской фигуры. Мера Жордана</h3>
+  </div>
+
+  <h4>Определение 1.1. Диаметр множества</h4>
+  <p>Пусть A — ограниченное множество в R². <strong>Диаметр</strong> множества A:</p>
+  <div class="formula main-formula">d(A) = sup { ρ(a, b) : a, b ∈ A }</div>
+  <p>где ρ(a,b) — евклидово расстояние между точками a и b.</p>
+
+  <h4>Замечание 1.1. Площадь многоугольной фигуры</h4>
+  <p>Для многоугольной фигуры P площадь S(P) обладает свойствами:</p>
+  <ul>
+    <li><strong>Монотонность:</strong> если P₁ ⊂ P₂, то S(P₁) ≤ S(P₂)</li>
+    <li><strong>Аддитивность:</strong> если P = P₁ ∪ P₂ и P₁ ∩ P₂ не содержит внутренних точек, то S(P) = S(P₁) + S(P₂)</li>
+    <li><strong>Инвариантность:</strong> площадь не меняется при движении (параллельный перенос, поворот)</li>
+  </ul>
+
+  <h4>Определение 1.2. Внутренняя и внешняя площади</h4>
+  <p>Пусть F — ограниченная фигура на плоскости.</p>
+  <p><strong>Внутренняя площадь</strong> (вписанные многоугольники):</p>
+  <div class="formula">S*(F) = sup { S(P) : P ⊂ F, P — многоугольная фигура }</div>
+  <p><strong>Внешняя площадь</strong> (описанные многоугольники):</p>
+  <div class="formula">S*(F) = inf { S(Q) : Q ⊃ F, Q — многоугольная фигура }</div>
+  <p>Всегда S*(F) ≤ S*(F).</p>
+  <p>Фигура F называется <strong>квадрируемой</strong> (измеримой по Жордану), если S*(F) = S*(F). В этом случае общее значение называется <strong>площадью</strong> S(F).</p>
+
+  <h4>Теорема 1.1. Критерий квадрируемости</h4>
+  <div class="formula main-formula">F квадрируема ⟺ ∀ε > 0 ∃P ⊂ F, Q ⊃ F (многоугольные): S(Q) − S(P) < ε</div>
+
+  <h4>Определение 1.3. Множество меры ноль</h4>
+  <p>Множество F имеет <strong>меру ноль</strong> (по Жордану), если:</p>
+  <div class="formula main-formula">∀ε > 0 ∃ Q ⊃ F (многоугольная фигура): S(Q) < ε</div>
+  <p>Иными словами, F можно покрыть многоугольной фигурой сколь угодно малой площади.</p>
+
+  <h4>Следствие к Теореме 1.1</h4>
+  <div class="formula main-formula">F квадрируема ⟺ граница ∂F имеет меру ноль</div>
+  <div class="note tip">Это ключевой результат! На экзамене часто спрашивают: «Когда фигура квадрируема?» — ответ: когда её граница имеет меру ноль.</div>
+
+  <h4>Лемма 1.1. Кривая имеет меру ноль</h4>
+  <p>Если f(x) непрерывна на [a,b], то график y = f(x) имеет <strong>меру ноль</strong>.</p>
+  <p><strong>Доказательство</strong> (через теорему Кантора):</p>
+  <ol class="steps">
+    <li>f непрерывна на [a,b] (компакт) → по теореме Кантора f <strong>равномерно непрерывна</strong></li>
+    <li>∀ε > 0 ∃δ > 0: |x₁ − x₂| < δ → |f(x₁) − f(x₂)| < ε/(2(b−a))</li>
+    <li>Разобьём [a,b] на n частей длины Δxₖ < δ. На каждой части колебание f менее ε/(2(b−a))</li>
+    <li>Покрываем кривую прямоугольниками шириной Δxₖ и высотой < ε/(b−a)</li>
+    <li>Суммарная площадь покрытия < Σ Δxₖ · ε/(b−a) = ε/(b−a) · (b−a) = ε</li>
+  </ol>
+  <div class="note">Следствие: область, ограниченная конечным числом непрерывных кривых, квадрируема (её граница имеет меру ноль).</div>
+
+  <h4>Теорема 1.2. Свойства площади</h4>
+  <ul>
+    <li><strong>Монотонность:</strong> F₁ ⊂ F₂ → S(F₁) ≤ S(F₂)</li>
+    <li><strong>Аддитивность:</strong> S(F₁ ∪ F₂) = S(F₁) + S(F₂) (если F₁ и F₂ не пересекаются по внутренним точкам)</li>
+    <li><strong>Инвариантность:</strong> при движениях (повороты, сдвиги) площадь сохраняется</li>
+    <li>Если F₁ и F₂ квадрируемы → F₁ ∩ F₂, F₁ ∪ F₂, F₁ \ F₂ тоже квадрируемы</li>
+  </ul>
+
+  <h4>Замечание 1.6. Мера Жордана</h4>
+  <p>Площадь квадрируемой фигуры называется также <strong>мерой Жордана</strong> (в честь Камиля Жордана). Это конечно-аддитивная мера, определённая на кольце квадрируемых множеств. В отличие от меры Лебега, мера Жордана не счётно-аддитивна (например, множество рациональных точек отрезка имеет меру Лебега ноль, но не является квадрируемым по Жордану).</p>
+</div>
+
+<!-- ===== ДВОЙНЫЕ ИНТЕГРАЛЫ ===== -->
+
+<div class="group-divider"><span>§2. Двойные интегралы</span></div>
+
+<!-- Билет 41 -->
+<div class="ticket" id="t41">
+  <div class="ticket-header">
+    <div class="ticket-num">41</div>
+    <h3>Двойной интеграл: определение, геометрический и физический смысл, свойства</h3>
+  </div>
+
+  <h4>Определение 2.1. Интегральная сумма Римана</h4>
+  <p>Пусть G — замкнутая квадрируемая область на плоскости, f(x,y) определена и ограничена на G.</p>
+  <p>Разобьём G на n частей G₁, G₂, ..., Gₙ с площадями ΔS₁, ΔS₂, ..., ΔSₙ. В каждой части выберем произвольную точку (ξₖ, ηₖ) ∈ Gₖ.</p>
+  <p><strong>Интегральная сумма Римана:</strong></p>
+  <div class="formula main-formula">σ = Σₖ₌₁ⁿ f(ξₖ, ηₖ) · ΔSₖ</div>
+
+  <h4>Определение 2.2. Ранг разбиения и двойной интеграл</h4>
+  <p><strong>Ранг разбиения</strong> (мелкость):</p>
+  <div class="formula">λ = max { d(Gₖ) : k = 1, ..., n }</div>
+  <p>где d(Gₖ) — диаметр k-й части (см. Определение 1.1).</p>
+  <p><strong>Двойной интеграл</strong> — предел интегральной суммы при λ → 0:</p>
+  <div class="formula main-formula">∬_G f(x,y) dσ = lim (λ→0) Σₖ₌₁ⁿ f(ξₖ, ηₖ) · ΔSₖ</div>
+  <p>Предел должен существовать и не зависеть ни от способа разбиения, ни от выбора точек (ξₖ, ηₖ).</p>
+
+  <h4>Замечание 2.1</h4>
+  <ul>
+    <li><strong>1)</strong> Интегрируемы только <strong>ограниченные</strong> функции на квадрируемых областях</li>
+    <li><strong>2)</strong> При f = 1: <code>∬_G 1 dσ = S(G)</code> — площадь области G</li>
+    <li><strong>3)</strong> При f(x,y) ≥ 0: <code>∬_G f dσ</code> = <strong>объём цилиндрического тела</strong>, ограниченного снизу областью G, сверху поверхностью z = f(x,y), с боков — цилиндрической поверхностью над ∂G</li>
+  </ul>
+
+  <h4>Геометрический смысл</h4>
+  <p>Если f(x,y) ≥ 0 на G, то <code>∬_G f(x,y) dσ</code> равен <strong>объёму</strong> цилиндрического тела с основанием G и «крышкой» z = f(x,y).</p>
+  <p>Если f меняет знак — получается <strong>алгебраический объём</strong> (с учётом знака: выше xOy — плюс, ниже — минус).</p>
+
+  <h4>Физический смысл</h4>
+  <p>Если f(x,y) = ρ(x,y) — поверхностная плотность пластинки G, то:</p>
+  <div class="formula">∬_G ρ(x,y) dσ = m — масса пластинки</div>
+
+  <h4>Теорема 2.2. Свойства двойного интеграла</h4>
+  <ul>
+    <li><strong>1) Линейность:</strong> <code>∬(αf + βg)dσ = α∬f dσ + β∬g dσ</code> (α, β — const)</li>
+    <li><strong>2) Аддитивность по области:</strong> если G = G₁ ∪ G₂, причём G₁ и G₂ не имеют общих внутренних точек:
+      <div class="formula">∬_G f dσ = ∬_{G₁} f dσ + ∬_{G₂} f dσ</div>
+    </li>
+    <li><strong>3) Монотонность:</strong> если f(x,y) ≤ g(x,y) на G → <code>∬_G f dσ ≤ ∬_G g dσ</code></li>
+    <li><strong>4) Оценка интеграла:</strong>
+      <div class="formula main-formula">m · S(G) ≤ ∬_G f dσ ≤ M · S(G)</div>
+      <p>где m = inf f, M = sup f на G, S(G) — площадь</p>
+    </li>
+    <li><strong>5) Теорема о среднем:</strong> если f непрерывна на замкнутой квадрируемой связной G, то ∃(ξ, η) ∈ G:
+      <div class="formula main-formula">∬_G f dσ = f(ξ, η) · S(G)</div>
+    </li>
+    <li><strong>6) Оценка модуля:</strong> <code>|∬_G f dσ| ≤ ∬_G |f| dσ</code></li>
+  </ul>
+</div>
+
+<!-- Билет 42 -->
+<div class="ticket" id="t42">
+  <div class="ticket-header">
+    <div class="ticket-num">42</div>
+    <h3>Теорема существования двойного интеграла. Условия интегрируемости</h3>
+  </div>
+
+  <h4>Теорема 2.1. Условия существования двойного интеграла</h4>
+
+  <p><strong>Условие 1.</strong> Если f(x,y) <strong>непрерывна</strong> на замкнутой квадрируемой области G, то f <strong>интегрируема</strong> на G (двойной интеграл существует).</p>
+
+  <p><strong>Условие 2.</strong> Если f(x,y) <strong>непрерывна</strong> на G <strong>всюду, кроме множества меры ноль</strong>, и ограничена на G, то f интегрируема на G.</p>
+
+  <p><strong>Условие 3.</strong> Изменение значений функции на <strong>множестве меры ноль</strong> не влияет на интегрируемость и значение интеграла.</p>
+
+  <div class="note">Вспомни Определение 1.3: множество меры ноль — то, которое можно покрыть многоугольной фигурой сколь угодно малой площади. Например: конечное число точек, конечное число непрерывных кривых (по Лемме 1.1).</div>
+
+  <h4>Связь с теорией площади (§1)</h4>
+  <p>Существование двойного интеграла опирается на понятие квадрируемости области (Определение 1.2) и свойства множеств меры ноль. Вот почему §1 важен для этого билета:</p>
+  <ul>
+    <li>Область G должна быть <strong>квадрируемой</strong> (т.е. её граница — множество меры ноль, по Следствию к Теореме 1.1)</li>
+    <li>Точки разрыва f должны образовывать <strong>множество меры ноль</strong> (Условие 2)</li>
+    <li>По Лемме 1.1 графики непрерывных функций имеют меру ноль → области, ограниченные непрерывными кривыми, квадрируемы</li>
+  </ul>
+
+  <h4>Необходимое условие</h4>
+  <p>Если f интегрируема на G → f <strong>ограничена</strong> на G.</p>
+
+  <h4>Первая теорема о среднем</h4>
+  <p>Если f непрерывна на замкнутой связной квадрируемой G, то ∃ (x₀, y₀) ∈ G:</p>
+  <div class="formula main-formula">∬_G f(x,y) dσ = f(x₀, y₀) · S(G)</div>
+  <p>Доказательство: из оценки (свойство 4) m·S ≤ ∬f dσ ≤ M·S, делим на S(G) > 0:</p>
+  <div class="formula">m ≤ (1/S(G)) · ∬_G f dσ ≤ M</div>
+  <p>По теореме Больцано-Коши о промежуточном значении (f непрерывна на связном G) ∃ точка (x₀,y₀) ∈ G, в которой f принимает это среднее значение.</p>
+
+  <h4>Вторая (обобщённая) теорема о среднем</h4>
+  <p>Если f непрерывна на G и g(x,y) ≥ 0 интегрируема на G, то ∃ (x₀,y₀) ∈ G:</p>
+  <div class="formula">∬_G f · g dσ = f(x₀, y₀) · ∬_G g dσ</div>
+
+  <div class="note tip">На экзамене по этому билету могут спросить: «Что такое квадрируемая область? Множество меры ноль?» — нужно знать Определения 1.2, 1.3, Лемму 1.1 из §1.</div>
+</div>
+
+<!-- Билет 43 -->
+<div class="ticket" id="t43">
+  <div class="ticket-header">
+    <div class="ticket-num">43</div>
+    <h3>Сведение к повторному интегралу. Замена переменных</h3>
+  </div>
+
+  <h4>Область 1-го типа (правильная по y)</h4>
+  <p>G задана неравенствами: <code>a ≤ x ≤ b, φ₁(x) ≤ y ≤ φ₂(x)</code></p>
+  <p>где φ₁, φ₂ — непрерывные функции.</p>
+  <div class="formula main-formula">∬_G f(x,y) dσ = ∫ₐᵇ dx ∫_{φ₁(x)}^{φ₂(x)} f(x,y) dy</div>
+  <p><strong>Порядок вычисления:</strong> сначала внутренний интеграл по y (при фиксированном x), затем внешний по x.</p>
+
+  <h4>Область 2-го типа (правильная по x)</h4>
+  <p>G задана: <code>c ≤ y ≤ d, ψ₁(y) ≤ x ≤ ψ₂(y)</code></p>
+  <div class="formula main-formula">∬_G f(x,y) dσ = ∫_c^d dy ∫_{ψ₁(y)}^{ψ₂(y)} f(x,y) dx</div>
+
+  <h4>Расстановка пределов (алгоритм)</h4>
+  <ol class="steps">
+    <li>Нарисовать область G и определить её границы</li>
+    <li>Определить тип (I или II) — провести «стрелку»: для типа I стрелка по y (вертикально), для типа II — по x (горизонтально)</li>
+    <li>Внешний интеграл — по «свободной» переменной (постоянные пределы: числа a,b или c,d)</li>
+    <li>Внутренний — по «зависимой» переменной (пределы — функции от внешней переменной)</li>
+    <li>Если область не является ни типом I, ни типом II — разбить на подобласти</li>
+  </ol>
+
+  <h4>Замена переменных (общая формула)</h4>
+  <p>Пусть x = x(u,v), y = y(u,v) — гладкое взаимно однозначное отображение. Тогда:</p>
+  <div class="formula main-formula">∬_G f(x,y) dxdy = ∬_{G'} f(x(u,v), y(u,v)) · |J| dudv</div>
+  <p>где J — <strong>якобиан</strong> перехода:</p>
+  <div class="formula">J = ∂(x,y)/∂(u,v) = | ∂x/∂u  ∂x/∂v |  = ∂x/∂u · ∂y/∂v − ∂x/∂v · ∂y/∂u
+                       | ∂y/∂u  ∂y/∂v |</div>
+  <p>Условия применимости: отображение диффеоморфизм (гладкое, взаимно однозначное, J ≠ 0 всюду кроме, быть может, множества меры ноль).</p>
+
+  <h4>Полярные координаты</h4>
+  <p><code>x = r·cos φ, y = r·sin φ</code> (r ≥ 0, 0 ≤ φ < 2π)</p>
+  <div class="formula">J = | cos φ  −r·sin φ | = r·cos²φ + r·sin²φ = r
+    | sin φ   r·cos φ |</div>
+  <div class="formula main-formula">∬_G f(x,y) dxdy = ∬_{G'} f(r·cos φ, r·sin φ) · r · dr dφ</div>
+
+  <div class="note tip">Полярные координаты удобны, когда:
+1) Область — круг, полукруг, сектор, кольцо
+2) Подынтегральное выражение содержит x² + y²
+3) Граница задана уравнением вида r = f(φ)</div>
+
+  <div class="example">
+    <div class="example-title">Пример: обобщённые полярные (эллипс)</div>
+    <p>Область: x²/a² + y²/b² ≤ 1. Замена: x = a·r·cos φ, y = b·r·sin φ, |J| = a·b·r</p>
+    <p>Область в новых координатах: 0 ≤ r ≤ 1, 0 ≤ φ < 2π</p>
+    <p>S = ∬ dxdy = ∫₀^{2π} dφ ∫₀¹ a·b·r dr = 2π · a·b/2 = π·a·b</p>
+  </div>
+</div>
+
+<!-- Билет 44 -->
+<div class="ticket" id="t44">
+  <div class="ticket-header">
+    <div class="ticket-num">44</div>
+    <h3>Вычисление двойных интегралов</h3>
+  </div>
+
+  <h4>Общий алгоритм</h4>
+  <ol class="steps">
+    <li>Нарисовать область G, найти точки пересечения границ</li>
+    <li>Определить тип области (I, II или разбить на части)</li>
+    <li>Расставить пределы интегрирования</li>
+    <li>Вычислить внутренний интеграл (внешняя переменная — параметр)</li>
+    <li>Вычислить внешний интеграл</li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример 1: прямоугольная область</div>
+    <p><code>∬_G xy dxdy</code>, G: 0 ≤ x ≤ 1, 0 ≤ y ≤ 2</p>
+    <p>Тип I: <code>= ∫₀¹ dx ∫₀² xy dy = ∫₀¹ x · [y²/2]₀² dx = ∫₀¹ 2x dx = [x²]₀¹ = 1</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: треугольная область</div>
+    <p><code>∬_G x dxdy</code>, G: x ≥ 0, y ≥ 0, x + y ≤ 1</p>
+    <p>Тип I: 0 ≤ x ≤ 1, 0 ≤ y ≤ 1−x</p>
+    <p><code>= ∫₀¹ dx ∫₀^{1−x} x dy = ∫₀¹ x·(1−x) dx = ∫₀¹ (x − x²) dx = [x²/2 − x³/3]₀¹ = 1/2 − 1/3 = 1/6</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: полярные координаты</div>
+    <p><code>∬_G (x² + y²) dxdy</code>, G: x² + y² ≤ R²</p>
+    <p>Переход: x² + y² = r², dxdy = r·dr·dφ, область: 0 ≤ r ≤ R, 0 ≤ φ ≤ 2π</p>
+    <p><code>= ∫₀^{2π} dφ ∫₀^R r² · r dr = 2π · [r⁴/4]₀^R = πR⁴/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 4: смена порядка интегрирования</div>
+    <p>Дано: <code>∫₀¹ dx ∫ₓ¹ sin(y²) dy</code> (внутренний не берётся в элементарных функциях!)</p>
+    <p>Область: 0 ≤ x ≤ 1, x ≤ y ≤ 1. Нарисуем: треугольник с вершинами (0,0), (1,1), (0,1).</p>
+    <p>Меняем порядок (тип II): 0 ≤ y ≤ 1, 0 ≤ x ≤ y</p>
+    <p><code>= ∫₀¹ dy ∫₀^y sin(y²) dx = ∫₀¹ y·sin(y²) dy = [−cos(y²)/2]₀¹ = (1 − cos 1)/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 5: область, ограниченная параболой и прямой</div>
+    <p><code>∬_G y dxdy</code>, G: y = x², y = x (область между параболой и прямой)</p>
+    <p>Точки пересечения: x² = x → x = 0, x = 1</p>
+    <p>Тип I: 0 ≤ x ≤ 1, x² ≤ y ≤ x</p>
+    <p><code>= ∫₀¹ dx ∫_{x²}^{x} y dy = ∫₀¹ [y²/2]_{x²}^{x} dx = ∫₀¹ (x²/2 − x⁴/2) dx</code></p>
+    <p><code>= 1/2 · [x³/3 − x⁵/5]₀¹ = 1/2 · (1/3 − 1/5) = 1/2 · 2/15 = 1/15</code></p>
+  </div>
+
+  <div class="note">Если внутренний интеграл не берётся в элементарных функциях — попробуй <strong>сменить порядок интегрирования</strong> (пример 4). Это классический приём на экзамене!</div>
+</div>
+
+<!-- Билет 45 -->
+<div class="ticket" id="t45">
+  <div class="ticket-header">
+    <div class="ticket-num">45</div>
+    <h3>Приложения двойных интегралов (геометрические и физические)</h3>
+  </div>
+
+  <h4>Площадь плоской области</h4>
+  <div class="formula main-formula">S = ∬_G 1 dxdy</div>
+
+  <h4>Объём тела</h4>
+  <p>Тело ограничено снизу z = f₁(x,y), сверху z = f₂(x,y), f₂ ≥ f₁, проекция на xOy — область G:</p>
+  <div class="formula main-formula">V = ∬_G (f₂(x,y) − f₁(x,y)) dxdy</div>
+  <p>Частный случай: тело под поверхностью z = f(x,y) ≥ 0 над областью G: V = ∬_G f dxdy</p>
+
+  <h4>Площадь поверхности</h4>
+  <p>Для поверхности z = f(x,y) над областью G:</p>
+  <div class="formula main-formula">S_пов = ∬_G √(1 + (∂f/∂x)² + (∂f/∂y)²) dxdy</div>
+
+  <div class="example">
+    <div class="example-title">Пример: площадь части полусферы</div>
+    <p>z = √(R² − x² − y²), G: x² + y² ≤ R²</p>
+    <p>∂z/∂x = −x/√(R²−x²−y²), ∂z/∂y = −y/√(R²−x²−y²)</p>
+    <p>1 + (∂z/∂x)² + (∂z/∂y)² = 1 + (x²+y²)/(R²−x²−y²) = R²/(R²−x²−y²)</p>
+    <p>S = ∬_G R/√(R²−x²−y²) dxdy</p>
+    <p>В полярных: = ∫₀^{2π} dφ ∫₀^R R·r/√(R²−r²) dr = 2π · R · [−√(R²−r²)]₀^R = 2πR²</p>
+  </div>
+
+  <h4>Масса пластинки</h4>
+  <p>Если ρ(x,y) — поверхностная плотность:</p>
+  <div class="formula main-formula">m = ∬_G ρ(x,y) dxdy</div>
+
+  <h4>Статические моменты</h4>
+  <p>Относительно координатных осей:</p>
+  <div class="formula">Mₓ = ∬_G y · ρ(x,y) dxdy   (момент относительно оси Ox)
+My = ∬_G x · ρ(x,y) dxdy   (момент относительно оси Oy)</div>
+
+  <h4>Координаты центра тяжести</h4>
+  <div class="formula main-formula">xc = My / m = ∬ x·ρ dσ / ∬ ρ dσ
+yc = Mₓ / m = ∬ y·ρ dσ / ∬ ρ dσ</div>
+  <p>Для однородной пластинки (ρ = const): xc = ∬x dσ / S, yc = ∬y dσ / S</p>
+
+  <h4>Моменты инерции</h4>
+  <p>Относительно координатных осей:</p>
+  <div class="formula">Iₓ = ∬_G y² · ρ dxdy   (момент инерции относительно Ox)
+Iy = ∬_G x² · ρ dxdy   (момент инерции относительно Oy)</div>
+  <p>Относительно начала координат (полярный момент):</p>
+  <div class="formula">I₀ = Iₓ + Iy = ∬_G (x² + y²) · ρ dxdy</div>
+
+  <div class="example">
+    <div class="example-title">Пример: центр тяжести треугольника</div>
+    <p>Однородный треугольник: x ≥ 0, y ≥ 0, x + y ≤ 1, ρ = 1</p>
+    <p>S = 1/2 (площадь)</p>
+    <p>xc = (1/S)·∬x dσ = 2·∫₀¹ dx ∫₀^{1−x} x dy = 2·∫₀¹ x(1−x) dx = 2·(1/2 − 1/3) = 1/3</p>
+    <p>По симметрии (относительно y=x): yc = 1/3</p>
+    <p>Центр тяжести: (1/3, 1/3) — совпадает с центроидом (пересечение медиан).</p>
+  </div>
+</div>
+
+<!-- ===== ТРОЙНЫЕ ИНТЕГРАЛЫ ===== -->
+
+<div class="group-divider"><span>§3. Тройные интегралы</span></div>
+
+<!-- Билет 46 -->
+<div class="ticket" id="t46">
+  <div class="ticket-header">
+    <div class="ticket-num">46</div>
+    <h3>Тройной интеграл: определение, геометрический и физический смысл, свойства</h3>
+  </div>
+
+  <h4>Определение (аналогично двойному)</h4>
+  <p>Пусть V — замкнутая ограниченная кубируемая область в R³, f(x,y,z) определена и ограничена на V.</p>
+  <ol class="steps">
+    <li>Разбиваем V на n частей V₁, V₂, ..., Vₙ с объёмами ΔV₁, ΔV₂, ..., ΔVₙ</li>
+    <li>В каждой части выбираем точку (ξₖ, ηₖ, ζₖ) ∈ Vₖ</li>
+    <li>Составляем интегральную сумму: <code>σ = Σ f(ξₖ, ηₖ, ζₖ) · ΔVₖ</code></li>
+    <li>Ранг разбиения: λ = max { d(Vₖ) }</li>
+  </ol>
+  <div class="formula main-formula">∭_V f(x,y,z) dv = lim (λ→0) Σₖ₌₁ⁿ f(ξₖ, ηₖ, ζₖ) · ΔVₖ</div>
+  <p>Предел должен существовать и не зависеть от способа разбиения и выбора точек.</p>
+
+  <h4>Геометрический смысл</h4>
+  <div class="formula">∭_V 1 dv = объём области V</div>
+  <p>(аналог: ∬_G 1 dσ = площадь для двойного интеграла)</p>
+
+  <h4>Физический смысл</h4>
+  <p>Если f = ρ(x,y,z) — объёмная плотность тела V:</p>
+  <div class="formula">∭_V ρ(x,y,z) dv = m — масса тела</div>
+
+  <h4>Свойства (аналогичны двойному интегралу)</h4>
+  <ul>
+    <li><strong>Линейность:</strong> ∭(αf + βg) dv = α∭f dv + β∭g dv</li>
+    <li><strong>Аддитивность по области:</strong> V = V₁ ∪ V₂ (без общих внутренних точек) → ∭_V = ∭_{V₁} + ∭_{V₂}</li>
+    <li><strong>Монотонность:</strong> f ≤ g на V → ∭f dv ≤ ∭g dv</li>
+    <li><strong>Оценка:</strong> m·|V| ≤ ∭f dv ≤ M·|V|, где m = inf f, M = sup f, |V| — объём</li>
+    <li><strong>Теорема о среднем:</strong> f непрерывна на связной V → ∃(ξ,η,ζ) ∈ V: ∭f dv = f(ξ,η,ζ)·|V|</li>
+    <li><strong>Оценка модуля:</strong> |∭f dv| ≤ ∭|f| dv</li>
+  </ul>
+</div>
+
+<!-- Билет 47 -->
+<div class="ticket" id="t47">
+  <div class="ticket-header">
+    <div class="ticket-num">47</div>
+    <h3>Теорема существования тройного интеграла. Основные теоремы</h3>
+  </div>
+
+  <h4>Теорема существования</h4>
+  <p>Если f(x,y,z) <strong>непрерывна</strong> на замкнутой ограниченной кубируемой области V, то тройной интеграл <strong>существует</strong>.</p>
+  <p>Более общее условие: если f непрерывна всюду на V, кроме множества меры ноль в R³, и ограничена, то f интегрируема.</p>
+
+  <h4>Понятие кубируемости</h4>
+  <p>Область V ⊂ R³ называется <strong>кубируемой</strong> (измеримой по Жордану в R³), если внутренний и внешний объёмы совпадают (аналогично квадрируемости в R²).</p>
+  <p>V кубируема ⟺ граница ∂V имеет меру ноль (трёхмерный аналог Следствия к Теореме 1.1).</p>
+
+  <h4>Теорема о среднем</h4>
+  <p>Если f непрерывна на замкнутой связной кубируемой V, то ∃ точка (x₀, y₀, z₀) ∈ V:</p>
+  <div class="formula main-formula">∭_V f(x,y,z) dv = f(x₀, y₀, z₀) · |V|</div>
+  <p>где |V| — объём области V.</p>
+
+  <h4>Перенос свойств с двойного интеграла</h4>
+  <p>Все основные теоремы двойного интеграла переносятся на тройной с естественными заменами:</p>
+  <ul>
+    <li>Область G (плоская) → V (пространственная)</li>
+    <li>Площадь S(G) → Объём |V|</li>
+    <li>dσ (элемент площади) → dv (элемент объёма)</li>
+    <li>Квадрируемость → Кубируемость</li>
+    <li>Множество меры ноль в R² → Множество меры ноль в R³</li>
+  </ul>
+
+  <div class="note">Изменение значений f на множестве меры ноль в R³ не влияет на значение тройного интеграла (аналог Условия 3 Теоремы 2.1).</div>
+</div>
+
+<!-- Билет 48 -->
+<div class="ticket" id="t48">
+  <div class="ticket-header">
+    <div class="ticket-num">48</div>
+    <h3>Сведение к повторному интегралу. Замена переменных</h3>
+  </div>
+
+  <h4>Сведение тройного интеграла к повторному</h4>
+
+  <div class="note warn"><strong>ВАЖНО (указание Петровой):</strong> Тройной интеграл ОБЯЗАТЕЛЬНО сначала выражается через ДВОЙНОЙ по проекции! НЕЛЬЗЯ сразу писать три определённых интеграла. Правильная запись — сначала сведение к двойному, потом двойной раскрывается в повторный.</div>
+
+  <p><strong>Правильная запись (через двойной по проекции):</strong></p>
+  <p>Пусть V проектируется на плоскость xOy в область G, и для каждой точки (x,y) ∈ G переменная z меняется от z₁(x,y) до z₂(x,y):</p>
+  <div class="formula main-formula">∭_V f dv = ∬_G [ ∫_{z₁(x,y)}^{z₂(x,y)} f(x,y,z) dz ] dxdy</div>
+  <p>Затем двойной интеграл по G раскрывается в повторный (по правилам §2).</p>
+
+  <p><strong>Полная запись</strong> (если G — область типа I: a ≤ x ≤ b, φ₁(x) ≤ y ≤ φ₂(x)):</p>
+  <div class="formula">∭_V f dv = ∫ₐᵇ dx ∫_{φ₁(x)}^{φ₂(x)} dy ∫_{z₁(x,y)}^{z₂(x,y)} f(x,y,z) dz</div>
+
+  <h4>Расстановка пределов (алгоритм)</h4>
+  <ol class="steps">
+    <li>Определить проекцию G тела V на плоскость xOy (или xOz, yOz — в зависимости от формы тела)</li>
+    <li>Для каждой точки (x,y) ∈ G определить пределы по z: от z₁(x,y) до z₂(x,y)</li>
+    <li>В области G расставить пределы по x и y (как для двойного интеграла)</li>
+  </ol>
+
+  <h4>Замена переменных (общая формула)</h4>
+  <p>Пусть x = x(u,v,w), y = y(u,v,w), z = z(u,v,w) — гладкое взаимно однозначное отображение:</p>
+  <div class="formula main-formula">∭_V f(x,y,z) dxdydz = ∭_{V'} f(...) · |J| dudvdw</div>
+  <p>J = ∂(x,y,z)/∂(u,v,w) — якобиан (определитель матрицы 3×3 частных производных).</p>
+
+  <h4>Цилиндрические координаты</h4>
+  <p><code>x = r·cos φ, &nbsp; y = r·sin φ, &nbsp; z = z</code></p>
+  <p>r ≥ 0, 0 ≤ φ < 2π, z ∈ R</p>
+  <div class="formula main-formula">|J| = r &nbsp; → &nbsp; dxdydz = r · dr dφ dz</div>
+  <p>По сути: полярные координаты в плоскости xOy + обычная координата z.</p>
+
+  <div class="note tip">Цилиндрические координаты удобны для тел с <strong>осью симметрии</strong> (ось Oz): цилиндры, конусы, параболоиды вращения.</div>
+
+  <h4>Сферические координаты</h4>
+  <p><code>x = r·sin θ·cos φ, &nbsp; y = r·sin θ·sin φ, &nbsp; z = r·cos θ</code></p>
+  <p>r ≥ 0 (расстояние от начала координат), 0 ≤ θ ≤ π (полярный угол от оси Oz), 0 ≤ φ < 2π (азимутальный угол)</p>
+  <div class="formula main-formula">|J| = r²·sin θ &nbsp; → &nbsp; dxdydz = r²·sin θ · dr dθ dφ</div>
+
+  <div class="note tip">Сферические координаты удобны для <strong>шаров</strong> и <strong>конусов</strong> с вершиной в начале координат. Ключевое соотношение: x² + y² + z² = r².</div>
+
+  <div class="example">
+    <div class="example-title">Запоминалка: якобианы</div>
+    <p>Полярные (2D): |J| = <strong>r</strong></p>
+    <p>Цилиндрические (3D): |J| = <strong>r</strong></p>
+    <p>Сферические (3D): |J| = <strong>r²·sin θ</strong></p>
+  </div>
+</div>
+
+<!-- Билет 49 -->
+<div class="ticket" id="t49">
+  <div class="ticket-header">
+    <div class="ticket-num">49</div>
+    <h3>Вычисление тройных интегралов</h3>
+  </div>
+
+  <h4>Общий алгоритм</h4>
+  <ol class="steps">
+    <li>Описать и (хотя бы схематично) нарисовать область V</li>
+    <li>Выбрать систему координат (декартовы, цилиндрические, сферические)</li>
+    <li>Найти проекцию G на подходящую координатную плоскость</li>
+    <li>Записать тройной интеграл через двойной по проекции (указание Петровой!)</li>
+    <li>Раскрыть двойной в повторный и расставить пределы</li>
+    <li>Вычислить последовательно: сначала внутренний, потом средний, потом внешний</li>
+  </ol>
+
+  <div class="example">
+    <div class="example-title">Пример 1: параллелепипед (декартовы)</div>
+    <p><code>∭_V xyz dv</code>, V: 0 ≤ x ≤ 1, 0 ≤ y ≤ 2, 0 ≤ z ≤ 3</p>
+    <p>Проекция на xOy: G = {0 ≤ x ≤ 1, 0 ≤ y ≤ 2}</p>
+    <p>∭ xyz dv = ∬_G [∫₀³ xyz dz] dxdy = ∬_G xy·[z²/2]₀³ dxdy = ∬_G (9/2)xy dxdy</p>
+    <p>= (9/2)·∫₀¹ dx ∫₀² xy dy = (9/2)·∫₀¹ x·[y²/2]₀² dx = (9/2)·∫₀¹ 2x dx = (9/2)·1 = 9/2</p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: объём шара (сферические координаты)</div>
+    <p><code>∭_V dv</code>, V: x² + y² + z² ≤ R²</p>
+    <p>Сферические: r от 0 до R, θ от 0 до π, φ от 0 до 2π</p>
+    <p><code>= ∫₀^{2π} dφ ∫₀^π sin θ dθ ∫₀^R r² dr</code></p>
+    <p><code>= 2π · [−cos θ]₀^π · [r³/3]₀^R = 2π · 2 · R³/3 = 4πR³/3</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: цилиндрические координаты</div>
+    <p><code>∭_V z dv</code>, V: x² + y² ≤ 1, 0 ≤ z ≤ 1 (цилиндр)</p>
+    <p>Проекция на xOy: круг r ≤ 1. В цилиндрических:</p>
+    <p>∭ z dv = ∬_G [∫₀¹ z dz] · r dr dφ = ∬_G (1/2) · r dr dφ</p>
+    <p><code>= (1/2)·∫₀^{2π} dφ ∫₀¹ r dr = (1/2)·2π·(1/2) = π/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 4: тело под параболоидом (цилиндрические)</div>
+    <p><code>∭_V dv</code>, V: z ≥ 0, z ≤ 1 − x² − y²</p>
+    <p>Проекция на xOy: x² + y² ≤ 1 (круг). В цилиндрических: z от 0 до 1−r²</p>
+    <p>= ∬_G [∫₀^{1−r²} dz] · r dr dφ = ∬_G (1−r²)·r dr dφ</p>
+    <p><code>= ∫₀^{2π} dφ ∫₀¹ (r − r³) dr = 2π · [r²/2 − r⁴/4]₀¹ = 2π · 1/4 = π/2</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 5: конус (сферические)</div>
+    <p><code>∭_V (x²+y²+z²) dv</code>, V: конус θ ≤ α, 0 ≤ r ≤ R</p>
+    <p>В сферических: x²+y²+z² = r²</p>
+    <p><code>= ∫₀^{2π} dφ ∫₀^α sin θ dθ ∫₀^R r² · r² dr</code></p>
+    <p><code>= 2π · (1 − cos α) · R⁵/5</code></p>
+  </div>
+
+  <div class="note warn">Частая ошибка: сразу писать ∫dx∫dy∫dz (три определённых интеграла) вместо того, чтобы сначала выделить двойной по проекции. На экзамене за это снижают!</div>
+</div>
+
+<!-- Билет 50 -->
+<div class="ticket" id="t50">
+  <div class="ticket-header">
+    <div class="ticket-num">50</div>
+    <h3>Приложения тройных интегралов (геометрические и физические)</h3>
+  </div>
+
+  <h4>Объём тела</h4>
+  <div class="formula main-formula">V = ∭_V 1 dxdydz</div>
+
+  <h4>Масса тела</h4>
+  <p>ρ(x,y,z) — объёмная плотность:</p>
+  <div class="formula main-formula">m = ∭_V ρ(x,y,z) dv</div>
+
+  <h4>Статические моменты</h4>
+  <p>Относительно координатных плоскостей:</p>
+  <div class="formula">Mxy = ∭_V z · ρ dv   (момент относительно пл. xOy)
+Mxz = ∭_V y · ρ dv   (момент относительно пл. xOz)
+Myz = ∭_V x · ρ dv   (момент относительно пл. yOz)</div>
+
+  <h4>Координаты центра масс</h4>
+  <div class="formula main-formula">xc = Myz / m = ∭ x·ρ dv / m
+yc = Mxz / m = ∭ y·ρ dv / m
+zc = Mxy / m = ∭ z·ρ dv / m</div>
+  <p>Для однородного тела (ρ = const): xc = ∭x dv / V, аналогично yc, zc.</p>
+
+  <h4>Моменты инерции</h4>
+  <p>Относительно координатных осей:</p>
+  <div class="formula">Ix = ∭_V (y² + z²) · ρ dv
+Iy = ∭_V (x² + z²) · ρ dv
+Iz = ∭_V (x² + y²) · ρ dv</div>
+  <p><em>Логика:</em> момент инерции относительно оси = ∭ (расстояние до оси)² · ρ dv. Расстояние от точки (x,y,z) до оси Oz = √(x²+y²), поэтому Iz = ∭(x²+y²)ρ dv.</p>
+
+  <p>Относительно координатных плоскостей:</p>
+  <div class="formula">Ixy = ∭_V z² · ρ dv
+Ixz = ∭_V y² · ρ dv
+Iyz = ∭_V x² · ρ dv</div>
+
+  <p>Относительно начала координат:</p>
+  <div class="formula">I₀ = ∭_V (x² + y² + z²) · ρ dv = Iyz + Ixz + Ixy</div>
+
+  <div class="note tip">Связь между моментами: Ix = Ixz + Ixy, Iy = Iyz + Ixy, Iz = Iyz + Ixz. Также: I₀ = (Ix + Iy + Iz) / 2.</div>
+
+  <div class="example">
+    <div class="example-title">Пример 1: центр масс однородного полушара</div>
+    <p>V: x² + y² + z² ≤ R², z ≥ 0, ρ = const</p>
+    <p>По симметрии: xc = 0, yc = 0 (тело симметрично относительно оси Oz).</p>
+    <p>V = (2/3)πR³ (объём полушара)</p>
+    <p>В сферических координатах:</p>
+    <p><code>∭ z dv = ∫₀^{2π} dφ ∫₀^{π/2} cos θ · sin θ dθ ∫₀^R r³ dr</code></p>
+    <p><code>= 2π · [sin²θ / 2]₀^{π/2} · [r⁴/4]₀^R = 2π · 1/2 · R⁴/4 = πR⁴/4</code></p>
+    <p><code>zc = (πR⁴/4) / ((2/3)πR³) = 3R/8</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 2: момент инерции однородного шара относительно оси Oz</div>
+    <p>V: x² + y² + z² ≤ R², ρ = const</p>
+    <p>Iz = ρ · ∭(x²+y²) dv. В сферических: x²+y² = r²·sin²θ</p>
+    <p><code>Iz = ρ · ∫₀^{2π} dφ ∫₀^π sin²θ · sinθ dθ ∫₀^R r⁴ dr</code></p>
+    <p><code>= ρ · 2π · ∫₀^π sin³θ dθ · R⁵/5</code></p>
+    <p>∫₀^π sin³θ dθ = 4/3, поэтому:</p>
+    <p><code>Iz = ρ · 2π · (4/3) · R⁵/5 = 8πρR⁵/15</code></p>
+    <p>Подставляя m = ρ · (4/3)πR³:</p>
+    <p><code>Iz = (2/5)mR²</code></p>
+  </div>
+
+  <div class="example">
+    <div class="example-title">Пример 3: момент инерции однородного цилиндра</div>
+    <p>V: x² + y² ≤ R², 0 ≤ z ≤ H, ρ = const</p>
+    <p>Iz = ρ · ∭(x²+y²) dv. В цилиндрических: x²+y² = r²</p>
+    <p><code>= ρ · ∫₀^{2π} dφ ∫₀^R r² · r dr ∫₀^H dz = ρ · 2π · R⁴/4 · H = πρR⁴H/2</code></p>
+    <p>Подставляя m = ρπR²H: <code>Iz = (1/2)mR²</code></p>
+  </div>
+
+  <div class="note tip">При наличии симметрии сразу определяй, какие координаты центра масс равны нулю — это значительно экономит время на экзамене! Например: тело симметрично относительно оси Oz → xc = yc = 0.</div>
+</div>
+
+</main>
+
+<script>
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) document.body.classList.remove('nav-open');
+    });
+  });
+  if (window.innerWidth > 768) document.body.classList.add('nav-open');
+</script>
+</body>
+</html>

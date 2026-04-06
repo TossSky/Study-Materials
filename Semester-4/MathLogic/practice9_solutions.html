@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Практика 9 — Логика предикатов</title>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: var(--accent);
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 30px;
+    font-size: 0.95em;
+  }
+  .theory-block {
+    background: linear-gradient(135deg, #1a1f2e, #161b22);
+    border: 1px solid var(--purple);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  .theory-block h2 {
+    color: var(--purple);
+    margin-bottom: 16px;
+    font-size: 1.3em;
+  }
+  .theory-block .def {
+    background: rgba(188, 140, 255, 0.08);
+    border-left: 3px solid var(--purple);
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .task-group {
+    margin-bottom: 30px;
+  }
+  .task-group > h2 {
+    color: var(--accent);
+    font-size: 1.3em;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .task {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .task-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .task-num {
+    background: var(--accent);
+    color: var(--bg);
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    flex-shrink: 0;
+  }
+  .task-header .formula {
+    font-size: 1.15em;
+  }
+  .step {
+    margin: 10px 0;
+    padding-left: 14px;
+    border-left: 2px solid var(--border);
+  }
+  .step-label {
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .answer {
+    background: rgba(63, 185, 80, 0.1);
+    border: 1px solid rgba(63, 185, 80, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+  }
+  .answer-label {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .check {
+    background: rgba(210, 153, 34, 0.1);
+    border-left: 3px solid var(--yellow);
+    padding: 8px 14px;
+    margin-top: 10px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.92em;
+    color: var(--muted);
+  }
+  .note {
+    color: var(--muted);
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  mjx-container {
+    color: var(--text) !important;
+  }
+</style>
+</head>
+<body>
+
+<h1>Практика 9</h1>
+<p class="subtitle">Логика предикатов &bull; Множества истинности &bull; Кванторные операции</p>
+
+<!-- ===== ТЕОРИЯ ===== -->
+<div class="theory-block">
+  <h2>Теория</h2>
+
+  <div class="def">
+    <strong>Предикат</strong> \(P(x)\) — функция, определённая на множестве \(\mathbf{M}\), принимающая значения \(\{0, 1\}\).
+  </div>
+
+  <div class="def">
+    <strong>Множество истинности:</strong>
+    \[I_P = \{x \in \mathbf{M} \mid P(x) = 1\}\]
+  </div>
+
+  <div class="def">
+    <strong>Операции и их множества истинности:</strong>
+    <table style="width:100%; margin-top:8px; border-collapse:collapse;">
+      <tr><td style="padding:4px 8px;">\(\overline{P}(x) = \neg P(x)\)</td><td>\(I = \mathbf{M} \setminus I_P\)</td></tr>
+      <tr><td style="padding:4px 8px;">\(P(x) \wedge Q(x)\)</td><td>\(I = I_P \cap I_Q\)</td></tr>
+      <tr><td style="padding:4px 8px;">\(P(x) \vee Q(x)\)</td><td>\(I = I_P \cup I_Q\)</td></tr>
+      <tr><td style="padding:4px 8px;">\(P(x) \to Q(x) = \neg P \vee Q\)</td><td>\(I = \overline{I_P} \cup I_Q\)</td></tr>
+      <tr><td style="padding:4px 8px;">\(P(x) \leftrightarrow Q(x)\)</td><td>\(I = (I_P \cap I_Q) \cup (\overline{I_P} \cap \overline{I_Q})\)</td></tr>
+    </table>
+  </div>
+
+  <div class="def">
+    <strong>Кванторы</strong> (на конечном \(\mathbf{M} = \{x_1, \ldots, x_N\}\)):
+    \[\forall x\, P(x) = P(x_1) \wedge P(x_2) \wedge \ldots \wedge P(x_N)\]
+    \[\exists x\, P(x) = P(x_1) \vee P(x_2) \vee \ldots \vee P(x_N)\]
+  </div>
+</div>
+
+<!-- ===== ЗАДАНИЕ 1 ===== -->
+<div class="task-group">
+  <h2>Задание 1 — Область истинности (диаграммы Венна)</h2>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">1</div>
+      <div class="formula">\(P(x)\,Q(x)\,\overline{R(x)}\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Раскрываем</div>
+      \(P \wedge Q \wedge \neg R\)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = I_P \cap I_Q \cap \overline{I_R}\]
+      На диаграмме: пересечение \(P\) и \(Q\), но <strong>вне</strong> \(R\).
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">2</div>
+      <div class="formula">\(\overline{P(x)} \leftrightarrow \overline{Q(x)}\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Упрощаем</div>
+      \(\neg P \leftrightarrow \neg Q\). Эквивалентность отрицаний = эквивалентность самих предикатов:<br>
+      \(\neg P \leftrightarrow \neg Q \;\equiv\; P \leftrightarrow Q\)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = (I_P \cap I_Q) \cup (\overline{I_P} \cap \overline{I_Q})\]
+      На диаграмме: \(x\) одновременно в \(P\) и \(Q\), <strong>либо</strong> одновременно вне обоих.
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">3</div>
+      <div class="formula">\(P(x) \to \bigl(Q(x) \vee \overline{Q(x)}\bigr)\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Упрощаем</div>
+      \(Q \vee \neg Q = 1\) — тавтология (закон исключённого третьего).<br>
+      \(P \to 1 = 1\) — импликация с истинным следствием всегда истинна.
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = \mathbf{M}\]
+      Тождественно истинна на всём множестве.
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">4</div>
+      <div class="formula">\(\overline{P(x)} \vee Q(x)\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Упрощаем</div>
+      \(\neg P \vee Q \;\equiv\; P \to Q\) — это определение импликации.
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = \overline{I_P} \cup I_Q\]
+      На диаграмме: всё вне \(P\), плюс всё в \(Q\).
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">5</div>
+      <div class="formula">\(P(x)\,Q(x) \to \overline{R(x)}\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Раскрываем</div>
+      \((P \wedge Q) \to \neg R = \neg(P \wedge Q) \vee \neg R = \neg P \vee \neg Q \vee \neg R\)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = \overline{I_P} \cup \overline{I_Q} \cup \overline{I_R} = \mathbf{M} \setminus (I_P \cap I_Q \cap I_R)\]
+      На диаграмме: всё, <strong>кроме</strong> пересечения всех трёх кругов.
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">6</div>
+      <div class="formula">\(P(x)\,Q(x) \vee P(x)\,R(x)\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Раскрываем</div>
+      \((P \wedge Q) \vee (P \wedge R) = P \wedge (Q \vee R)\) — вынесли \(P\) за скобку (дистрибутивность).
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I = I_P \cap (I_Q \cup I_R)\]
+      На диаграмме: часть \(P\), попадающая в \(Q\) или \(R\) (или оба).
+    </div>
+  </div>
+</div>
+
+<!-- ===== ЗАДАНИЕ 2 ===== -->
+<div class="task-group">
+  <h2>Задание 2 — Область истинности на \(\mathbb{R}\)</h2>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">1</div>
+      <div class="formula">\(P(x) = \left(\dfrac{x^2+3x+2}{x^2+4x+3} = 0\right)\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Числитель = 0</div>
+      \(x^2+3x+2 = (x+1)(x+2) = 0 \;\Rightarrow\; x = -1 \text{ или } x = -2\)
+    </div>
+    <div class="step">
+      <div class="step-label">Знаменатель = 0 (запрещённые значения)</div>
+      \(x^2+4x+3 = (x+1)(x+3) = 0 \;\Rightarrow\; x = -1 \text{ или } x = -3\)
+    </div>
+    <div class="step">
+      <div class="step-label">Проверка корней</div>
+      Дробь = 0 когда числитель = 0 <strong>и</strong> знаменатель &ne; 0:<br><br>
+      &bull; \(x = -1\): знаменатель = \((-1+1)(-1+3) = 0\) &rarr; не определена <span style="color:var(--red)">✗</span><br>
+      &bull; \(x = -2\): знаменатель = \((-2+1)(-2+3) = (-1)(1) = -1 \neq 0\) &rarr; дробь = 0 <span style="color:var(--green)">✓</span>
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I_P = \{-2\}\]
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">2</div>
+      <div class="formula">\(P(x) = (x^2-6x+8 \geq 0)\;\&\;(x^2-7x+10 \leq 0)\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">Первое неравенство</div>
+      \(x^2 - 6x + 8 = (x-2)(x-4) \geq 0\)<br>
+      Корни: \(2, 4\). Парабола ветвями вверх.<br>
+      \(\Rightarrow x \in (-\infty,\, 2] \cup [4,\, +\infty)\)
+    </div>
+    <div class="step">
+      <div class="step-label">Второе неравенство</div>
+      \(x^2 - 7x + 10 = (x-2)(x-5) \leq 0\)<br>
+      Корни: \(2, 5\). Парабола ветвями вверх.<br>
+      \(\Rightarrow x \in [2,\, 5]\)
+    </div>
+    <div class="step">
+      <div class="step-label">Пересечение</div>
+      \(\bigl((-\infty, 2] \cup [4, +\infty)\bigr) \;\cap\; [2, 5]\)<br>
+      \(= \{2\} \cup [4, 5]\)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I_P = \{2\} \cup [4,\, 5]\]
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">3</div>
+      <div class="formula">\(P(x, y) = (\lg(x) = \lg(y))\)</div>
+    </div>
+    <div class="step">
+      <div class="step-label">ОДЗ</div>
+      \(\lg\) определён только при положительных аргументах: \(x > 0,\; y > 0\).
+    </div>
+    <div class="step">
+      <div class="step-label">Решение</div>
+      \(\lg(x) = \lg(y) \;\Longleftrightarrow\; x = y\) (логарифм — строго монотонная, взаимно однозначная функция).
+    </div>
+    <div class="answer">
+      <div class="answer-label">Ответ</div>
+      \[I_P = \{(x, y) \in \mathbb{R}^2 \mid x = y,\; x > 0\}\]
+      Геометрически: луч \(y = x\) при \(x > 0\) (биссектриса первого квадранта, без начала координат).
+    </div>
+  </div>
+</div>
+
+<!-- ===== ЗАДАНИЕ 3 ===== -->
+<div class="task-group">
+  <h2>Задание 3 — Формулы с кванторами</h2>
+  <p class="note" style="margin-bottom:16px;">
+    Даны предикаты: \(S(x,y,z) = (x+y=z)\), \;\(P(x,y,z) = (xy=z)\).<br>
+    Свободная переменная — \(x\), остальные связаны кванторами. Область — \(\mathbb{Z}\).
+  </p>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">1</div>
+      <span>\(x\) — чётное число</span>
+    </div>
+    <div class="step">
+      <div class="step-label">Идея</div>
+      \(x\) чётное \(\Leftrightarrow\) \(\exists y: x = 2y\) \(\Leftrightarrow\) \(\exists y: y + y = x\)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\exists y\; S(y, y, x)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> \(S(y,y,x)\) означает \(y+y=x\), т.е. \(x = 2y\) — определение чётности. ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">2</div>
+      <span>\(x\) — нечётное число</span>
+    </div>
+    <div class="step">
+      <div class="step-label">Идея</div>
+      Нечётное = НЕ чётное = не существует \(y\), что \(y+y=x\).
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\neg\,\exists y\; S(y, y, x) \;\;\equiv\;\; \forall y\; \neg\,S(y, y, x)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> для любого \(y\) выполняется \(y+y \neq x\) &rarr; \(x\) не представимо как \(2y\). ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">3</div>
+      <span>\(x = 0\)</span>
+    </div>
+    <div class="step">
+      <div class="step-label">Идея</div>
+      \(0\) — нейтральный элемент сложения: \(\forall y:\; x + y = y\).
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\forall y\; S(x, y, y)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> \(S(x,y,y)\) означает \(x+y=y\) &rarr; \(x=0\). Обратно: если \(x=0\), то \(0+y=y\) для любого \(y\). ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">4</div>
+      <span>\(x = 1\)</span>
+    </div>
+    <div class="step">
+      <div class="step-label">Идея</div>
+      \(1\) — нейтральный элемент умножения: \(\forall y:\; x \cdot y = y\).
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\forall y\; P(x, y, y)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> \(P(x,y,y)\) означает \(xy = y\). При \(y \neq 0\): \(x = 1\). При \(y = 0\): \(x \cdot 0 = 0\) верно для любого \(x\), но формула требует выполнения для <em>всех</em> \(y\), включая ненулевые &rarr; \(x = 1\). ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">5</div>
+      <span>\(x = 2\)</span>
+    </div>
+    <div class="step">
+      <div class="step-label">Идея</div>
+      \(x = 2 = 1 + 1\). Сначала находим «\(1\)» через его свойство (нейтральный по умножению), затем складываем его с собой.
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\exists y\;\bigl(\forall z\; P(y, z, z) \;\wedge\; S(y, y, x)\bigr)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong><br>
+      &bull; \(\forall z\; P(y,z,z)\) означает \(yz = z\) для всех \(z\) &rarr; \(y = 1\)<br>
+      &bull; \(S(y,y,x)\) означает \(y + y = x\) &rarr; \(1 + 1 = x\) &rarr; \(x = 2\)<br>
+      Итого: существует \(y = 1\), для которого оба условия выполнены &hArr; \(x = 2\). ✓
+    </div>
+  </div>
+</div>
+
+<!-- ===== ЗАДАНИЕ 4 ===== -->
+<div class="task-group">
+  <h2>Задание 4 — Формализация рассуждений</h2>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">1</div>
+    </div>
+    <p><em>«Все политики — лицедеи. Некоторые лицедеи — лицемеры. Значит, некоторые политики — лицемеры.»</em></p>
+    <div class="step">
+      <div class="step-label">Вводим предикаты</div>
+      \(A(x)\) — «\(x\) политик», \;\(B(x)\) — «\(x\) лицедей», \;\(C(x)\) — «\(x\) лицемер»
+    </div>
+    <div class="step">
+      <div class="step-label">Посылки</div>
+      1. \(\forall x\;\bigl(A(x) \to B(x)\bigr)\) — все политики — лицедеи<br>
+      2. \(\exists x\;\bigl(B(x) \wedge C(x)\bigr)\) — некоторые лицедеи — лицемеры
+    </div>
+    <div class="step">
+      <div class="step-label">Заключение</div>
+      \(\exists x\;\bigl(A(x) \wedge C(x)\bigr)\) — некоторые политики — лицемеры
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула рассуждения</div>
+      \[\bigl(\forall x(A(x) \to B(x)) \;\wedge\; \exists x(B(x) \wedge C(x))\bigr) \;\to\; \exists x(A(x) \wedge C(x))\]
+    </div>
+    <div class="check">
+      <strong>Замечание:</strong> это рассуждение <span style="color:var(--red)">НЕ является общезначимым</span> — «некоторые лицедеи-лицемеры» могут не быть политиками. Задание просит записать, а не доказать.
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">2</div>
+    </div>
+    <p><em>«Глупец был бы способен на это. Я на это не способен. Значит, я не глупец.»</em></p>
+    <div class="step">
+      <div class="step-label">Вводим предикаты</div>
+      \(G(x)\) — «\(x\) глупец», \;\(S(x)\) — «\(x\) способен на это», \;\(a\) — «я» (константа)
+    </div>
+    <div class="step">
+      <div class="step-label">Посылки</div>
+      1. \(\forall x\;\bigl(G(x) \to S(x)\bigr)\) — каждый глупец способен<br>
+      2. \(\neg S(a)\) — я не способен
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула рассуждения</div>
+      \[\bigl(\forall x(G(x) \to S(x)) \;\wedge\; \neg S(a)\bigr) \;\to\; \neg G(a)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> это <span style="color:var(--green)">modus tollens</span> — общезначимое рассуждение. Если \(G(a)\) было бы истинно, то по первой посылке \(S(a)\) — противоречие со второй посылкой. ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">3</div>
+    </div>
+    <p><em>«Друг моего друга — мой друг.»</em></p>
+    <div class="step">
+      <div class="step-label">Вводим предикаты</div>
+      \(F(x, y)\) — «\(x\) друг \(y\)», \;\(a\) — «я» (константа)
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула</div>
+      \[\forall x\;\forall y\;\bigl(F(x, a) \wedge F(y, x) \;\to\; F(y, a)\bigr)\]
+    </div>
+    <div class="check">
+      <strong>Чтение:</strong> для любых \(x, y\): если \(x\) — мой друг и \(y\) — друг \(x\), то \(y\) — мой друг. ✓
+    </div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">4</div>
+    </div>
+    <p><em>«Каждый любит сам себя. Значит, кого-то кто-нибудь любит.»</em></p>
+    <div class="step">
+      <div class="step-label">Вводим предикаты</div>
+      \(L(x, y)\) — «\(x\) любит \(y\)»
+    </div>
+    <div class="step">
+      <div class="step-label">Посылка и заключение</div>
+      Посылка: \(\forall x\; L(x, x)\) — каждый любит себя<br>
+      Заключение: \(\exists y\;\exists x\; L(x, y)\) — существует кто-то, кого кто-нибудь любит
+    </div>
+    <div class="answer">
+      <div class="answer-label">Формула рассуждения</div>
+      \[\forall x\; L(x, x) \;\to\; \exists y\;\exists x\; L(x, y)\]
+    </div>
+    <div class="check">
+      <strong>Проверка:</strong> <span style="color:var(--green)">общезначимо</span>. Если каждый любит себя, возьмём любого человека \(y\) — он сам себя любит, т.е. \(\exists x\; L(x, y)\) (этот \(x = y\)). ✓
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
