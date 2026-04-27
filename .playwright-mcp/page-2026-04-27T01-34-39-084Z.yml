@@ -1,0 +1,782 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "DupliChecker Logo" [ref=e6] [cursor=pointer]:
+        - /url: https://www.duplichecker.com/
+        - img "DupliChecker Logo" [ref=e7]
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "Paraphrasing Tool" [ref=e11] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/paraphrase-tool.php
+        - listitem [ref=e12]:
+          - link "Plagiarism Checker" [ref=e13] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/
+        - listitem [ref=e14]:
+          - link "Reverse Image Search" [ref=e15] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/reverse-image-search.php
+        - listitem [ref=e16]:
+          - button "EN" [ref=e17] [cursor=pointer]:
+            - generic [ref=e18]: EN
+        - listitem [ref=e19]:
+          - link "Login" [ref=e20] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/login
+        - listitem [ref=e21]:
+          - link "Free Tools" [ref=e22] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/free-tools.php
+        - listitem [ref=e23]:
+          - link "Pricing" [ref=e25] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/pricing
+  - generic [ref=e26]:
+    - generic [ref=e28]:
+      - heading "Plagiarism Checker" [level=1] [ref=e30]
+      - paragraph [ref=e32]: Duplichecker detects plagiarism from your text more accurately
+      - generic [ref=e34]:
+        - link "testimage Deep search Support Upto 25,000 words Accurate Reports No Ads Try Premium" [ref=e36] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - list [ref=e41]:
+            - listitem [ref=e42]:
+              - img "testimage" [ref=e43]
+              - generic "Deep search" [ref=e44]
+            - listitem [ref=e45]:
+              - generic "Support" [ref=e46]
+            - listitem [ref=e47]:
+              - generic "Upto 25,000 words" [ref=e48]
+            - listitem [ref=e49]:
+              - generic "Accurate Reports" [ref=e50]
+            - listitem [ref=e51]:
+              - generic "No Ads" [ref=e52]
+          - strong [ref=e55]: Try Premium
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e61] [cursor=pointer]:
+              - generic [ref=e63]: Go Premium
+              - text: Unlock Word Limits
+            - generic [ref=e66]:
+              - img "user" [ref=e67]
+              - text: 5.10M+ reviews
+            - textbox "Please enter your text and press Check Plagiarism" [ref=e68]:
+              - /placeholder: "Please enter your text and press Check Plagiarism "
+            - generic [ref=e69]:
+              - generic [ref=e70] [cursor=pointer]: Choose File
+              - img [ref=e74] [cursor=pointer]
+            - generic:
+              - generic [ref=e77]: "1000 words limit per search | Total words: 0"
+              - generic [ref=e80]:
+                - generic [ref=e81]: 4.7 / 5
+                - generic [ref=e82]:
+                  - img "star" [ref=e83]
+                  - img "star" [ref=e84]
+                  - img "star" [ref=e85]
+                  - img "star" [ref=e86]
+                  - img "star" [ref=e87]
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e91]: Check Plagiarism via webpage URL
+              - generic [ref=e92]:
+                - generic [ref=e96] [cursor=pointer]: 
+                - textbox "Enter URL (https://abc.com)" [ref=e97]
+            - generic [ref=e98]:
+              - generic [ref=e99]:
+                - text: Exclude URLS (Max 5)
+                - img "information" [ref=e100] [cursor=pointer]
+              - generic [ref=e101]:
+                - generic [ref=e105] [cursor=pointer]: 
+                - textbox "Enter URL (https://abc.com)" [ref=e106]
+        - generic [ref=e110]:
+          - button "Check Plagiarism" [ref=e111] [cursor=pointer]
+          - button "Detect AI Content" [ref=e112] [cursor=pointer]
+          - link "Grammar Check" [ref=e113] [cursor=pointer]:
+            - /url: https://www.grammarly.com/?q=grammar&utm_source=placement&utm_medium=cpc&utm_content=72890_3&utm_term=duplichecker
+            - button "Grammar Check" [ref=e114]
+          - link "API" [ref=e116] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/plagiarism-checker-api
+            - generic [ref=e117]: API
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - heading "Available in" [level=2] [ref=e123]
+          - generic [ref=e124]:
+            - text: English -
+            - link "Plagiarism Checker" [ref=e125] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/
+          - generic [ref=e126]:
+            - text: Español -
+            - link "Detector de plagio" [ref=e127] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/es
+          - generic [ref=e128]:
+            - text: Português -
+            - link "Detector de plagio" [ref=e129] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/pt
+          - generic [ref=e130]:
+            - text: русский -
+            - link "Антиплагиат" [ref=e131] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ru
+          - generic [ref=e132]:
+            - text: Deutsche -
+            - link "Kostenloser Check" [ref=e133] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/de
+          - generic [ref=e134]:
+            - text: italiano -
+            - link "Antiplagio" [ref=e135] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/it
+          - generic [ref=e136]:
+            - text: Indonesia -
+            - link "Cek plagiarisme" [ref=e137] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/id
+          - generic [ref=e138]:
+            - text: العربية -
+            - link "مدقق الانتحال" [ref=e139] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ar
+          - generic [ref=e140]:
+            - text: Turkish -
+            - link "Intihal programı" [ref=e141] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/tr
+          - generic [ref=e142]:
+            - text: Dutch -
+            - link "Plagiaat checker" [ref=e143] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/nl
+          - generic [ref=e144]:
+            - text: Tiếng Việt -
+            - link "Kiểm tra đạo văn" [ref=e145] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/vi
+          - generic [ref=e146]:
+            - text: French -
+            - link "Logiciel anti plagiat" [ref=e147] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/fr
+          - generic [ref=e148]:
+            - text: Svenska -
+            - link "Plagiatkontroll" [ref=e149] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/sv
+          - generic [ref=e150]:
+            - text: Korean -
+            - link "표절검사 도구" [ref=e151] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ko
+          - generic [ref=e152]:
+            - text: 日本語 -
+            - link "剽窃チェッカー" [ref=e153] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ja
+          - generic [ref=e154]:
+            - text: Danish -
+            - link "Plagiat tjek" [ref=e155] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/da
+          - generic [ref=e156]:
+            - text: Romanian -
+            - link "Plagiat detector" [ref=e157] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ro
+          - generic [ref=e158]:
+            - text: Norwegian -
+            - link "Plagiatkontroll" [ref=e159] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/no
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - heading "Plagiarism Checker" [level=2] [ref=e162]
+            - paragraph [ref=e163]: To be specific, Plagiarism checking or content's similarity detection is a process of identifying the occurrence of plagiarism or copyright infringement within a work of content for writer, teacher, student blogger, webmaster, or any document.
+            - heading "What we offer!" [level=3] [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - strong [ref=e168]: Multiple File Formats
+              - table [ref=e170]:
+                - rowgroup [ref=e171]:
+                  - row "✓ Use multiple ways of uploading text." [ref=e172]:
+                    - cell "✓ Use multiple ways of uploading text." [ref=e173]
+                  - row "✓ Simple copy pasting in the text area." [ref=e174]:
+                    - cell "✓ Simple copy pasting in the text area." [ref=e175]
+                  - row "✓ Upload through device or cloud storage." [ref=e176]:
+                    - cell "✓ Upload through device or cloud storage." [ref=e177]
+                  - row "✓ Supports 7 formats of document." [ref=e178]:
+                    - cell "✓ Supports 7 formats of document." [ref=e179]
+                  - row "✓ No limitation of document formats." [ref=e180]:
+                    - cell "✓ No limitation of document formats." [ref=e181]
+                  - row "✓ .tex, .txt, .doc, .docx, .odt, .pdf, and .rtf" [ref=e182]:
+                    - cell "✓ .tex, .txt, .doc, .docx, .odt, .pdf, and .rtf" [ref=e183]
+            - generic [ref=e184]:
+              - strong [ref=e186]: Results in Percentage
+              - table [ref=e188]:
+                - rowgroup [ref=e189]:
+                  - row "✓ Provides absolute comfort to users." [ref=e190]:
+                    - cell "✓ Provides absolute comfort to users." [ref=e191]
+                  - row "✓ Unique content ratio in percentage." [ref=e192]:
+                    - cell "✓ Unique content ratio in percentage." [ref=e193]
+                  - row "✓ Clarifies plagiarized resources in numbers." [ref=e194]:
+                    - cell "✓ Clarifies plagiarized resources in numbers." [ref=e195]
+                  - row "✓ Most accurate plagiarism checker ratio." [ref=e196]:
+                    - cell "✓ Most accurate plagiarism checker ratio." [ref=e197]
+                  - row "✓ Click \"Remove Plagiarism\" button." [ref=e198]:
+                    - cell "✓ Click \"Remove Plagiarism\" button." [ref=e199]
+                  - row "✓ Best matching detection." [ref=e200]:
+                    - cell "✓ Best matching detection." [ref=e201]
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - strong [ref=e205]: Privacy Guaranteed
+              - table [ref=e207]:
+                - rowgroup [ref=e208]:
+                  - row "✓ Plagiarism checker with 100% privacy." [ref=e209]:
+                    - cell "✓ Plagiarism checker with 100% privacy." [ref=e210]
+                  - row "✓ Doesn't save any uploaded material." [ref=e211]:
+                    - cell "✓ Doesn't save any uploaded material." [ref=e212]
+                  - row "✓ Trashes content after checking plagiarism." [ref=e213]:
+                    - cell "✓ Trashes content after checking plagiarism." [ref=e214]
+                  - row "✓ No risks of data leakage." [ref=e215]:
+                    - cell "✓ No risks of data leakage." [ref=e216]
+                  - row "✓ Protects privacy and security of content." [ref=e217]:
+                    - cell "✓ Protects privacy and security of content." [ref=e218]
+                  - row "✓ Reveals the best results." [ref=e219]:
+                    - cell "✓ Reveals the best results." [ref=e220]
+            - generic [ref=e221]:
+              - strong [ref=e223]: AI-Based Technology
+              - table [ref=e225]:
+                - rowgroup [ref=e226]:
+                  - row "✓ Tool is Developed using AI technology." [ref=e227]:
+                    - cell "✓ Tool is Developed using AI technology." [ref=e228]
+                  - row "✓ Not only picks the exactly matched content." [ref=e229]:
+                    - cell "✓ Not only picks the exactly matched content." [ref=e230]
+                  - row "✓ Detects minor trace of plagiarism." [ref=e231]:
+                    - cell "✓ Detects minor trace of plagiarism." [ref=e232]
+                  - row "✓ Paraphrased content can also be identified." [ref=e233]:
+                    - cell "✓ Paraphrased content can also be identified." [ref=e234]
+                  - row "✓ Best plagiarism checker to catch the duplication." [ref=e235]:
+                    - cell "✓ Best plagiarism checker to catch the duplication." [ref=e236]
+                  - row "✓ Compares the content with millions of sources." [ref=e237]:
+                    - cell "✓ Compares the content with millions of sources." [ref=e238]
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - strong [ref=e242]: Multilingual Support
+              - table [ref=e244]:
+                - rowgroup [ref=e245]:
+                  - row "✓ Worldwide usage with multilingual users." [ref=e246]:
+                    - cell "✓ Worldwide usage with multilingual users." [ref=e247]
+                  - row "✓ Detects plagiarism in various languages." [ref=e248]:
+                    - cell "✓ Detects plagiarism in various languages." [ref=e249]
+                  - row "✓ Operational in up to 7 different languages." [ref=e250]:
+                    - cell "✓ Operational in up to 7 different languages." [ref=e251]
+                  - row "✓ Supports Spanish, Russian, Portuguese," [ref=e252]:
+                    - cell "✓ Supports Spanish, Russian, Portuguese," [ref=e253]
+                  - row "✓ Dutch, Indonesian, Italian, and Arabic." [ref=e254]:
+                    - cell "✓ Dutch, Indonesian, Italian, and Arabic." [ref=e255]
+                  - row "✓ Checks plagiarism, webpages, research papers etc." [ref=e256]:
+                    - cell "✓ Checks plagiarism, webpages, research papers etc." [ref=e257]
+            - generic [ref=e258]:
+              - strong [ref=e260]: Writing Enhancements
+              - table [ref=e262]:
+                - rowgroup [ref=e263]:
+                  - row "✓ Embedded with other writing enhancements." [ref=e264]:
+                    - cell "✓ Embedded with other writing enhancements." [ref=e265]
+                  - row "✓ Remove the duplicate article." [ref=e266]:
+                    - cell "✓ Remove the duplicate article." [ref=e267]
+                  - row "✓ Removes plagiarism instantly." [ref=e268]:
+                    - cell "✓ Removes plagiarism instantly." [ref=e269]
+                  - row "✓ Highlights grammar errors." [ref=e270]:
+                    - cell "✓ Highlights grammar errors." [ref=e271]
+                  - row "✓ Produces quality content that is ready to publish." [ref=e272]:
+                    - cell "✓ Produces quality content that is ready to publish." [ref=e273]
+                  - row "✓ Traces plagiarism from every possible source." [ref=e274]:
+                    - cell "✓ Traces plagiarism from every possible source." [ref=e275]
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - strong [ref=e279]: Fast & Deep Scanning
+              - table [ref=e281]:
+                - rowgroup [ref=e282]:
+                  - row "✓ Provides results in a super-fast detection." [ref=e283]:
+                    - cell "✓ Provides results in a super-fast detection." [ref=e284]
+                  - row "✓ Despite having the deep-scanning technology." [ref=e285]:
+                    - cell "✓ Despite having the deep-scanning technology." [ref=e286]
+                  - row "✓ Doesn't cause a delay in report generation." [ref=e287]:
+                    - cell "✓ Doesn't cause a delay in report generation." [ref=e288]
+                  - row "✓ Download plagiarism report seconds." [ref=e289]:
+                    - cell "✓ Download plagiarism report seconds." [ref=e290]
+                  - row "✓ Fully reliable plagiarism detection software." [ref=e291]:
+                    - cell "✓ Fully reliable plagiarism detection software." [ref=e292]
+                  - row "✓ To remove plagiarism takes immediate action." [ref=e293]:
+                    - cell "✓ To remove plagiarism takes immediate action." [ref=e294]
+            - generic [ref=e295]:
+              - strong [ref=e297]: Highlights Duplication
+              - table [ref=e299]:
+                - rowgroup [ref=e300]:
+                  - row "✓ Generates easy to understand results" [ref=e301]:
+                    - cell "✓ Generates easy to understand results" [ref=e302]
+                  - row "✓ No struggle to dig up the conclusion" [ref=e303]:
+                    - cell "✓ No struggle to dig up the conclusion" [ref=e304]
+                  - row "✓ Uses colour coding scheme" [ref=e305]:
+                    - cell "✓ Uses colour coding scheme" [ref=e306]
+                  - row "✓ Differentiates duplicate and unique phrases" [ref=e307]:
+                    - cell "✓ Differentiates duplicate and unique phrases" [ref=e308]
+                  - row "✓ Duplicate sentences are marked in pink" [ref=e309]:
+                    - cell "✓ Duplicate sentences are marked in pink" [ref=e310]
+                  - row "✓ Thoroughly checks each and every sentence" [ref=e311]:
+                    - cell "✓ Thoroughly checks each and every sentence" [ref=e312]
+      - generic [ref=e314]:
+        - generic [ref=e317]:
+          - textbox "search-field" [ref=e318]:
+            - /placeholder: Search from SEO tools
+          - button "search-field" [ref=e319] [cursor=pointer]:
+            - img "search icon" [ref=e320]
+        - generic [ref=e321]:
+          - heading "Popular SEO Tools" [level=3] [ref=e322]
+          - list [ref=e324]:
+            - listitem [ref=e325]:
+              - link "Icon of plagiarism checker Plagiarism Checker" [ref=e326] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/
+                - img "Icon of plagiarism checker" [ref=e327]
+                - generic [ref=e328]: Plagiarism Checker
+            - listitem [ref=e329]:
+              - link "Icon of paraprhasing tool Paraphrasing Tool" [ref=e330] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/paraphrase-tool.php
+                - img "Icon of paraprhasing tool" [ref=e331]
+                - generic [ref=e332]: Paraphrasing Tool
+            - listitem [ref=e333]:
+              - link "Icon of Grammar checker Grammar checker" [ref=e334] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/grammar-checker.php
+                - img "Icon of Grammar checker" [ref=e335]
+                - generic [ref=e336]: Grammar checker
+            - listitem [ref=e337]:
+              - link "Icon of Small text Generator Small Text Generator" [ref=e338] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/small-text-generator
+                - img "Icon of Small text Generator" [ref=e339]
+                - generic [ref=e340]: Small Text Generator
+            - listitem [ref=e341]:
+              - link "Icon of Word counting tool Word Counter" [ref=e342] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/word-counter.php
+                - img "Icon of Word counting tool" [ref=e343]
+                - generic [ref=e344]: Word Counter
+            - listitem [ref=e345]:
+              - link "Icon of Reverse image search tool Reverse Image Search" [ref=e346] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/reverse-image-search.php
+                - img "Icon of Reverse image search tool" [ref=e347]
+                - generic [ref=e348]: Reverse Image Search
+            - listitem [ref=e349]:
+              - link "Icon of Domain Authority Checker Domain Authority Checker" [ref=e350] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/domain-authority-checker.php
+                - img "Icon of Domain Authority Checker" [ref=e351]
+                - generic [ref=e352]: Domain Authority Checker
+            - listitem [ref=e353]:
+              - link "AI Text Generator AI Text Generator" [ref=e354] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/ai-text-generator.php
+                - img "AI Text Generator" [ref=e355]
+                - generic [ref=e356]: AI Text Generator
+        - generic [ref=e357]:
+          - heading "Other Tools" [level=3] [ref=e358]
+          - list [ref=e360]:
+            - listitem [ref=e361]:
+              - link "text-analysis-tools Text Analysis Tools" [ref=e362] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/text-analysis-tools
+                - img "text-analysis-tools" [ref=e363]
+                - generic [ref=e364]: Text Analysis Tools
+            - listitem [ref=e365]:
+              - link "web-management-tools Web Management Tools" [ref=e366] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/web-management-tools
+                - img "web-management-tools" [ref=e367]
+                - generic [ref=e368]: Web Management Tools
+            - listitem [ref=e369]:
+              - link "seo-backlink-tools SEO Backlink Tools" [ref=e370] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/seo-backlink-tools
+                - img "seo-backlink-tools" [ref=e371]
+                - generic [ref=e372]: SEO Backlink Tools
+            - listitem [ref=e373]:
+              - link "domain-tools Domain Tools" [ref=e374] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/domain-tools
+                - img "domain-tools" [ref=e375]
+                - generic [ref=e376]: Domain Tools
+            - listitem [ref=e377]:
+              - link "image-tools Image Tools" [ref=e378] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/image-tools
+                - img "image-tools" [ref=e379]
+                - generic [ref=e380]: Image Tools
+            - listitem [ref=e381]:
+              - link "website-checker-tools Website Checker Tools" [ref=e382] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/website-checker-tools
+                - img "website-checker-tools" [ref=e383]
+                - generic [ref=e384]: Website Checker Tools
+            - listitem [ref=e385]:
+              - link "pdf-converter PDF Converter Tools" [ref=e386] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/pdf-converter
+                - img "pdf-converter" [ref=e387]
+                - generic [ref=e388]: PDF Converter Tools
+            - listitem [ref=e389]:
+              - link "unit-converter Unit Tools" [ref=e390] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/unit-converter.php
+                - img "unit-converter" [ref=e391]
+                - generic [ref=e392]: Unit Tools
+            - listitem [ref=e393]:
+              - link "binary to text Binary Translator" [ref=e394] [cursor=pointer]:
+                - /url: https://www.duplichecker.com/binary-translator
+                - img "binary to text" [ref=e395]
+                - generic [ref=e396]: Binary Translator
+    - generic [ref=e400]:
+      - generic [ref=e401]:
+        - paragraph [ref=e402]: “What People Say?”
+        - generic [ref=e403]:
+          - paragraph
+          - paragraph [ref=e404]: “I typically don't opt for free plagiarism checkers. But DupliChecker.com changed my thinking. I tried this with partially paraphrased, fully rephrased, and completely copied content, and it gave accurate results. I never knew that free plagiarism detectors could be so handy.”
+          - generic [ref=e408]:
+            - paragraph [ref=e409]: Thomas Carroll
+            - img "img" [ref=e411]
+      - generic [ref=e413]:
+        - img "img" [ref=e414]
+        - img "img" [ref=e415]
+    - generic [ref=e417]:
+      - generic [ref=e418]:
+        - generic [ref=e419]:
+          - heading "How to use Duplichecker’s plagiarism checker? " [level=2] [ref=e421]:
+            - button "How to use Duplichecker’s plagiarism checker? " [expanded] [ref=e422] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e423]:
+            - generic [ref=e424]:
+              - heading "Here are the following steps to check plagiarism" [level=3] [ref=e425]
+              - paragraph [ref=e426]:
+                - strong [ref=e427]: "Step 1:"
+                - text: Paste your text into the text box.
+                - strong [ref=e428]: Or
+                - text: ",Upload your Doc or Text file using the Choose File button. (.tex, .txt, .doc, .docx, .odt, .pdf, and .rtf)"
+              - paragraph [ref=e429]:
+                - img "screen 1" [ref=e430]
+              - paragraph [ref=e431]:
+                - strong [ref=e432]: "Step 2:"
+                - text: Click on the “Check Plagiarism” button
+              - paragraph [ref=e433]:
+                - img "screen 2" [ref=e434]
+              - paragraph [ref=e435]:
+                - strong [ref=e436]: "Step 3:"
+                - text: Check results
+              - paragraph [ref=e437]: In case there are duplicate matches (Plagricontent) found, the tool will show results in percentage meaning
+              - paragraph [ref=e438]:
+                - text: Percentage % of Unique content
+                - strong [ref=e439]: and
+                - text: Percentage % of Plagiarized
+              - paragraph [ref=e440]:
+                - img "screen 3" [ref=e441]
+              - paragraph [ref=e442]:
+                - strong [ref=e443]: "Step 4:"
+                - text: Click on the Remove plagiarism to eliminate plagiarism in the content
+              - paragraph [ref=e444]:
+                - img "screen 4" [ref=e445]
+              - paragraph [ref=e446]:
+                - strong [ref=e447]: "Step 5:"
+                - text: After Removing Plagiarism, you can recheck plagiarism by clicking on the given button
+              - paragraph [ref=e448]:
+                - img "screen 5" [ref=e449]
+              - paragraph [ref=e450]:
+                - strong [ref=e451]: "Step 6:"
+                - text: Click on the Check Grammar tab to check your grammar.
+              - paragraph [ref=e452]:
+                - img "screen 6" [ref=e453]
+              - paragraph [ref=e454]:
+                - strong [ref=e455]: "Step 7:"
+                - text: Click on the AI detector Tab to check your content for AI detection
+              - paragraph [ref=e456]:
+                - img "screen 7" [ref=e457]
+        - generic [ref=e458]:
+          - heading "How does the plagiarism checker work? " [level=2] [ref=e460]:
+            - button "How does the plagiarism checker work? " [expanded] [ref=e461] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e462]:
+            - generic [ref=e463]:
+              - paragraph [ref=e464]:
+                - text: Our duplicate text detector identifies the similarity in the content by performing a deep scan. Its advanced
+                - strong [ref=e465]: partial match feature
+                - text: is trained to analyze the text on a paragraph level to detect the duplication of structure, reasoning, or logical order. It further scans the document
+                - strong [ref=e466]: word by word
+                - text: and
+                - strong [ref=e467]: sentence by sentence
+                - text: to identify the instances of copied content. Any resemblance in sentence structure, phrasing, or wording is highlighted in the source.
+              - paragraph [ref=e468]:
+                - strong [ref=e469]: Important!
+              - paragraph [ref=e470]:
+                - text: Duplichecker allows you to scan up to
+                - strong [ref=e471]: 25,000 words per search
+                - text: . While using global search methods and AI-based technology, it deeply analyzes the content for duplication. This plagiarism checker is one of the most efficient and advanced due to its extensive features, such as URL checking, custom PDF reports, and supporting multiple file formats.
+        - generic [ref=e472]:
+          - heading "Definition of Plagiarism " [level=2] [ref=e474]:
+            - button "Definition of Plagiarism " [expanded] [ref=e475] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e476]:
+            - generic [ref=e477]:
+              - heading "What is plagiarism?" [level=3] [ref=e478]
+              - paragraph [ref=e479]: “The act of pretension where you take one’s words and make them your own it can include ideas, thoughts, or any material that you can see/hear and make a copy of.”
+              - paragraph [ref=e480]:
+                - strong [ref=e481]: According to the Oxford Dictionary, plagiarism is
+                - text: ":"
+              - paragraph [ref=e482]: “The practice of taking someone else's work or ideas and passing them off as one's own”
+              - paragraph [ref=e483]: In precise words, plagiarism is an act of fraud. It involves both stealing someone else's artwork and lying about it for a while.
+              - heading "Types of plagiarism" [level=3] [ref=e484]
+              - paragraph [ref=e485]:
+                - strong [ref=e486]: Here are the different
+                - link "types of plagiarism" [ref=e487] [cursor=pointer]:
+                  - /url: https://www.duplichecker.com/blog/common-types-of-plagiarism.php
+                  - strong [ref=e488]: types of plagiarism
+                - strong [ref=e489]: ":"
+              - list [ref=e490]:
+                - listitem [level=1] [ref=e491]:
+                  - link "Self-plagiarism" [ref=e492] [cursor=pointer]:
+                    - /url: https://www.duplichecker.com/blog/defining-self-plagiarism.php
+                - listitem [level=1] [ref=e493]:
+                  - link "incremental plagiarism" [ref=e494] [cursor=pointer]:
+                    - /url: https://www.duplichecker.com/blog/what-is-incremental-plagiarism.php
+                - listitem [level=1] [ref=e495]: Direct plagiarism
+                - listitem [level=1] [ref=e496]: Mosaic plagiarism
+                - listitem [level=1] [ref=e497]: Patchwork plagiarism
+        - generic [ref=e498]:
+          - heading "Advantages Of Plagiarism Checker by DupliChecker " [level=2] [ref=e500]:
+            - button "Advantages Of Plagiarism Checker by DupliChecker " [expanded] [ref=e501] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e502]:
+            - generic [ref=e503]:
+              - paragraph [ref=e504]: If you aim to create unique and different content from others, the duplicate content checker is the best facility for you. It provides you with the following benefits for text checking.
+              - heading "High-quality check" [level=3] [ref=e505]
+              - paragraph [ref=e506]: The online duplication checker deeply analyses the text based on the choice of words, repetition, and phrasing. Then, it matches the text with the billions of online resources to find the similarities and highlight them.
+              - heading "Safe and Fast" [level=3] [ref=e507]
+              - paragraph [ref=e508]: With the plagiarism detector, you can get the duplication results within a few seconds. The tool matches the text and shows the percentage quickly. It also keeps the content safe from unauthorized use.
+              - heading "It’s Free" [level=3] [ref=e509]
+              - paragraph [ref=e510]: All the advanced functionalities of the originality checker are offered free of cost. The tool does not ask for registration or subscription fees to start the text-checking process.
+        - generic [ref=e511]:
+          - heading "AI Plagiarism Checker " [level=2] [ref=e513]:
+            - button "AI Plagiarism Checker " [expanded] [ref=e514] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e515]:
+            - generic [ref=e516]:
+              - paragraph [ref=e517]: Most tools sometimes fail to spot plagiarism instances or content duplication in generative AI-based texts. But DupliChecker’s state-of-the-art AI plagiarism checker excels at this.
+              - heading "DupliChecker’s Advanced AI Plagiarism Detection Techniques" [level=3] [ref=e518]
+              - paragraph [ref=e519]: "Our developers have employed the latest cutting-edge algorithms to improve the working of this plagiarism detector. Our tool is now sophisticated enough to accurately detect plagiarism traces in any LLM’s content. Below is a quick rundown of the methods that this online utility uses:"
+              - heading "Text Preprocessing:" [level=4] [ref=e520]
+              - paragraph [ref=e521]: When you process a content piece, our tool initially prepares it for analysis. This step involves cleaning the input by removing redundant characters and performing text normalization. It paves the way for more accurate and efficient analysis.
+              - heading "Semantic Analysis:" [level=4] [ref=e522]
+              - paragraph [ref=e523]: This web utility does more than just surface-level examination. It takes aid from Natural Language Processing (NLP) to understand the given content’s details and word connections. This support enables our tool to ensure a more thorough understanding of the text.
+              - heading "Feature Extraction:" [level=4] [ref=e524]
+              - paragraph [ref=e525]: After gaining an understanding of the input, our AI plagiarism checker aims to identify and extract the key features. This process involves separating the important text components, like keywords, phrases, and grammatical structures. It makes our tool more effective in comparing various content pieces.
+              - heading "Machine Learning Models:" [level=4] [ref=e526]
+              - paragraph [ref=e527]: This online utility also benefits from the training of its machine learning models. They have already been trained to spot patterns in the input because of their ability to learn from data. Such innovative technology helps our tool to detect potential plagiarism with a high degree of accuracy.
+              - heading "Deep Learning Techniques:" [level=4] [ref=e528]
+              - paragraph [ref=e529]: Though ML models are sufficient to detect hidden text data patterns, they sometimes fail to detect complicated patterns. To close this gap, our experts have utilized deep learning techniques. These approaches use neural networks to understand complex text patterns and structures. Their assistance enables this web utility to detect new plagiarism attempts that regular approaches could overlook.
+              - heading "Database Comparison:" [level=4] [ref=e530]
+              - paragraph [ref=e531]: Like conventional tools, our plagiarism detector looks for precise similarities by comparing the text to large databases. This web utility successfully identifies overlaps or similarities by comparing the input to a massive archive of academic papers, publications, and online content.
+              - heading "Real-Time Monitoring:" [level=4] [ref=e532]
+              - paragraph [ref=e533]: This web utility has been programmed to monitor and analyze the entered text in real-time. As you input or change information, our tool keeps analyzing your text, which empowers it to deliver feedback quickly.
+              - heading "Feedback and Improvement:" [level=4] [ref=e534]
+              - paragraph [ref=e535]: We highly value our users’ feedback. Therefore, this online utility’s learning process never stops. With guidance from users’ feedback, the tool constantly works to improve the effectiveness of its algorithms. This allows our plagiarism checker to detect plagiarism more reliably in fresh information.
+        - generic [ref=e536]:
+          - heading "Plagiarism detector VS Manual checking [Pros and Cons] " [level=2] [ref=e538]:
+            - button "Plagiarism detector VS Manual checking [Pros and Cons] " [expanded] [ref=e539] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e540]:
+            - generic [ref=e541]:
+              - paragraph [ref=e542]: It’s boring, time taking and the big thing is the MANUAL! Ah
+              - paragraph [ref=e543]: Who wouldn’t want to skip doing something that technology can do for you with more accuracy and quickly? Right!!!
+              - paragraph [ref=e544]: We know We would! As it can help in many ways, one of which is finding a copy of original content over the internet and informing about it while you are sipping your coffee in dim light, “Sounds Cool”. Or you can go ahead and crosscheck to look for the plagiarized work manually which not only is going to take a lot of time. You need an excellent memory because while reading so many documents you might keep on forgetting the duplication and sources.
+              - paragraph [ref=e545]:
+                - strong [ref=e546]: Isn’t it enough reason why a plagiarism scanner is used?
+              - paragraph [ref=e547]: Because it is accurate and able to find the copied content real fast to improve academic honesty and whatsoever that does not allow plagiarism. This usually happens in almost every student, professional writer, professor, or content creator’s life that uses the internet to study, teach or deliver their work.
+              - paragraph [ref=e548]:
+                - text: So, they have to be very careful in uploading a part of their work online; the best way is the use of image formation. If someone copies from the image we have developed a tool to
+                - link "find similar image" [ref=e549] [cursor=pointer]:
+                  - /url: https://www.duplichecker.com/reverse-image-search.php
+                - text: . It will recognize objects on the image and let you know where this object or image is located. In which no one can copy any sort of work, but they will have to write down which people mostly don’t like to do.
+              - heading "Plagiarism in the digital world." [level=3] [ref=e550]
+              - paragraph [ref=e551]: The most common problem in plagiarized content has to face is expulsion from the Search Engine Result Page (SERP), and websites that are aiming for a better rank can’t afford that.
+              - paragraph [ref=e552]: Therefore this plagiarism checker will inform you after detection of all the areas of the internet where it finds similarity or duplication in the content.
+              - paragraph [ref=e553]:
+                - strong [ref=e554]: In the world
+                - text: of the internet, it is not considered a crime, but it just shows deceitfulness in that person’s character. The question is why does it matter? Well, in academics, it can put people into serious trouble, if caught plagiarizing, they will not only face punishments but lose the time a beginner can utilize to learn.
+              - paragraph [ref=e555]:
+                - strong [ref=e556]: In this cyberspace,
+                - text: there can be many mistakes that can trigger duplication in content. One of the most significant ones is failing to put a quotation mark, even if you had no intention of taking someone’s words but forgetting unintentionally to give credits or quoting the name, there is a possibility that it can put the content or you to serious complications.
+              - heading "Why Introducing Plagiarism checker by DupliChecker.com?" [level=3] [ref=e557]
+              - paragraph [ref=e558]: Whether it is an academic assignment or an article for a website, as a writer you must be familiar with the importance of written work. There are times in life when people copy your work and pretend to be the rightful owner of that content, how bad can it be? It is another discussion.
+              - table [ref=e560]:
+                - rowgroup [ref=e561]:
+                  - row "🕵️ Plagiarism Detection 🤩 Impressive , Deeply" [ref=e562]:
+                    - cell "🕵️ Plagiarism Detection" [ref=e563]
+                    - cell "🤩 Impressive , Deeply" [ref=e564]
+                  - row "👌 Accuracy 🤞 Promising 💯" [ref=e565]:
+                    - cell "👌 Accuracy" [ref=e566]
+                    - cell "🤞 Promising 💯" [ref=e567]
+                  - row "🗺️ Languages 🌎 Globally" [ref=e568]:
+                    - cell "🗺️ Languages" [ref=e569]
+                    - cell "🌎 Globally" [ref=e570]
+                  - row "💰 Price 🤗 Totally Free" [ref=e571]:
+                    - cell "💰 Price" [ref=e572]
+                    - cell "🤗 Totally Free" [ref=e573]
+                  - row "👨‍💻 Technology ✨ Advance AI Based" [ref=e574]:
+                    - cell "👨‍💻 Technology" [ref=e575]
+                    - cell "✨ Advance AI Based" [ref=e576]:
+                      - paragraph [ref=e577]: ✨ Advance AI Based
+              - paragraph [ref=e578]:
+                - text: There is a specific term used for such a type of ill practice known as plagiarism. It is not about only the copy of the written content or academic paper, but people even copy photos, music, and videos and show others as their work without giving even a little piece of credit to the person who is the real holder of all that work. Thoughts and ideas of someone are their property and thus belong to them and can be protected by
+                - link "copyright laws" [ref=e579] [cursor=pointer]:
+                  - /url: https://www.duplichecker.com/blog/keeping-copyright-laws-in-mind-when-plagiarizing.php
+                - text: .
+              - paragraph [ref=e580]: We know how it feels when somebody takes away a part of your work. Of course, whatever you write is your thoughts; therefore, we developed a plagiarism detection tool.
+              - paragraph [ref=e581]: Plagiarism detector looks for any copied content over the internet if found then online plagiarism checker free will inform you about where it is located and how much of your content is present word by word on that website.
+        - generic [ref=e582]:
+          - heading "Paper Checker (Essay checker) " [level=2] [ref=e584]:
+            - button "Paper Checker (Essay checker) " [expanded] [ref=e585] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e586]:
+            - generic [ref=e587]:
+              - paragraph [ref=e588]:
+                - strong [ref=e589]: How accurate is this free plagiarism checker for students?
+              - paragraph [ref=e590]: "Take our word: This copyright checker offers you the most authentic possible results."
+              - paragraph [ref=e591]:
+                - text: It took us months of research and trials to come up with a final product – a duplicate content checker that you delightfully use to check your essay, articles, Quotations, and research paper today. Our sophisticated, one-of-a-kind anti-plagiarism tool has been designed as an exclusive free plagiarism checker
+                - link "for students" [ref=e592] [cursor=pointer]:
+                  - /url: https://www.duplichecker.com/blog/guides-for-students-to-avoid-duplication.php
+                - text: to provide you with the results even for Academic writing that are authentic and easy to interpret with minimum probability of errors.
+              - paragraph [ref=e593]: We drive satisfaction from the fact that our tool is being used by hundreds and thousands every day and users are happy with the results to improve academic integrity and unique web content. Nonetheless, if you come across any bug or error, please bring it to our attention so we can fix it soon.
+        - generic [ref=e594]:
+          - heading "Free online plagiarism checker with percentage " [level=2] [ref=e596]:
+            - button "Free online plagiarism checker with percentage " [expanded] [ref=e597] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e598]:
+            - generic [ref=e599]:
+              - paragraph [ref=e600]: Our plagiarism checker free stands out as an easily accessible tool designed to help users assess the originality of their text effortlessly. It’s completely free to use that allows you to check for plagiarism without spending a penny. Being an entirely web-based utility, it offers the convenience of conducting plagiarism tests online at any time and from anywhere.
+              - paragraph [ref=e601]: Moreover, what sets this tool apart is its ability to provide results in a clear and concise manner. The percentage-based output helps users understand the exact proportion of original and plagiarized content in their text.
+              - paragraph [ref=e602]: "The most prominent users who take advantage of the DupliChecker are:"
+              - heading "Students" [level=3] [ref=e603]
+              - paragraph [ref=e604]: Students get a low grade, fine, or verbal warning for plagiarized assignments, reports, or essays. Therefore, they must check the originality of their content using the online plagiarism checker before submitting.
+              - heading "Teachers" [level=3] [ref=e605]
+              - paragraph [ref=e606]: For grading students' work, teachers can utilize the duplicate text checker to find out the plagiarism percentage. This tool will also help them to check if the cited sources are authentic or not.
+              - heading "Researchers" [level=3] [ref=e607]
+              - paragraph [ref=e608]: To maintain academic integrity, researchers must rely on their thoughts and cite all research materials properly. Researchers can use the free plagiarism checker to help identify potential instances of duplication.
+              - heading "Copywriters" [level=3] [ref=e609]
+              - paragraph [ref=e610]: Copywriters work with a vast amount of information, and they can accidentally incorporate someone else's ideas into their work. They must utilize the originality checker tool to find unintentional duplication before publishing it.
+        - generic [ref=e611]:
+          - heading "FAQs " [level=2] [ref=e613]:
+            - button "FAQs " [expanded] [ref=e614] [cursor=pointer]
+          - region "How to use Duplichecker’s plagiarism checker? " [ref=e615]:
+            - generic [ref=e617]:
+              - heading "What is the most accurate plagiarism checker free?" [level=3] [ref=e618]
+              - paragraph [ref=e619]: According to our millions of satisfied users, absolutely Duplichecker.com is free and the most accurate plagiarism checking website.
+              - heading "How do I check for plagiarism?" [level=3] [ref=e620]
+              - paragraph [ref=e621]:
+                - text: "There is a procedure as mentioned above:"
+                - strong [ref=e622]: How to use Duplichecker’s plagiarism checker?
+              - paragraph [ref=e623]: It detects plagiarism by checking more than billions of websites, pages, and papers.
+              - heading "How can I avoid plagiarism in my written work?" [level=3] [ref=e624]
+              - paragraph [ref=e625]: You can avoid plagiarism in your written work by paraphrasing it and citing sources. For this purpose, you can use DupliChecker’s AI-powered paraphrasing tool.
+              - heading "Can I check, or is there a plagiarism check for free?" [level=3] [ref=e626]
+              - paragraph [ref=e627]:
+                - generic [ref=e628]:
+                  - text: Absolutely free with
+                  - link "duplichecker.com" [ref=e629] [cursor=pointer]:
+                    - /url: https://www.duplichecker.com/
+              - heading "How do you check for plagiarism in written work?" [level=3] [ref=e630]
+              - paragraph [ref=e631]: The plagiarism checker offered on this web portal can help you check for plagiarism in written work. It just asks you to submit text and press the action button to fetch a precise plagiarism detection report instantly.
+              - heading "How can I accurately cite my sources?" [level=3] [ref=e632]
+              - paragraph [ref=e633]: To accurately cite your sources, you first need to understand the required citation style by your institute. Once you understand it, you can add citations with the text you have acquired from another source.
+              - heading "Can I check my research paper for plagiarism for free?" [level=3] [ref=e634]
+              - paragraph [ref=e635]: Yes! Our plagiarism checker allows you to check plagiarism from your research articles for free.
+              - heading "Can I check my essay for plagiarism free online?" [level=3] [ref=e636]
+              - paragraph [ref=e637]: Yes! DupliChecker is a one-stop solution for students to check their essays for plagiarism. Simply access this tool through your device’s web browser and conduct a free plagiarism check online in a matter of seconds.
+              - heading "Is plagiarism detection the same as AI detection?" [level=3] [ref=e638]
+              - paragraph [ref=e639]: No! Both tools are essential to preserve academic integrity, but they are not the same. The first one identifies copied content, and the later one determines if the content is written by a human or generated by AI.
+      - generic [ref=e641]:
+        - generic [ref=e642]: Our Blog
+        - generic [ref=e644]:
+          - text: Read Our Blogs to Enrich Your Knowledge
+          - paragraph [ref=e645]: Duplicheckers blog is so much more than just a written diary or journal. This blog is a place for sharing knowledge and views, and for awaring people about various hot topics. “It’s a place that can become the entire foundation of your online world and a key to unlocking incredible opportunities.”
+          - link "Click here for more" [ref=e647] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/blog/
+            - text: Click here for more
+        - generic [ref=e649]:
+          - generic [ref=e651]:
+            - heading "How to Protect Your Website from Plagiarism?" [level=3] [ref=e652]
+            - paragraph [ref=e653]: The internet is the biggest platform that provides comprehensive information related to every
+          - link "More Info" [ref=e655] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/blog/how-to-protect-your-website-from-plagiarism.php
+            - text: More Info
+        - generic [ref=e657]:
+          - generic [ref=e659]:
+            - heading "How to Avoid Curse of Plagiarism in Writing?" [level=3] [ref=e660]
+            - paragraph [ref=e661]: Content duplication means stolen someone else’ work and were passing it off as your own, at t
+          - link "More Info" [ref=e663] [cursor=pointer]:
+            - /url: https://www.duplichecker.com/blog/avoid-curse-of-plagiarism.php
+            - text: More Info
+    - generic [ref=e665]:
+      - heading "As Seen On" [level=2] [ref=e666]
+      - generic [ref=e667]:
+        - img "Academia.edu" [ref=e668]
+        - img "Bllue Blots" [ref=e669]
+        - img "eHOW" [ref=e670]
+        - img "Helum" [ref=e671]
+        - img "OSU" [ref=e672]
+        - img "Kansas university" [ref=e673]
+    - generic [ref=e677]:
+      - generic [ref=e678]:
+        - text: Languages
+        - button "EN" [ref=e679] [cursor=pointer]:
+          - generic [ref=e680]: EN
+      - generic [ref=e681]:
+        - heading "About us" [level=2] [ref=e682]
+        - paragraph [ref=e683]: "The DupliChecker.com team comprises of experts in different fields, all with the same primary focus: helping our clients generate greater business by use of online services."
+        - text: "For more:"
+        - link "Free Tools" [ref=e684] [cursor=pointer]:
+          - /url: https://www.duplichecker.com/free-tools.php
+      - generic [ref=e685]:
+        - heading "Quick Links" [level=2] [ref=e686]
+        - list [ref=e688]:
+          - listitem [ref=e689]:
+            - link "Plagiarism Checker" [ref=e690] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/
+          - listitem [ref=e691]:
+            - link "AI Detector" [ref=e692] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/ai-content-detector.php
+          - listitem [ref=e693]:
+            - link "About us" [ref=e694] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/about-us
+          - listitem [ref=e695]:
+            - link "Testimonials" [ref=e696] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/testimonials
+          - listitem [ref=e697]:
+            - link "Banners" [ref=e698] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/banners
+          - listitem [ref=e699]:
+            - link "FAQs" [ref=e700] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/faqs
+        - list [ref=e702]:
+          - listitem [ref=e703]:
+            - link "Blog" [ref=e704] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/blog/
+          - listitem [ref=e705]:
+            - link "Sitemap" [ref=e706] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/sitemap.html
+          - listitem [ref=e707]:
+            - link "Contact us" [ref=e708] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/contact-us
+          - listitem [ref=e709]:
+            - link "Privacy policy" [ref=e710] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/privacy-policy
+          - listitem [ref=e711]:
+            - link "Refund Policy" [ref=e712] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/refund-policy
+          - listitem [ref=e713]:
+            - link "Term of Services" [ref=e714] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/term-of-services
+          - listitem [ref=e715]:
+            - link "Opt-Out" [ref=e716] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/opt-out-request
+          - listitem [ref=e717]:
+            - link "DMCA" [ref=e718] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/dmca-request
+          - listitem [ref=e719]:
+            - link "CSR" [ref=e720] [cursor=pointer]:
+              - /url: https://www.duplichecker.com/csr
+      - generic [ref=e721]:
+        - img "Subscribe" [ref=e722]
+        - generic [ref=e723]: Subscribe to Our Newsletter
+        - generic [ref=e726]:
+          - searchbox "Email address" [ref=e727]
+          - button "Subscribe" [ref=e729] [cursor=pointer]
+      - generic [ref=e730]:
+        - link "DupliChecker Logo" [ref=e732] [cursor=pointer]:
+          - /url: https://www.duplichecker.com/
+          - img "DupliChecker Logo" [ref=e733]
+        - paragraph [ref=e735]: 2026 Dupli Checker. All Right Reserved.
+        - generic [ref=e737]:
+          - link "Facebook" [ref=e738] [cursor=pointer]:
+            - /url: https://www.facebook.com/duplichecker/
+            - img "Facebook" [ref=e739]
+          - link "Twitter" [ref=e740] [cursor=pointer]:
+            - /url: https://x.com/duplichecker
+            - img "Twitter" [ref=e741]
+          - link "LinkedIn" [ref=e742] [cursor=pointer]:
+            - /url: https://uk.pinterest.com/duplichecker/
+            - img "LinkedIn" [ref=e743]
+          - link "LinkedIn" [ref=e744] [cursor=pointer]:
+            - /url: https://www.instagram.com/duplichecker/
+            - img "LinkedIn" [ref=e745]
+          - link "Youtube" [ref=e746] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/duplichecker1
+            - img "Youtube" [ref=e747]
+    - generic:
+      - link "Close Popup":
+        - /url: ""
