@@ -1,0 +1,18 @@
+[    1652ms] TypeError: Cannot read properties of null (reading 'value')
+    at updateSliderFill (https://plagiarismdetector.net/:1535:28)
+    at https://plagiarismdetector.net/:1541:5
+[    1652ms] TypeError: Cannot read properties of null (reading 'addEventListener')
+    at https://plagiarismdetector.net/:3218:34
+[    4749ms] [LOG] Runs after ~100ms (no setTimeout). @ https://plagiarismdetector.net/:3010
+[    6637ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.livechatinc.com/v3.6/customer/action/check_goals?organization_id=97cb7b86-5082-465c-bfe1-2e076d4db12a&x-region=us-south1:0
+[   39326ms] [ERROR] Failed to load resource: the server responded with a status of 422 () @ https://api.livechatinc.com/v3.6/customer/action/check_goals?organization_id=97cb7b86-5082-465c-bfe1-2e076d4db12a&x-region=us-south1:0
+[   39749ms] [LOG] 0 @ https://plagiarismdetector.net/:3239
+[   39749ms] [LOG] SE @ https://plagiarismdetector.net/:3240
+[   40273ms] [LOG] Runs after ~100ms (no setTimeout). @ https://plagiarismdetector.net/:6255
+[   42222ms] [ERROR] Error retrieving token: FirebaseError: Messaging: The notification permission was not granted and blocked instead. (messaging/permission-blocked).
+    at getToken$1 (https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging.js:2273:29)
+    at getToken (https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging.js:2551:12)
+    at https://plagiarismdetector.net/js/fcm-notifications.js?1777254938:29:44 @ https://plagiarismdetector.net/js/fcm-notifications.js?1777254938:40
+[  154129ms] [LOG] 0 @ https://plagiarismdetector.net/:3565
+[  154129ms] [LOG] ffffffffffffff @ https://plagiarismdetector.net/:3699
+[  154135ms] [LOG] ffffffffffffff @ https://plagiarismdetector.net/:3699
