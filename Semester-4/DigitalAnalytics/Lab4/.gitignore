@@ -1,0 +1,6 @@
+README.md
+bot_polling.py
+report/
+users.db
+*.db
+__pycache__/
