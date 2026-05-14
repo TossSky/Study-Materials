@@ -1,0 +1,7 @@
+flask
+pyTelegramBotAPI
+requests
+torch
+torchvision
+pillow
+python-docx
