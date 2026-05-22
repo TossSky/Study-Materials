@@ -4,4 +4,3 @@ requests
 torch
 torchvision
 pillow
-python-docx

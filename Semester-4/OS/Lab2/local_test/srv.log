@@ -1,0 +1,5 @@
+listening TCP: 9001
+connected: 127.0.0.1:46902
+"stop" received, server will terminate
+disconnected: 127.0.0.1:46902
+server stopped
