@@ -1,0 +1,5 @@
+round 1: sent 4, acked 1/4
+round 2: sent 3, acked 2/4
+round 3: sent 2, acked 3/4
+round 4: sent 1, acked 4/4
+done: acked 4/4
