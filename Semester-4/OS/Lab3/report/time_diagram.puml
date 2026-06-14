@@ -1,0 +1,61 @@
+@startuml time_diagram
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 14
+skinparam ArrowColor #1F4E79
+
+title Временная диаграмма работы пула (main + 3 worker)
+
+concise  "main"     as M
+concise  "worker 0" as W0
+concise  "worker 1" as W1
+concise  "worker 2" as W2
+
+scale 1 as 22 pixels
+
+@0
+M  is init
+W0 is blocked
+W1 is blocked
+W2 is blocked
+
+@4
+M  is "push+sem_post×(N-1)"
+
+@10
+W0 is crit
+@12
+W1 is crit
+@14
+W2 is crit
+
+@16
+M  is "pthread_join"
+W0 is running
+W1 is running
+W2 is running
+
+@26
+W0 is "+total"
+W1 is "+total"
+W2 is "+total"
+
+@30
+W0 is running
+W1 is running
+W2 is running
+
+@40
+W0 is idle
+W1 is idle
+W2 is idle
+
+@44
+W0 is exit
+W1 is exit
+W2 is exit
+
+@46
+M  is "save_files"
+
+@50
+@enduml

@@ -1,0 +1,37 @@
+@startuml worker_flow
+skinparam defaultFontName DejaVu Sans
+skinparam defaultFontSize 13
+skinparam ActivityBackgroundColor #CFE2FF
+skinparam ActivityBorderColor #1F4E79
+skinparam ActivityDiamondBackgroundColor #FFF3CD
+skinparam ActivityDiamondBorderColor #8A6D3B
+skinparam ArrowColor #1F4E79
+skinparam ArrowThickness 1.4
+
+title Алгоритм поточной функции worker
+
+start
+
+while (цикл рабочего потока) is (продолжаем)
+  :sem_wait(g_sem_avail);
+  :sem_wait(g_sem_queue);
+
+  if (g_next_task < g_tasks.size?) then (нет)
+    :sem_post(g_sem_queue);
+    break
+  else (да)
+    :my = g_next_task++
+got = true;
+    :sem_post(g_sem_queue);
+    :c = count_local(
+       g_tasks[my].rem,
+       g_tasks[my].max_part);
+    :sem_wait(g_sem_total);
+    :g_total += c
+sem_post(g_sem_total);
+  endif
+endwhile (-)
+
+stop
+
+@enduml
