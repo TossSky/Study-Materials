@@ -1,0 +1,1047 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Конспект АСВТ — экзамен</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#0c0f14;--panel:#11161d;--panel2:#161d27;--fg:#e7eef5;--muted:#9fb0c0;
+--acc:#46d09a;--acc2:#4cc0f0;--line:#1f2935;--code:#0a0e13}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:
+ radial-gradient(900px 500px at 80% -5%,rgba(76,192,240,.06),transparent),
+ radial-gradient(700px 500px at -5% 10%,rgba(70,208,154,.05),transparent),var(--bg);
+ color:var(--fg);font:400 16px/1.62 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:30px 24px 120px}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:16px}
+.masthead h1{font-weight:700;font-size:1.5rem;margin:0;letter-spacing:-.01em}
+.masthead .sub{color:var(--muted);font-size:.92rem}
+h1{font-size:1.42rem;font-weight:700;margin:2.6em 0 .2em}
+h2{font-size:1.12rem;font-weight:600;margin:2.3em 0 .55em;padding:.4em .8em;line-height:1.4;
+ color:#eafff7;background:linear-gradient(90deg,rgba(70,208,154,.13),rgba(70,208,154,.02));
+ border-left:3px solid var(--acc);border-radius:5px;scroll-margin-top:14px}
+p{margin:.55em 0}
+ul,ol{padding-left:1.4em;margin:.5em 0}li{margin:.34em 0}li>ul,li>ol{margin:.3em 0}
+strong{color:#fff;font-weight:600}em{color:var(--muted);font-style:normal;font-size:.92em}
+a{color:var(--acc2);text-decoration:none}a:hover{text-decoration:underline}
+code{background:var(--code);color:#bfe3ff;border:1px solid var(--line);padding:.06em .4em;border-radius:5px;
+ font-family:"IBM Plex Mono",Consolas,monospace;font-size:.85em}
+blockquote{background:var(--panel2);border:1px solid var(--line);border-left:4px solid var(--acc);
+ border-radius:9px;margin:1em 0;padding:.7em 1.1em;color:#d8e4f0}blockquote strong{color:var(--acc)}
+hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+table{border-collapse:collapse;width:100%;margin:.8em 0;font-size:.92rem;background:var(--panel);
+ border:1px solid var(--line);border-radius:9px;overflow:hidden}
+th,td{border:1px solid var(--line);padding:7px 11px;text-align:left;vertical-align:top}
+th{background:var(--panel2);color:#eafff7;font-weight:600}tr:nth-child(even) td{background:rgba(255,255,255,.012)}
+.fig{background:linear-gradient(180deg,#10161e,#0c1117);border:1px solid var(--line);border-radius:12px;
+ padding:16px;margin:1.1em 0;text-align:center;box-shadow:0 1px 0 rgba(255,255,255,.03) inset}
+.fig svg{max-width:100%;height:auto}.cap{color:var(--muted);font-size:.84rem;margin:6px 0}
+table.pipe{width:auto;margin:6px auto;border:0;background:none;font-family:"IBM Plex Mono",monospace}
+table.pipe th{background:none;border:0;color:var(--muted);font-weight:500;padding:3px 8px;font-size:.8rem}
+table.pipe td{border:1px solid var(--line);width:46px;height:30px;text-align:center;color:#06121a;font-weight:700;font-size:.78rem}
+.pp.s1{background:#4cc0f0}.pp.s2{background:#5ed6a3}.pp.s3{background:#ffd166}.pp.s4{background:#f6a96b}.pp.s5{background:#e07a8b}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:14px 20px;margin:1.3em 0;font-size:.85rem;columns:2;column-gap:34px}
+.toc>ul{margin:0;padding:0}.toc ul{list-style:none;padding-left:.7em;margin:.12em 0}
+.toc>ul>li{break-inside:avoid;margin:.12em 0}.toc a{color:#c3d2e0}.toc a:hover{color:var(--acc2)}
+.toc>ul>li>a{color:var(--acc);font-weight:600}
+@media(max-width:640px){.toc{columns:1}.wrap{padding:18px 14px}body{font-size:15px}}
+@media print{body{background:#fff;color:#000}.wrap{max-width:100%}.fig,table{page-break-inside:avoid}}
+</style></head><body><div class="wrap"><div class="masthead"><h1>Конспект АСВТ</h1><span class="sub">экзамен · Семенов П.О. · 55 билетов</span></div><h1 id="_1">Конспект к экзамену по АСВТ (Семенов П.О.)</h1>
+<blockquote>
+<p><strong>Как пользоваться.</strong> Это 55 готовых ответов в формате, который требует препод: ключевые
+определения (жирным), краткие тезисы, схемы там, где в вопросе есть слово «схема». На билет
+40 минут, 3 вопроса (начало / середина / конец курса). Сочинения не нужны — нужны ключевые
+моменты, выводы и схемки.</p>
+<p><strong>Правила оценки (со слов старосты):</strong>
+- Не ответил вообще ни на один из 3 вопросов → выше тройки не поставят. <strong>Вывод: на каждый вопрос знай хоть что-то.</strong>
+- Описал смежное, а не то, что спросили → минимальный балл. Отвечай строго по теме.
+- Нет схемы там, где в вопросе слово «схема» → большой минус. В остальных — схемы по желанию.
+- Транзисторы в вентилях рисовать НЕ надо. Максимум один пример схемы вентиля/триггера — и то если есть время.
+- Семенов жёстко и много спрашивает <strong>параллельные вычисления (в. 44–55)</strong> — это приоритет.
+- <strong>Процессоры (Intel/AMD):</strong> хронология ЦП + современные Intel и AMD, их особенности и отличия; конкретные старые модели зубрить не надо.</p>
+<p>Дальше — по номерам списка 2026. Ключевые определения и термины — жирным.</p>
+</blockquote>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#_1">Конспект к экзамену по АСВТ (Семенов П.О.)</a></li>
+<li><a href="#1-118">БЛОК 1. Начало курса (вопросы 1–18)</a><ul>
+<li><a href="#1">1. Представление информации в ЭВМ (понятие информации, виды систем счисления, способы представления чисел со знаком и примеры, способы представления вещественных чисел и примеры, методы кодирования информации: текст, графика, звук/видео).</a></li>
+<li><a href="#2">2. Этапы развития вычислительной техники, классификация ВМ (этапы информатизации, поколения ЭВМ: элементная база, ключевые черты, классификация ВМ).</a></li>
+<li><a href="#3">3. Назначение и характеристики элементарных узлов ЭВМ (вентили, триггеры, сумматоры, счётчики, компараторы, шифраторы/дешифраторы, мультиплексоры/демультиплексоры, ЦАП/АЦП – назначение и краткое описание всех узлов).</a></li>
+<li><a href="#4-fpga-fpga-sram-based-antifuse-flash">4. Специализированные интегральные схемы (схема ПЛМ, типы компонентов FPGA, принципы работы программируемых элементов FPGA: SRAM-based, antifuse, flash).</a></li>
+<li><a href="#5-">5. Архитектуры ЭВМ и принципы фон Неймана (уровни детализации структуры ВМ, принципы фон-неймановской концепции, структура фон-неймановской ВМ, виды архитектур ЭВМ).</a></li>
+<li><a href="#6">6. Функциональные блоки ЦП (схема и назначение АЛУ, схема и назначение УУ, основные регистры ЦП).</a></li>
+<li><a href="#7">7. Командный цикл процессора, регистр флагов и состояния (понятия команды, потока управления и исполнительного адреса, описание командного цикла, описание флагов в регистре флагов и состояний).</a></li>
+<li><a href="#8">8. Основные архитектуры системы команд (описание стековой, аккумуляторной, регистровой архитектуры системы команд и архитектура с выделенным доступом к памяти).</a></li>
+<li><a href="#9-cisc-risc-vliw-cisc-risc">9. Основы построения CISC-, RISC- и VLIW-архитектур системы команд (принципы построения основных архитектур, схема процессора, сравнение функций устройства управления в CISC и RISC процессорах).</a></li>
+<li><a href="#10-x86-risc-16-avr">10. Форматы команд и виды адресации (классификация команд процессора, примеры форматов команд x86, RISC-16, AVR).</a></li>
+<li><a href="#11-mmx-3dnow-sse-sse2">11. Понятия конвейерной, суперскалярной и векторной обработки (схема работы конвейера, показатели эффективности конвейера, схема суперскалярного ЦП, конфликты в конвейере, назначение MMX, 3DNow!, SSE, SSE2,…).</a></li>
+<li><a href="#12">12. Технологии динамического исполнения (краткое описание средств динамического исполнения, технология многократного декодирование команд).</a></li>
+<li><a href="#13">13. Основы микроархитектур процессоров (понятие микроархитектуры, технологические нормы, производительность, эксплуатационные характеристики МП, физические параметры МП, общая структура МП).</a></li>
+<li><a href="#14-intel-">14. Микроархитектуры процессоров Intel (перечень поколений и характерные черты микропроцессоров, схема и характеристики какого-нибудь из последних МП).</a></li>
+<li><a href="#15-amd-">15. Микроархитектуры процессоров AMD (перечень поколения и характерные черты микропроцессоров, схема и характеристики какого-нибудь из последних МП).</a></li>
+<li><a href="#16">16. Основы построения компьютерной памяти (методы доступа к данным, характеристики памяти, иерархическая организация памяти, обнаружение и исправление ошибок).</a></li>
+<li><a href="#17">17. Основная память, статические ОЗУ (структура ОП, характеристики, блочная организация ОП, запоминающий элемент в статическом ОЗУ, виды статических ОЗУ).</a></li>
+<li><a href="#18">18. Динамические ОЗУ (виды динамических ОЗУ, запоминающий элемент, методы ускорения микросхемы, способы регенерации данных).</a></li>
+</ul>
+</li>
+<li><a href="#2-1943">БЛОК 2. Середина курса (вопросы 19–43)</a><ul>
+<li><a href="#19-eeprom-flash">19. Специальные типы оперативной памяти, ПЗУ (виды энергонезависимых ОЗУ, виды ПЗУ: EEPROM, Flash, ОЗУ для видеоадаптеров, стековая память).</a></li>
+<li><a href="#20-">20. Организация кэш-памяти, способы отображения основной памяти на кэш-память (назначение кэш-памяти, уровни кэш-памяти, факторы эффективности кэш-памяти, схемы вариантов отображения ОП на кэш-память и сравнение).</a></li>
+<li><a href="#21-">21. Порядок замещения строк в кэш-памяти, согласование ОП и кэш-памяти, дисковая кэш-память (перечень алгоритмов выбора замещаемой строки, краткое описание алгоритмов согласование содержимого ОП и кэш-памяти для однопроцессорных ЭВМ, характеристики дисковой кэш-памяти).</a></li>
+<li><a href="#22">22. Организация защиты памяти (назначение средств защиты памяти, краткое описание методов защиты памяти).</a></li>
+<li><a href="#23-tlb">23. Концепция виртуальной памяти (схемы страничного, сегментного и сегментно-страничного распределения виртуальной памяти, страничная таблица, TLB).</a></li>
+<li><a href="#24-ssd-ssd-">24. Организация НЖМД, SSD, оптической памяти, магнитных лент (характеристики дисковой памяти, принципы организации SSD-памяти, принципы организации оптической памяти, назначение магнитных лент).</a></li>
+<li><a href="#25-raid-">25. Избыточные дисковые подсистемы (назначение, способы повышения производительности ЗУ, способы повышения надёжности ЗУ, схемы уровней RAID-массивов).</a></li>
+<li><a href="#26">26. Основы построения компьютерных шин (типы шин, иерархия шин, ША, ШД, ШУ, состав линий в ШУ).</a></li>
+<li><a href="#27">27. Организация арбитража шины (схемы приоритетов, схемы арбитража, способы организации опроса).</a></li>
+<li><a href="#28">28. Типы протоколов шин, синхронная и асинхронная передача данных (управление процессом передачи данных, схемы и принципы работы протоколов шин).</a></li>
+<li><a href="#29">29. Методы повышения эффективности шин, надёжность и отказоустойчивость шины (способы повышения эффективности шин, способы повышения надёжности шин).</a></li>
+<li><a href="#30-eisa-lpc-pci-pci-e-agp">30. Внутренние интерфейсы ЭВМ: EISA, LPC, PCI, PCI-E, AGP (основные характеристики).</a></li>
+<li><a href="#31-ide-sata-scsi-sas">31. Внешние интерфейсы для ЗУ: IDE, SATA, SCSI, SAS (основные характеристики).</a></li>
+<li><a href="#32-rs-232c-lpt-epp-ecp-usb-spi-i2c">32. Внешние интерфейсы для ввода/вывода: RS-232C, LPT (EPP, ECP), USB, SPI, I²C (основные характеристики).</a></li>
+<li><a href="#33-">33. Система ввода-вывода, организация адресного пространства (способы подключения СВВ к ЦП и ОП, достоинства и недостатки совмещённого и выделенного адресного пространства).</a></li>
+<li><a href="#34">34. Модуль ввода/вывода, абстрактное периферийное устройство (структура и функции МВВ, схема ПУ).</a></li>
+<li><a href="#35-">35. Программно-управляемый ввод/вывод, ввод/вывод по прерываниям (блок-схемы обоих способов, принцип работы векторных прерываний).</a></li>
+<li><a href="#36">36. Прямой доступ к памяти (схема подключения КПДП, способы распределения системной шины между ЦП и КПДП, примеры схем конфигураций систем ПДП).</a></li>
+<li><a href="#37">37. Каналы и процессоры ввода/вывода (принципы работы, схема, управляющие слова канала, БУВУ).</a></li>
+<li><a href="#38">38. Организации системы прерываний. (способы организации системы прерываний, виды прерываний, аппаратные и программные средства системы прерываний).</a></li>
+<li><a href="#39">39. Прерываний в реальном и защищённом режимах, защита в процедурах прерываний (таблицы векторов прерываний, шлюзы прерываний, алгоритмы выполнения прерываний, средства защиты в процедурах прерываний).</a></li>
+<li><a href="#40">40. Чипсет ЭВМ (назначение, архитектура «северный мост – южный мост», пример схемы современного чипсета с указанием основных интерфейсов).</a></li>
+<li><a href="#41-rom-bios-post-cmos-plugplay">41. Подсистема ROM BIOS (назначение, программы POST и CMOS, назначение прерываний, организация стандарта Plug&amp;Play).</a></li>
+<li><a href="#42">42. Периферийные устройства ввода (клавиатура: принцип работы, оптическая мышь: принцип работы, механические устройства позиционирования: шариковая мышь/трекбол/джойстик, сканеры: принцип работы).</a></li>
+<li><a href="#43-ac97">43. Периферийные устройств вывода (принтеры: принципы работы лазерных и струйных принтеров, звуковая система: схема AC97, графическая система: назначение, дополнительные блоки в акселераторе и сопроцессоре).</a></li>
+</ul>
+</li>
+<li><a href="#3-4455">БЛОК 3. Конец курса — ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ (вопросы 44–55)</a><ul>
+<li><a href="#44">44. Уровни и средства комплексирования в ВС, классификация ВС по Флину (понятие гранулярности, уровни параллелизма, уровни комплексирования и принципы взаимодействия, классификация ВС по Флину).</a></li>
+<li><a href="#45-7">45. Метрики параллельных вычислений, закон Амдала (7 метрик с формулами и закон Амдала с выводами).</a></li>
+<li><a href="#46-uma-norma">46. Виды ВС: UMA и NORMA (схемы и принципы работы).</a></li>
+<li><a href="#47-numa-coma-dsm-numa">47. Виды ВС: NUMA, COMA и DSM (принципы работы, + для NUMA – схема).</a></li>
+<li><a href="#48-simd">48. Виды ВС класса SIMD: векторные и матричные (принципы построения, общие схемы работы, + для векторных – классификация).</a></li>
+<li><a href="#49-simd">49. Виды ВС класса SIMD: ассоциативные ВС и систолические ВС (концептуальные схемы и принципы работы).</a></li>
+<li><a href="#50-mimd-pvp-mpp">50. Виды ВС класса MIMD: PVP и MPP (схемы построения, принципы работы).</a></li>
+<li><a href="#51-mimd">51. Виды ВС класса MIMD: Кластерные ВС (схема построения, топологии ВС, характеристики топологий).</a></li>
+<li><a href="#52-dataflow-reduction">52. Виды ВС: dataflow и reduction (принципы работы, пример потокового графа, классификация потоковых ВС).</a></li>
+<li><a href="#53">53. Перспективные типы процессоров ЭВМ (краткое описание ассоциативных, клеточных, нейронных процессоров, процессоров с многозначной логикой, квантовых компьютеров).</a></li>
+<li><a href="#54-mesi">54. Методы поддержания когерентности кэш-памяти в ВС (перечень методов, общая схема, протокол MESI: состояния и граф переходов).</a></li>
+<li><a href="#55">55. Современные суперкомпьютеры: характеристики и примеры</a></li>
+<li><a href="#-">Шпаргалка-минимум (если совсем мало времени — выучи это)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="1-118">БЛОК 1. Начало курса (вопросы 1–18)</h1>
+<h2 id="1">1. Представление информации в ЭВМ (понятие информации, виды систем счисления, способы представления чисел со знаком и примеры, способы представления вещественных чисел и примеры, методы кодирования информации: текст, графика, звук/видео).</h2>
+<ul>
+<li><strong>Информация</strong> (3 трактовки):<ul>
+<li><strong>в обиходе</strong> — данные/факты, представляющие интерес;</li>
+<li><strong>в технике</strong> — сообщения в форме знаков или сигналов;</li>
+<li><strong>в кибернетике</strong> — часть знаний для ориентирования, активного действия, управления.</li>
+</ul>
+</li>
+<li>В ЭВМ информация кодируется двоичными сигналами (0/1).</li>
+<li><strong>Система счисления (СС)</strong> — способ записи чисел знаками. Три класса:<ul>
+<li><strong>непозиционные</strong> — древние;</li>
+<li><strong>позиционные</strong> — вес цифры зависит от позиции (2-, 8-, 10-, 16-ричная);</li>
+<li><strong>смешанные</strong> — напр. римская.</li>
+</ul>
+</li>
+<li><strong>Числа со знаком</strong> (n разрядов, старший — знаковый: 0 = «+», 1 = «−»):<ul>
+<li><strong>Прямой код</strong> — знак + модуль. Минус: два нуля (+0 и −0), сложно вычитать.</li>
+<li><strong>Обратный код</strong> — для отрицательных инвертируются все разряды. <code>a + (−a) = 2ⁿ − 1</code>.</li>
+<li><strong>Дополнительный код</strong> — обратный + 1. <code>a + (−a) = 2ⁿ</code>. <strong>Главный</strong>: вычитание заменяется сложением, один ноль. Используется в АЛУ.</li>
+</ul>
+</li>
+<li><strong>Вещественные числа:</strong><ul>
+<li><strong>С фиксированной точкой</strong> — точка на заданном месте, простой, но малый диапазон.</li>
+<li><strong>С плавающей точкой</strong> — <code>±M · qᵖ</code> (мантисса M, порядок p, основание q). Стандарт <strong>IEEE 754</strong>: знак, порядок (смещённый), мантисса. Широкий диапазон.</li>
+</ul>
+</li>
+<li><strong>Кодирование</strong> (статическое и динамическое):<ul>
+<li><strong>статическое — текст:</strong> таблицы кодировки (ASCII 8 бит, <strong>Unicode/UTF-8</strong>);</li>
+<li><strong>статическое — графика:</strong> растровое и векторное;</li>
+<li><strong>динамическое — звук/видео:</strong> преобразование аналог→цифра (АЦП) + сжатие (кодеки).</li>
+</ul>
+</li>
+</ul>
+<h2 id="2">2. Этапы развития вычислительной техники, классификация ВМ (этапы информатизации, поколения ЭВМ: элементная база, ключевые черты, классификация ВМ).</h2>
+<ul>
+<li><strong>Исторические этапы информатизации</strong> (фактор → период):<ul>
+<li>технический (структура/архитектура ЭВМ) — 1946–64;</li>
+<li>программный — 1954–70;</li>
+<li>информационный (структуры данных) — с 1970;</li>
+<li>гуманитарный (интерфейсы) — с 1990.</li>
+</ul>
+</li>
+<li><strong>Поколения ЭВМ (по элементной базе):</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Пок.</th>
+<th>Годы</th>
+<th>База</th>
+<th>Черты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1642–1945</td>
+<td>механика, реле</td>
+<td>Паскаль (1642), Лейбниц, Бэббидж, Z3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1945–1953</td>
+<td>электронные <strong>лампы</strong></td>
+<td>10²–2·10⁴ оп/с, ОЗУ на ферритах, машинный код</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1954–1962</td>
+<td><strong>транзисторы</strong></td>
+<td>10³–10⁵ оп/с, печатный монтаж, языки выс. уровня</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1963–1972</td>
+<td><strong>интегральные схемы</strong></td>
+<td>10⁶ оп/с, ОС (разделение времени), сети</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1972–1984</td>
+<td><strong>большие ИС (БИС)</strong></td>
+<td>10⁶–10⁸ оп/с, микропроцессоры, идея RISC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1984–1990</td>
+<td><strong>СБИС</strong></td>
+<td>многопроцессорные ВС, ЛВС, суперЭВМ</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1990–…</td>
+<td>СБИС</td>
+<td>параллелизм, сети</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Классификация ВМ:</strong><ul>
+<li>по принципу действия: механические, электрические (ЭВМ), оптические, пневматические, гидравлические;</li>
+<li>по форме представления информации: аналоговые (АВМ), цифровые (ЦВМ), гибридные (АВМ+ЦВМ);</li>
+<li>по назначению: широкого назначения, проблемно-специализированные, узкоспециализированные.</li>
+</ul>
+</li>
+<li>ЭВМ и системы: обычные ЭВМ · суперкомпьютеры (многопроцессорные ЭВМ) · вычислительные системы. <strong>Отличие ВС от ЭВМ — в числе вычислителей.</strong></li>
+</ul>
+<h2 id="3">3. Назначение и характеристики элементарных узлов ЭВМ (вентили, триггеры, сумматоры, счётчики, компараторы, шифраторы/дешифраторы, мультиплексоры/демультиплексоры, ЦАП/АЦП – назначение и краткое описание всех узлов).</h2>
+<p><em>Схему рисовать не требует — только назначение. Можно один пример (напр. вентиль).</em></p>
+<ul>
+<li><strong>Вентиль (логический элемент)</strong> — реализует булеву функцию (И, ИЛИ, НЕ, И-НЕ, ИЛИ-НЕ, XOR). Базовый кирпич схемотехники.</li>
+<li><strong>Триггер</strong> — элемент памяти на 1 бит, имеет 2 устойчивых состояния (RS, D, T, JK).</li>
+<li><strong>Сумматор</strong> — сложение двоичных чисел (полусумматор, полный сумматор с переносом).</li>
+<li><strong>Счётчик</strong> — подсчёт импульсов / хранение числа, +1 каждый такт (суммирующий, вычитающий, реверсивный).</li>
+<li><strong>Компаратор</strong> — сравнение двух чисел (=, &lt;, &gt;).</li>
+<li><strong>Шифратор / дешифратор</strong> — преобразование кода: позиционный код ↔ двоичный (дешифратор активирует один выход по входному коду).</li>
+<li><strong>Мультиплексор / демультиплексор</strong> — MUX выбирает один из N входов на общий выход по адресу; DEMUX — наоборот, направляет вход на один из N выходов.</li>
+<li><strong>ЦАП / АЦП</strong> — преобразование цифра↔аналог: ЦАП цифровой код → напряжение, АЦП напряжение → цифровой код (дискретизация + квантование).</li>
+</ul>
+<h2 id="4-fpga-fpga-sram-based-antifuse-flash">4. Специализированные интегральные схемы (схема ПЛМ, типы компонентов FPGA, принципы работы программируемых элементов FPGA: SRAM-based, antifuse, flash).</h2>
+<p><em>Нужна </em><em>схема ПЛМ</em><em>.</em></p>
+<ul>
+<li><strong>ПЛМ (программируемая логическая матрица)</strong> — две программируемые матрицы: матрица «И» (формирует конъюнкции входов) → матрица «ИЛИ» (суммирует их). Реализует любую булеву функцию в ДНФ.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 720 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="148.0" y1="74.0" x2="222.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="328.0" y1="74.0" x2="395.5" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="340.8" y="65.0" width="42.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="361.8" y="78.0" text-anchor="middle" class="el">термы</text><line x1="494.5" y1="74.0" x2="572.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="62.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="105.0" y="70.8">входы</tspan><tspan x="105.0" y="86.2">x1..xn</tspan></text><rect x="222.0" y="49.0" width="106.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="70.8">Матрица И</tspan><tspan x="275.0" y="86.2">(конъюнкции)</tspan></text><rect x="395.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="445.0" y="70.8">Матрица ИЛИ</tspan><tspan x="445.0" y="86.2">(сумма)</tspan></text><rect x="572.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="615.0" y="70.8">выходы</tspan><tspan x="615.0" y="86.2">f1..fm</tspan></text></svg></div>
+
+<ul>
+<li><strong>FPGA</strong> — ПЛИС с программируемой логикой. Компоненты: <strong>логические блоки (CLB)</strong> с LUT-таблицами и триггерами, <strong>программируемые межсоединения</strong>, <strong>блоки ввода-вывода (IOB)</strong>, блоки памяти, умножители.</li>
+<li><strong>Программируемые элементы (как хранится конфигурация):</strong><ul>
+<li><strong>SRAM-based</strong> — конфигурация в статической памяти. Перепрограммируемые, но энергозависимые (теряют прошивку при выключении, нужна загрузка из ПЗУ). Самые распространённые.</li>
+<li><strong>Antifuse</strong> — однократно программируемые (перемычка «прожигается»). Энергонезависимые, надёжные, но не перепрошиваются.</li>
+<li><strong>Flash</strong> — на флеш-ячейках. Энергонезависимые и перепрограммируемые (компромисс).</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-">5. Архитектуры ЭВМ и принципы фон Неймана (уровни детализации структуры ВМ, принципы фон-неймановской концепции, структура фон-неймановской ВМ, виды архитектур ЭВМ).</h2>
+<p><em>Нужна </em><em>структура фон-неймановской ВМ</em><em>.</em></p>
+<ul>
+<li><strong>Уровни детализации структуры ВМ (7, сверху вниз):</strong> языки высокого уровня → ассемблер → ОС → архитектура системы команд → микроархитектура → цифровой логический → физический (транзисторный).</li>
+<li><strong>Принципы фон Неймана:</strong><ol>
+<li><strong>Двоичное кодирование</strong> данных и команд.</li>
+<li><strong>Программное управление</strong> — программа из команд, выполняемых последовательно.</li>
+<li><strong>Однородность памяти</strong> — команды и данные в одной памяти, неразличимы по виду (команду можно обрабатывать как данные).</li>
+<li><strong>Адресуемость памяти</strong> — память из ячеек с адресами, доступ по адресу.</li>
+</ol>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="283.0" y1="94.0" x2="166.3" y2="157.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="158.6" y="116.5" width="132.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="224.6" y="129.5" text-anchor="middle" class="el">адрес / данные / упр</text><line x1="357.0" y1="94.0" x2="473.7" y2="157.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="397.4" y="116.5" width="36.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="415.4" y="129.5" text-anchor="middle" class="el">шины</text><rect x="263.5" y="54.0" width="113.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="78.5">ЦП — УУ + АЛУ</tspan></text><rect x="53.0" y="157.0" width="134.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="178.8">Память (ОЗУ):</tspan><tspan x="120.0" y="194.2">команды + данные</tspan></text><rect x="467.0" y="157.0" width="106.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="178.8">Устройства</tspan><tspan x="520.0" y="194.2">ввода-вывода</tspan></text></svg></div>
+
+<ul>
+<li><strong>Виды архитектур ЭВМ:</strong> централизованная, магистральная, иерархическая (с канальными процессорами); по организации памяти ЦУ — <strong>фон-неймановская/принстонская</strong> (общая память команд и данных) vs <strong>гарвардская</strong> (раздельные памяти и шины — быстрее, в DSP/МК).</li>
+</ul>
+<h2 id="6">6. Функциональные блоки ЦП (схема и назначение АЛУ, схема и назначение УУ, основные регистры ЦП).</h2>
+<p><em>Нужны </em><em>схема АЛУ</em><em> и </em><em>схема УУ</em><em>.</em></p>
+<ul>
+<li><strong>АЛУ (арифметико-логическое устройство)</strong> — выполняет арифметические и логические операции над операндами; синхронизировано с остальными узлами.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="157.0" y1="94.0" x2="273.7" y2="157.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="163.0" y1="182.0" x2="249.5" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="157.0" y1="270.0" x2="273.7" y2="207.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="366.3" y1="157.0" x2="483.0" y2="94.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="366.3" y1="207.0" x2="483.0" y2="270.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">операнд A</tspan></text><rect x="77.0" y="162.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="186.5">операнд B</tspan></text><rect x="67.0" y="270.0" width="106.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="294.5">код операции</tspan></text><rect x="249.5" y="157.0" width="141.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="178.8">АЛУ</tspan><tspan x="320.0" y="194.2">+ − И ИЛИ, сдвиги</tspan></text><rect x="477.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">результат</tspan></text><rect x="463.5" y="270.0" width="113.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="294.5">флаги Z C S O</tspan></text></svg></div>
+
+<ul>
+<li><strong>УУ (устройство управления)</strong> — формирует управляющие сигналы, дешифрирует команды, задаёт последовательность работы узлов.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="163.0" y1="74.0" x2="239.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="157.0" y1="162.0" x2="273.7" y2="99.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="401.0" y1="74.0" x2="460.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">команда</tspan></text><rect x="77.0" y="162.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="186.5">такты</tspan></text><rect x="239.0" y="49.0" width="162.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="70.8">УУ</tspan><tspan x="320.0" y="86.2">дешифратор + автомат</tspan></text><rect x="460.0" y="41.2" width="120.0" height="65.5" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="63.0">упр. сигналы:</tspan><tspan x="520.0" y="78.5">АЛУ · регистры</tspan><tspan x="520.0" y="94.0">память · ВВ</tspan></text></svg></div>
+
+<ul>
+<li><strong>Два типа УУ:</strong><ul>
+<li>с <strong>жёсткой (схемной)</strong> логикой — быстрое, под конкретную систему команд (→ RISC);</li>
+<li><strong>микропрограммное</strong> — гибкое (перенастройка заменой микропрограммы), но медленнее (→ CISC).</li>
+</ul>
+</li>
+<li><strong>Основные регистры ЦП:</strong><ul>
+<li><strong>PC (Program Counter)</strong> / счётчик команд — адрес следующей команды.</li>
+<li><strong>IR (Instruction Register)</strong> — текущая выполняемая команда.</li>
+<li><strong>MAR (Memory Address Register)</strong> — адрес ячейки памяти для обращения.</li>
+<li><strong>MDR/MBR (Memory Data Register)</strong> — данные, читаемые/пишемые в память.</li>
+<li><strong>Аккумулятор</strong>, регистры общего назначения (РОН), регистр флагов.</li>
+</ul>
+</li>
+</ul>
+<h2 id="7">7. Командный цикл процессора, регистр флагов и состояния (понятия команды, потока управления и исполнительного адреса, описание командного цикла, описание флагов в регистре флагов и состояний).</h2>
+<ul>
+<li><strong>Команда</strong> — элементарное действие процессора (код операции + операнды/адреса).</li>
+<li><strong>Поток управления</strong> — порядок выполнения команд (определяется PC и переходами).</li>
+<li><strong>Исполнительный адрес</strong> — фактический адрес операнда в памяти (после применения адресации).</li>
+<li>
+<p><strong>Командный цикл (7 шагов):</strong></p>
+<ol>
+<li><strong>Чтение команды:</strong> <code>IR ← [PC]</code> (адрес берётся из счётчика команд).</li>
+<li><strong>Увеличение счётчика команд</strong> на 1: <code>PC ← PC + 1</code>.</li>
+<li><strong>Формирование адреса операндов</strong> (по виду адресации).</li>
+<li><strong>Извлечение операндов</strong> из памяти/регистров.</li>
+<li><strong>Выполнение</strong> операции в АЛУ.</li>
+<li><strong>Размещение результата</strong> в памяти/регистрах.</li>
+<li><strong>Переход к п. 1</strong> (с проверкой прерываний).
+<em>(Декодирование командой УУ — между шагами 1 и 3. Не «склеивай» шаги: на схеме их именно 7.)</em></li>
+</ol>
+</li>
+<li>
+<p>Если вопрос привязан к лабам на <strong>AVR (ATmega)</strong> — там регистр флагов называется <strong>SREG</strong> (биты C, Z, N, V, S, H, T, I), а не EFLAGS.</p>
+</li>
+<li><strong>Регистр флагов (FLAGS/EFLAGS)</strong> — биты состояния после операции:<ul>
+<li><strong>ZF</strong> — нуль (результат = 0); <strong>CF</strong> — перенос/заём; <strong>SF</strong> — знак (старший бит); <strong>OF</strong> — переполнение; <strong>PF</strong> — чётность; <strong>AF</strong> — вспомогательный перенос.</li>
+<li>Управляющие флаги: <strong>IF</strong> (разрешение прерываний), <strong>DF</strong> (направление), <strong>TF</strong> (трассировка).</li>
+</ul>
+</li>
+</ul>
+<h2 id="8">8. Основные архитектуры системы команд (описание стековой, аккумуляторной, регистровой архитектуры системы команд и архитектура с выделенным доступом к памяти).</h2>
+<ul>
+<li><strong>Система команд</strong> — полный перечень команд, которые способна выполнять машина. <strong>Архитектура системы команд (АСК)</strong> — совокупность средств, <strong>видимых и доступных программисту</strong>. Характеристики АСК: вид/формат данных, место хранения данных, методы доступа, операции над данными, число операндов, способ определения адреса следующей команды, способ кодирования.</li>
+<li>Хронология АСК: аккумуляторная (1950) → стековая (1963–66) → регистровая (1964) → с выделенным доступом к памяти → CISC (1977–80) → RISC (1987) → VLIW (конец 1990-х) → ROSC (безоперандная, 2001).</li>
+<li><strong>Архитектуры (по способу хранения операндов):</strong><ul>
+<li><strong>Стековая</strong> — операнды берутся с вершины стека, безадресные команды. Просто, но медленно (всё через стек).</li>
+<li><strong>Аккумуляторная</strong> — один операнд в аккумуляторе, второй в памяти; результат в аккумулятор. Короткие команды, но много обращений к памяти.</li>
+<li><strong>Регистровая</strong> — операнды в регистрах общего назначения (РОН). Быстро, основа RISC. Подвиды: регистр-регистр и регистр-память.</li>
+<li><strong>С выделенным доступом к памяти (load/store)</strong> — с памятью работают только команды <code>load</code>/<code>store</code>, арифметика только над регистрами. Чистая RISC-модель.</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-cisc-risc-vliw-cisc-risc">9. Основы построения CISC-, RISC- и VLIW-архитектур системы команд (принципы построения основных архитектур, схема процессора, сравнение функций устройства управления в CISC и RISC процессорах).</h2>
+<p><em>Нужна </em><em>схема процессора</em><em> и </em><em>сравнение УУ в CISC и RISC</em><em>.</em></p>
+<ul>
+<li><strong>CISC (Complex Instruction Set)</strong> — много сложных команд разной длины, развитая адресация, команда может делать несколько действий. УУ <strong>микропрограммное</strong> (сложное, медленное). Пример: x86.</li>
+<li><strong>RISC (Reduced Instruction Set)</strong> — мало простых команд фиксированной длины, выполнение за 1 такт, много регистров, load/store. УУ <strong>аппаратное (схемное)</strong> — быстрое. Конвейеризация. Пример: ARM, MIPS.</li>
+<li><strong>VLIW (Very Long Instruction Word)</strong> — в одной длинной команде несколько операций, распараллеливание задаёт <strong>компилятор</strong> (не процессор). Простое железо, сложный компилятор. Пример: Itanium, Эльбрус.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 720 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="148.0" y1="74.0" x2="225.5" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="324.5" y1="74.0" x2="402.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="488.0" y1="74.0" x2="572.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="148.0" y1="182.0" x2="229.0" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="321.0" y1="182.0" x2="572.0" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="62.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="105.0" y="70.8">CISC</tspan><tspan x="105.0" y="86.2">команда</tspan></text><rect x="225.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="70.8">микропрогр.</tspan><tspan x="275.0" y="86.2">УУ</tspan></text><rect x="402.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="445.0" y="70.8">микро-</tspan><tspan x="445.0" y="86.2">команды</tspan></text><rect x="572.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="615.0" y="78.5">АЛУ</tspan></text><rect x="62.0" y="157.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="105.0" y="178.8">RISC</tspan><tspan x="105.0" y="194.2">команда</tspan></text><rect x="229.0" y="157.0" width="92.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="178.8">аппаратное</tspan><tspan x="275.0" y="194.2">УУ</tspan></text><rect x="572.0" y="157.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="615.0" y="178.8">АЛУ</tspan><tspan x="615.0" y="194.2">(1 такт)</tspan></text></svg></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>CISC</th>
+<th>RISC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>УУ</td>
+<td>микропрограммное</td>
+<td>аппаратное (схемное)</td>
+</tr>
+<tr>
+<td>Команды</td>
+<td>сложные, переменной длины</td>
+<td>простые, фиксированной длины</td>
+</tr>
+<tr>
+<td>Такты на команду</td>
+<td>много</td>
+<td>~1 (конвейер)</td>
+</tr>
+<tr>
+<td>Регистры</td>
+<td>мало</td>
+<td>много</td>
+</tr>
+<tr>
+<td>Доступ к памяти</td>
+<td>любая команда</td>
+<td>только load/store</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-x86-risc-16-avr">10. Форматы команд и виды адресации (классификация команд процессора, примеры форматов команд x86, RISC-16, AVR).</h2>
+<ul>
+<li><strong>Классификация команд:</strong> пересылки (load/store, mov), арифметико-логические, передачи управления (переходы, вызовы), ввода-вывода, системные.</li>
+<li><strong>Формат команды</strong> = код операции (КОП) + адресная часть. Число адресов: 0 (стек), 1 (аккумулятор), 2–3 (регистровые). Примеры: <strong>x86</strong> — переменная длина; <strong>RISC-16 / AVR</strong> — фиксированная.</li>
+<li><strong>Виды адресации:</strong><ul>
+<li><strong>Прямая</strong> — в команде сам адрес операнда.</li>
+<li><strong>Непосредственная</strong> — операнд прямо в команде (константа).</li>
+<li><strong>Регистровая</strong> — операнд в регистре.</li>
+<li><strong>Косвенная</strong> — в команде адрес ячейки/регистра, где лежит адрес операнда.</li>
+<li><strong>Со смещением (базовая/индексная)</strong> — адрес = базовый регистр + смещение.</li>
+<li><strong>Относительная</strong> — адрес = PC + смещение (для переходов).</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-mmx-3dnow-sse-sse2">11. Понятия конвейерной, суперскалярной и векторной обработки (схема работы конвейера, показатели эффективности конвейера, схема суперскалярного ЦП, конфликты в конвейере, назначение MMX, 3DNow!, SSE, SSE2,…).</h2>
+<p><em>Нужны </em><em>схема конвейера</em><em> и </em><em>схема суперскалярного ЦП</em><em>.</em></p>
+<ul>
+<li><strong>Конвейер (pipeline)</strong> — команда делится на ступени (стадии), которые выполняются параллельно для разных команд. Идеально: 1 команда/такт.</li>
+</ul>
+<div class="fig"><div class="cap">Конвейер: 1 команда за такт (стадии перекрываются)</div><table class="pipe"><thead><tr><th>такт→</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><th>К1</th><td class="pp s1">IF</td><td class="pp s2">ID</td><td class="pp s3">EX</td><td class="pp s4">MEM</td><td class="pp s5">WB</td><td></td><td></td><td></td><td></td></tr><tr><th>К2</th><td></td><td class="pp s1">IF</td><td class="pp s2">ID</td><td class="pp s3">EX</td><td class="pp s4">MEM</td><td class="pp s5">WB</td><td></td><td></td><td></td></tr><tr><th>К3</th><td></td><td></td><td class="pp s1">IF</td><td class="pp s2">ID</td><td class="pp s3">EX</td><td class="pp s4">MEM</td><td class="pp s5">WB</td><td></td><td></td></tr><tr><th>К4</th><td></td><td></td><td></td><td class="pp s1">IF</td><td class="pp s2">ID</td><td class="pp s3">EX</td><td class="pp s4">MEM</td><td class="pp s5">WB</td><td></td></tr><tr><th>К5</th><td></td><td></td><td></td><td></td><td class="pp s1">IF</td><td class="pp s2">ID</td><td class="pp s3">EX</td><td class="pp s4">MEM</td><td class="pp s5">WB</td></tr></tbody></table><div class="cap">IF выборка · ID декод · EX исполнение · MEM память · WB запись</div></div>
+<ul>
+<li><strong>Показатели эффективности</strong> (N команд, K ступеней, T_K — такт):<ul>
+<li><strong>ускорение</strong> <code>S = NK/(K+N−1) → K</code>;</li>
+<li><strong>эффективность</strong> <code>E = S/K = N/(K+N−1) → 1</code>;</li>
+<li><strong>производительность</strong> <code>P = N/(T_K·(K+N−1)) → 1/T_K = F</code> (частота).</li>
+</ul>
+</li>
+<li><strong>Конфликты (hazards) в конвейере:</strong><ul>
+<li><strong>Структурные</strong> — нехватка аппаратного ресурса.</li>
+<li><strong>По данным</strong> — команда ждёт результат предыдущей (решают форвардингом/простоем).</li>
+<li><strong>По управлению</strong> — переход меняет PC (решают предсказанием переходов).</li>
+</ul>
+</li>
+<li><strong>Суперскалярный ЦП</strong> — несколько конвейеров/исполнительных устройств → &gt;1 команды за такт (внеочередное исполнение).</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 550 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="144.4" y1="157.0" x2="243.5" y2="94.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="158.0" y1="182.0" x2="232.0" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="144.4" y1="207.0" x2="243.5" y2="270.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="306.5" y1="94.0" x2="405.6" y2="157.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="318.0" y1="182.0" x2="399.0" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="306.5" y1="270.0" x2="405.6" y2="207.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="52.0" y="157.0" width="106.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="105.0" y="178.8">выборка</tspan><tspan x="105.0" y="194.2">неск. команд</tspan></text><rect x="232.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="78.5">ALU 1</tspan></text><rect x="232.0" y="162.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="186.5">ALU 2</tspan></text><rect x="232.0" y="270.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="294.5">FPU</tspan></text><rect x="399.0" y="157.0" width="92.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="445.0" y="178.8">&gt;1 команды</tspan><tspan x="445.0" y="194.2">за такт</tspan></text></svg></div>
+
+<ul>
+<li><strong>Векторная обработка</strong> — одна команда над массивом данных (SIMD). Мультимедийные расширения: <strong>MMX</strong> (целые), <strong>3DNow!</strong> (AMD, float), <strong>SSE/SSE2/AVX</strong> (float, расширение регистров).</li>
+</ul>
+<h2 id="12">12. Технологии динамического исполнения (краткое описание средств динамического исполнения, технология многократного декодирование команд).</h2>
+<ul>
+<li><strong>Динамическое исполнение</strong> — процессор сам меняет порядок и условия выполнения команд для загрузки конвейера. Средства:<ul>
+<li><strong>Предсказание переходов (branch prediction)</strong> — угадывает направление ветвления, заранее грузит команды.</li>
+<li><strong>Спекулятивное (упреждающее) исполнение</strong> — выполняет команды до того, как известно, нужны ли они; результат отбрасывается, если предсказание неверно.</li>
+<li><strong>Внеочередное исполнение (out-of-order)</strong> — команды исполняются по готовности данных, а не по порядку.</li>
+<li><strong>Переименование регистров</strong> — устраняет ложные зависимости по регистрам.</li>
+</ul>
+</li>
+<li><strong>Многократное (множественное) декодирование команд</strong> — несколько декодеров параллельно разбирают команды, преобразуя сложные CISC-команды в простые микрооперации (μops) для конвейера.</li>
+</ul>
+<h2 id="13">13. Основы микроархитектур процессоров (понятие микроархитектуры, технологические нормы, производительность, эксплуатационные характеристики МП, физические параметры МП, общая структура МП).</h2>
+<ul>
+<li><strong>Микроархитектура</strong> — аппаратная организация и логическая структура микропроцессора: регистры, управляющие схемы, АЛУ, запоминающие устройства, информационные магистрали. Противопоставляется <strong>макроархитектуре</strong> = система команд, типы данных, режимы адресации, принципы работы МП.</li>
+<li><strong>Технологический процесс (техпроцесс/нормы)</strong> — размер элементов на кристалле (нм). Чем меньше, тем больше транзисторов и ниже энергопотребление.</li>
+<li><strong>Степень интеграции</strong> — число элементов на кристалле.</li>
+<li><strong>Производительность:</strong> тактовая частота ядра, частота системной шины, объём кэша (L1/L2/L3).</li>
+<li><strong>Эксплуатационные характеристики:</strong> напряжение питания, потребляемая мощность, тепловыделение (TDP), макс. температура.</li>
+<li><strong>Физические параметры:</strong> тип и размер корпуса, размер кристалла, число и форма выводов.</li>
+<li><strong>Общая структура МП:</strong> ядро (АЛУ, регистры, кэш L1/L2) + контроллер памяти + шина/интерконнект между ядрами + периферийные блоки (графика, контроллеры ВВ).</li>
+</ul>
+<h2 id="14-intel-">14. Микроархитектуры процессоров Intel (перечень поколений и характерные черты микропроцессоров, схема и характеристики какого-нибудь из последних МП).</h2>
+<p><em>Нужна </em><em>схема и характеристики одного из последних МП</em><em>. Важна хронология + современные особенности.</em></p>
+<ul>
+<li><strong>Хронология (поколения):</strong> 4004 (1971, 4-бит) → 8086 (16-бит, x86) → 80286 (защищённый режим) → 80386 (32-бит) → 80486 (кэш на кристалле) → <strong>Pentium</strong> (суперскаляр) → Pentium Pro/II/III (out-of-order, MMX/SSE) → <strong>Pentium 4</strong> (NetBurst, длинный конвейер, Hyper-Threading) → <strong>Core</strong> (многоядерность, отказ от длинного конвейера) → Core i3/i5/i7/i9 (Nehalem→…→современные).</li>
+<li><strong>Современные особенности Intel:</strong><ul>
+<li><strong>Гибридная архитектура</strong> (с Alder Lake): <strong>P-ядра</strong> (Performance) + <strong>E-ядра</strong> (Efficiency), планировщик <strong>Thread Director</strong>.</li>
+<li>Интегрированный контроллер памяти и графика, кэш L1/L2/L3, кольцевая/mesh-шина между ядрами.</li>
+<li>Технологии: Hyper-Threading (SMT), Turbo Boost, AVX-512.</li>
+</ul>
+</li>
+<li><strong>Схема современного МП (обобщённо):</strong></li>
+</ul>
+<div class="fig"><svg viewBox="0 0 790 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="138.0" y1="89.5" x2="339.4" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="272.8" y1="94.0" x2="367.2" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="395.0" y1="94.0" x2="395.0" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="517.2" y1="94.0" x2="422.8" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="652.0" y1="89.5" x2="450.6" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="395.0" y1="202.0" x2="395.0" y2="270.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="52.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="95.0" y="78.5">P-ядро</tspan></text><rect x="202.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="245.0" y="78.5">P-ядро</tspan></text><rect x="352.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="395.0" y="78.5">E-ядро</tspan></text><rect x="502.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="545.0" y="78.5">E-ядро</tspan></text><rect x="652.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="695.0" y="78.5">iGPU</tspan></text><rect x="328.0" y="162.0" width="134.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="395.0" y="186.5">общий кэш L3 (кольцо / mesh)</tspan></text><rect x="328.0" y="270.0" width="134.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="395.0" y="294.5">контроллер памяти + PCIe</tspan></text></svg></div>
+
+<h2 id="15-amd-">15. Микроархитектуры процессоров AMD (перечень поколения и характерные черты микропроцессоров, схема и характеристики какого-нибудь из последних МП).</h2>
+<p><em>Нужна </em><em>схема и характеристики одного из последних МП</em><em>.</em></p>
+<ul>
+<li><strong>Хронология:</strong> Am286/386/486 (клоны Intel) → <strong>K5</strong> (первая своя архитектура) → <strong>K6</strong> (MMX, 3DNow!) → <strong>Athlon (K7)</strong> — аналог/конкурент Pentium III → <strong>Athlon 64 / Opteron (K8)</strong> — первым ввёл <strong>64-бит (AMD64/x86-64)</strong>, встроенный контроллер памяти, шина <strong>HyperTransport</strong> → <strong>Opteron/Phenom (K10)</strong> — 4 ядра на кристалле → Bulldozer (модульная) → <strong>Zen/Zen2/3/4/5</strong> — современная (чиплеты).</li>
+<li><strong>Современные особенности AMD (Ryzen, Zen):</strong><ul>
+<li><strong>Чиплетная компоновка</strong> — несколько кристаллов <strong>CCD</strong> (ядра) + <strong>I/O-die</strong>, связь по шине <strong>Infinity Fabric</strong>. Дешевле в производстве, лучше выход годных.</li>
+<li>Большой L3-кэш (<strong>3D V-Cache</strong> — кэш «этажом» над ядрами), SMT, поддержка PCIe.</li>
+</ul>
+</li>
+<li><strong>Особенности/отличия от Intel:</strong><ul>
+<li>раньше внедрили 64-бит и встроенный контроллер памяти;</li>
+<li>чиплеты (у AMD) против монолита (у Intel); гибрид P+E у Intel — у AMD ядра однотипные;</li>
+<li>Infinity Fabric против кольцевой/mesh-шины.</li>
+</ul>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="166.3" y1="99.0" x2="283.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="473.7" y1="99.0" x2="357.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="202.0" x2="320.0" y2="265.0" stroke="#62748a" stroke-width="1.6"/><rect x="70.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="70.8">CCD0:</tspan><tspan x="120.0" y="86.2">8 ядер + L3</tspan></text><rect x="470.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="70.8">CCD1:</tspan><tspan x="520.0" y="86.2">8 ядер + L3</tspan></text><rect x="256.5" y="162.0" width="127.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="186.5">Infinity Fabric</tspan></text><rect x="228.0" y="265.0" width="184.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="286.8">I/O-die</tspan><tspan x="320.0" y="302.2">контр. памяти · PCIe · USB</tspan></text></svg></div>
+
+<h2 id="16">16. Основы построения компьютерной памяти (методы доступа к данным, характеристики памяти, иерархическая организация памяти, обнаружение и исправление ошибок).</h2>
+<ul>
+<li><strong>Виды ЗУ:</strong> <strong>процессорные</strong> (регистры, кэш L1/L2/L3) · <strong>внутренние</strong> (основная память — ЦП обращается напрямую) · <strong>внешние</strong> (большой ёмкости, подключаются как ВВ — диски, ленты).</li>
+<li><strong>Методы доступа:</strong> последовательный (лента), прямой (диск), произвольный (ОЗУ — любая ячейка за одно время), ассоциативный (по содержимому, параллельно — кэш).</li>
+<li><strong>Характеристики:</strong><ul>
+<li>ёмкость;</li>
+<li>быстродействие: <strong>время доступа</strong> (от выдачи адреса до готовности данных), <strong>длительность цикла / период обращения</strong> (мин. интервал между двумя обращениями), <strong>скорость передачи</strong>;</li>
+<li>удельная стоимость;</li>
+<li>энергозависимость.</li>
+</ul>
+</li>
+<li><strong>Иерархия памяти</strong> (основана на <strong>принципе локальности</strong> обращений; сверху вниз: быстрее+дороже+меньше → медленнее+дешевле+больше):</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 300 664" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="150.0" y1="79.0" x2="150.0" y2="117.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="102.0" y="89.0" width="96.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="150.0" y="102.0" text-anchor="middle" class="el">быстрее·дороже</text><line x1="150.0" y1="157.0" x2="150.0" y2="195.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="150.0" y1="235.0" x2="150.0" y2="273.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="150.0" y1="313.0" x2="150.0" y2="351.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="150.0" y1="391.0" x2="150.0" y2="429.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="150.0" y1="469.0" x2="150.0" y2="507.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="150.0" y1="547.0" x2="150.0" y2="585.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="102.0" y="557.0" width="96.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="150.0" y="570.0" text-anchor="middle" class="el">больше·дешевле</text><rect x="107.0" y="39.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="63.5">регистры</tspan></text><rect x="107.0" y="117.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="141.5">L1-кэш</tspan></text><rect x="107.0" y="195.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="219.5">L2-кэш</tspan></text><rect x="107.0" y="273.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="297.5">L3</tspan></text><rect x="107.0" y="351.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="375.5">ОЗУ</tspan></text><rect x="97.0" y="429.0" width="106.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="453.5">дисковый кэш</tspan></text><rect x="76.0" y="507.0" width="148.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="531.5">магн. диски / RAID</tspan></text><rect x="93.5" y="585.0" width="113.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="150.0" y="609.5">оптика, ленты</tspan></text></svg></div>
+
+<p>взаимодействуют только два соседних уровня; <strong>попадание (hit)</strong> / <strong>промах (miss)</strong>, hit rate.</p>
+<ul>
+<li><strong>Обнаружение и исправление ошибок:</strong> <strong>отказ</strong> (постоянный — дефект/износ, разряд всегда 0 или 1) vs <strong>сбой</strong> (случайный, без дефекта). Основа — <strong>корректирующие коды</strong> (избыточность): <strong>бит чётности</strong> обнаруживает 1 ошибку; <strong>код Хэмминга / ECC</strong> обнаруживает 2 и исправляет 1.</li>
+</ul>
+<h2 id="17">17. Основная память, статические ОЗУ (структура ОП, характеристики, блочная организация ОП, запоминающий элемент в статическом ОЗУ, виды статических ОЗУ).</h2>
+<p><em>Нужен </em><em>запоминающий элемент SRAM</em><em>.</em></p>
+<ul>
+<li><strong>Структура ОП:</strong> массив ячеек с адресами, дешифратор адреса, регистры данных, схемы чтения/записи. <strong>Блочная организация</strong> — память делится на банки для параллельного доступа.</li>
+<li><strong>Характеристики:</strong> объём, разрядность, время доступа, цикл обращения.</li>
+<li><strong>Запоминающий элемент SRAM</strong> — <strong>триггер на 4–6 транзисторах</strong>. Хранит бит, пока есть питание, регенерация не нужна. Быстрый, но дорогой и малой плотности → используется для <strong>кэша</strong>.</li>
+<li><strong>Виды SRAM (4 группы):</strong> <strong>асинхронные</strong> (низко-/средне-/высокоскоростные), <strong>синхронные</strong> (с чередованием адресов, конвейерные, ZBT, DDR, двухпортовые), <strong>специального применения</strong> (многопортовые, FIFO, теговое ЗУ кэша), <strong>энергонезависимые</strong> (NVRAM, BBSRAM).</li>
+</ul>
+<h2 id="18">18. Динамические ОЗУ (виды динамических ОЗУ, запоминающий элемент, методы ускорения микросхемы, способы регенерации данных).</h2>
+<p><em>Нужен </em><em>запоминающий элемент DRAM</em><em>.</em></p>
+<ul>
+<li><strong>Запоминающий элемент DRAM</strong> — <strong>1 транзистор + 1 конденсатор</strong>. Бит = заряд конденсатора. Дёшево, высокая плотность → основная память. Минус: заряд утекает → нужна <strong>регенерация</strong>.</li>
+<li><strong>Виды ДОЗУ:</strong> <strong>асинхронные</strong> (FPM, EDO, BEDO) и <strong>синхронные</strong> (SDRAM, DDR/DDR2/3/4/5, RDRAM).</li>
+<li><strong>Способы регенерации (3):</strong> <strong>ROR</strong> (RAS Only Refresh — построчно), <strong>CBR</strong> (CAS before RAS — по внутреннему счётчику строк), <strong>Self-Refresh</strong> (авторегенерация в режиме энергосбережения).</li>
+<li><strong>Методы ускорения ядра:</strong> быстрый постраничный, пакетный, конвейерный, удвоение скорости (DDR — передача по обоим фронтам такта).</li>
+</ul>
+<hr />
+<h1 id="2-1943">БЛОК 2. Середина курса (вопросы 19–43)</h1>
+<h2 id="19-eeprom-flash">19. Специальные типы оперативной памяти, ПЗУ (виды энергонезависимых ОЗУ, виды ПЗУ: EEPROM, Flash, ОЗУ для видеоадаптеров, стековая память).</h2>
+<ul>
+<li><strong>Виды энергонезависимых ОЗУ:</strong> <strong>NVRAM</strong>, <strong>BBSRAM</strong> — статическое ОЗУ с резервным питанием (батарейкой).</li>
+<li><strong>Виды ПЗУ:</strong><ul>
+<li><strong>ROM (масочное)</strong> — прошивается на заводе, не меняется.</li>
+<li><strong>PROM</strong> — однократно программируемое.</li>
+<li><strong>EPROM</strong> — стирается УФ-светом, перепрограммируемое.</li>
+<li><strong>EEPROM</strong> — стирается электрически, побайтно.</li>
+<li><strong>Flash</strong> — электрически, блоками; высокая плотность (SSD, BIOS). Две технологии: <strong>NOR</strong> (быстрый доступ к каждой ячейке, память программ микроконтроллеров) и <strong>NAND</strong> (выше плотность, доступ группами — SSD, USB-флешки). Плотность хранения: <strong>SLC</strong> (1 бит/ячейку), <strong>MLC</strong> (2), <strong>TLC</strong> (3).</li>
+<li><strong>PCM</strong> (Phase Change Memory) — фазовая память (перепрограммируемое ПЗУ).</li>
+</ul>
+</li>
+<li><strong>ОЗУ для видеоадаптеров:</strong> <strong>VRAM</strong> (двухпортовая — одновременно вывод на экран и запись), SGRAM, GDDR.</li>
+<li><strong>Стековая память</strong> — LIFO, для адресов возврата и локальных данных.</li>
+</ul>
+<h2 id="20-">20. Организация кэш-памяти, способы отображения основной памяти на кэш-память (назначение кэш-памяти, уровни кэш-памяти, факторы эффективности кэш-памяти, схемы вариантов отображения ОП на кэш-память и сравнение).</h2>
+<p><em>Нужны </em><em>схемы вариантов отображения</em><em>.</em></p>
+<ul>
+<li><strong>Назначение кэша</strong> — быстрая буферная память между ЦП и ОП, хранит часто используемые данные (принцип локальности: временна́я и пространственная).</li>
+<li><strong>Уровни:</strong> L1 (в ядре, самый быстрый, раздельный для команд/данных), L2, L3 (общий для ядер).</li>
+<li><strong>Факторы эффективности:</strong> объём, скорость, процент попаданий (hit rate), стратегия отображения и замещения.</li>
+<li><strong>Способы отображения ОП на кэш:</strong><ul>
+<li><strong>Прямое (direct-mapped)</strong> — блок ОП → строго в одну строку кэша (<code>№ = адрес mod N</code>). Просто и быстро, но частые вытеснения (конфликты).</li>
+<li><strong>Полностью ассоциативное</strong> — блок → в любую строку. Гибко, нет конфликтов, но дорогой поиск (сравнение всех тегов).</li>
+<li><strong>Множественно-ассоциативное (set-associative)</strong> — кэш делится на наборы по K строк; блок → в любую строку своего набора. <strong>Компромисс</strong>, применяется на практике (2-, 4-, 8-way).</li>
+</ul>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 520 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="183.0" y1="162.7" x2="324.4" y2="99.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="183.0" y1="182.0" x2="323.5" y2="182.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="183.0" y1="201.3" x2="324.4" y2="265.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="97.0" y="162.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="140.0" y="186.5">блок ОП</tspan></text><rect x="295.5" y="49.0" width="169.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="380.0" y="70.8">Прямое:</tspan><tspan x="380.0" y="86.2">1 строка (addr mod N)</tspan></text><rect x="323.5" y="157.0" width="113.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="380.0" y="178.8">Полностью</tspan><tspan x="380.0" y="194.2">ассоциативное</tspan></text><rect x="295.5" y="265.0" width="169.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="380.0" y="286.8">Множ.-ассоц.:</tspan><tspan x="380.0" y="302.2">строка набора (K-way)</tspan></text></svg></div>
+
+<h2 id="21-">21. Порядок замещения строк в кэш-памяти, согласование ОП и кэш-памяти, дисковая кэш-память (перечень алгоритмов выбора замещаемой строки, краткое описание алгоритмов согласование содержимого ОП и кэш-памяти для однопроцессорных ЭВМ, характеристики дисковой кэш-памяти).</h2>
+<ul>
+<li><strong>Алгоритмы замещения строки:</strong><ul>
+<li><strong>LRU</strong> (Least Recently Used) — вытесняем дольше всех неиспользуемую.</li>
+<li><strong>LFU</strong> (Least Frequently Used) — реже всех используемую.</li>
+<li><strong>FIFO</strong> — первую вошедшую.</li>
+<li><strong>Random</strong> — случайную.</li>
+<li><strong>ARC</strong> (Adaptive Replacement Cache) — комбинирует LRU+LFU (патент IBM).</li>
+</ul>
+</li>
+<li><strong>Алгоритмы согласования ОП↔кэш (однопроцессорные ЭВМ):</strong><ul>
+<li><strong>Сквозная запись (write-through)</strong> — сразу в кэш и в ОП. Просто, но медленно.</li>
+<li><strong>Простой свопинг</strong> — обратная запись блока в ОП при его вытеснении.</li>
+<li><strong>Свопинг с флагами</strong> — в ОП переписывается только при установленном бите модификации (dirty). Быстрее.</li>
+<li><strong>Регистровый свопинг с флагами</strong> — то же с буферным регистром для ускорения.</li>
+</ul>
+</li>
+<li><strong>Дисковый кэш</strong> — буфер в ОЗУ для часто запрашиваемых секторов диска; ускоряет дисковый ввод-вывод.</li>
+</ul>
+<h2 id="22">22. Организация защиты памяти (назначение средств защиты памяти, краткое описание методов защиты памяти).</h2>
+<ul>
+<li><strong>Назначение:</strong> не дать программе обратиться к чужой/системной памяти (изоляция, надёжность, безопасность).</li>
+<li><strong>Методы (4):</strong><ul>
+<li><strong>Защита отдельных ячеек</strong> — «разряд защиты» в ячейке запрещает запись в неё (для отладки программ).</li>
+<li><strong>Граничные регистры</strong> — задают нижнюю и верхнюю границу области процесса.</li>
+<li><strong>Ключи защиты</strong> — каждому блоку памяти и программе присвоен ключ; доступ при совпадении.</li>
+<li><strong>Кольца защиты (уровни привилегий 0–3)</strong> — режим ядра vs пользователя; для страниц — биты доступа R/W/X.</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-tlb">23. Концепция виртуальной памяти (схемы страничного, сегментного и сегментно-страничного распределения виртуальной памяти, страничная таблица, TLB).</h2>
+<p><em>Нужны </em><em>схемы страничного, сегментного, сегментно-страничного</em><em> распределения.</em></p>
+<ul>
+<li><strong>Виртуальная память</strong> — механизм: программа работает в логическом (виртуальном) адресном пространстве больше физического; трансляция вирт.→физ. адреса аппаратно (MMU), редко используемое выгружается на диск (swap).</li>
+<li><strong>Страничное</strong> — память делится на страницы фиксированного размера. Вирт. адрес = № страницы + смещение → через <strong>страничную таблицу</strong> в физ. адрес.</li>
+<li><strong>Сегментное</strong> — деление на сегменты переменной длины (по смыслу: код, данные, стек). Адрес = № сегмента + смещение.</li>
+<li><strong>Сегментно-страничное</strong> — комбинация: сегменты делятся на страницы (x86). Гибкость сегментов + удобство страниц.</li>
+<li><strong>Страничная таблица</strong> — поля записи: <strong>V</strong> (присутствие страницы в ОП; V=0 → <strong>страничный сбой / page fault</strong>), <strong>R</strong> (использование — для замещения), <strong>M</strong> (модификация — для свопинга с флагами), <strong>A</strong> (права доступа: чтение/запись). Сокращение длины таблицы: многоуровневые таблицы, инвертированная таблица.</li>
+<li>Характеристики: <strong>страничная</strong> → внутренняя фрагментация; <strong>сегментная</strong> → внешняя фрагментация, но удобен разделяемый доступ к общим сегментам.</li>
+<li><strong>TLB (Translation Lookaside Buffer)</strong> — кэш недавних трансляций адресов (8–4096 записей, полностью/множественно-ассоциативный), ускоряет MMU (без него — лишнее обращение к таблице на каждый доступ).</li>
+</ul>
+<pre><code>вирт. адрес ─► [TLB?] ─есть─► физ. адрес
+                                    └─нет─► страничная таблица ─► физ. адрес (+ занести в TLB)
+</code></pre>
+<h2 id="24-ssd-ssd-">24. Организация НЖМД, SSD, оптической памяти, магнитных лент (характеристики дисковой памяти, принципы организации SSD-памяти, принципы организации оптической памяти, назначение магнитных лент).</h2>
+<ul>
+<li><strong>НЖМД (HDD)</strong> — магнитные пластины, головки. Геометрия: <strong>дорожки, секторы, цилиндры</strong>. Характеристики: ёмкость, скорость вращения (об/мин), время доступа (seek), интерфейс. Дёшево за ГБ, но механика — медленно.</li>
+<li><strong>SSD</strong> — флеш-память (NAND), нет механики. Быстрее, тише, надёжнее к ударам. Минус: ограниченный ресурс перезаписи ячеек → <strong>контроллер с wear-leveling</strong> (равномерный износ), TRIM. Чем больше параллельных каналов NAND, тем быстрее.</li>
+<li><strong>Оптика (CD/DVD/Blu-ray)</strong> — данные = питы/лэнды на дорожке, читаются лазером. Спиральная дорожка от центра.</li>
+<li><strong>Магнитные ленты</strong> — последовательный доступ, огромная ёмкость, дёшево → <strong>архивное резервное копирование</strong>.</li>
+</ul>
+<h2 id="25-raid-">25. Избыточные дисковые подсистемы (назначение, способы повышения производительности ЗУ, способы повышения надёжности ЗУ, схемы уровней RAID-массивов).</h2>
+<p><em>Нужны </em><em>схемы уровней RAID</em><em>.</em></p>
+<ul>
+<li><strong>Назначение RAID</strong> — объединить диски для роста производительности и/или надёжности.</li>
+<li><strong>Производительность</strong> — <strong>расслоение (stripe)</strong>: данные параллельно на несколько дисков.</li>
+<li><strong>Надёжность (3 способа):</strong> <strong>зеркалирование (mirror)</strong> — избыточность 100%; <strong>код Хэмминга</strong> — ~30%; <strong>контроль чётности (parity)</strong> — ~20%.</li>
+<li><strong>Уровни:</strong><ul>
+<li><strong>RAID 0</strong> — striping, без избыточности. Быстро, но смерть 1 диска = потеря всего.</li>
+<li><strong>RAID 1</strong> — mirroring (зеркало). Надёжно, но 50% ёмкости.</li>
+<li><strong>RAID 5</strong> — striping + чётность по всем дискам. Переживает отказ 1 диска. Баланс.</li>
+<li><strong>RAID 6</strong> — две чётности, переживает 2 диска.</li>
+<li><strong>RAID 10 (1+0)</strong> — зеркало + страйп. Скорость и надёжность, дорого.</li>
+</ul>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 500 430" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="164.5" y1="195.0" x2="328.1" y2="84.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="178.0" y1="200.4" x2="322.0" y2="151.6" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="178.0" y1="215.0" x2="294.5" y2="215.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="178.0" y1="229.6" x2="319.0" y2="277.4" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="164.5" y1="235.0" x2="328.1" y2="346.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="92.0" y="195.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="135.0" y="219.5">RAID</tspan></text><rect x="294.5" y="34.0" width="141.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="365.0" y="55.8">RAID 0</tspan><tspan x="365.0" y="71.2">страйп (скорость)</tspan></text><rect x="322.0" y="112.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="365.0" y="133.8">RAID 1</tspan><tspan x="365.0" y="149.2">зеркало</tspan></text><rect x="294.5" y="190.0" width="141.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="365.0" y="211.8">RAID 5</tspan><tspan x="365.0" y="227.2">страйп + чётность</tspan></text><rect x="319.0" y="268.0" width="92.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="365.0" y="289.8">RAID 6</tspan><tspan x="365.0" y="305.2">2 чётности</tspan></text><rect x="298.0" y="346.0" width="134.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="365.0" y="367.8">RAID 10</tspan><tspan x="365.0" y="383.2">зеркало + страйп</tspan></text></svg></div>
+
+<h2 id="26">26. Основы построения компьютерных шин (типы шин, иерархия шин, ША, ШД, ШУ, состав линий в ШУ).</h2>
+<ul>
+<li><strong>Шина (bus)</strong> — набор линий для обмена между функциональными блоками (ЦП↔память, ЦП↔ВВ, память↔ВВ); «двунаправленный универсальный коммутатор».</li>
+<li><strong>Функциональные типы:</strong><ul>
+<li><strong>ША (адреса)</strong> — <strong>однонаправленная</strong>, разрядность задаёт объём адресуемой памяти (<code>N=2ⁱ</code>);</li>
+<li><strong>ШД (данных)</strong> — <strong>двунаправленная</strong>, последовательная или параллельная, ширина = слово;</li>
+<li><strong>ШУ (управления)</strong> — линии управляющей информации и состояния.</li>
+</ul>
+</li>
+<li><strong>Иерархия шин:</strong> системная (ЦП–память) → шина расширения → шина ввода/вывода (через адаптеры); архитектура с «пристройкой» (mezzanine). Чем ближе к ЦП, тем быстрее.</li>
+<li><strong>Состав линий ШУ (7 групп):</strong> сигналы управления транзакциями (тип операции, кол-во передаваемых байт, тип адреса, тип протокола), информация состояния (статуса), арбитраж, прерывания, последовательные локальные сети, позиционный код, тактирование и синхронизация.</li>
+</ul>
+<h2 id="27">27. Организация арбитража шины (схемы приоритетов, схемы арбитража, способы организации опроса).</h2>
+<p><em>Нужны </em><em>схемы приоритетов и арбитража</em><em>.</em></p>
+<ul>
+<li><strong>Арбитраж</strong> — процедура допуска к управлению шиной только одного из ведущих (master). <strong>Арбитр</strong> распределяет доступ (обычно на северном мосту).</li>
+<li><strong>Схемы приоритетов:</strong> <strong>статические</strong> (фиксированные) и <strong>динамические</strong>. Динамические алгоритмы: простая циклическая смена, циклическая с учётом последнего запроса, по случайному закону, равных приоритетов, LRU (наиболее давнее использование).</li>
+<li><strong>Схемы арбитража:</strong><ul>
+<li><strong>Централизованная</strong> (один арбитр):<ul>
+<li><strong>параллельная</strong> — у каждого ведущего своя линия запроса/предоставления;</li>
+<li><strong>последовательная (цепочечная, daisy chain)</strong> — сигнал разрешения идёт по цепочке, ближний к арбитру = высший приоритет.</li>
+</ul>
+</li>
+<li><strong>Децентрализованная (распределённая)</strong> — единого арбитра нет, у каждого ведущего свой контроллер шины.</li>
+</ul>
+</li>
+<li><strong>Способы организации опроса:</strong> <strong>централизованный</strong> (контроллер по очереди опрашивает ведущих, выставляя их адрес) и <strong>децентрализованный</strong> (каждый ведущий сам формирует адрес следующего).</li>
+</ul>
+<h2 id="28">28. Типы протоколов шин, синхронная и асинхронная передача данных (управление процессом передачи данных, схемы и принципы работы протоколов шин).</h2>
+<p><em>Нужны </em><em>схемы протоколов</em><em>.</em></p>
+<ul>
+<li><strong>Синхронная передача</strong> — общий тактовый сигнал, события привязаны к фронтам такта. Быстро и просто, но все устройства на одной частоте, длина ограничена.</li>
+<li><strong>Асинхронная передача</strong> — без общего такта, по <strong>квитированию (handshake)</strong>: запрос → готовность (request/acknowledge). Гибко (разные скорости устройств), но медленнее и сложнее.</li>
+</ul>
+<pre><code>Синхронная: CLK ‾|_|‾|_|‾|_  данные привязаны к фронтам
+Асинхронная: REQ ──► устройство ──► ACK (рукопожатие)
+</code></pre>
+<h2 id="29">29. Методы повышения эффективности шин, надёжность и отказоустойчивость шины (способы повышения эффективности шин, способы повышения надёжности шин).</h2>
+<ul>
+<li><strong>Повышение эффективности (полосы):</strong> <strong>отказ от мультиплексирования</strong> ША/ШД, увеличение ширины ШД и тактовой частоты, <strong>блочные/пакетные транзакции (burst)</strong>, <strong>конвейеризация</strong> и <strong>расщепление транзакций (split)</strong>, арбитраж с перекрытием и с удержанием шины, переход на <strong>последовательные дифференциальные</strong> линии (PCIe вместо PCI).</li>
+<li><strong>Повышение надёжности:</strong> контроль чётности/ECC на шине, дублирование/резервные линии, экранирование, протоколы повтора при ошибке.</li>
+</ul>
+<h2 id="30-eisa-lpc-pci-pci-e-agp">30. Внутренние интерфейсы ЭВМ: EISA, LPC, PCI, PCI-E, AGP (основные характеристики).</h2>
+<ul>
+<li><strong>EISA</strong> — расширение ISA, 32-бит, для серверов (устаревший).</li>
+<li><strong>LPC (Low Pin Count)</strong> — для низкоскоростной периферии (контроллеры клавиатуры, BIOS), заменил ISA.</li>
+<li><strong>PCI</strong> — параллельная, 32/64-бит, 33/66 МГц, общая шина с арбитражем (устаревает).</li>
+<li><strong>PCI-E (PCI Express)</strong> — <strong>последовательная</strong>, по «линиям» (lanes ×1…×16), независимые дифференциальные пары, point-to-point. Современный стандарт.</li>
+<li><strong>AGP</strong> — выделенный интерфейс для видеокарт (между PCI и PCI-E исторически), вытеснен PCI-E.</li>
+</ul>
+<h2 id="31-ide-sata-scsi-sas">31. Внешние интерфейсы для ЗУ: IDE, SATA, SCSI, SAS (основные характеристики).</h2>
+<ul>
+<li><strong>IDE/PATA</strong> — параллельный, для HDD/CD, шлейф 40/80 жил, 1–2 устройства, до 45 см (устарел).</li>
+<li><strong>SATA</strong> — <strong>последовательный</strong> наследник IDE, точка-точка, hot-swap. Ревизии: <strong>1.0 — 1.5 Гбит/с, 2.0 — 3, 3.0 — 6 Гбит/с</strong>; SATA Express (PCIe). Массовый для дисков.</li>
+<li><strong>SCSI</strong> — <strong>параллельный</strong>, шина для нескольких устройств, для серверов (очередь команд). От обычного SCSI (8 бит, 5 МБ/с) до <strong>Ultra-640 (16 бит, 640 МБ/с)</strong>.</li>
+<li><strong>SAS (Serial Attached SCSI)</strong> — <strong>последовательный</strong> наследник SCSI: точка-точка, <strong>полнодуплекс</strong>, <strong>1.5/3/6/12 Гбит/с</strong> на линию, до <strong>16 384</strong> устройств, обратно совместим с SATA. Компоненты: инициаторы, целевые устройства, подсистема доставки, расширители.</li>
+</ul>
+<h2 id="32-rs-232c-lpt-epp-ecp-usb-spi-i2c">32. Внешние интерфейсы для ввода/вывода: RS-232C, LPT (EPP, ECP), USB, SPI, I²C (основные характеристики).</h2>
+<ul>
+<li><strong>RS-232C</strong> — последовательный COM-порт, низкая скорость, для модемов/терминалов (устарел).</li>
+<li><strong>LPT</strong> — параллельный порт для принтеров; режимы <strong>EPP</strong> (двунаправленный) и <strong>ECP</strong> (с DMA и сжатием).</li>
+<li><strong>USB</strong> — последовательный, универсальный, hot-plug, питание, до USB4 (40 Гбит/с), топология «дерево» с хабами.</li>
+<li><strong>SPI</strong> — синхронный, 4 линии (MOSI/MISO/SCLK/CS), быстрый, для микросхем на плате, full-duplex.</li>
+<li><strong>I²C</strong> — синхронный, <strong>2 линии</strong> (SDA/SCL), адресация устройств, медленнее SPI, для датчиков.</li>
+</ul>
+<h2 id="33-">33. Система ввода-вывода, организация адресного пространства (способы подключения СВВ к ЦП и ОП, достоинства и недостатки совмещённого и выделенного адресного пространства).</h2>
+<ul>
+<li><strong>Способы подключения СВВ:</strong><ul>
+<li><strong>Совмещённое адресное пространство (memory-mapped I/O)</strong> — порты ВВ в общем адресном пространстве с памятью. Плюс: любые команды работы с памятью годятся для ВВ. Минус: «съедает» адреса памяти.</li>
+<li><strong>Выделенное адресное пространство (port-mapped, x86 <code>IN</code>/<code>OUT</code>)</strong> — отдельное пространство портов. Плюс: не отнимает память, отдельные команды. Минус: нужны спец. команды, сложнее.</li>
+</ul>
+</li>
+</ul>
+<h2 id="34">34. Модуль ввода/вывода, абстрактное периферийное устройство (структура и функции МВВ, схема ПУ).</h2>
+<p><em>Нужна </em><em>схема ПУ</em><em>.</em></p>
+<ul>
+<li><strong>МВВ (модуль ввода-вывода)</strong> — посредник между системной шиной и периферией. <strong>5 функций:</strong> локализация данных (дешифрация адреса ВУ/регистра, адресация данных на ПУ), управление и синхронизация, обмен информацией, буферизация (согласование скоростей ЦП и ПУ), обнаружение ошибок.</li>
+<li><strong>Структура МВВ:</strong> регистры данных, регистры состояния/управления, дешифратор адреса, логика управления, интерфейс с ПУ.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 790 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="188.0" y1="74.0" x2="300.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="490.0" y1="74.0" x2="574.5" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="102.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="145.0" y="70.8">системная</tspan><tspan x="145.0" y="86.2">шина</tspan></text><rect x="300.0" y="41.2" width="190.0" height="65.5" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="395.0" y="63.0">МВВ</tspan><tspan x="395.0" y="78.5">рег. данных · состояния</tspan><tspan x="395.0" y="94.0">упр. логика · дешифратор</tspan></text><rect x="574.5" y="49.0" width="141.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="645.0" y="70.8">ПУ</tspan><tspan x="645.0" y="86.2">(датчик / привод)</tspan></text></svg></div>
+
+<h2 id="35-">35. Программно-управляемый ввод/вывод, ввод/вывод по прерываниям (блок-схемы обоих способов, принцип работы векторных прерываний).</h2>
+<p><em>Нужны </em><em>блок-схемы обоих способов</em><em>.</em></p>
+<ul>
+<li><strong>Программно-управляемый (polling)</strong> — ЦП в цикле опрашивает флаг готовности ПУ. Просто, но ЦП впустую крутит цикл ожидания.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 610 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="175.0" y1="74.0" x2="262.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="348.0" y1="74.0" x2="438.5" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="381.2" y="65.0" width="24.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="393.2" y="78.0" text-anchor="middle" class="el">да</text><path d="M262.0,74.0 Q218.5,40.0 175.0,74.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="203.5" y="31.0" width="30.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="218.5" y="44.0" text-anchor="middle" class="el">нет</text><rect x="55.0" y="49.0" width="120.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="115.0" y="70.8">читать регистр</tspan><tspan x="115.0" y="86.2">состояния</tspan></text><rect x="262.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="305.0" y="78.5">ПУ готов?</tspan></text><rect x="438.5" y="54.0" width="113.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="495.0" y="78.5">обмен данными</tspan></text></svg></div>
+
+<ul>
+<li><strong>ВВ по прерываниям</strong> — ПУ само сигналит прерыванием, когда готово; ЦП занят своим делом, по сигналу переключается на обработчик. Эффективнее.</li>
+<li><strong>Векторное прерывание</strong> — ПУ передаёт <strong>номер (вектор)</strong>, по нему ЦП находит адрес обработчика в таблице векторов.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 840 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="149.5" y1="74.0" x2="217.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="150.2" y="65.0" width="66.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="183.2" y="78.0" text-anchor="middle" class="el">IRQ от ПУ</text><line x1="303.0" y1="74.0" x2="367.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="473.0" y1="74.0" x2="537.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="623.0" y1="74.0" x2="697.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="50.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="100.0" y="70.8">ЦП занят</tspan><tspan x="100.0" y="86.2">своим делом</tspan></text><rect x="217.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="260.0" y="70.8">сохранить</tspan><tspan x="260.0" y="86.2">состояние</tspan></text><rect x="367.0" y="49.0" width="106.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="420.0" y="70.8">обработчик</tspan><tspan x="420.0" y="86.2">(по вектору)</tspan></text><rect x="537.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="580.0" y="78.5">обмен</tspan></text><rect x="697.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="740.0" y="78.5">возврат</tspan></text></svg></div>
+
+<h2 id="36">36. Прямой доступ к памяти (схема подключения КПДП, способы распределения системной шины между ЦП и КПДП, примеры схем конфигураций систем ПДП).</h2>
+<p><em>Нужна </em><em>схема КПДП</em><em> и </em><em>конфигурации</em><em>.</em></p>
+<ul>
+<li><strong>ПДП (DMA)</strong> — обмен ПУ↔память <strong>без участия ЦП</strong>, через контроллер <strong>КПДП (DMAC)</strong>. ЦП освобождается, эффективно для больших блоков.</li>
+<li><strong>Способы распределения шины между ЦП и КПДП:</strong><ul>
+<li><strong>С захватом цикла (cycle stealing)</strong> — КПДП «крадёт» отдельные циклы шины.</li>
+<li><strong>Блочный (burst)</strong> — КПДП захватывает шину на весь блок.</li>
+<li><strong>Прозрачный</strong> — КПДП работает, когда ЦП не использует шину.</li>
+</ul>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="163.0" y1="74.0" x2="277.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="363.0" y1="74.0" x2="477.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="384.0" y="65.0" width="72.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="420.0" y="78.0" text-anchor="middle" class="el">запрос DMA</text><line x1="320.0" y1="99.0" x2="320.0" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="483.0" y1="94.0" x2="357.0" y2="162.0" stroke="#62748a" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ar)"/><rect x="372.0" y="119.0" width="96.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="420.0" y="132.0" text-anchor="middle" class="el">обмен минуя ЦП</text><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">ЦП</tspan></text><rect x="277.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="70.8">КПДП</tspan><tspan x="320.0" y="86.2">(DMAC)</tspan></text><rect x="477.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">ПУ</tspan></text><rect x="277.0" y="162.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="186.5">Память</tspan></text></svg></div>
+
+<h2 id="37">37. Каналы и процессоры ввода/вывода (принципы работы, схема, управляющие слова канала, БУВУ).</h2>
+<ul>
+<li><strong>Назначение</strong> — разгрузить ЦП: канал = специализированный процессор ВВ, выполняет <strong>канальную программу</strong> (управляющие слова канала, УСК).</li>
+<li><strong>Режимы работы канала:</strong><ul>
+<li><strong>Мультиплексный</strong> — несколько ВУ разделяют канал во времени (много медленных устройств, короткими сеансами; байт-/блок-мультиплексный).</li>
+<li><strong>Монопольный</strong> — одно (быстрое) ВУ монополизирует канал до завершения канальной программы (диски).</li>
+</ul>
+</li>
+<li><strong>БУВУ (блок управления внешними устройствами)</strong> — управляет конкретным ПУ под командой канала.</li>
+</ul>
+<h2 id="38">38. Организации системы прерываний. (способы организации системы прерываний, виды прерываний, аппаратные и программные средства системы прерываний).</h2>
+<ul>
+<li><strong>Прерывание</strong> — приостановка текущей программы для реакции на событие, с переходом на обработчик и возвратом.</li>
+<li><strong>Виды прерываний:</strong><ul>
+<li><strong>Аппаратные внешние</strong> — от устройств (IRQ).</li>
+<li><strong>Внутренние (исключения)</strong> — ошибки ЦП. Три типа: <strong>отказ (fault)</strong> — обнаруживается до инструкции, после обработки возврат на <strong>ту же</strong> инструкцию (отказ страницы #PF, деление на 0 #DE); <strong>ловушка (trap)</strong> — после инструкции, возврат на <strong>следующую</strong> (#BP, #OF); <strong>аварийное завершение (abort)</strong> — нельзя точно установить инструкцию (#DF двойной отказ).</li>
+<li><strong>Программные</strong> — команда <code>INT n</code> (системные вызовы).</li>
+</ul>
+</li>
+<li>Внешние делятся на <strong>немаскируемые (NMI)</strong> и <strong>маскируемые (INTR)</strong> (маскируются флагом IF).</li>
+<li><strong>Способы организации:</strong> опрос (polling), векторные прерывания, приоритеты.</li>
+<li><strong>Средства:</strong> аппаратные — выводы ЦП (INTR/NMI/INTA), <strong>контроллер прерываний (8259A / APIC)</strong> для приоритезации и маскирования; программные — таблица векторов, флаги IF/TF, команды <code>int/iret/cli/sti</code>.</li>
+</ul>
+<h2 id="39">39. Прерываний в реальном и защищённом режимах, защита в процедурах прерываний (таблицы векторов прерываний, шлюзы прерываний, алгоритмы выполнения прерываний, средства защиты в процедурах прерываний).</h2>
+<ul>
+<li><strong>Реальный режим</strong> — <strong>таблица векторов прерываний (IVT)</strong> в начале памяти, каждый вектор = адрес обработчика (CS:IP).</li>
+<li><strong>Защищённый режим</strong> — <strong>IDT (таблица дескрипторов прерываний)</strong> из <strong>шлюзов (gates)</strong>: шлюз прерывания/ловушки/задачи, с проверкой уровня привилегий.</li>
+<li><strong>Алгоритм:</strong> сигнал → сохранить состояние (флаги, CS:IP) → по вектору найти обработчик → проверка привилегий → выполнить → <code>IRET</code>.</li>
+<li><strong>Защита в процедурах прерываний:</strong> контроль уровня привилегий (кольца), шлюзы ограничивают точки входа в ядро.</li>
+</ul>
+<h2 id="40">40. Чипсет ЭВМ (назначение, архитектура «северный мост – южный мост», пример схемы современного чипсета с указанием основных интерфейсов).</h2>
+<p><em>Нужна </em><em>схема современного чипсета</em><em>.</em></p>
+<ul>
+<li><strong>Чипсет</strong> — набор микросхем на плате, связывающий ЦП, память и периферию.</li>
+<li><strong>Классическая архитектура «северный мост — южный мост»:</strong><ul>
+<li><strong>Северный мост (Northbridge)</strong> — быстрый: контроллер памяти, графика (AGP/PCIe), связь с ЦП.</li>
+<li><strong>Южный мост (Southbridge)</strong> — медленная периферия: USB, SATA, PCI, LPC, BIOS, аудио, сеть.</li>
+</ul>
+</li>
+<li><strong>Современно:</strong> контроллер памяти и графики <strong>встроены в ЦП</strong>, остался один чип <strong>PCH</strong> (Platform Controller Hub), связь с ЦП по DMI.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="380.6" y1="106.8" x2="483.0" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="413.8" y="125.4" width="36.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="431.8" y="138.4" text-anchor="middle" class="el">PCIe</text><line x1="320.0" y1="106.8" x2="320.0" y2="257.2" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="305.0" y="173.0" width="30.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="320.0" y="186.0" text-anchor="middle" class="el">DMI</text><rect x="249.5" y="41.2" width="141.0" height="65.5" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="63.0">ЦП</tspan><tspan x="320.0" y="78.5">контроллер памяти</tspan><tspan x="320.0" y="94.0">+ PCIe + iGPU</tspan></text><rect x="474.0" y="162.0" width="92.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="186.5">видеокарта</tspan></text><rect x="246.0" y="257.2" width="148.0" height="65.5" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="279.0">PCH (южный мост):</tspan><tspan x="320.0" y="294.5">USB · SATA · сеть</tspan><tspan x="320.0" y="310.0">аудио · LPC → BIOS</tspan></text></svg></div>
+
+<h2 id="41-rom-bios-post-cmos-plugplay">41. Подсистема ROM BIOS (назначение, программы POST и CMOS, назначение прерываний, организация стандарта Plug&amp;Play).</h2>
+<ul>
+<li><strong>BIOS (Basic Input Output System)</strong> — прошивка в ПЗУ на плате: базовые драйверы устройств, загрузка ОС.</li>
+<li><strong>POST (Power-On Self Test)</strong> — самотестирование при включении (память, устройства).</li>
+<li><strong>CMOS</strong> — энергонезависимая память (с батарейкой) с настройками BIOS (время, параметры).</li>
+<li><strong>Прерывания BIOS</strong> — программные сервисы доступа к устройствам в реальном режиме.</li>
+<li><strong>Plug&amp;Play</strong> — автоматическое распознавание и конфигурирование устройств (распределение ресурсов: IRQ, DMA, адреса). Современная замена — <strong>UEFI</strong>.</li>
+</ul>
+<h2 id="42">42. Периферийные устройства ввода (клавиатура: принцип работы, оптическая мышь: принцип работы, механические устройства позиционирования: шариковая мышь/трекбол/джойстик, сканеры: принцип работы).</h2>
+<ul>
+<li><strong>Клавиатура</strong> — матрица клавиш, контроллер опрашивает строки/столбцы, выдаёт <strong>скан-код</strong>.</li>
+<li><strong>Оптическая мышь</strong> — подсветка поверхности + микрокамера + DSP, по смещению картинки считает перемещение.</li>
+<li><strong>Механические позиционеры:</strong> шариковая мышь (шарик→ролики→датчики), трекбол, джойстик.</li>
+<li><strong>Сканеры</strong> — оптический датчик (CCD/CIS) построчно считывает отражённый свет, оцифровывает изображение.</li>
+</ul>
+<h2 id="43-ac97">43. Периферийные устройств вывода (принтеры: принципы работы лазерных и струйных принтеров, звуковая система: схема AC97, графическая система: назначение, дополнительные блоки в акселераторе и сопроцессоре).</h2>
+<p><em>Можно </em><em>схема AC97</em><em>.</em></p>
+<ul>
+<li><strong>Принтеры:</strong><ul>
+<li><strong>Лазерный</strong> — лазер рисует скрытое изображение на барабане (электростатика), тонер прилипает, переносится на бумагу, запекается. Чёткий, быстрый.</li>
+<li><strong>Струйный</strong> — печатающая головка распыляет капли чернил. Дёшево, цветная фотопечать.</li>
+</ul>
+</li>
+<li><strong>Звуковая система (AC97)</strong> — стандарт: цифровой контроллер на чипсете + аналоговый <strong>кодек AC97</strong> (ЦАП/АЦП). Разделение цифровой и аналоговой частей.</li>
+<li><strong>Графическая система</strong> — видеоадаптер: видеопамять, кадровый буфер, <strong>RAMDAC + ЦАП</strong>, контроллер ЭЛТ (CRTC), ROM Video BIOS. Дополнительные блоки:<ul>
+<li><strong>акселератор</strong> — аппаратный курсор, блок продвинутой графики, BitBlt, блок выполнения операций (готовые функции);</li>
+<li><strong>сопроцессор</strong> — полноценный процессор: ОЗУ микроинструкций, УУ, АЛУ, регистры (программируемый).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="3-4455">БЛОК 3. Конец курса — ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ (вопросы 44–55)</h1>
+<blockquote>
+<p>⚠️ Семенов спрашивает этот блок жёстко и много. Учи внимательнее, чем остальное.</p>
+</blockquote>
+<h2 id="44">44. Уровни и средства комплексирования в ВС, классификация ВС по Флину (понятие гранулярности, уровни параллелизма, уровни комплексирования и принципы взаимодействия, классификация ВС по Флину).</h2>
+<p><em>Нужна </em><em>классификация по Флинну</em><em> (схема).</em></p>
+<ul>
+<li><strong>Гранулярность</strong> — мера отношения объёма вычислений к объёму коммуникаций (обмена сообщениями). Виды (с указанием, кто обеспечивает): <strong>крупнозернистый</strong> (coarse, тысячи команд, обеспечивает ОС) / <strong>среднезернистый</strong> (medium, сотни команд, программист или компилятор) / <strong>мелкозернистый</strong> (fine, ~10 команд, векторизирующий компилятор). При малой коммуникац. задержке выигрывает мелкозернистое разбиение, при большой — крупнозернистое.</li>
+<li><strong>Уровни параллелизма (4):</strong> микроуровень (фазы команды перекрыты конвейером) → уровень команд (несколько конвейеров — суперскаляр) → уровень потоков (на параллельных ВС) → уровень заданий (независимые задания на разных процессорах).</li>
+<li><strong>Уровни комплексирования машин (5):</strong><ol>
+<li>прямого управления (процессор–процессор, короткие приказы-сообщения);</li>
+<li>общей оперативной памяти (через быстрый коммутатор — лучший для оперативного взаимодействия);</li>
+<li>комплексируемых каналов ВВ (адаптер «канал–канал»);</li>
+<li>устройств управления внешними устройствами (УВУ, двухканальный переключатель);</li>
+<li>общих внешних устройств.</li>
+</ol>
+</li>
+<li>Доп. классификации (могут спросить): <strong>Джонсона</strong> (для MIMD: GMSV/DMSV/GMMP/DMMP — общая/распределённая память × разделяемые переменные/передача сообщений) и <strong>Скилликорна</strong> (процессоры IP/DP, память IM/DM, переключатели; всего 28 классов).</li>
+<li><strong>Классификация Флинна</strong> — по числу потоков команд (Instruction) и данных (Data):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>один поток данных (SD)</th>
+<th>много потоков данных (MD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>один поток команд (SI)</strong></td>
+<td><strong>SISD</strong> — обычный фон-Нейман</td>
+<td><strong>SIMD</strong> — векторные, матричные</td>
+</tr>
+<tr>
+<td><strong>много потоков команд (MI)</strong></td>
+<td><strong>MISD</strong> — конвейер/систолич. (редко)</td>
+<td><strong>MIMD</strong> — мультипроцессоры, кластеры</td>
+</tr>
+</tbody>
+</table>
+<div class="fig"><svg viewBox="0 0 520 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><rect x="62.5" y="49.0" width="155.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="140.0" y="70.8">SISD</tspan><tspan x="140.0" y="86.2">1 команда → 1 поток</tspan></text><rect x="285.0" y="49.0" width="190.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="380.0" y="70.8">SIMD</tspan><tspan x="380.0" y="86.2">1 команда → много данных</tspan></text><rect x="48.5" y="157.0" width="183.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="140.0" y="178.8">MISD</tspan><tspan x="140.0" y="194.2">много команд → 1 данные</tspan></text><rect x="299.0" y="157.0" width="162.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="380.0" y="178.8">MIMD</tspan><tspan x="380.0" y="194.2">много команд → много</tspan></text></svg></div>
+
+<h2 id="45-7">45. Метрики параллельных вычислений, закон Амдала (7 метрик с формулами и закон Амдала с выводами).</h2>
+<p><em>Нужны </em><em>7 метрик с формулами</em><em> и </em><em>закон Амдала с выводами</em><em>.</em></p>
+<p>Обозначения: <code>T(1)=O(1)</code> — время/объём операций на 1 процессоре; <code>T(n)</code>, <code>O(n)</code> — время и объём операций на n процессорах.</p>
+<ol>
+<li><strong>Степень параллелизма</strong> <code>P(t)</code> — число процессоров, одновременно выполняющих программу в момент t (даёт <strong>профиль параллелизма</strong>).</li>
+<li><strong>Индекс параллелизма</strong> <code>PI(n) = O(n) / T(n)</code> — средняя скорость (операций в единицу времени).</li>
+<li><strong>Ускорение</strong> <code>S(n) = T(1) / T(n)</code> — во сколько раз быстрее. Идеал <code>S = n</code>.</li>
+<li><strong>Эффективность</strong> <code>E(n) = S(n)/n = T(1) / (n·T(n))</code> — доля ускорения на один процессор (0…1).</li>
+<li><strong>Утилизация</strong> <code>U(n) = O(n) / (n·T(n))</code> (= R·E).</li>
+<li><strong>Избыточность</strong> <code>R(n) = O(n) / O(1)</code> — во сколько раз больше операций.</li>
+<li><strong>Сжатие</strong> <code>C(n) = O(1) / O(n)</code> (величина, обратная избыточности).</li>
+<li><strong>Качество</strong> <code>Q(n) = T³(1) / (n·T²(n)·O(n)) = S·E·C</code> — обобщённый показатель.</li>
+</ol>
+<p><strong>Пример:</strong> <code>n=8</code>, <code>T(1)=O(1)=O(8)=93</code>, <code>T(8)=25</code> → <code>S=PI=3.72</code>; <code>E=U=0.465</code>; <code>R=C=1</code>; <code>Q=1.73</code>.</p>
+<ul>
+<li><strong>Закон Амдала.</strong> Если доля <strong>последовательного</strong> кода <code>f</code> (не распараллеливается), то максимальное ускорение:</li>
+</ul>
+<pre><code>                S(n) = 1 / (f + (1 − f)/n)
+                                                    ↓ при n → ∞
+                S_max = 1 / f
+</code></pre>
+<ul>
+<li><strong>Вывод:</strong> ускорение ограничено последовательной частью. Если <code>f = 10%</code>, то даже на ∞ процессорах <code>S_max = 10</code>. <strong>Главный смысл: распараллеливать бесполезно, пока велика последовательная доля</strong> — наращивание процессоров упирается в потолок <code>1/f</code>.</li>
+</ul>
+<h2 id="46-uma-norma">46. Виды ВС: UMA и NORMA (схемы и принципы работы).</h2>
+<p><em>Нужны </em><em>схемы и принципы</em><em>.</em></p>
+<ul>
+<li><strong>UMA (Uniform Memory Access)</strong> — общая память, <strong>одинаковое время доступа</strong> для всех процессоров. Связь через общую шину/коммутатор. К UMA относятся <strong>SMP</strong> (симметричная мультипроцессорная) и <strong>PVP</strong> (на векторных процессорах). Минус: шина — узкое место, плохо масштабируется.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="157.0" y1="94.0" x2="283.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="94.0" x2="320.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="483.0" y1="94.0" x2="357.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="202.0" x2="320.0" y2="265.0" stroke="#62748a" stroke-width="1.6"/><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">ЦП</tspan></text><rect x="277.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="78.5">ЦП</tspan></text><rect x="477.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">ЦП</tspan></text><rect x="274.0" y="162.0" width="92.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="186.5">общая шина</tspan></text><rect x="228.0" y="265.0" width="184.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="286.8">общая память</tspan><tspan x="320.0" y="302.2">(время доступа одинаково)</tspan></text></svg></div>
+
+<ul>
+<li><strong>NORMA (No Remote Memory Access)</strong> — у каждого процессора <strong>только своя локальная память</strong>, чужую напрямую читать нельзя — <strong>только обмен сообщениями</strong> по сети. Это основа <strong>кластеров и MPP</strong>. Хорошо масштабируется.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="169.5" y1="74.0" x2="270.5" y2="74.0" stroke="#62748a" stroke-width="1.6"/><rect x="202.0" y="65.0" width="36.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="220.0" y="78.0" text-anchor="middle" class="el">сеть</text><line x1="369.5" y1="74.0" x2="470.5" y2="74.0" stroke="#62748a" stroke-width="1.6"/><rect x="402.0" y="65.0" width="36.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="420.0" y="78.0" text-anchor="middle" class="el">сеть</text><rect x="70.5" y="54.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">ЦП + память</tspan></text><rect x="270.5" y="54.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="78.5">ЦП + память</tspan></text><rect x="470.5" y="54.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">ЦП + память</tspan></text></svg></div>
+
+<h2 id="47-numa-coma-dsm-numa">47. Виды ВС: NUMA, COMA и DSM (принципы работы, + для NUMA – схема).</h2>
+<p><em>Для </em><em>NUMA — схема</em><em>.</em></p>
+<ul>
+<li><strong>NUMA (Non-Uniform Memory Access)</strong> — общее адресное пространство, но память <strong>физически распределена</strong>: доступ к своей памяти быстрый (напрямую), к чужой (удалённой) — медленнее (через коммутатор/сеть). Масштабируется лучше UMA. <strong>Подвиды:</strong> <strong>ccNUMA</strong> (cache coherent — с обеспечением когерентности кэшей) и <strong>nccNUMA</strong> (без когерентности).</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="120.0" y1="94.0" x2="120.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="520.0" y1="94.0" x2="520.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="163.0" y1="74.0" x2="239.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="156.0" y="65.0" width="90.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="201.0" y="78.0" text-anchor="middle" class="el">своя — быстро</text><line x1="477.0" y1="74.0" x2="401.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="385.0" y="65.0" width="108.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="439.0" y="78.0" text-anchor="middle" class="el">чужая — медленно</text><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">ЦП</tspan></text><rect x="70.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="186.5">лок. память</tspan></text><rect x="239.0" y="49.0" width="162.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="70.8">сеть / коммутатор</tspan><tspan x="320.0" y="86.2">(общее адр. простр.)</tspan></text><rect x="477.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">ЦП</tspan></text><rect x="470.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="186.5">лок. память</tspan></text></svg></div>
+
+<ul>
+<li><strong>COMA (Cache Only Memory <em>Architecture</em>)</strong> — вся локальная память работает как <strong>большой кэш</strong>; данные мигрируют к процессору, который их использует. Нет фиксированной «домашней» памяти.</li>
+<li><strong>DSM (Distributed Shared Memory)</strong> — физически распределённая память программно представляется как <strong>общая</strong> (виртуальное общее адр. пространство поверх сети).</li>
+</ul>
+<h2 id="48-simd">48. Виды ВС класса SIMD: векторные и матричные (принципы построения, общие схемы работы, + для векторных – классификация).</h2>
+<p><em>Нужны </em><em>общие схемы</em><em>, для векторных — классификация.</em></p>
+<ul>
+<li><strong>SIMD</strong> — одна команда над множеством данных одновременно.</li>
+<li><strong>Векторные</strong> — <strong>векторный процессор</strong>: операндами команд могут быть массивы (векторы). <strong>Классификация обработки:</strong> векторно-<strong>параллельная</strong> (несколько конвейерных ФБ параллельно над векторами) и векторно-<strong>конвейерная</strong>.</li>
+</ul>
+<pre><code>Векторный: вектор A ─►[конвейерное АЛУ]─► вектор C
+                        вектор B ─►  (поэлементно)
+</code></pre>
+<ul>
+<li><strong>Матричные</strong> — <strong>массив одинаковых процессорных элементов (ПЭ)</strong>, каждый со своей памятью. <strong>Контроллер массива ПЭ (КМП)</strong> выполняет последовательный код и транслирует команды/данные всем ПЭ по шине широковещательной рассылки; результаты идут по шине результата. <strong>Фронтальная ВМ</strong> загружает программы и данные в КМП. Состав ПЭ: АЛУ, регистры данных, сетевой интерфейс, номер ПЭ, <strong>регистр флага маскирования F</strong>, локальная память (маска отключает часть ПЭ от выполнения команды).</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 720 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="301.0" y1="99.0" x2="152.2" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="340.3" y1="99.0" x2="290.7" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="379.7" y1="99.0" x2="429.3" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="419.0" y1="99.0" x2="567.8" y2="162.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="283.0" y="49.0" width="154.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="360.0" y="70.8">общий УУ</tspan><tspan x="360.0" y="86.2">(одна команда всем)</tspan></text><rect x="55.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="105.0" y="186.5">ПЭ + память</tspan></text><rect x="225.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="275.0" y="186.5">ПЭ + память</tspan></text><rect x="395.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="445.0" y="186.5">ПЭ + память</tspan></text><rect x="565.5" y="162.0" width="99.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="615.0" y="186.5">ПЭ + память</tspan></text></svg></div>
+
+<h2 id="49-simd">49. Виды ВС класса SIMD: ассоциативные ВС и систолические ВС (концептуальные схемы и принципы работы).</h2>
+<p><em>Нужны </em><em>концептуальные схемы</em><em>.</em></p>
+<ul>
+<li><strong>Ассоциативные ВС</strong> — <strong>ассоциативный процессор</strong> на базе <strong>АЗУ</strong> (ассоциативного ЗУ): доступ к данным не по адресу, а по <strong>отличительным признакам в самом операнде</strong>. Две особенности (отличие от обычного АЗУ): наличие <strong>средств обработки данных</strong> и <strong>мультизапись</strong> (параллельная запись во все ячейки, где совпал ассоциативный признак).</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 745 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="180.5" y1="74.0" x2="274.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="471.0" y1="74.0" x2="564.5" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="94.5" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="137.5" y="70.8">признак</tspan><tspan x="137.5" y="86.2">поиска</tspan></text><rect x="274.0" y="49.0" width="197.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="372.5" y="70.8">сравнение со ВСЕМИ</tspan><tspan x="372.5" y="86.2">ячейками (по содержимому)</tspan></text><rect x="564.5" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="607.5" y="70.8">совпавшие</tspan><tspan x="607.5" y="86.2">ячейки</tspan></text></svg></div>
+
+<ul>
+<li><strong>Систолические ВС</strong> — однородная среда из ПЭ, сочетает свойства <strong>конвейерной и матричной</strong> обработки:<ul>
+<li>данные <strong>ритмично прокачиваются</strong> от ПЭ к ПЭ без запоминания промежуточных результатов;</li>
+<li>каждый элемент данных читается из памяти <strong>однократно</strong>, используется столько раз, сколько нужно;</li>
+<li>ПЭ однотипны, связи локальные.</li>
+</ul>
+</li>
+<li><strong>Конфигурации матриц:</strong> линейная, прямоугольная, гексагональная, трёхмерная. Пример ПЭ: <code>c_вых = c_вх + a_вх × b_вх</code> (умножение матриц).</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 690 148" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="128.0" y1="74.0" x2="172.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="258.0" y1="74.0" x2="302.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="388.0" y1="74.0" x2="432.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="518.0" y1="74.0" x2="562.0" y2="74.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="42.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="85.0" y="78.5">данные</tspan></text><rect x="172.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="215.0" y="78.5">ПЭ</tspan></text><rect x="302.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="345.0" y="78.5">ПЭ</tspan></text><rect x="432.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="475.0" y="78.5">ПЭ</tspan></text><rect x="562.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="605.0" y="78.5">результат</tspan></text></svg></div>
+
+<h2 id="50-mimd-pvp-mpp">50. Виды ВС класса MIMD: PVP и MPP (схемы построения, принципы работы).</h2>
+<p><em>Нужны </em><em>схемы и принципы</em><em>.</em></p>
+<ul>
+<li><strong>PVP (Parallel Vector Processor)</strong> — <strong>SMP-система</strong>, где роль ПЭ играют <strong>векторно-конвейерные</strong> процессоры, связанные широкополосным коммутатором типа <strong>«кроссбар»</strong> с разделяемой памятью. Число процессоров: типично <strong>8–16</strong>, до 512. Cray, NEC.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 364" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="157.0" y1="94.0" x2="274.0" y2="157.2" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="94.0" x2="320.0" y2="157.0" stroke="#62748a" stroke-width="1.6"/><line x1="483.0" y1="94.0" x2="366.0" y2="157.2" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="207.0" x2="320.0" y2="265.0" stroke="#62748a" stroke-width="1.6"/><rect x="77.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="78.5">вект. ЦП</tspan></text><rect x="277.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="78.5">вект. ЦП</tspan></text><rect x="477.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="78.5">вект. ЦП</tspan></text><rect x="274.0" y="157.0" width="92.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="178.8">коммутатор</tspan><tspan x="320.0" y="194.2">(кроссбар)</tspan></text><rect x="270.5" y="265.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="286.8">разделяемая</tspan><tspan x="320.0" y="302.2">память</tspan></text></svg></div>
+
+<ul>
+<li><strong>MPP (Massively Parallel Processing)</strong> — <strong>массово-параллельная</strong>: тысячи узлов (NORMA, обмен <strong>сообщениями</strong>). Узел содержит: процессор, локальный банк ОП, <strong>2 коммуникационных процессора (маршрутизатора)</strong> — отдельно для команд и данных, диски/устройства ВВ. <strong>Хост-компьютер</strong> — ядро системы (планировщик заданий). На каждом узле своя ОС (или урезанная). Отлично масштабируется, но сложное ПО.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="166.3" y1="99.0" x2="283.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="99.0" x2="320.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="473.7" y1="99.0" x2="357.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><rect x="70.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="70.8">узел:</tspan><tspan x="120.0" y="86.2">ЦП + память</tspan></text><rect x="270.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="70.8">узел:</tspan><tspan x="320.0" y="86.2">ЦП + память</tspan></text><rect x="470.5" y="49.0" width="99.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="70.8">узел:</tspan><tspan x="520.0" y="86.2">ЦП + память</tspan></text><rect x="235.5" y="162.0" width="169.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="186.5">высокоскоростная сеть</tspan></text></svg></div>
+
+<h2 id="51-mimd">51. Виды ВС класса MIMD: Кластерные ВС (схема построения, топологии ВС, характеристики топологий).</h2>
+<p><em>Нужны </em><em>схема, топологии, характеристики топологий</em><em>.</em></p>
+<ul>
+<li><strong>Кластер</strong> — группа взаимно соединённых <strong>самостоятельных</strong> узлов, работающих совместно как единый ресурс (иллюзия единой ВМ). Дешевле MPP (готовые ПК + сеть). Связь — обмен сообщениями через коммутатор (switch).</li>
+<li><strong>Преимущества (4):</strong> абсолютная масштабируемость (десятки узлов-мультипроцессоров), наращиваемая масштабируемость (добавление узлов малыми порциями), высокий <strong>коэффициент готовности</strong> (отказ узла не валит кластер), низкое <strong>цена/производительность</strong>.</li>
+<li><strong>Кластеры и созвездия:</strong> N узлов, M процессоров в узле — если N &lt; M это кластер, если N &gt; M — <strong>созвездие</strong>. Топология «<strong>Fat-tree</strong>» (толстое дерево) — частая для суперкластеров.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 256" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="163.0" y1="97.2" x2="283.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="320.0" y1="99.0" x2="320.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><line x1="477.0" y1="97.2" x2="357.0" y2="162.0" stroke="#62748a" stroke-width="1.6"/><rect x="77.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="120.0" y="70.8">узел —</tspan><tspan x="120.0" y="86.2">целый ПК</tspan></text><rect x="277.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="70.8">узел —</tspan><tspan x="320.0" y="86.2">целый ПК</tspan></text><rect x="477.0" y="49.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="520.0" y="70.8">узел —</tspan><tspan x="520.0" y="86.2">целый ПК</tspan></text><rect x="228.0" y="162.0" width="184.0" height="40.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="186.5">сеть / коммутатор (switch)</tspan></text></svg></div>
+
+<ul>
+<li><strong>Топологии сети:</strong> шина, кольцо, звезда, решётка (mesh), тор, гиперкуб, дерево, полносвязная.</li>
+<li><strong>Характеристики топологий:</strong><ul>
+<li><strong>Диаметр</strong> — макс. расстояние между узлами (определяет задержку).</li>
+<li><strong>Связность (connectivity)</strong> — число путей между узлами (отказоустойчивость).</li>
+<li><strong>Ширина бисекции (bisection width)</strong> — мин. число линий при разрезе сети пополам (пропускная способность).</li>
+<li><strong>Стоимость</strong> — общее число линий связи.</li>
+</ul>
+</li>
+</ul>
+<h2 id="52-dataflow-reduction">52. Виды ВС: dataflow и reduction (принципы работы, пример потокового графа, классификация потоковых ВС).</h2>
+<p><em>Нужны </em><em>принципы, потоковый граф, классификация</em><em>.</em></p>
+<ul>
+<li><strong>Потоковые (dataflow)</strong> — <strong>управление данными</strong>: команда выполняется, как только готовы её <strong>операнды</strong> (нет счётчика команд, нет PC). Естественный параллелизм. Программа = <strong>потоковый граф</strong>.</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 640 472" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><line x1="108.9" y1="94.0" x2="140.1" y2="139.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="231.1" y1="94.0" x2="199.9" y2="139.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="408.9" y1="94.0" x2="440.1" y2="139.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="531.1" y1="94.0" x2="499.9" y2="139.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="213.0" y1="213.0" x2="277.0" y2="259.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="427.0" y1="213.0" x2="363.0" y2="259.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><line x1="320.0" y1="333.0" x2="320.0" y2="378.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="52.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="95.0" y="78.5">a</tspan></text><rect x="202.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="245.0" y="78.5">b</tspan></text><rect x="352.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="395.0" y="78.5">c</tspan></text><rect x="502.0" y="54.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="545.0" y="78.5">d</tspan></text><circle cx="170.0" cy="182.0" r="43.0" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.6" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="170.0" y="186.5">+</tspan></text><circle cx="470.0" cy="182.0" r="43.0" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.6" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="470.0" y="186.5">×</tspan></text><circle cx="320.0" cy="290.0" r="43.0" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.6" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="294.5">−</tspan></text><rect x="277.0" y="378.0" width="86.0" height="40.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="320.0" y="402.5">результат</tspan></text></svg></div>
+
+<ul>
+<li><strong>Редукционные (reduction)</strong> — <strong>управление по запросу</strong>: вычисление запускается, когда его результат <strong>затребован</strong> другим (ленивые вычисления, demand-driven).</li>
+<li><strong>Классификация потоковых:</strong> статические (1 токен на дуге) и динамические (с метками — несколько токенов).</li>
+</ul>
+<h2 id="53">53. Перспективные типы процессоров ЭВМ (краткое описание ассоциативных, клеточных, нейронных процессоров, процессоров с многозначной логикой, квантовых компьютеров).</h2>
+<ul>
+<li><strong>Ассоциативные</strong> — доступ к памяти по содержимому, параллельный поиск.</li>
+<li><strong>Клеточные (ДНК-процессоры)</strong> — вычисления на молекулах ДНК, массовый параллелизм химических реакций.</li>
+<li><strong>Нейронные (нейропроцессоры/NPU)</strong> — структура из нейронов, параллельная обработка, обучение, для ИИ/распознавания.</li>
+<li><strong>С многозначной (нечёткой, fuzzy) логикой</strong> — оперируют не «0/1», а степенями истинности через <strong>функции принадлежности</strong>; реализуют <strong>механизм нечёткого вывода</strong>. Для задач с неопределённостью.</li>
+<li><strong>Квантовые</strong> — кубиты в <strong>суперпозиции</strong> (0 и 1 одновременно) + <strong>запутанность</strong> → экспоненциальный параллелизм для некоторых задач (факторизация, поиск).</li>
+</ul>
+<h2 id="54-mesi">54. Методы поддержания когерентности кэш-памяти в ВС (перечень методов, общая схема, протокол MESI: состояния и граф переходов).</h2>
+<p><em>Нужны </em><em>общая схема</em><em> и </em><em>граф переходов MESI</em><em>.</em></p>
+<ul>
+<li><strong>Проблема когерентности</strong> — в SMP у каждого ЦП свой кэш; одна ячейка ОП может иметь разные копии → нужно согласование.</li>
+<li><strong>Способы:</strong><ul>
+<li>программные (компилятор + ОС, некэшируемые данные);</li>
+<li>протоколы сквозной / обратной записи;</li>
+<li><strong>запись с аннулированием (write invalidate)</strong> — копии блока в других кэшах помечаются недостоверными (бит достоверности → 0);</li>
+<li><strong>запись с обновлением (write update)</strong> — запись дублируется во все кэши с копией (широковещательно);</li>
+<li>разделяемая кэш-память; стандарт SCI.</li>
+</ul>
+</li>
+<li><strong>Аппаратные механизмы реализации:</strong><ul>
+<li><strong>Снупинг (наблюдение, snooping)</strong> — контроллер каждого кэша следит за шиной; процессоры широковещательно шлют запросы, локальный контроллер аннулирует/обновляет свою копию.</li>
+<li><strong>Справочниковый (directory)</strong> — централизованный справочник в ОП хранит, у кого какие копии (для больших систем без общей шины).</li>
+</ul>
+</li>
+<li>Предшественник MESI — <strong>протокол однократной записи (write-once)</strong>: состояния I (Invalid) / V (Valid) / R (Reserved, однократное изменение, учтено в ОЗУ) / D (Dirty).</li>
+<li><strong>Протокол MESI</strong> — 4 состояния строки кэша:<ul>
+<li><strong>M (Modified)</strong> — изменена, только здесь, не совпадает с ОП («грязная»).</li>
+<li><strong>E (Exclusive)</strong> — только здесь, совпадает с ОП (чистая).</li>
+<li><strong>S (Shared)</strong> — есть копии в других кэшах, совпадает с ОП.</li>
+<li><strong>I (Invalid)</strong> — недействительна.</li>
+</ul>
+</li>
+</ul>
+<div class="fig"><svg viewBox="0 0 595 400" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="bx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2431"/><stop offset="1" stop-color="#131a24"/></linearGradient><marker id="ar" markerWidth="9" markerHeight="9" refX="7.5" refY="3" orient="auto"><path d="M0,0 L7.5,3 L0,6 Z" fill="#62748a"/></marker><filter id="sh" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="#000" flood-opacity="0.5"/></filter></defs><style>text.nl{fill:#e8eef4;font:600 12.5px "IBM Plex Sans",sans-serif}text.el{fill:#9fb0c0;font:500 10.5px "IBM Plex Sans",sans-serif}text.dt{fill:#9fb0c0;font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.3px}</style><path d="M259.0,295.0 Q186.5,288.5 151.0,225.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="126.5" y="279.5" width="120.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="186.5" y="292.5" text-anchor="middle" class="el">чтение (ни у кого)</text><path d="M336.0,295.0 Q408.5,288.5 444.0,225.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="351.5" y="279.5" width="114.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="408.5" y="292.5" text-anchor="middle" class="el">чтение (у других)</text><line x1="151.0" y1="175.0" x2="259.0" y2="105.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="181.0" y="131.0" width="48.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="205.0" y="144.0" text-anchor="middle" class="el">запись</text><path d="M444.0,175.0 Q408.5,111.5 336.0,105.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="357.5" y="102.5" width="102.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="408.5" y="115.5" text-anchor="middle" class="el">запись → инвал.</text><line x1="297.5" y1="105.0" x2="297.5" y2="295.0" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="255.5" y="191.0" width="84.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="297.5" y="204.0" text-anchor="middle" class="el">чужая запись</text><path d="M336.0,105.0 Q408.5,111.5 444.0,175.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="366.5" y="102.5" width="84.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="408.5" y="115.5" text-anchor="middle" class="el">чужое чтение</text><path d="M151.0,225.0 Q223.5,231.5 259.0,295.0" fill="none" stroke="#62748a" stroke-width="1.6" marker-end="url(#ar)"/><rect x="181.5" y="222.5" width="84.0" height="18" rx="5" fill="#0f141b" stroke="#46566a" stroke-width="1"/><text x="223.5" y="235.5" text-anchor="middle" class="el">чужая запись</text><rect x="254.5" y="55.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#e07a8b" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="297.5" y="76.8">M</tspan><tspan x="297.5" y="92.2">Modified</tspan></text><rect x="69.5" y="175.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#4cc0f0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="112.5" y="196.8">E</tspan><tspan x="112.5" y="212.2">Exclusive</tspan></text><rect x="439.5" y="175.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#46d09a" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="482.5" y="196.8">S</tspan><tspan x="482.5" y="212.2">Shared</tspan></text><rect x="254.5" y="295.0" width="86.0" height="50.0" rx="11" fill="url(#bx)" stroke="#9fb0c0" stroke-width="1.5" filter="url(#sh)"/><text class="nl" text-anchor="middle"><tspan x="297.5" y="316.8">I</tspan><tspan x="297.5" y="332.2">Invalid</tspan></text></svg></div>
+
+<ul>
+<li><strong>Принцип:</strong> запись разрешена только из состояния M или E; перед записью в S — рассылается инвалидация другим кэшам (→ их строки в I), своя → M.</li>
+</ul>
+<h2 id="55">55. Современные суперкомпьютеры: характеристики и примеры</h2>
+<p><em>Метрика — производительность в </em><em>PFlop/s</em><em> на тесте LINPACK: <code>Rmax</code> (реальная) и <code>Rpeak</code> (пиковая); рейтинг </em><em>TOP500</em><em> (top500.org).</em></p>
+<ul>
+<li><strong>Суперкомпьютер</strong> — система максимальной производительности; современные — <strong>экзафлопсные</strong> (≥ 10¹⁸ Flop/s), <strong>гибридные</strong> узлы CPU + GPU-ускорители, быстрая сеть (Slingshot, InfiniBand).</li>
+<li><strong>TOP500 (ноябрь 2023), первая тройка:</strong><ol>
+<li><strong>El Capitan</strong> (США, HPE Cray, <strong>AMD EPYC 4-го пок. + AMD Instinct MI300A</strong>) — <strong>1.809 EFlop/s</strong>, ~11.3 млн ядер, 29 МВт, 2024 г.</li>
+<li><strong>Frontier</strong> (США, HPE Cray, <strong>AMD EPYC + Instinct MI250X</strong>) — ~1.35 EFlop/s, первый экзафлопсный (2022).</li>
+<li><strong>Aurora</strong> (США, HPE Cray, <strong>Intel Xeon Max + Intel GPU Max</strong>) — ~1.0 EFlop/s.
+- Также: <strong>Fugaku</strong> (Япония, ARM <strong>A64FX</strong>, без GPU), Eagle (Microsoft, NVIDIA H100), JUPITER (Германия, NVIDIA GH200).</li>
+</ol>
+</li>
+<li><strong>Российские (в TOP500):</strong> <strong>Червоненкис</strong>, Галушкин, Ляпунов (Yandex, AMD EPYC + NVIDIA A100), <strong>Christofari / Christofari Neo</strong> (СберCloud, NVIDIA DGX).</li>
+<li><strong>Пути развития:</strong><ul>
+<li>эволюция (экстраполяция предыдущих лет);</li>
+<li><strong>Grid-технологии и облака</strong>;</li>
+<li>параллелизм многих уровней;</li>
+<li><strong>сопроцессоры-ускорители</strong> (неоднородная структура);</li>
+<li>обработка на <strong>ПЛИС/FPGA</strong>;</li>
+<li>специализация на заказных микросхемах.</li>
+</ul>
+</li>
+<li><strong>Основные сложности:</strong><ul>
+<li>задержки и узкая полоса «процессор–память» и межпроцессорных связей;</li>
+<li>издержки ОС, растущие с числом процессоров;</li>
+<li>трудности распараллеливания;</li>
+<li>слабая поддержка параллелизма языками программирования.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="-">Шпаргалка-минимум (если совсем мало времени — выучи это)</h2>
+<ul>
+<li><strong>Флинн:</strong> SISD / SIMD / MISD / MIMD (по потокам команд × данных).</li>
+<li><strong>Амдал:</strong> <code>S = 1/(f + (1−f)/n)</code>, потолок <code>1/f</code>. Последовательная доля всё губит.</li>
+<li><strong>Память ВС:</strong> UMA (общая, равный доступ, SMP) · NUMA (распределённая, общее адр., неравный доступ) · NORMA (только своя память + сообщения, кластеры/MPP).</li>
+<li><strong>SIMD</strong> = векторные/матричные/ассоциативные/систолические. <strong>MIMD</strong> = PVP/MPP/кластеры.</li>
+<li><strong>MESI:</strong> Modified / Exclusive / Shared / Invalid — когерентность кэшей.</li>
+<li><strong>CISC</strong> (микропрограммное УУ, сложные команды) vs <strong>RISC</strong> (аппаратное УУ, простые, 1 такт, load/store) vs <strong>VLIW</strong> (параллелизм задаёт компилятор).</li>
+<li><strong>Фон Нейман:</strong> двоичное кодирование, программное управление, однородность памяти, адресуемость.</li>
+<li><strong>Кэш-отображение:</strong> прямое / ассоциативное / множественно-ассоциативное.</li>
+<li><strong>DMA</strong> — обмен ПУ↔память минуя ЦП.</li>
+<li><strong>Intel vs AMD:</strong> AMD первой ввела 64-бит и встроенный контроллер памяти; сейчас Intel = гибрид P+E ядра, AMD = чиплеты + Infinity Fabric + 3D V-Cache.</li>
+</ul></div></body></html>

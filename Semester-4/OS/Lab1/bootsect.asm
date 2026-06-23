@@ -144,7 +144,6 @@ load_kernel:
     mov dh, 0                   ; головка 0
     mov dl, 1                   ; диск 1 (fdb)
     int 0x13
-    jc  disk_error
 
     cli
     lgdt [gdt_info]
@@ -156,22 +155,10 @@ load_kernel:
     mov  cr0, eax
     jmp  0x8:protected_mode
 
-; ----- Обработчик ошибки чтения диска: сообщить и зависнуть ------------------
-disk_error:
-    mov dh, 12
-    mov dl, 2
-    call set_cursor
-    mov si, err_msg
-    call teletype
-.hang:
-    hlt
-    jmp .hang
-
 ; ----- Данные ----------------------------------------------------------------
 hdr_msg:    db "ConvertOS bootloader.", 0
 label_msg:  db "Color: ", 0
 hint_msg:   db "Up/Down: change color, Enter: boot.", 0
-err_msg:    db "Disk read error!", 0
 
 cur_idx:    db 0
 

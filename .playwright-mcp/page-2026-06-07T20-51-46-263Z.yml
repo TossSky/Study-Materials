@@ -1,0 +1,2513 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "Конспект АСВТ" [level=1] [ref=e4]
+    - generic [ref=e5]: экзамен · Семенов П.О. · 55 билетов
+  - heading "Конспект к экзамену по АСВТ (Семенов П.О.)" [level=1] [ref=e6]
+  - blockquote [ref=e7]:
+    - paragraph [ref=e8]:
+      - strong [ref=e9]: Как пользоваться.
+      - text: "Это 55 готовых ответов в формате, который требует препод: ключевые определения (жирным), краткие тезисы, схемы там, где в вопросе есть слово «схема». На билет 40 минут, 3 вопроса (начало / середина / конец курса). Сочинения не нужны — нужны ключевые моменты, выводы и схемки."
+    - paragraph [ref=e10]:
+      - strong [ref=e11]: "Правила оценки (со слов старосты):"
+      - text: "- Не ответил вообще ни на один из 3 вопросов → выше тройки не поставят."
+      - strong [ref=e12]: "Вывод: на каждый вопрос знай хоть что-то."
+      - text: "- Описал смежное, а не то, что спросили → минимальный балл. Отвечай строго по теме. - Нет схемы там, где в вопросе слово «схема» → большой минус. В остальных — схемы по желанию. - Транзисторы в вентилях рисовать НЕ надо. Максимум один пример схемы вентиля/триггера — и то если есть время. - Семенов жёстко и много спрашивает"
+      - strong [ref=e13]: параллельные вычисления (в. 44–55)
+      - text: "— это приоритет. - Из лекции про процессоры (Intel/AMD) важно:"
+      - strong [ref=e14]: хронология ЦП + современные Intel и AMD, их особенности и отличия
+      - text: . Конкретные старые модели зубрить не надо.
+    - paragraph [ref=e15]: Дальше — по номерам списка 2026. Красные заголовки из лекций = жирные определения здесь.
+  - separator [ref=e16]
+  - list [ref=e18]:
+    - listitem [ref=e19]:
+      - link "Конспект к экзамену по АСВТ (Семенов П.О.)" [ref=e20] [cursor=pointer]:
+        - /url: "#_1"
+    - listitem [ref=e21]:
+      - link "БЛОК 1. Начало курса (вопросы 1–18)" [ref=e22] [cursor=pointer]:
+        - /url: "#1-118"
+      - list [ref=e23]:
+        - listitem [ref=e24]:
+          - link "1. Представление информации в ЭВМ" [ref=e25] [cursor=pointer]:
+            - /url: "#1"
+        - listitem [ref=e26]:
+          - link "2. Этапы развития ВТ, классификация ВМ" [ref=e27] [cursor=pointer]:
+            - /url: "#2"
+        - listitem [ref=e28]:
+          - link "3. Элементарные узлы ЭВМ (назначение каждого)" [ref=e29] [cursor=pointer]:
+            - /url: "#3"
+        - listitem [ref=e30]:
+          - link "4. Специализированные ИС (ПЛМ, FPGA)" [ref=e31] [cursor=pointer]:
+            - /url: "#4-fpga"
+        - listitem [ref=e32]:
+          - link "5. Архитектуры ЭВМ и принципы фон Неймана" [ref=e33] [cursor=pointer]:
+            - /url: "#5"
+        - listitem [ref=e34]:
+          - link "6. Функциональные блоки ЦП" [ref=e35] [cursor=pointer]:
+            - /url: "#6"
+        - listitem [ref=e36]:
+          - link "7. Командный цикл, регистр флагов" [ref=e37] [cursor=pointer]:
+            - /url: "#7"
+        - listitem [ref=e38]:
+          - link "8. Основные архитектуры системы команд" [ref=e39] [cursor=pointer]:
+            - /url: "#8"
+        - listitem [ref=e40]:
+          - link "9. CISC, RISC, VLIW" [ref=e41] [cursor=pointer]:
+            - /url: "#9-cisc-risc-vliw"
+        - listitem [ref=e42]:
+          - link "10. Форматы команд и виды адресации" [ref=e43] [cursor=pointer]:
+            - /url: "#10"
+        - listitem [ref=e44]:
+          - link "11. Конвейер, суперскаляр, векторная обработка" [ref=e45] [cursor=pointer]:
+            - /url: "#11"
+        - listitem [ref=e46]:
+          - link "12. Технологии динамического исполнения" [ref=e47] [cursor=pointer]:
+            - /url: "#12"
+        - listitem [ref=e48]:
+          - link "13. Основы микроархитектур процессоров" [ref=e49] [cursor=pointer]:
+            - /url: "#13"
+        - listitem [ref=e50]:
+          - link "14. Микроархитектуры процессоров Intel" [ref=e51] [cursor=pointer]:
+            - /url: "#14-intel"
+        - listitem [ref=e52]:
+          - link "15. Микроархитектуры процессоров AMD" [ref=e53] [cursor=pointer]:
+            - /url: "#15-amd"
+        - listitem [ref=e54]:
+          - link "16. Основы построения памяти" [ref=e55] [cursor=pointer]:
+            - /url: "#16"
+        - listitem [ref=e56]:
+          - link "17. Основная память, статические ОЗУ (SRAM)" [ref=e57] [cursor=pointer]:
+            - /url: "#17-sram"
+        - listitem [ref=e58]:
+          - link "18. Динамические ОЗУ (DRAM)" [ref=e59] [cursor=pointer]:
+            - /url: "#18-dram"
+    - listitem [ref=e60]:
+      - link "БЛОК 2. Середина курса (вопросы 19–43)" [ref=e61] [cursor=pointer]:
+        - /url: "#2-1943"
+      - list [ref=e62]:
+        - listitem [ref=e63]:
+          - link "19. Спец. типы ОЗУ, ПЗУ" [ref=e64] [cursor=pointer]:
+            - /url: "#19"
+        - listitem [ref=e65]:
+          - link "20. Организация кэш-памяти, отображение ОП на кэш" [ref=e66] [cursor=pointer]:
+            - /url: "#20-"
+        - listitem [ref=e67]:
+          - link "21. Замещение строк, согласование ОП↔кэш, дисковый кэш" [ref=e68] [cursor=pointer]:
+            - /url: "#21"
+        - listitem [ref=e69]:
+          - link "22. Организация защиты памяти" [ref=e70] [cursor=pointer]:
+            - /url: "#22"
+        - listitem [ref=e71]:
+          - link "23. Концепция виртуальной памяти" [ref=e72] [cursor=pointer]:
+            - /url: "#23"
+        - listitem [ref=e73]:
+          - link "24. НЖМД, SSD, оптика, магнитные ленты" [ref=e74] [cursor=pointer]:
+            - /url: "#24-ssd"
+        - listitem [ref=e75]:
+          - link "25. Избыточные дисковые подсистемы (RAID)" [ref=e76] [cursor=pointer]:
+            - /url: "#25-raid"
+        - listitem [ref=e77]:
+          - link "26. Основы построения шин" [ref=e78] [cursor=pointer]:
+            - /url: "#26"
+        - listitem [ref=e79]:
+          - link "27. Арбитраж шины" [ref=e80] [cursor=pointer]:
+            - /url: "#27"
+        - listitem [ref=e81]:
+          - link "28. Протоколы шин, синхронная/асинхронная передача" [ref=e82] [cursor=pointer]:
+            - /url: "#28"
+        - listitem [ref=e83]:
+          - link "29. Эффективность, надёжность, отказоустойчивость шин" [ref=e84] [cursor=pointer]:
+            - /url: "#29"
+        - listitem [ref=e85]:
+          - 'link "30. Внутренние интерфейсы: EISA, LPC, PCI, PCI-E, AGP" [ref=e86] [cursor=pointer]':
+            - /url: "#30-eisa-lpc-pci-pci-e-agp"
+        - listitem [ref=e87]:
+          - 'link "31. Внешние интерфейсы для ЗУ: IDE, SATA, SCSI, SAS" [ref=e88] [cursor=pointer]':
+            - /url: "#31-ide-sata-scsi-sas"
+        - listitem [ref=e89]:
+          - 'link "32. Внешние интерфейсы ввода-вывода: RS-232C, LPT, USB, SPI, I²C" [ref=e90] [cursor=pointer]':
+            - /url: "#32-rs-232c-lpt-usb-spi-i2c"
+        - listitem [ref=e91]:
+          - link "33. Система ввода-вывода, адресное пространство" [ref=e92] [cursor=pointer]:
+            - /url: "#33-"
+        - listitem [ref=e93]:
+          - link "34. Модуль ввода-вывода, абстрактное ПУ" [ref=e94] [cursor=pointer]:
+            - /url: "#34-"
+        - listitem [ref=e95]:
+          - link "35. Программно-управляемый ВВ, ВВ по прерываниям" [ref=e96] [cursor=pointer]:
+            - /url: "#35-"
+        - listitem [ref=e97]:
+          - link "36. Прямой доступ к памяти (ПДП/DMA)" [ref=e98] [cursor=pointer]:
+            - /url: "#36-dma"
+        - listitem [ref=e99]:
+          - link "37. Каналы и процессоры ввода-вывода" [ref=e100] [cursor=pointer]:
+            - /url: "#37-"
+        - listitem [ref=e101]:
+          - link "38. Организация системы прерываний" [ref=e102] [cursor=pointer]:
+            - /url: "#38"
+        - listitem [ref=e103]:
+          - link "39. Прерывания в реальном и защищённом режимах, защита" [ref=e104] [cursor=pointer]:
+            - /url: "#39"
+        - listitem [ref=e105]:
+          - link "40. Чипсет ЭВМ" [ref=e106] [cursor=pointer]:
+            - /url: "#40"
+        - listitem [ref=e107]:
+          - link "41. Подсистема ROM BIOS" [ref=e108] [cursor=pointer]:
+            - /url: "#41-rom-bios"
+        - listitem [ref=e109]:
+          - link "42. Периферийные устройства ввода" [ref=e110] [cursor=pointer]:
+            - /url: "#42"
+        - listitem [ref=e111]:
+          - link "43. Периферийные устройства вывода" [ref=e112] [cursor=pointer]:
+            - /url: "#43"
+    - listitem [ref=e113]:
+      - link "БЛОК 3. Конец курса — ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ (вопросы 44–55)" [ref=e114] [cursor=pointer]:
+        - /url: "#3-4455"
+      - list [ref=e115]:
+        - listitem [ref=e116]:
+          - link "44. Комплексирование в ВС, классификация Флинна" [ref=e117] [cursor=pointer]:
+            - /url: "#44"
+        - listitem [ref=e118]:
+          - link "45. Метрики параллельных вычислений, закон Амдала" [ref=e119] [cursor=pointer]:
+            - /url: "#45"
+        - listitem [ref=e120]:
+          - 'link "46. ВС: UMA и NORMA" [ref=e121] [cursor=pointer]':
+            - /url: "#46-uma-norma"
+        - listitem [ref=e122]:
+          - 'link "47. ВС: NUMA, COMA, DSM" [ref=e123] [cursor=pointer]':
+            - /url: "#47-numa-coma-dsm"
+        - listitem [ref=e124]:
+          - 'link "48. SIMD: векторные и матричные" [ref=e125] [cursor=pointer]':
+            - /url: "#48-simd"
+        - listitem [ref=e126]:
+          - 'link "49. SIMD: ассоциативные и систолические" [ref=e127] [cursor=pointer]':
+            - /url: "#49-simd"
+        - listitem [ref=e128]:
+          - 'link "50. MIMD: PVP и MPP" [ref=e129] [cursor=pointer]':
+            - /url: "#50-mimd-pvp-mpp"
+        - listitem [ref=e130]:
+          - 'link "51. MIMD: кластерные ВС" [ref=e131] [cursor=pointer]':
+            - /url: "#51-mimd"
+        - listitem [ref=e132]:
+          - 'link "52. ВС: dataflow и reduction" [ref=e133] [cursor=pointer]':
+            - /url: "#52-dataflow-reduction"
+        - listitem [ref=e134]:
+          - link "53. Перспективные процессоры" [ref=e135] [cursor=pointer]:
+            - /url: "#53"
+        - listitem [ref=e136]:
+          - link "54. Когерентность кэша в ВС, протокол MESI" [ref=e137] [cursor=pointer]:
+            - /url: "#54-mesi"
+        - listitem [ref=e138]:
+          - link "55. Современные суперкомпьютеры" [ref=e139] [cursor=pointer]:
+            - /url: "#55"
+        - listitem [ref=e140]:
+          - link "Шпаргалка-минимум (если совсем мало времени — выучи это)" [ref=e141] [cursor=pointer]:
+            - /url: "#-"
+  - heading "БЛОК 1. Начало курса (вопросы 1–18)" [level=1] [ref=e142]
+  - heading "1. Представление информации в ЭВМ" [level=2] [ref=e143]
+  - list [ref=e144]:
+    - listitem [ref=e145]:
+      - strong [ref=e146]: Информация
+      - text: — сведения об объектах и явлениях, уменьшающие неопределённость знаний. В ЭВМ кодируется двоичными сигналами (0/1).
+    - listitem [ref=e147]:
+      - strong [ref=e148]: Система счисления (СС)
+      - text: — способ записи чисел знаками.
+      - strong [ref=e149]: Позиционная
+      - text: "(вес цифры зависит от позиции: 2-, 8-, 10-, 16-ричная) и"
+      - strong [ref=e150]: непозиционная
+      - text: (вес не зависит от позиции, напр. римская).
+    - listitem [ref=e151]:
+      - strong [ref=e152]: Числа со знаком
+      - text: "(n разрядов, старший — знаковый: 0 = «+», 1 = «−»):"
+      - list [ref=e153]:
+        - listitem [ref=e154]:
+          - strong [ref=e155]: Прямой код
+          - text: "— знак + модуль. Минус: два нуля (+0 и −0), сложно вычитать."
+        - listitem [ref=e156]:
+          - strong [ref=e157]: Обратный код
+          - text: — для отрицательных инвертируются все разряды.
+          - code [ref=e158]: a + (−a) = 2ⁿ − 1
+          - text: .
+        - listitem [ref=e159]:
+          - strong [ref=e160]: Дополнительный код
+          - text: — обратный + 1.
+          - code [ref=e161]: a + (−a) = 2ⁿ
+          - text: .
+          - strong [ref=e162]: Главный
+          - text: ": вычитание заменяется сложением, один ноль. Используется в АЛУ."
+    - listitem [ref=e163]:
+      - strong [ref=e164]: "Вещественные числа:"
+      - list [ref=e165]:
+        - listitem [ref=e166]:
+          - strong [ref=e167]: С фиксированной точкой
+          - text: — точка на заданном месте, простой, но малый диапазон.
+        - listitem [ref=e168]:
+          - strong [ref=e169]: С плавающей точкой
+          - text: —
+          - code [ref=e170]: ±M · qᵖ
+          - text: (мантисса M, порядок p, основание q). Стандарт
+          - strong [ref=e171]: IEEE 754
+          - text: ": знак, порядок (смещённый), мантисса. Широкий диапазон."
+    - listitem [ref=e172]:
+      - strong [ref=e173]: "Кодирование:"
+      - text: текст — таблицы кодировки (ASCII 8 бит,
+      - strong [ref=e174]: Unicode/UTF-8
+      - text: ); графика — растр (пиксели, RGB) и вектор; звук — дискретизация + квантование (АЦП, напр. PCM); видео — последовательность кадров + сжатие (кодеки).
+  - heading "2. Этапы развития ВТ, классификация ВМ" [level=2] [ref=e175]
+  - list [ref=e176]:
+    - listitem [ref=e177]:
+      - strong [ref=e178]: Исторические этапы информатизации
+      - text: "(фактор → период): технический (структура/архитектура ЭВМ) 1946–64; программный 1954–70; информационный (структуры данных) с 1970; гуманитарный (интерфейсы) с 1990."
+    - listitem [ref=e179]:
+      - strong [ref=e180]: "Поколения ЭВМ (по элементной базе):"
+  - table [ref=e181]:
+    - rowgroup [ref=e182]:
+      - row "Пок. Годы База Черты" [ref=e183]:
+        - columnheader "Пок." [ref=e184]
+        - columnheader "Годы" [ref=e185]
+        - columnheader "База" [ref=e186]
+        - columnheader "Черты" [ref=e187]
+    - rowgroup [ref=e188]:
+      - row "0 1642–1945 механика, реле Паскаль (1642), Лейбниц, Бэббидж, Z3" [ref=e189]:
+        - cell "0" [ref=e190]
+        - cell "1642–1945" [ref=e191]
+        - cell "механика, реле" [ref=e192]
+        - cell "Паскаль (1642), Лейбниц, Бэббидж, Z3" [ref=e193]
+      - row "1 1945–1953 электронные лампы 10²–2·10⁴ оп/с, ОЗУ на ферритах, машинный код" [ref=e194]:
+        - cell "1" [ref=e195]
+        - cell "1945–1953" [ref=e196]
+        - cell "электронные лампы" [ref=e197]:
+          - text: электронные
+          - strong [ref=e198]: лампы
+        - cell "10²–2·10⁴ оп/с, ОЗУ на ферритах, машинный код" [ref=e199]
+      - row "2 1954–1962 транзисторы 10³–10⁵ оп/с, печатный монтаж, языки выс. уровня" [ref=e200]:
+        - cell "2" [ref=e201]
+        - cell "1954–1962" [ref=e202]
+        - cell "транзисторы" [ref=e203]:
+          - strong [ref=e204]: транзисторы
+        - cell "10³–10⁵ оп/с, печатный монтаж, языки выс. уровня" [ref=e205]
+      - row "3 1963–1972 интегральные схемы 10⁶ оп/с, ОС (разделение времени), сети" [ref=e206]:
+        - cell "3" [ref=e207]
+        - cell "1963–1972" [ref=e208]
+        - cell "интегральные схемы" [ref=e209]:
+          - strong [ref=e210]: интегральные схемы
+        - cell "10⁶ оп/с, ОС (разделение времени), сети" [ref=e211]
+      - row "4 1972–1984 большие ИС (БИС) 10⁶–10⁸ оп/с, микропроцессоры, идея RISC" [ref=e212]:
+        - cell "4" [ref=e213]
+        - cell "1972–1984" [ref=e214]
+        - cell "большие ИС (БИС)" [ref=e215]:
+          - strong [ref=e216]: большие ИС (БИС)
+        - cell "10⁶–10⁸ оп/с, микропроцессоры, идея RISC" [ref=e217]
+      - row "5 1984–1990 СБИС многопроцессорные ВС, ЛВС, суперЭВМ" [ref=e218]:
+        - cell "5" [ref=e219]
+        - cell "1984–1990" [ref=e220]
+        - cell "СБИС" [ref=e221]:
+          - strong [ref=e222]: СБИС
+        - cell "многопроцессорные ВС, ЛВС, суперЭВМ" [ref=e223]
+      - row "6 1990–… СБИС параллелизм, сети" [ref=e224]:
+        - cell "6" [ref=e225]
+        - cell "1990–…" [ref=e226]
+        - cell "СБИС" [ref=e227]
+        - cell "параллелизм, сети" [ref=e228]
+  - list [ref=e229]:
+    - listitem [ref=e230]:
+      - strong [ref=e231]: "Классификация ВМ:"
+      - text: супер-ЭВМ, мейнфреймы, серверы, ПК, встраиваемые, микроконтроллеры.
+  - heading "3. Элементарные узлы ЭВМ (назначение каждого)" [level=2] [ref=e232]
+  - paragraph [ref=e233]:
+    - emphasis [ref=e234]: Схему рисовать не требует — только назначение. Можно один пример (напр. вентиль).
+  - list [ref=e235]:
+    - listitem [ref=e236]:
+      - strong [ref=e237]: Вентиль (логический элемент)
+      - text: — реализует булеву функцию (И, ИЛИ, НЕ, И-НЕ, ИЛИ-НЕ, XOR). Базовый кирпич схемотехники.
+    - listitem [ref=e238]:
+      - strong [ref=e239]: Триггер
+      - text: — элемент памяти на 1 бит, имеет 2 устойчивых состояния (RS, D, T, JK).
+    - listitem [ref=e240]:
+      - strong [ref=e241]: Сумматор
+      - text: — сложение двоичных чисел (полусумматор, полный сумматор с переносом).
+    - listitem [ref=e242]:
+      - strong [ref=e243]: Счётчик
+      - text: — подсчёт импульсов / хранение числа, +1 каждый такт (суммирующий, вычитающий, реверсивный).
+    - listitem [ref=e244]:
+      - strong [ref=e245]: Компаратор
+      - text: — сравнение двух чисел (=, <, >).
+    - listitem [ref=e246]:
+      - strong [ref=e247]: Шифратор / дешифратор
+      - text: "— преобразование кода: позиционный код ↔ двоичный (дешифратор активирует один выход по входному коду)."
+    - listitem [ref=e248]:
+      - strong [ref=e249]: Мультиплексор / демультиплексор
+      - text: — MUX выбирает один из N входов на общий выход по адресу; DEMUX — наоборот, направляет вход на один из N выходов.
+    - listitem [ref=e250]:
+      - strong [ref=e251]: ЦАП / АЦП
+      - text: "— преобразование цифра↔аналог: ЦАП цифровой код → напряжение, АЦП напряжение → цифровой код (дискретизация + квантование)."
+  - heading "4. Специализированные ИС (ПЛМ, FPGA)" [level=2] [ref=e252]
+  - paragraph [ref=e253]:
+    - emphasis [ref=e254]: Нужна
+    - emphasis [ref=e255]: схема ПЛМ
+    - emphasis [ref=e256]: .
+  - list [ref=e257]:
+    - listitem [ref=e258]:
+      - strong [ref=e259]: ПЛМ (программируемая логическая матрица)
+      - text: "— две программируемые матрицы: матрица «И» (формирует конъюнкции входов) → матрица «ИЛИ» (суммирует их). Реализует любую булеву функцию в ДНФ."
+  - document [ref=e261]:
+    - generic [ref=e263]:
+      - paragraph [ref=e270]: термы
+      - generic [ref=e271]:
+        - paragraph [ref=e278]: входы x1..xn
+        - paragraph [ref=e285]:
+          - text: Матрица И
+          - text: конъюнкции
+        - paragraph [ref=e292]:
+          - text: Матрица ИЛИ
+          - text: сумма
+        - paragraph [ref=e299]: выходы f1..fm
+  - list [ref=e300]:
+    - listitem [ref=e301]:
+      - strong [ref=e302]: FPGA
+      - text: "— ПЛИС с программируемой логикой. Компоненты:"
+      - strong [ref=e303]: логические блоки (CLB)
+      - text: с LUT-таблицами и триггерами,
+      - strong [ref=e304]: программируемые межсоединения
+      - text: ","
+      - strong [ref=e305]: блоки ввода-вывода (IOB)
+      - text: ", блоки памяти, умножители."
+    - listitem [ref=e306]:
+      - strong [ref=e307]: "Программируемые элементы (как хранится конфигурация):"
+      - list [ref=e308]:
+        - listitem [ref=e309]:
+          - strong [ref=e310]: SRAM-based
+          - text: — конфигурация в статической памяти. Перепрограммируемые, но энергозависимые (теряют прошивку при выключении, нужна загрузка из ПЗУ). Самые распространённые.
+        - listitem [ref=e311]:
+          - strong [ref=e312]: Antifuse
+          - text: — однократно программируемые (перемычка «прожигается»). Энергонезависимые, надёжные, но не перепрошиваются.
+        - listitem [ref=e313]:
+          - strong [ref=e314]: Flash
+          - text: — на флеш-ячейках. Энергонезависимые и перепрограммируемые (компромисс).
+  - heading "5. Архитектуры ЭВМ и принципы фон Неймана" [level=2] [ref=e315]
+  - paragraph [ref=e316]:
+    - emphasis [ref=e317]: Нужна
+    - emphasis [ref=e318]: структура фон-неймановской ВМ
+    - emphasis [ref=e319]: .
+  - list [ref=e320]:
+    - listitem [ref=e321]:
+      - strong [ref=e322]: "Уровни детализации структуры ВМ (7, сверху вниз):"
+      - text: языки высокого уровня → ассемблер → ОС → архитектура системы команд → микроархитектура → цифровой логический → физический (транзисторный).
+    - listitem [ref=e323]:
+      - strong [ref=e324]: "Принципы фон Неймана:"
+      - list [ref=e325]:
+        - listitem [ref=e326]:
+          - strong [ref=e327]: Двоичное кодирование
+          - text: данных и команд.
+        - listitem [ref=e328]:
+          - strong [ref=e329]: Программное управление
+          - text: — программа из команд, выполняемых последовательно.
+        - listitem [ref=e330]:
+          - strong [ref=e331]: Однородность памяти
+          - text: — команды и данные в одной памяти, неразличимы по виду (команду можно обрабатывать как данные).
+        - listitem [ref=e332]:
+          - strong [ref=e333]: Адресуемость памяти
+          - text: — память из ячеек с адресами, доступ по адресу.
+  - document [ref=e335]:
+    - generic [ref=e337]:
+      - generic [ref=e341]:
+        - paragraph [ref=e347]: адрес / данные / управление
+        - paragraph [ref=e353]: шины
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - paragraph [ref=e363]: ЦП
+          - generic [ref=e364]:
+            - paragraph [ref=e371]: УУ
+            - paragraph [ref=e378]: АЛУ
+        - paragraph [ref=e385]: "ОЗУ: команды + данные"
+        - paragraph [ref=e392]: Устройства ввода-вывода
+  - list [ref=e393]:
+    - listitem [ref=e394]:
+      - strong [ref=e395]: "Виды архитектур ЭВМ:"
+      - text: централизованная, магистральная, иерархическая (с канальными процессорами); по организации памяти ЦУ —
+      - strong [ref=e396]: фон-неймановская/принстонская
+      - text: (общая память команд и данных) vs
+      - strong [ref=e397]: гарвардская
+      - text: (раздельные памяти и шины — быстрее, в DSP/МК).
+  - heading "6. Функциональные блоки ЦП" [level=2] [ref=e398]
+  - paragraph [ref=e399]:
+    - emphasis [ref=e400]: Нужны
+    - emphasis [ref=e401]: схема АЛУ
+    - emphasis [ref=e402]: и
+    - emphasis [ref=e403]: схема УУ
+    - emphasis [ref=e404]: .
+  - list [ref=e405]:
+    - listitem [ref=e406]:
+      - strong [ref=e407]: АЛУ (арифметико-логическое устройство)
+      - text: — выполняет арифметические и логические операции над операндами; синхронизировано с остальными узлами.
+  - document [ref=e409]:
+    - generic [ref=e417]:
+      - paragraph [ref=e424]: операнд A
+      - paragraph [ref=e431]: "АЛУ: + − И ИЛИ, сдвиги"
+      - paragraph [ref=e438]: операнд B
+      - paragraph [ref=e445]: код операции
+      - paragraph [ref=e452]: результат
+      - paragraph [ref=e459]: флаги Z C S O
+  - list [ref=e460]:
+    - listitem [ref=e461]:
+      - strong [ref=e462]: УУ (устройство управления)
+      - text: — формирует управляющие сигналы, дешифрирует команды, задаёт последовательность работы узлов.
+  - document [ref=e464]:
+    - generic [ref=e470]:
+      - paragraph [ref=e477]: команда
+      - paragraph [ref=e484]: "УУ: дешифратор + автомат"
+      - paragraph [ref=e491]: такты
+      - paragraph [ref=e498]:
+        - text: "управляющие сигналы:"
+        - text: АЛУ, регистры, память, ВВ
+  - list [ref=e499]:
+    - listitem [ref=e500]:
+      - strong [ref=e501]: "Два типа УУ:"
+      - text: с
+      - strong [ref=e502]: жёсткой (схемной)
+      - text: логикой — быстрое, под конкретную систему команд (→ RISC);
+      - strong [ref=e503]: микропрограммное
+      - text: — гибкое (перенастройка заменой микропрограммы), но медленнее (→ CISC).
+    - listitem [ref=e504]:
+      - strong [ref=e505]: "Основные регистры ЦП:"
+      - list [ref=e506]:
+        - listitem [ref=e507]:
+          - strong [ref=e508]: PC (Program Counter)
+          - text: / счётчик команд — адрес следующей команды.
+        - listitem [ref=e509]:
+          - strong [ref=e510]: IR (Instruction Register)
+          - text: — текущая выполняемая команда.
+        - listitem [ref=e511]:
+          - strong [ref=e512]: MAR (Memory Address Register)
+          - text: — адрес ячейки памяти для обращения.
+        - listitem [ref=e513]:
+          - strong [ref=e514]: MDR/MBR (Memory Data Register)
+          - text: — данные, читаемые/пишемые в память.
+        - listitem [ref=e515]:
+          - strong [ref=e516]: Аккумулятор
+          - text: ", регистры общего назначения (РОН), регистр флагов."
+  - heading "7. Командный цикл, регистр флагов" [level=2] [ref=e517]
+  - list [ref=e518]:
+    - listitem [ref=e519]:
+      - strong [ref=e520]: Команда
+      - text: — элементарное действие процессора (код операции + операнды/адреса).
+    - listitem [ref=e521]:
+      - strong [ref=e522]: Поток управления
+      - text: — порядок выполнения команд (определяется PC и переходами).
+    - listitem [ref=e523]:
+      - strong [ref=e524]: Исполнительный адрес
+      - text: — фактический адрес операнда в памяти (после применения адресации).
+    - listitem [ref=e525]:
+      - paragraph [ref=e526]:
+        - strong [ref=e527]: "Командный цикл (7 шагов по лекции):"
+      - list [ref=e528]:
+        - listitem [ref=e529]:
+          - strong [ref=e530]: "Чтение команды:"
+          - code [ref=e531]: IR ← [PC]
+          - text: (адрес берётся из счётчика команд).
+        - listitem [ref=e532]:
+          - strong [ref=e533]: Увеличение счётчика команд
+          - text: "на 1:"
+          - code [ref=e534]: PC ← PC + 1
+          - text: .
+        - listitem [ref=e535]:
+          - strong [ref=e536]: Формирование адреса операндов
+          - text: (по виду адресации).
+        - listitem [ref=e537]:
+          - strong [ref=e538]: Извлечение операндов
+          - text: из памяти/регистров.
+        - listitem [ref=e539]:
+          - strong [ref=e540]: Выполнение
+          - text: операции в АЛУ.
+        - listitem [ref=e541]:
+          - strong [ref=e542]: Размещение результата
+          - text: в памяти/регистрах.
+        - listitem [ref=e543]:
+          - strong [ref=e544]: Переход к п. 1
+          - text: (с проверкой прерываний).
+          - emphasis [ref=e545]: "(Декодирование командой УУ — между шагами 1 и 3. Не «склеивай» шаги: на схеме их именно 7.)"
+    - listitem [ref=e546]:
+      - paragraph [ref=e547]:
+        - text: Если вопрос привязан к лабам на
+        - strong [ref=e548]: AVR (ATmega)
+        - text: — там регистр флагов называется
+        - strong [ref=e549]: SREG
+        - text: (биты C, Z, N, V, S, H, T, I), а не EFLAGS.
+    - listitem [ref=e550]:
+      - strong [ref=e551]: Регистр флагов (FLAGS/EFLAGS)
+      - text: "— биты состояния после операции:"
+      - list [ref=e552]:
+        - listitem [ref=e553]:
+          - strong [ref=e554]: ZF
+          - text: — нуль (результат = 0);
+          - strong [ref=e555]: CF
+          - text: — перенос/заём;
+          - strong [ref=e556]: SF
+          - text: — знак (старший бит);
+          - strong [ref=e557]: OF
+          - text: — переполнение;
+          - strong [ref=e558]: PF
+          - text: — чётность;
+          - strong [ref=e559]: AF
+          - text: — вспомогательный перенос.
+        - listitem [ref=e560]:
+          - text: "Управляющие флаги:"
+          - strong [ref=e561]: IF
+          - text: (разрешение прерываний),
+          - strong [ref=e562]: DF
+          - text: (направление),
+          - strong [ref=e563]: TF
+          - text: (трассировка).
+  - heading "8. Основные архитектуры системы команд" [level=2] [ref=e564]
+  - list [ref=e565]:
+    - listitem [ref=e566]:
+      - strong [ref=e567]: Система команд
+      - text: — полный перечень команд, которые способна выполнять машина.
+      - strong [ref=e568]: Архитектура системы команд (АСК)
+      - text: — совокупность средств,
+      - strong [ref=e569]: видимых и доступных программисту
+      - text: ". Характеристики АСК: вид/формат данных, место хранения данных, методы доступа, операции над данными, число операндов, способ определения адреса следующей команды, способ кодирования."
+    - listitem [ref=e570]: "Хронология АСК: аккумуляторная (1950) → стековая (1963–66) → регистровая (1964) → с выделенным доступом к памяти → CISC (1977–80) → RISC (1987) → VLIW (конец 1990-х) → ROSC (безоперандная, 2001)."
+    - listitem [ref=e571]:
+      - strong [ref=e572]: "Архитектуры (по способу хранения операндов):"
+      - list [ref=e573]:
+        - listitem [ref=e574]:
+          - strong [ref=e575]: Стековая
+          - text: — операнды берутся с вершины стека, безадресные команды. Просто, но медленно (всё через стек).
+        - listitem [ref=e576]:
+          - strong [ref=e577]: Аккумуляторная
+          - text: — один операнд в аккумуляторе, второй в памяти; результат в аккумулятор. Короткие команды, но много обращений к памяти.
+        - listitem [ref=e578]:
+          - strong [ref=e579]: Регистровая
+          - text: "— операнды в регистрах общего назначения (РОН). Быстро, основа RISC. Подвиды: регистр-регистр и регистр-память."
+        - listitem [ref=e580]:
+          - strong [ref=e581]: С выделенным доступом к памяти (load/store)
+          - text: — с памятью работают только команды
+          - code [ref=e582]: load
+          - text: /
+          - code [ref=e583]: store
+          - text: ", арифметика только над регистрами. Чистая RISC-модель."
+  - document [ref=e585]:
+    - generic [ref=e593]:
+      - paragraph [ref=e600]:
+        - text: Архитектуры системы команд
+        - text: (по хранению операндов)
+      - paragraph [ref=e607]:
+        - text: Стековая
+        - text: безадресные команды
+      - paragraph [ref=e614]:
+        - text: Аккумуляторная
+        - text: 1 операнд в аккумуляторе
+      - paragraph [ref=e621]:
+        - text: Регистровая (РОН)
+        - text: рег-рег, рег-память
+      - paragraph [ref=e628]:
+        - text: С выделенным доступом
+        - text: load/store
+  - heading "9. CISC, RISC, VLIW" [level=2] [ref=e629]
+  - paragraph [ref=e630]:
+    - emphasis [ref=e631]: Нужна
+    - emphasis [ref=e632]: схема процессора
+    - emphasis [ref=e633]: и
+    - emphasis [ref=e634]: сравнение УУ в CISC и RISC
+    - emphasis [ref=e635]: .
+  - list [ref=e636]:
+    - listitem [ref=e637]:
+      - strong [ref=e638]: CISC (Complex Instruction Set)
+      - text: — много сложных команд разной длины, развитая адресация, команда может делать несколько действий. УУ
+      - strong [ref=e639]: микропрограммное
+      - text: "(сложное, медленное). Пример: x86."
+    - listitem [ref=e640]:
+      - strong [ref=e641]: RISC (Reduced Instruction Set)
+      - text: — мало простых команд фиксированной длины, выполнение за 1 такт, много регистров, load/store. УУ
+      - strong [ref=e642]: аппаратное (схемное)
+      - text: "— быстрое. Конвейеризация. Пример: ARM, MIPS."
+    - listitem [ref=e643]:
+      - strong [ref=e644]: VLIW (Very Long Instruction Word)
+      - text: — в одной длинной команде несколько операций, распараллеливание задаёт
+      - strong [ref=e645]: компилятор
+      - text: "(не процессор). Простое железо, сложный компилятор. Пример: Itanium, Эльбрус."
+  - document [ref=e647]:
+    - generic [ref=e651]:
+      - paragraph [ref=e658]: "CISC: команда"
+      - paragraph [ref=e665]: микропрограммное УУ
+      - paragraph [ref=e672]: микрокоманды
+      - paragraph [ref=e679]: АЛУ
+      - paragraph [ref=e686]: "RISC: команда"
+      - paragraph [ref=e693]: аппаратное УУ
+      - paragraph [ref=e700]: АЛУ за 1 такт
+  - table [ref=e701]:
+    - rowgroup [ref=e702]:
+      - row "CISC RISC" [ref=e703]:
+        - columnheader [ref=e704]
+        - columnheader "CISC" [ref=e705]
+        - columnheader "RISC" [ref=e706]
+    - rowgroup [ref=e707]:
+      - row "УУ микропрограммное аппаратное (схемное)" [ref=e708]:
+        - cell "УУ" [ref=e709]
+        - cell "микропрограммное" [ref=e710]
+        - cell "аппаратное (схемное)" [ref=e711]
+      - row "Команды сложные, переменной длины простые, фиксированной длины" [ref=e712]:
+        - cell "Команды" [ref=e713]
+        - cell "сложные, переменной длины" [ref=e714]
+        - cell "простые, фиксированной длины" [ref=e715]
+      - row "Такты на команду много ~1 (конвейер)" [ref=e716]:
+        - cell "Такты на команду" [ref=e717]
+        - cell "много" [ref=e718]
+        - cell "~1 (конвейер)" [ref=e719]
+      - row "Регистры мало много" [ref=e720]:
+        - cell "Регистры" [ref=e721]
+        - cell "мало" [ref=e722]
+        - cell "много" [ref=e723]
+      - row "Доступ к памяти любая команда только load/store" [ref=e724]:
+        - cell "Доступ к памяти" [ref=e725]
+        - cell "любая команда" [ref=e726]
+        - cell "только load/store" [ref=e727]
+  - heading "10. Форматы команд и виды адресации" [level=2] [ref=e728]
+  - list [ref=e729]:
+    - listitem [ref=e730]:
+      - strong [ref=e731]: "Классификация команд:"
+      - text: пересылки (load/store, mov), арифметико-логические, передачи управления (переходы, вызовы), ввода-вывода, системные.
+    - listitem [ref=e732]:
+      - strong [ref=e733]: Формат команды
+      - text: "= код операции (КОП) + адресная часть. Число адресов: 0 (стек), 1 (аккумулятор), 2–3 (регистровые). Примеры:"
+      - strong [ref=e734]: x86
+      - text: — переменная длина;
+      - strong [ref=e735]: RISC-16 / AVR
+      - text: — фиксированная.
+    - listitem [ref=e736]:
+      - strong [ref=e737]: "Виды адресации:"
+      - list [ref=e738]:
+        - listitem [ref=e739]:
+          - strong [ref=e740]: Прямая
+          - text: — в команде сам адрес операнда.
+        - listitem [ref=e741]:
+          - strong [ref=e742]: Непосредственная
+          - text: — операнд прямо в команде (константа).
+        - listitem [ref=e743]:
+          - strong [ref=e744]: Регистровая
+          - text: — операнд в регистре.
+        - listitem [ref=e745]:
+          - strong [ref=e746]: Косвенная
+          - text: — в команде адрес ячейки/регистра, где лежит адрес операнда.
+        - listitem [ref=e747]:
+          - strong [ref=e748]: Со смещением (базовая/индексная)
+          - text: — адрес = базовый регистр + смещение.
+        - listitem [ref=e749]:
+          - strong [ref=e750]: Относительная
+          - text: — адрес = PC + смещение (для переходов).
+  - heading "11. Конвейер, суперскаляр, векторная обработка" [level=2] [ref=e751]
+  - paragraph [ref=e752]:
+    - emphasis [ref=e753]: Нужны
+    - emphasis [ref=e754]: схема конвейера
+    - emphasis [ref=e755]: и
+    - emphasis [ref=e756]: схема суперскалярного ЦП
+    - emphasis [ref=e757]: .
+  - list [ref=e758]:
+    - listitem [ref=e759]:
+      - strong [ref=e760]: Конвейер (pipeline)
+      - text: "— команда делится на ступени (стадии), которые выполняются параллельно для разных команд. Идеально: 1 команда/такт."
+  - generic [ref=e761]:
+    - generic [ref=e762]: "Конвейер: 1 команда за такт (стадии перекрываются)"
+    - table [ref=e763]:
+      - rowgroup [ref=e764]:
+        - row "такт→ 1 2 3 4 5 6 7 8 9" [ref=e765]:
+          - columnheader "такт→" [ref=e766]
+          - columnheader "1" [ref=e767]
+          - columnheader "2" [ref=e768]
+          - columnheader "3" [ref=e769]
+          - columnheader "4" [ref=e770]
+          - columnheader "5" [ref=e771]
+          - columnheader "6" [ref=e772]
+          - columnheader "7" [ref=e773]
+          - columnheader "8" [ref=e774]
+          - columnheader "9" [ref=e775]
+      - rowgroup [ref=e776]:
+        - row "К1 IF ID EX MEM WB" [ref=e777]:
+          - rowheader "К1" [ref=e778]
+          - cell "IF" [ref=e779]
+          - cell "ID" [ref=e780]
+          - cell "EX" [ref=e781]
+          - cell "MEM" [ref=e782]
+          - cell "WB" [ref=e783]
+          - cell [ref=e784]
+          - cell [ref=e785]
+          - cell [ref=e786]
+          - cell [ref=e787]
+        - row "К2 IF ID EX MEM WB" [ref=e788]:
+          - columnheader "К2" [ref=e789]
+          - cell [ref=e790]
+          - cell "IF" [ref=e791]
+          - cell "ID" [ref=e792]
+          - cell "EX" [ref=e793]
+          - cell "MEM" [ref=e794]
+          - cell "WB" [ref=e795]
+          - cell [ref=e796]
+          - cell [ref=e797]
+          - cell [ref=e798]
+        - row "К3 IF ID EX MEM WB" [ref=e799]:
+          - columnheader "К3" [ref=e800]
+          - cell [ref=e801]
+          - cell [ref=e802]
+          - cell "IF" [ref=e803]
+          - cell "ID" [ref=e804]
+          - cell "EX" [ref=e805]
+          - cell "MEM" [ref=e806]
+          - cell "WB" [ref=e807]
+          - cell [ref=e808]
+          - cell [ref=e809]
+        - row "К4 IF ID EX MEM WB" [ref=e810]:
+          - columnheader "К4" [ref=e811]
+          - cell [ref=e812]
+          - cell [ref=e813]
+          - cell [ref=e814]
+          - cell "IF" [ref=e815]
+          - cell "ID" [ref=e816]
+          - cell "EX" [ref=e817]
+          - cell "MEM" [ref=e818]
+          - cell "WB" [ref=e819]
+          - cell [ref=e820]
+        - row "К5 IF ID EX MEM WB" [ref=e821]:
+          - columnheader "К5" [ref=e822]
+          - cell [ref=e823]
+          - cell [ref=e824]
+          - cell [ref=e825]
+          - cell [ref=e826]
+          - cell "IF" [ref=e827]
+          - cell "ID" [ref=e828]
+          - cell "EX" [ref=e829]
+          - cell "MEM" [ref=e830]
+          - cell "WB" [ref=e831]
+    - generic [ref=e832]: IF выборка · ID декод · EX исполнение · MEM память · WB запись
+  - list [ref=e833]:
+    - listitem [ref=e834]:
+      - strong [ref=e835]: Показатели эффективности
+      - text: "(N команд, K ступеней, T_K — такт): ускорение"
+      - code [ref=e836]: S = NK/(K+N−1) → K
+      - text: ; эффективность
+      - code [ref=e837]: E = S/K = N/(K+N−1) → 1
+      - text: ; производительность
+      - code [ref=e838]: P = N/(T_K·(K+N−1)) → 1/T_K = F
+      - text: (частота).
+    - listitem [ref=e839]:
+      - strong [ref=e840]: "Конфликты (hazards) в конвейере:"
+      - list [ref=e841]:
+        - listitem [ref=e842]:
+          - strong [ref=e843]: Структурные
+          - text: — нехватка аппаратного ресурса.
+        - listitem [ref=e844]:
+          - strong [ref=e845]: По данным
+          - text: — команда ждёт результат предыдущей (решают форвардингом/простоем).
+        - listitem [ref=e846]:
+          - strong [ref=e847]: По управлению
+          - text: — переход меняет PC (решают предсказанием переходов).
+    - listitem [ref=e848]:
+      - strong [ref=e849]: Суперскалярный ЦП
+      - text: — несколько конвейеров/исполнительных устройств → >1 команды за такт (внеочередное исполнение).
+  - document [ref=e851]:
+    - generic [ref=e859]:
+      - paragraph [ref=e866]:
+        - text: выборка
+        - text: неск. команд
+      - paragraph [ref=e873]: ALU 1
+      - paragraph [ref=e880]: ALU 2
+      - paragraph [ref=e887]: FPU
+      - paragraph [ref=e894]: "> 1 команды за такт"
+  - list [ref=e895]:
+    - listitem [ref=e896]:
+      - strong [ref=e897]: Векторная обработка
+      - text: "— одна команда над массивом данных (SIMD). Мультимедийные расширения:"
+      - strong [ref=e898]: MMX
+      - text: (целые),
+      - strong [ref=e899]: 3DNow!
+      - text: (AMD, float),
+      - strong [ref=e900]: SSE/SSE2/AVX
+      - text: (float, расширение регистров).
+  - heading "12. Технологии динамического исполнения" [level=2] [ref=e901]
+  - list [ref=e902]:
+    - listitem [ref=e903]:
+      - strong [ref=e904]: Динамическое исполнение
+      - text: "— процессор сам меняет порядок и условия выполнения команд для загрузки конвейера. Средства:"
+      - list [ref=e905]:
+        - listitem [ref=e906]:
+          - strong [ref=e907]: Предсказание переходов (branch prediction)
+          - text: — угадывает направление ветвления, заранее грузит команды.
+        - listitem [ref=e908]:
+          - strong [ref=e909]: Спекулятивное (упреждающее) исполнение
+          - text: — выполняет команды до того, как известно, нужны ли они; результат отбрасывается, если предсказание неверно.
+        - listitem [ref=e910]:
+          - strong [ref=e911]: Внеочередное исполнение (out-of-order)
+          - text: — команды исполняются по готовности данных, а не по порядку.
+        - listitem [ref=e912]:
+          - strong [ref=e913]: Переименование регистров
+          - text: — устраняет ложные зависимости по регистрам.
+    - listitem [ref=e914]:
+      - strong [ref=e915]: Многократное (множественное) декодирование команд
+      - text: — несколько декодеров параллельно разбирают команды, преобразуя сложные CISC-команды в простые микрооперации (μops) для конвейера.
+  - heading "13. Основы микроархитектур процессоров" [level=2] [ref=e916]
+  - list [ref=e917]:
+    - listitem [ref=e918]:
+      - strong [ref=e919]: Микроархитектура
+      - text: "(по лекции) — аппаратная организация и логическая структура микропроцессора: регистры, управляющие схемы, АЛУ, запоминающие устройства, информационные магистрали. Противопоставляется"
+      - strong [ref=e920]: макроархитектуре
+      - text: = система команд, типы данных, режимы адресации, принципы работы МП.
+    - listitem [ref=e921]:
+      - strong [ref=e922]: Технологический процесс (техпроцесс/нормы)
+      - text: — размер элементов на кристалле (нм). Чем меньше, тем больше транзисторов и ниже энергопотребление.
+    - listitem [ref=e923]:
+      - strong [ref=e924]: Степень интеграции
+      - text: — число элементов на кристалле.
+    - listitem [ref=e925]:
+      - strong [ref=e926]: "Производительность:"
+      - text: тактовая частота ядра, частота системной шины, объём кэша (L1/L2/L3).
+    - listitem [ref=e927]:
+      - strong [ref=e928]: "Эксплуатационные характеристики:"
+      - text: напряжение питания, потребляемая мощность, тепловыделение (TDP), макс. температура.
+    - listitem [ref=e929]:
+      - strong [ref=e930]: "Физические параметры:"
+      - text: тип и размер корпуса, размер кристалла, число и форма выводов.
+    - listitem [ref=e931]:
+      - strong [ref=e932]: "Общая структура МП:"
+      - text: ядро (АЛУ, регистры, кэш L1/L2) + контроллер памяти + шина/интерконнект между ядрами + периферийные блоки (графика, контроллеры ВВ).
+  - heading "14. Микроархитектуры процессоров Intel" [level=2] [ref=e933]
+  - paragraph [ref=e934]:
+    - emphasis [ref=e935]: Нужна
+    - emphasis [ref=e936]: схема и характеристики одного из последних МП
+    - emphasis [ref=e937]: . Важна хронология + современные особенности.
+  - list [ref=e938]:
+    - listitem [ref=e939]:
+      - strong [ref=e940]: "Хронология (поколения):"
+      - text: 4004 (1971, 4-бит) → 8086 (16-бит, x86) → 80286 (защищённый режим) → 80386 (32-бит) → 80486 (кэш на кристалле) →
+      - strong [ref=e941]: Pentium
+      - text: (суперскаляр) → Pentium Pro/II/III (out-of-order, MMX/SSE) →
+      - strong [ref=e942]: Pentium 4
+      - text: (NetBurst, длинный конвейер, Hyper-Threading) →
+      - strong [ref=e943]: Core
+      - text: (многоядерность, отказ от длинного конвейера) → Core i3/i5/i7/i9 (Nehalem→…→современные).
+    - listitem [ref=e944]:
+      - strong [ref=e945]: "Современные особенности Intel:"
+      - list [ref=e946]:
+        - listitem [ref=e947]:
+          - strong [ref=e948]: Гибридная архитектура
+          - text: "(с Alder Lake):"
+          - strong [ref=e949]: P-ядра
+          - text: (Performance) +
+          - strong [ref=e950]: E-ядра
+          - text: (Efficiency), планировщик
+          - strong [ref=e951]: Thread Director
+          - text: .
+        - listitem [ref=e952]: Интегрированный контроллер памяти и графика, кэш L1/L2/L3, кольцевая/mesh-шина между ядрами.
+        - listitem [ref=e953]: "Технологии: Hyper-Threading (SMT), Turbo Boost, AVX-512."
+    - listitem [ref=e954]:
+      - strong [ref=e955]: "Схема современного МП (обобщённо):"
+  - document [ref=e957]:
+    - generic [ref=e960]:
+      - generic [ref=e961]:
+        - paragraph [ref=e969]: кристалл ЦП
+        - generic [ref=e970]:
+          - paragraph [ref=e977]: P-ядро
+          - paragraph [ref=e984]: P-ядро
+          - paragraph [ref=e991]: E-ядро
+          - paragraph [ref=e998]: E-ядро
+          - paragraph [ref=e1005]: iGPU
+      - paragraph [ref=e1012]: общий кэш L3 (кольцо / mesh)
+      - paragraph [ref=e1019]: контроллер памяти + PCIe
+  - heading "15. Микроархитектуры процессоров AMD" [level=2] [ref=e1020]
+  - paragraph [ref=e1021]:
+    - emphasis [ref=e1022]: Нужна
+    - emphasis [ref=e1023]: схема и характеристики одного из последних МП
+    - emphasis [ref=e1024]: .
+  - list [ref=e1025]:
+    - listitem [ref=e1026]:
+      - strong [ref=e1027]: "Хронология:"
+      - text: Am286/386/486 (клоны Intel) →
+      - strong [ref=e1028]: K5
+      - text: (первая своя архитектура) →
+      - strong [ref=e1029]: K6
+      - text: (MMX, 3DNow!) →
+      - strong [ref=e1030]: Athlon (K7)
+      - text: — аналог/конкурент Pentium III →
+      - strong [ref=e1031]: Athlon 64 / Opteron (K8)
+      - text: — первым ввёл
+      - strong [ref=e1032]: 64-бит (AMD64/x86-64)
+      - text: ", встроенный контроллер памяти, шина"
+      - strong [ref=e1033]: HyperTransport
+      - text: →
+      - strong [ref=e1034]: Opteron/Phenom (K10)
+      - text: — 4 ядра на кристалле → Bulldozer (модульная) →
+      - strong [ref=e1035]: Zen/Zen2/3/4/5
+      - text: — современная (чиплеты).
+    - listitem [ref=e1036]:
+      - strong [ref=e1037]: "Современные особенности AMD (Ryzen, Zen):"
+      - list [ref=e1038]:
+        - listitem [ref=e1039]:
+          - strong [ref=e1040]: Чиплетная компоновка
+          - text: — несколько кристаллов
+          - strong [ref=e1041]: CCD
+          - text: (ядра) +
+          - strong [ref=e1042]: I/O-die
+          - text: ", связь по шине"
+          - strong [ref=e1043]: Infinity Fabric
+          - text: . Дешевле в производстве, лучше выход годных.
+        - listitem [ref=e1044]:
+          - text: Большой L3-кэш (
+          - strong [ref=e1045]: 3D V-Cache
+          - text: — кэш «этажом» над ядрами), SMT, поддержка PCIe.
+    - listitem [ref=e1046]:
+      - strong [ref=e1047]: "Особенности/отличия от Intel:"
+      - text: раньше внедрили 64-бит и встроенный контроллер памяти; чиплеты vs монолит (у Intel) / гибрид P+E (у Intel — у AMD ядра однотипные); Infinity Fabric vs кольцевая/mesh.
+  - document [ref=e1049]:
+    - generic [ref=e1055]:
+      - paragraph [ref=e1062]: "CCD0: 8 ядер + L3"
+      - paragraph [ref=e1069]: Infinity Fabric
+      - paragraph [ref=e1076]: "CCD1: 8 ядер + L3"
+      - paragraph [ref=e1083]:
+        - text: I/O-die
+        - text: контроллер памяти · PCIe · USB
+  - heading "16. Основы построения памяти" [level=2] [ref=e1084]
+  - list [ref=e1085]:
+    - listitem [ref=e1086]:
+      - strong [ref=e1087]: "Виды ЗУ:"
+      - strong [ref=e1088]: процессорные
+      - text: (регистры, кэш L1/L2/L3) ·
+      - strong [ref=e1089]: внутренние
+      - text: (основная память — ЦП обращается напрямую) ·
+      - strong [ref=e1090]: внешние
+      - text: (большой ёмкости, подключаются как ВВ — диски, ленты).
+    - listitem [ref=e1091]:
+      - strong [ref=e1092]: "Методы доступа:"
+      - text: последовательный (лента), прямой (диск), произвольный (ОЗУ — любая ячейка за одно время), ассоциативный (по содержимому, параллельно — кэш).
+    - listitem [ref=e1093]:
+      - strong [ref=e1094]: "Характеристики:"
+      - text: ёмкость; быстродействие —
+      - strong [ref=e1095]: время доступа
+      - text: (от выдачи адреса до готовности данных),
+      - strong [ref=e1096]: длительность цикла / период обращения
+      - text: (мин. интервал между двумя обращениями),
+      - strong [ref=e1097]: скорость передачи
+      - text: ; удельная стоимость; энергозависимость.
+    - listitem [ref=e1098]:
+      - strong [ref=e1099]: Иерархия памяти
+      - text: (основана на
+      - strong [ref=e1100]: принципе локальности
+      - text: "обращений; сверху вниз: быстрее+дороже+меньше → медленнее+дешевле+больше):"
+  - document [ref=e1102]:
+    - generic [ref=e1105]:
+      - paragraph [ref=e1112]: регистры
+      - paragraph [ref=e1119]: L1-кэш
+      - paragraph [ref=e1126]: L2-кэш
+      - paragraph [ref=e1133]: L3
+      - paragraph [ref=e1140]: ОЗУ
+      - paragraph [ref=e1147]: дисковый кэш
+      - paragraph [ref=e1154]: магн. диски / RAID
+      - paragraph [ref=e1161]: оптика, ленты
+  - paragraph [ref=e1162]:
+    - text: взаимодействуют только два соседних уровня;
+    - strong [ref=e1163]: попадание (hit)
+    - text: /
+    - strong [ref=e1164]: промах (miss)
+    - text: ", hit rate."
+  - list [ref=e1165]:
+    - listitem [ref=e1166]:
+      - strong [ref=e1167]: "Обнаружение и исправление ошибок:"
+      - strong [ref=e1168]: отказ
+      - text: (постоянный — дефект/износ, разряд всегда 0 или 1) vs
+      - strong [ref=e1169]: сбой
+      - text: (случайный, без дефекта). Основа —
+      - strong [ref=e1170]: корректирующие коды
+      - text: "(избыточность):"
+      - strong [ref=e1171]: бит чётности
+      - text: обнаруживает 1 ошибку;
+      - strong [ref=e1172]: код Хэмминга / ECC
+      - text: обнаруживает 2 и исправляет 1.
+  - document [ref=e1174]:
+    - generic [ref=e1182]:
+      - paragraph [ref=e1189]: Методы доступа
+      - paragraph [ref=e1196]:
+        - text: последовательный
+        - text: (лента)
+      - paragraph [ref=e1203]:
+        - text: прямой
+        - text: (диск)
+      - paragraph [ref=e1210]:
+        - text: произвольный
+        - text: (ОЗУ)
+      - paragraph [ref=e1217]:
+        - text: ассоциативный
+        - text: (кэш, по содержимому)
+  - heading "17. Основная память, статические ОЗУ (SRAM)" [level=2] [ref=e1218]
+  - paragraph [ref=e1219]:
+    - emphasis [ref=e1220]: Нужен
+    - emphasis [ref=e1221]: запоминающий элемент SRAM
+    - emphasis [ref=e1222]: .
+  - list [ref=e1223]:
+    - listitem [ref=e1224]:
+      - strong [ref=e1225]: "Структура ОП:"
+      - text: массив ячеек с адресами, дешифратор адреса, регистры данных, схемы чтения/записи.
+      - strong [ref=e1226]: Блочная организация
+      - text: — память делится на банки для параллельного доступа.
+    - listitem [ref=e1227]:
+      - strong [ref=e1228]: "Характеристики:"
+      - text: объём, разрядность, время доступа, цикл обращения.
+    - listitem [ref=e1229]:
+      - strong [ref=e1230]: Запоминающий элемент SRAM
+      - text: —
+      - strong [ref=e1231]: триггер на 4–6 транзисторах
+      - text: . Хранит бит, пока есть питание, регенерация не нужна. Быстрый, но дорогой и малой плотности → используется для
+      - strong [ref=e1232]: кэша
+      - text: .
+    - listitem [ref=e1233]:
+      - strong [ref=e1234]: "Виды SRAM:"
+      - text: асинхронные, синхронные (SSRAM), конвейерные (PB SRAM).
+  - heading "18. Динамические ОЗУ (DRAM)" [level=2] [ref=e1235]
+  - paragraph [ref=e1236]:
+    - emphasis [ref=e1237]: Нужен
+    - emphasis [ref=e1238]: запоминающий элемент DRAM
+    - emphasis [ref=e1239]: .
+  - list [ref=e1240]:
+    - listitem [ref=e1241]:
+      - strong [ref=e1242]: Запоминающий элемент DRAM
+      - text: —
+      - strong [ref=e1243]: 1 транзистор + 1 конденсатор
+      - text: ". Бит = заряд конденсатора. Дёшево, высокая плотность → основная память. Минус: заряд утекает → нужна"
+      - strong [ref=e1244]: регенерация
+      - text: .
+    - listitem [ref=e1245]:
+      - strong [ref=e1246]: "Способы регенерации (3, по лекции):"
+      - strong [ref=e1247]: ROR
+      - text: (RAS Only Refresh — построчно),
+      - strong [ref=e1248]: CBR
+      - text: (CAS before RAS — по внутреннему счётчику строк),
+      - strong [ref=e1249]: Self-Refresh
+      - text: (авторегенерация в режиме энергосбережения).
+    - listitem [ref=e1250]:
+      - strong [ref=e1251]: "Методы ускорения:"
+      - text: FPM, EDO,
+      - strong [ref=e1252]: SDRAM
+      - text: (синхронная),
+      - strong [ref=e1253]: DDR/DDR2/3/4/5
+      - text: (передача по обоим фронтам такта, удвоение/учетверение полосы).
+  - separator [ref=e1254]
+  - heading "БЛОК 2. Середина курса (вопросы 19–43)" [level=1] [ref=e1255]
+  - heading "19. Спец. типы ОЗУ, ПЗУ" [level=2] [ref=e1256]
+  - list [ref=e1257]:
+    - listitem [ref=e1258]:
+      - strong [ref=e1259]: "Энергонезависимые ОЗУ:"
+      - strong [ref=e1260]: NVRAM
+      - text: (SRAM + батарейка/Flash),
+      - strong [ref=e1261]: FRAM
+      - text: (ферроэлектрик),
+      - strong [ref=e1262]: MRAM
+      - text: (магниторезистивная) — хранят данные без питания.
+    - listitem [ref=e1263]:
+      - strong [ref=e1264]: "Виды ПЗУ:"
+      - list [ref=e1265]:
+        - listitem [ref=e1266]:
+          - strong [ref=e1267]: ROM (масочное)
+          - text: — прошивается на заводе, не меняется.
+        - listitem [ref=e1268]:
+          - strong [ref=e1269]: PROM
+          - text: — однократно программируемое.
+        - listitem [ref=e1270]:
+          - strong [ref=e1271]: EPROM
+          - text: — стирается УФ-светом, перепрограммируемое.
+        - listitem [ref=e1272]:
+          - strong [ref=e1273]: EEPROM
+          - text: — стирается электрически, побайтно.
+        - listitem [ref=e1274]:
+          - strong [ref=e1275]: Flash
+          - text: "— электрически, блоками; высокая плотность (SSD, BIOS). Две технологии:"
+          - strong [ref=e1276]: NOR
+          - text: (быстрый доступ к каждой ячейке, память программ микроконтроллеров) и
+          - strong [ref=e1277]: NAND
+          - text: "(выше плотность, доступ группами — SSD, USB-флешки). Плотность хранения:"
+          - strong [ref=e1278]: SLC
+          - text: (1 бит/ячейку),
+          - strong [ref=e1279]: MLC
+          - text: (2),
+          - strong [ref=e1280]: TLC
+          - text: (3).
+        - listitem [ref=e1281]:
+          - strong [ref=e1282]: PCM
+          - text: (Phase Change Memory) — фазовая память (перепрограммируемое ПЗУ).
+    - listitem [ref=e1283]:
+      - strong [ref=e1284]: "ОЗУ для видеоадаптеров:"
+      - strong [ref=e1285]: VRAM
+      - text: (двухпортовая — одновременно вывод на экран и запись), SGRAM, GDDR.
+    - listitem [ref=e1286]:
+      - strong [ref=e1287]: Стековая память
+      - text: — LIFO, для адресов возврата и локальных данных.
+  - document [ref=e1289]:
+    - generic [ref=e1299]:
+      - paragraph [ref=e1306]: ПЗУ
+      - paragraph [ref=e1313]:
+        - text: ROM — масочное
+        - text: (на заводе)
+      - paragraph [ref=e1320]: PROM — однократное
+      - paragraph [ref=e1327]: EPROM — УФ-стирание
+      - paragraph [ref=e1334]: EEPROM — электр., побайтно
+      - paragraph [ref=e1341]:
+        - text: Flash — блоками
+        - text: NOR / NAND
+      - paragraph [ref=e1348]: PCM — фазовая
+  - heading "20. Организация кэш-памяти, отображение ОП на кэш" [level=2] [ref=e1349]
+  - paragraph [ref=e1350]:
+    - emphasis [ref=e1351]: Нужны
+    - emphasis [ref=e1352]: схемы вариантов отображения
+    - emphasis [ref=e1353]: .
+  - list [ref=e1354]:
+    - listitem [ref=e1355]:
+      - strong [ref=e1356]: Назначение кэша
+      - text: "— быстрая буферная память между ЦП и ОП, хранит часто используемые данные (принцип локальности: временна́я и пространственная)."
+    - listitem [ref=e1357]:
+      - strong [ref=e1358]: "Уровни:"
+      - text: L1 (в ядре, самый быстрый, раздельный для команд/данных), L2, L3 (общий для ядер).
+    - listitem [ref=e1359]:
+      - strong [ref=e1360]: "Факторы эффективности:"
+      - text: объём, скорость, процент попаданий (hit rate), стратегия отображения и замещения.
+    - listitem [ref=e1361]:
+      - strong [ref=e1362]: "Способы отображения ОП на кэш:"
+      - list [ref=e1363]:
+        - listitem [ref=e1364]:
+          - strong [ref=e1365]: Прямое (direct-mapped)
+          - text: — блок ОП → строго в одну строку кэша (
+          - code [ref=e1366]: № = адрес mod N
+          - text: ). Просто и быстро, но частые вытеснения (конфликты).
+        - listitem [ref=e1367]:
+          - strong [ref=e1368]: Полностью ассоциативное
+          - text: — блок → в любую строку. Гибко, нет конфликтов, но дорогой поиск (сравнение всех тегов).
+        - listitem [ref=e1369]:
+          - strong [ref=e1370]: Множественно-ассоциативное (set-associative)
+          - text: — кэш делится на наборы по K строк; блок → в любую строку своего набора.
+          - strong [ref=e1371]: Компромисс
+          - text: ", применяется на практике (2-, 4-, 8-way)."
+  - document [ref=e1373]:
+    - generic [ref=e1379]:
+      - paragraph [ref=e1386]: блок ОП
+      - paragraph [ref=e1393]:
+        - text: "Прямое:"
+        - text: 1 строка (адрес mod N)
+      - paragraph [ref=e1400]:
+        - text: "Полностью ассоциативное:"
+        - text: любая строка
+      - paragraph [ref=e1407]:
+        - text: "Множ.-ассоциативное:"
+        - text: любая строка набора (K-way)
+  - heading "21. Замещение строк, согласование ОП↔кэш, дисковый кэш" [level=2] [ref=e1408]
+  - list [ref=e1409]:
+    - listitem [ref=e1410]:
+      - strong [ref=e1411]: "Алгоритмы замещения строки:"
+      - list [ref=e1412]:
+        - listitem [ref=e1413]:
+          - strong [ref=e1414]: LRU
+          - text: (Least Recently Used) — вытесняем дольше всех неиспользуемую.
+        - listitem [ref=e1415]:
+          - strong [ref=e1416]: LFU
+          - text: (Least Frequently Used) — реже всех используемую.
+        - listitem [ref=e1417]:
+          - strong [ref=e1418]: FIFO
+          - text: — первую вошедшую.
+        - listitem [ref=e1419]:
+          - strong [ref=e1420]: Random
+          - text: — случайную.
+        - listitem [ref=e1421]:
+          - strong [ref=e1422]: ARC
+          - text: (Adaptive Replacement Cache) — комбинирует LRU+LFU (патент IBM).
+    - listitem [ref=e1423]:
+      - strong [ref=e1424]: "Алгоритмы согласования ОП↔кэш (однопроцессорные ЭВМ, по лекции):"
+      - list [ref=e1425]:
+        - listitem [ref=e1426]:
+          - strong [ref=e1427]: Сквозная запись (write-through)
+          - text: — сразу в кэш и в ОП. Просто, но медленно.
+        - listitem [ref=e1428]:
+          - strong [ref=e1429]: Простой свопинг
+          - text: — обратная запись блока в ОП при его вытеснении.
+        - listitem [ref=e1430]:
+          - strong [ref=e1431]: Свопинг с флагами
+          - text: — в ОП переписывается только при установленном бите модификации (dirty). Быстрее.
+        - listitem [ref=e1432]:
+          - strong [ref=e1433]: Регистровый свопинг с флагами
+          - text: — то же с буферным регистром для ускорения.
+    - listitem [ref=e1434]:
+      - strong [ref=e1435]: Дисковый кэш
+      - text: — буфер в ОЗУ для часто запрашиваемых секторов диска; ускоряет дисковый ввод-вывод.
+  - heading "22. Организация защиты памяти" [level=2] [ref=e1436]
+  - list [ref=e1437]:
+    - listitem [ref=e1438]:
+      - strong [ref=e1439]: "Назначение:"
+      - text: не дать программе обратиться к чужой/системной памяти (изоляция, надёжность, безопасность).
+    - listitem [ref=e1440]:
+      - strong [ref=e1441]: "Методы (4, по лекции):"
+      - list [ref=e1442]:
+        - listitem [ref=e1443]:
+          - strong [ref=e1444]: Защита отдельных ячеек
+          - text: — «разряд защиты» в ячейке запрещает запись в неё (для отладки программ).
+        - listitem [ref=e1445]:
+          - strong [ref=e1446]: Граничные регистры
+          - text: — задают нижнюю и верхнюю границу области процесса.
+        - listitem [ref=e1447]:
+          - strong [ref=e1448]: Ключи защиты
+          - text: — каждому блоку памяти и программе присвоен ключ; доступ при совпадении.
+        - listitem [ref=e1449]:
+          - strong [ref=e1450]: Кольца защиты (уровни привилегий 0–3)
+          - text: — режим ядра vs пользователя; для страниц — биты доступа R/W/X.
+  - heading "23. Концепция виртуальной памяти" [level=2] [ref=e1451]
+  - paragraph [ref=e1452]:
+    - emphasis [ref=e1453]: Нужны
+    - emphasis [ref=e1454]: схемы страничного, сегментного, сегментно-страничного
+    - emphasis [ref=e1455]: распределения.
+  - list [ref=e1456]:
+    - listitem [ref=e1457]:
+      - strong [ref=e1458]: Виртуальная память
+      - text: "— механизм: программа работает в логическом (виртуальном) адресном пространстве больше физического; трансляция вирт.→физ. адреса аппаратно (MMU), редко используемое выгружается на диск (swap)."
+    - listitem [ref=e1459]:
+      - strong [ref=e1460]: Страничное
+      - text: — память делится на страницы фиксированного размера. Вирт. адрес = № страницы + смещение → через
+      - strong [ref=e1461]: страничную таблицу
+      - text: в физ. адрес.
+    - listitem [ref=e1462]:
+      - strong [ref=e1463]: Сегментное
+      - text: "— деление на сегменты переменной длины (по смыслу: код, данные, стек). Адрес = № сегмента + смещение."
+    - listitem [ref=e1464]:
+      - strong [ref=e1465]: Сегментно-страничное
+      - text: "— комбинация: сегменты делятся на страницы (x86). Гибкость сегментов + удобство страниц."
+    - listitem [ref=e1466]:
+      - strong [ref=e1467]: Страничная таблица
+      - text: "— поля записи:"
+      - strong [ref=e1468]: V
+      - text: (присутствие страницы в ОП; V=0 →
+      - strong [ref=e1469]: страничный сбой / page fault
+      - text: ),
+      - strong [ref=e1470]: R
+      - text: (использование — для замещения),
+      - strong [ref=e1471]: M
+      - text: (модификация — для свопинга с флагами),
+      - strong [ref=e1472]: A
+      - text: "(права доступа: чтение/запись). Сокращение длины таблицы: многоуровневые таблицы, инвертированная таблица."
+    - listitem [ref=e1473]:
+      - text: "Характеристики:"
+      - strong [ref=e1474]: страничная
+      - text: → внутренняя фрагментация;
+      - strong [ref=e1475]: сегментная
+      - text: → внешняя фрагментация, но удобен разделяемый доступ к общим сегментам.
+    - listitem [ref=e1476]:
+      - strong [ref=e1477]: TLB (Translation Lookaside Buffer)
+      - text: — кэш недавних трансляций адресов (8–4096 записей, полностью/множественно-ассоциативный), ускоряет MMU (без него — лишнее обращение к таблице на каждый доступ).
+  - code [ref=e1479]: вирт. адрес ─► [TLB?] ─есть─► физ. адрес └─нет─► страничная таблица ─► физ. адрес (+ занести в TLB)
+  - heading "24. НЖМД, SSD, оптика, магнитные ленты" [level=2] [ref=e1480]
+  - list [ref=e1481]:
+    - listitem [ref=e1482]:
+      - strong [ref=e1483]: НЖМД (HDD)
+      - text: "— магнитные пластины, головки. Геометрия:"
+      - strong [ref=e1484]: дорожки, секторы, цилиндры
+      - text: ". Характеристики: ёмкость, скорость вращения (об/мин), время доступа (seek), интерфейс. Дёшево за ГБ, но механика — медленно."
+    - listitem [ref=e1485]:
+      - strong [ref=e1486]: SSD
+      - text: "— флеш-память (NAND), нет механики. Быстрее, тише, надёжнее к ударам. Минус: ограниченный ресурс перезаписи ячеек →"
+      - strong [ref=e1487]: контроллер с wear-leveling
+      - text: (равномерный износ), TRIM. Чем больше параллельных каналов NAND, тем быстрее.
+    - listitem [ref=e1488]:
+      - strong [ref=e1489]: Оптика (CD/DVD/Blu-ray)
+      - text: — данные = питы/лэнды на дорожке, читаются лазером. Спиральная дорожка от центра.
+    - listitem [ref=e1490]:
+      - strong [ref=e1491]: Магнитные ленты
+      - text: — последовательный доступ, огромная ёмкость, дёшево →
+      - strong [ref=e1492]: архивное резервное копирование
+      - text: .
+  - heading "25. Избыточные дисковые подсистемы (RAID)" [level=2] [ref=e1493]
+  - paragraph [ref=e1494]:
+    - emphasis [ref=e1495]: Нужны
+    - emphasis [ref=e1496]: схемы уровней RAID
+    - emphasis [ref=e1497]: .
+  - list [ref=e1498]:
+    - listitem [ref=e1499]:
+      - strong [ref=e1500]: Назначение RAID
+      - text: — объединить диски для роста производительности и/или надёжности.
+    - listitem [ref=e1501]:
+      - strong [ref=e1502]: Производительность
+      - text: —
+      - strong [ref=e1503]: расслоение (stripe)
+      - text: ": данные параллельно на несколько дисков."
+    - listitem [ref=e1504]:
+      - strong [ref=e1505]: Надёжность
+      - text: —
+      - strong [ref=e1506]: зеркалирование (mirror)
+      - text: и
+      - strong [ref=e1507]: контроль чётности (parity)
+      - text: .
+    - listitem [ref=e1508]:
+      - strong [ref=e1509]: "Уровни:"
+      - list [ref=e1510]:
+        - listitem [ref=e1511]:
+          - strong [ref=e1512]: RAID 0
+          - text: — striping, без избыточности. Быстро, но смерть 1 диска = потеря всего.
+        - listitem [ref=e1513]:
+          - strong [ref=e1514]: RAID 1
+          - text: — mirroring (зеркало). Надёжно, но 50% ёмкости.
+        - listitem [ref=e1515]:
+          - strong [ref=e1516]: RAID 5
+          - text: — striping + чётность по всем дискам. Переживает отказ 1 диска. Баланс.
+        - listitem [ref=e1517]:
+          - strong [ref=e1518]: RAID 6
+          - text: — две чётности, переживает 2 диска.
+        - listitem [ref=e1519]:
+          - strong [ref=e1520]: RAID 10 (1+0)
+          - text: — зеркало + страйп. Скорость и надёжность, дорого.
+  - document [ref=e1522]:
+    - generic [ref=e1525]:
+      - generic [ref=e1526]:
+        - paragraph [ref=e1534]: RAID 5 — страйп + чётность
+        - generic [ref=e1535]:
+          - paragraph [ref=e1542]: A1
+          - paragraph [ref=e1549]: A2
+          - paragraph [ref=e1556]: Ap (чётность)
+      - generic [ref=e1557]:
+        - paragraph [ref=e1565]: RAID 1 — зеркало (надёжность)
+        - generic [ref=e1566]:
+          - paragraph [ref=e1573]: A1
+          - paragraph [ref=e1580]: A1 копия
+      - generic [ref=e1581]:
+        - paragraph [ref=e1589]: RAID 0 — страйп (скорость)
+        - generic [ref=e1590]:
+          - paragraph [ref=e1597]: A1
+          - paragraph [ref=e1604]: A2
+          - paragraph [ref=e1611]: A3
+          - paragraph [ref=e1618]: A4
+  - heading "26. Основы построения шин" [level=2] [ref=e1619]
+  - list [ref=e1620]:
+    - listitem [ref=e1621]:
+      - strong [ref=e1622]: Шина (bus)
+      - text: — набор линий для обмена между функциональными блоками (ЦП↔память, ЦП↔ВВ, память↔ВВ); «двунаправленный универсальный коммутатор».
+    - listitem [ref=e1623]:
+      - strong [ref=e1624]: "Функциональные типы:"
+      - strong [ref=e1625]: ША (адреса)
+      - text: —
+      - strong [ref=e1626]: однонаправленная
+      - text: ", разрядность задаёт объём адресуемой памяти ("
+      - code [ref=e1627]: N=2ⁱ
+      - text: );
+      - strong [ref=e1628]: ШД (данных)
+      - text: —
+      - strong [ref=e1629]: двунаправленная
+      - text: ", последовательная или параллельная, ширина = слово;"
+      - strong [ref=e1630]: ШУ (управления)
+      - text: — линии управляющей информации и состояния.
+    - listitem [ref=e1631]:
+      - strong [ref=e1632]: "Иерархия шин:"
+      - text: системная (ЦП–память) → шина расширения → шина ввода/вывода (через адаптеры); архитектура с «пристройкой» (mezzanine). Чем ближе к ЦП, тем быстрее.
+    - listitem [ref=e1633]:
+      - strong [ref=e1634]: "Состав линий ШУ (7 групп):"
+      - text: сигналы управления транзакциями (тип операции, кол-во передаваемых байт, тип адреса, тип протокола), информация состояния (статуса), арбитраж, прерывания, последовательные локальные сети, позиционный код, тактирование и синхронизация.
+  - heading "27. Арбитраж шины" [level=2] [ref=e1635]
+  - paragraph [ref=e1636]:
+    - emphasis [ref=e1637]: Нужны
+    - emphasis [ref=e1638]: схемы приоритетов и арбитража
+    - emphasis [ref=e1639]: .
+  - list [ref=e1640]:
+    - listitem [ref=e1641]:
+      - strong [ref=e1642]: Арбитраж
+      - text: — процедура допуска к управлению шиной только одного из ведущих (master).
+      - strong [ref=e1643]: Арбитр
+      - text: распределяет доступ (обычно на северном мосту).
+    - listitem [ref=e1644]:
+      - strong [ref=e1645]: "Схемы приоритетов:"
+      - strong [ref=e1646]: статические
+      - text: (фиксированные) и
+      - strong [ref=e1647]: динамические
+      - text: ". Динамические алгоритмы: простая циклическая смена, циклическая с учётом последнего запроса, по случайному закону, равных приоритетов, LRU (наиболее давнее использование)."
+    - listitem [ref=e1648]:
+      - strong [ref=e1649]: "Схемы арбитража:"
+      - list [ref=e1650]:
+        - listitem [ref=e1651]:
+          - strong [ref=e1652]: Централизованная
+          - text: "(один арбитр):"
+          - strong [ref=e1653]: параллельная
+          - text: — у каждого ведущего своя линия запроса/предоставления;
+          - strong [ref=e1654]: последовательная (цепочечная, daisy chain)
+          - text: — сигнал разрешения идёт по цепочке, ближний к арбитру = высший приоритет.
+        - listitem [ref=e1655]:
+          - strong [ref=e1656]: Децентрализованная (распределённая)
+          - text: — единого арбитра нет, у каждого ведущего свой контроллер шины.
+    - listitem [ref=e1657]:
+      - strong [ref=e1658]: "Способы организации опроса:"
+      - strong [ref=e1659]: централизованный
+      - text: (контроллер по очереди опрашивает ведущих, выставляя их адрес) и
+      - strong [ref=e1660]: децентрализованный
+      - text: (каждый ведущий сам формирует адрес следующего).
+  - document [ref=e1662]:
+    - generic [ref=e1670]:
+      - paragraph [ref=e1677]: Арбитраж шины
+      - paragraph [ref=e1684]:
+        - text: Централизованный
+        - text: (один арбитр)
+      - paragraph [ref=e1691]:
+        - text: Децентрализованный
+        - text: (у каждого свой контроллер шины)
+      - paragraph [ref=e1698]:
+        - text: параллельный
+        - text: у каждого своя линия запроса/предоставления
+      - paragraph [ref=e1705]:
+        - text: последовательный — daisy chain
+        - text: сигнал по цепочке; ближний к арбитру = выше
+  - heading "28. Протоколы шин, синхронная/асинхронная передача" [level=2] [ref=e1706]
+  - paragraph [ref=e1707]:
+    - emphasis [ref=e1708]: Нужны
+    - emphasis [ref=e1709]: схемы протоколов
+    - emphasis [ref=e1710]: .
+  - list [ref=e1711]:
+    - listitem [ref=e1712]:
+      - strong [ref=e1713]: Синхронная передача
+      - text: — общий тактовый сигнал, события привязаны к фронтам такта. Быстро и просто, но все устройства на одной частоте, длина ограничена.
+    - listitem [ref=e1714]:
+      - strong [ref=e1715]: Асинхронная передача
+      - text: — без общего такта, по
+      - strong [ref=e1716]: квитированию (handshake)
+      - text: ": запрос → готовность (request/acknowledge). Гибко (разные скорости устройств), но медленнее и сложнее."
+  - code [ref=e1718]: "Синхронная: CLK ‾|_|‾|_|‾|_ данные привязаны к фронтам Асинхронная: REQ ──► устройство ──► ACK (рукопожатие)"
+  - heading "29. Эффективность, надёжность, отказоустойчивость шин" [level=2] [ref=e1719]
+  - list [ref=e1720]:
+    - listitem [ref=e1721]:
+      - strong [ref=e1722]: "Повышение эффективности (полосы):"
+      - strong [ref=e1723]: отказ от мультиплексирования
+      - text: ША/ШД, увеличение ширины ШД и тактовой частоты,
+      - strong [ref=e1724]: блочные/пакетные транзакции (burst)
+      - text: ","
+      - strong [ref=e1725]: конвейеризация
+      - text: и
+      - strong [ref=e1726]: расщепление транзакций (split)
+      - text: ", арбитраж с перекрытием и с удержанием шины, переход на"
+      - strong [ref=e1727]: последовательные дифференциальные
+      - text: линии (PCIe вместо PCI).
+    - listitem [ref=e1728]:
+      - strong [ref=e1729]: "Повышение надёжности:"
+      - text: контроль чётности/ECC на шине, дублирование/резервные линии, экранирование, протоколы повтора при ошибке.
+  - 'heading "30. Внутренние интерфейсы: EISA, LPC, PCI, PCI-E, AGP" [level=2] [ref=e1730]'
+  - list [ref=e1731]:
+    - listitem [ref=e1732]:
+      - strong [ref=e1733]: EISA
+      - text: — расширение ISA, 32-бит, для серверов (устаревший).
+    - listitem [ref=e1734]:
+      - strong [ref=e1735]: LPC (Low Pin Count)
+      - text: — для низкоскоростной периферии (контроллеры клавиатуры, BIOS), заменил ISA.
+    - listitem [ref=e1736]:
+      - strong [ref=e1737]: PCI
+      - text: — параллельная, 32/64-бит, 33/66 МГц, общая шина с арбитражем (устаревает).
+    - listitem [ref=e1738]:
+      - strong [ref=e1739]: PCI-E (PCI Express)
+      - text: —
+      - strong [ref=e1740]: последовательная
+      - text: ", по «линиям» (lanes ×1…×16), независимые дифференциальные пары, point-to-point. Современный стандарт."
+    - listitem [ref=e1741]:
+      - strong [ref=e1742]: AGP
+      - text: — выделенный интерфейс для видеокарт (между PCI и PCI-E исторически), вытеснен PCI-E.
+  - 'heading "31. Внешние интерфейсы для ЗУ: IDE, SATA, SCSI, SAS" [level=2] [ref=e1743]'
+  - list [ref=e1744]:
+    - listitem [ref=e1745]:
+      - strong [ref=e1746]: IDE/PATA
+      - text: — параллельный, для HDD/CD, шлейф 40/80 жил (устарел).
+    - listitem [ref=e1747]:
+      - strong [ref=e1748]: SATA
+      - text: —
+      - strong [ref=e1749]: последовательный
+      - text: наследник IDE, точка-точка, hot-swap, скорости до 6 Гбит/с. Массовый для дисков.
+    - listitem [ref=e1750]:
+      - strong [ref=e1751]: SCSI
+      - text: — параллельный, шина для нескольких устройств, для серверов (надёжность, очередь команд).
+    - listitem [ref=e1752]:
+      - strong [ref=e1753]: SAS (Serial Attached SCSI)
+      - text: — последовательный наследник SCSI, совместим с SATA-дисками, для серверов/СХД.
+  - 'heading "32. Внешние интерфейсы ввода-вывода: RS-232C, LPT, USB, SPI, I²C" [level=2] [ref=e1754]'
+  - list [ref=e1755]:
+    - listitem [ref=e1756]:
+      - strong [ref=e1757]: RS-232C
+      - text: — последовательный COM-порт, низкая скорость, для модемов/терминалов (устарел).
+    - listitem [ref=e1758]:
+      - strong [ref=e1759]: LPT
+      - text: — параллельный порт для принтеров; режимы
+      - strong [ref=e1760]: EPP
+      - text: (двунаправленный) и
+      - strong [ref=e1761]: ECP
+      - text: (с DMA и сжатием).
+    - listitem [ref=e1762]:
+      - strong [ref=e1763]: USB
+      - text: — последовательный, универсальный, hot-plug, питание, до USB4 (40 Гбит/с), топология «дерево» с хабами.
+    - listitem [ref=e1764]:
+      - strong [ref=e1765]: SPI
+      - text: — синхронный, 4 линии (MOSI/MISO/SCLK/CS), быстрый, для микросхем на плате, full-duplex.
+    - listitem [ref=e1766]:
+      - strong [ref=e1767]: I²C
+      - text: — синхронный,
+      - strong [ref=e1768]: 2 линии
+      - text: (SDA/SCL), адресация устройств, медленнее SPI, для датчиков.
+  - heading "33. Система ввода-вывода, адресное пространство" [level=2] [ref=e1769]
+  - list [ref=e1770]:
+    - listitem [ref=e1771]:
+      - strong [ref=e1772]: "Способы подключения СВВ:"
+      - list [ref=e1773]:
+        - listitem [ref=e1774]:
+          - strong [ref=e1775]: Совмещённое адресное пространство (memory-mapped I/O)
+          - text: "— порты ВВ в общем адресном пространстве с памятью. Плюс: любые команды работы с памятью годятся для ВВ. Минус: «съедает» адреса памяти."
+        - listitem [ref=e1776]:
+          - strong [ref=e1777]:
+            - text: Выделенное адресное пространство (port-mapped, x86
+            - code [ref=e1778]: IN
+            - text: /
+            - code [ref=e1779]: OUT
+            - text: )
+          - text: "— отдельное пространство портов. Плюс: не отнимает память, отдельные команды. Минус: нужны спец. команды, сложнее."
+  - heading "34. Модуль ввода-вывода, абстрактное ПУ" [level=2] [ref=e1780]
+  - paragraph [ref=e1781]:
+    - emphasis [ref=e1782]: Нужна
+    - emphasis [ref=e1783]: схема ПУ
+    - emphasis [ref=e1784]: .
+  - list [ref=e1785]:
+    - listitem [ref=e1786]:
+      - strong [ref=e1787]: МВВ (модуль ввода-вывода)
+      - text: — посредник между системной шиной и периферией.
+      - strong [ref=e1788]: "5 функций (по лекции):"
+      - text: локализация данных (дешифрация адреса ВУ/регистра, адресация данных на ПУ), управление и синхронизация, обмен информацией, буферизация (согласование скоростей ЦП и ПУ), обнаружение ошибок.
+    - listitem [ref=e1789]:
+      - strong [ref=e1790]: "Структура МВВ:"
+      - text: регистры данных, регистры состояния/управления, дешифратор адреса, логика управления, интерфейс с ПУ.
+  - document [ref=e1792]:
+    - generic [ref=e1795]:
+      - paragraph [ref=e1802]: системная шина
+      - paragraph [ref=e1809]:
+        - text: МВВ
+        - text: рег. данных · рег. состояния
+        - text: упр. логика · дешифратор адреса
+      - paragraph [ref=e1816]: ПУ (датчик / привод)
+  - heading "35. Программно-управляемый ВВ, ВВ по прерываниям" [level=2] [ref=e1817]
+  - paragraph [ref=e1818]:
+    - emphasis [ref=e1819]: Нужны
+    - emphasis [ref=e1820]: блок-схемы обоих способов
+    - emphasis [ref=e1821]: .
+  - list [ref=e1822]:
+    - listitem [ref=e1823]:
+      - strong [ref=e1824]: Программно-управляемый (polling)
+      - text: — ЦП в цикле опрашивает флаг готовности ПУ. Просто, но ЦП впустую крутит цикл ожидания.
+  - document [ref=e1826]:
+    - generic [ref=e1828]:
+      - generic [ref=e1832]:
+        - paragraph [ref=e1838]: нет (цикл ожидания)
+        - paragraph [ref=e1844]: да
+      - generic [ref=e1845]:
+        - paragraph [ref=e1852]: читать регистр состояния
+        - paragraph [ref=e1859]: ПУ готов?
+        - paragraph [ref=e1866]: обмен данными
+  - list [ref=e1867]:
+    - listitem [ref=e1868]:
+      - strong [ref=e1869]: ВВ по прерываниям
+      - text: — ПУ само сигналит прерыванием, когда готово; ЦП занят своим делом, по сигналу переключается на обработчик. Эффективнее.
+    - listitem [ref=e1870]:
+      - strong [ref=e1871]: Векторное прерывание
+      - text: — ПУ передаёт
+      - strong [ref=e1872]: номер (вектор)
+      - text: ", по нему ЦП находит адрес обработчика в таблице векторов."
+  - document [ref=e1874]:
+    - generic [ref=e1876]:
+      - paragraph [ref=e1883]: IRQ от ПУ
+      - generic [ref=e1884]:
+        - paragraph [ref=e1891]: ЦП занят своим делом
+        - paragraph [ref=e1898]: сохранить состояние
+        - paragraph [ref=e1905]:
+          - text: обработчик
+          - text: (по вектору)
+        - paragraph [ref=e1912]: обмен
+        - paragraph [ref=e1919]: возврат
+  - heading "36. Прямой доступ к памяти (ПДП/DMA)" [level=2] [ref=e1920]
+  - paragraph [ref=e1921]:
+    - emphasis [ref=e1922]: Нужна
+    - emphasis [ref=e1923]: схема КПДП
+    - emphasis [ref=e1924]: и
+    - emphasis [ref=e1925]: конфигурации
+    - emphasis [ref=e1926]: .
+  - list [ref=e1927]:
+    - listitem [ref=e1928]:
+      - strong [ref=e1929]: ПДП (DMA)
+      - text: — обмен ПУ↔память
+      - strong [ref=e1930]: без участия ЦП
+      - text: ", через контроллер"
+      - strong [ref=e1931]: КПДП (DMAC)
+      - text: . ЦП освобождается, эффективно для больших блоков.
+    - listitem [ref=e1932]:
+      - strong [ref=e1933]: "Способы распределения шины между ЦП и КПДП:"
+      - list [ref=e1934]:
+        - listitem [ref=e1935]:
+          - strong [ref=e1936]: С захватом цикла (cycle stealing)
+          - text: — КПДП «крадёт» отдельные циклы шины.
+        - listitem [ref=e1937]:
+          - strong [ref=e1938]: Блочный (burst)
+          - text: — КПДП захватывает шину на весь блок.
+        - listitem [ref=e1939]:
+          - strong [ref=e1940]: Прозрачный
+          - text: — КПДП работает, когда ЦП не использует шину.
+  - document [ref=e1942]:
+    - generic [ref=e1944]:
+      - generic [ref=e1949]:
+        - paragraph [ref=e1955]: запрос DMA
+        - paragraph [ref=e1961]: обмен ПУ↔память минуя ЦП
+      - generic [ref=e1962]:
+        - paragraph [ref=e1969]: ЦП
+        - paragraph [ref=e1976]: КПДП (DMAC)
+        - paragraph [ref=e1983]: ПУ
+        - paragraph [ref=e1990]: Память
+  - heading "37. Каналы и процессоры ввода-вывода" [level=2] [ref=e1991]
+  - list [ref=e1992]:
+    - listitem [ref=e1993]:
+      - strong [ref=e1994]: Назначение
+      - text: "— разгрузить ЦП: канал = специализированный процессор ВВ, выполняет"
+      - strong [ref=e1995]: канальную программу
+      - text: (управляющие слова канала, УСК).
+    - listitem [ref=e1996]:
+      - strong [ref=e1997]: "Режимы работы канала (по лекции):"
+      - list [ref=e1998]:
+        - listitem [ref=e1999]:
+          - strong [ref=e2000]: Мультиплексный
+          - text: — несколько ВУ разделяют канал во времени (много медленных устройств, короткими сеансами; байт-/блок-мультиплексный).
+        - listitem [ref=e2001]:
+          - strong [ref=e2002]: Монопольный
+          - text: — одно (быстрое) ВУ монополизирует канал до завершения канальной программы (диски).
+    - listitem [ref=e2003]:
+      - strong [ref=e2004]: БУВУ (блок управления внешними устройствами)
+      - text: — управляет конкретным ПУ под командой канала.
+  - heading "38. Организация системы прерываний" [level=2] [ref=e2005]
+  - list [ref=e2006]:
+    - listitem [ref=e2007]:
+      - strong [ref=e2008]: Прерывание
+      - text: — приостановка текущей программы для реакции на событие, с переходом на обработчик и возвратом.
+    - listitem [ref=e2009]:
+      - strong [ref=e2010]: "Виды прерываний:"
+      - list [ref=e2011]:
+        - listitem [ref=e2012]:
+          - strong [ref=e2013]: Аппаратные внешние
+          - text: — от устройств (IRQ).
+        - listitem [ref=e2014]:
+          - strong [ref=e2015]: Внутренние (исключения)
+          - text: "— ошибки ЦП. Три типа:"
+          - strong [ref=e2016]: отказ (fault)
+          - text: — обнаруживается до инструкции, после обработки возврат на
+          - strong [ref=e2017]: ту же
+          - text: "инструкцию (отказ страницы #PF, деление на 0 #DE);"
+          - strong [ref=e2018]: ловушка (trap)
+          - text: — после инструкции, возврат на
+          - strong [ref=e2019]: следующую
+          - text: "(#BP, #OF);"
+          - strong [ref=e2020]: аварийное завершение (abort)
+          - text: — нельзя точно установить инструкцию (#DF двойной отказ).
+        - listitem [ref=e2021]:
+          - strong [ref=e2022]: Программные
+          - text: — команда
+          - code [ref=e2023]: INT n
+          - text: (системные вызовы).
+    - listitem [ref=e2024]:
+      - text: Внешние делятся на
+      - strong [ref=e2025]: немаскируемые (NMI)
+      - text: и
+      - strong [ref=e2026]: маскируемые (INTR)
+      - text: (маскируются флагом IF).
+    - listitem [ref=e2027]:
+      - strong [ref=e2028]: "Способы организации:"
+      - text: опрос (polling), векторные прерывания, приоритеты.
+    - listitem [ref=e2029]:
+      - strong [ref=e2030]: "Средства:"
+      - text: аппаратные — выводы ЦП (INTR/NMI/INTA),
+      - strong [ref=e2031]: контроллер прерываний (8259A / APIC)
+      - text: для приоритезации и маскирования; программные — таблица векторов, флаги IF/TF, команды
+      - code [ref=e2032]: int/iret/cli/sti
+      - text: .
+  - document [ref=e2034]:
+    - generic [ref=e2044]:
+      - paragraph [ref=e2051]: Прерывания
+      - paragraph [ref=e2058]: Внешние (аппаратные)
+      - paragraph [ref=e2065]: Внутренние (исключения)
+      - paragraph [ref=e2072]: Программные — INT n
+      - paragraph [ref=e2079]: немаскируемые (NMI)
+      - paragraph [ref=e2086]: маскируемые (INTR) — флаг IF
+      - paragraph [ref=e2093]:
+        - text: отказ (fault)
+        - text: до инструкции → возврат на ту же
+      - paragraph [ref=e2100]:
+        - text: ловушка (trap)
+        - text: после инструкции → на следующую
+      - paragraph [ref=e2107]:
+        - text: аварийное (abort)
+        - text: инструкцию не установить
+  - heading "39. Прерывания в реальном и защищённом режимах, защита" [level=2] [ref=e2108]
+  - list [ref=e2109]:
+    - listitem [ref=e2110]:
+      - strong [ref=e2111]: Реальный режим
+      - text: —
+      - strong [ref=e2112]: таблица векторов прерываний (IVT)
+      - text: в начале памяти, каждый вектор = адрес обработчика (CS:IP).
+    - listitem [ref=e2113]:
+      - strong [ref=e2114]: Защищённый режим
+      - text: —
+      - strong [ref=e2115]: IDT (таблица дескрипторов прерываний)
+      - text: из
+      - strong [ref=e2116]: шлюзов (gates)
+      - text: ": шлюз прерывания/ловушки/задачи, с проверкой уровня привилегий."
+    - listitem [ref=e2117]:
+      - strong [ref=e2118]: "Алгоритм:"
+      - text: сигнал → сохранить состояние (флаги, CS:IP) → по вектору найти обработчик → проверка привилегий → выполнить →
+      - code [ref=e2119]: IRET
+      - text: .
+    - listitem [ref=e2120]:
+      - strong [ref=e2121]: "Защита в процедурах прерываний:"
+      - text: контроль уровня привилегий (кольца), шлюзы ограничивают точки входа в ядро.
+  - heading "40. Чипсет ЭВМ" [level=2] [ref=e2122]
+  - paragraph [ref=e2123]:
+    - emphasis [ref=e2124]: Нужна
+    - emphasis [ref=e2125]: схема современного чипсета
+    - emphasis [ref=e2126]: .
+  - list [ref=e2127]:
+    - listitem [ref=e2128]:
+      - strong [ref=e2129]: Чипсет
+      - text: — набор микросхем на плате, связывающий ЦП, память и периферию.
+    - listitem [ref=e2130]:
+      - strong [ref=e2131]: "Классическая архитектура «северный мост — южный мост»:"
+      - list [ref=e2132]:
+        - listitem [ref=e2133]:
+          - strong [ref=e2134]: Северный мост (Northbridge)
+          - text: "— быстрый: контроллер памяти, графика (AGP/PCIe), связь с ЦП."
+        - listitem [ref=e2135]:
+          - strong [ref=e2136]: Южный мост (Southbridge)
+          - text: "— медленная периферия: USB, SATA, PCI, LPC, BIOS, аудио, сеть."
+    - listitem [ref=e2137]:
+      - strong [ref=e2138]: "Современно:"
+      - text: контроллер памяти и графики
+      - strong [ref=e2139]: встроены в ЦП
+      - text: ", остался один чип"
+      - strong [ref=e2140]: PCH
+      - text: (Platform Controller Hub), связь с ЦП по DMI.
+  - document [ref=e2142]:
+    - generic [ref=e2144]:
+      - generic [ref=e2148]:
+        - paragraph [ref=e2154]: PCIe
+        - paragraph [ref=e2160]: DMI
+      - generic [ref=e2161]:
+        - paragraph [ref=e2168]:
+          - text: ЦП
+          - text: контроллер памяти + PCIe + iGPU
+        - paragraph [ref=e2175]: видеокарта
+        - paragraph [ref=e2182]:
+          - text: "PCH (южный мост):"
+          - text: USB, SATA, сеть, аудио, LPC → BIOS
+  - heading "41. Подсистема ROM BIOS" [level=2] [ref=e2183]
+  - list [ref=e2184]:
+    - listitem [ref=e2185]:
+      - strong [ref=e2186]: BIOS (Basic Input Output System)
+      - text: "— прошивка в ПЗУ на плате: базовые драйверы устройств, загрузка ОС."
+    - listitem [ref=e2187]:
+      - strong [ref=e2188]: POST (Power-On Self Test)
+      - text: — самотестирование при включении (память, устройства).
+    - listitem [ref=e2189]:
+      - strong [ref=e2190]: CMOS
+      - text: — энергонезависимая память (с батарейкой) с настройками BIOS (время, параметры).
+    - listitem [ref=e2191]:
+      - strong [ref=e2192]: Прерывания BIOS
+      - text: — программные сервисы доступа к устройствам в реальном режиме.
+    - listitem [ref=e2193]:
+      - strong [ref=e2194]: Plug&Play
+      - text: "— автоматическое распознавание и конфигурирование устройств (распределение ресурсов: IRQ, DMA, адреса). Современная замена —"
+      - strong [ref=e2195]: UEFI
+      - text: .
+  - heading "42. Периферийные устройства ввода" [level=2] [ref=e2196]
+  - list [ref=e2197]:
+    - listitem [ref=e2198]:
+      - strong [ref=e2199]: Клавиатура
+      - text: — матрица клавиш, контроллер опрашивает строки/столбцы, выдаёт
+      - strong [ref=e2200]: скан-код
+      - text: .
+    - listitem [ref=e2201]:
+      - strong [ref=e2202]: Оптическая мышь
+      - text: — подсветка поверхности + микрокамера + DSP, по смещению картинки считает перемещение.
+    - listitem [ref=e2203]:
+      - strong [ref=e2204]: "Механические позиционеры:"
+      - text: шариковая мышь (шарик→ролики→датчики), трекбол, джойстик.
+    - listitem [ref=e2205]:
+      - strong [ref=e2206]: Сканеры
+      - text: — оптический датчик (CCD/CIS) построчно считывает отражённый свет, оцифровывает изображение.
+  - heading "43. Периферийные устройства вывода" [level=2] [ref=e2207]
+  - paragraph [ref=e2208]:
+    - emphasis [ref=e2209]: Можно
+    - emphasis [ref=e2210]: схема AC97
+    - emphasis [ref=e2211]: .
+  - list [ref=e2212]:
+    - listitem [ref=e2213]:
+      - strong [ref=e2214]: "Принтеры:"
+      - list [ref=e2215]:
+        - listitem [ref=e2216]:
+          - strong [ref=e2217]: Лазерный
+          - text: — лазер рисует скрытое изображение на барабане (электростатика), тонер прилипает, переносится на бумагу, запекается. Чёткий, быстрый.
+        - listitem [ref=e2218]:
+          - strong [ref=e2219]: Струйный
+          - text: — печатающая головка распыляет капли чернил. Дёшево, цветная фотопечать.
+    - listitem [ref=e2220]:
+      - strong [ref=e2221]: Звуковая система (AC97)
+      - text: "— стандарт: цифровой контроллер на чипсете + аналоговый"
+      - strong [ref=e2222]: кодек AC97
+      - text: (ЦАП/АЦП). Разделение цифровой и аналоговой частей.
+    - listitem [ref=e2223]:
+      - strong [ref=e2224]: Графическая система
+      - text: "— видеокарта:"
+      - strong [ref=e2225]: GPU (графический процессор/акселератор)
+      - text: "+ видеопамять + RAMDAC/выходы. Доп. блоки: 2D/3D-акселератор, блоки шейдеров, видеодекодер."
+  - separator [ref=e2226]
+  - heading "БЛОК 3. Конец курса — ПАРАЛЛЕЛЬНЫЕ ВЫЧИСЛЕНИЯ (вопросы 44–55)" [level=1] [ref=e2227]
+  - blockquote [ref=e2228]:
+    - paragraph [ref=e2229]: ⚠️ Семенов спрашивает этот блок жёстко и много. Учи внимательнее, чем остальное.
+  - heading "44. Комплексирование в ВС, классификация Флинна" [level=2] [ref=e2230]
+  - paragraph [ref=e2231]:
+    - emphasis [ref=e2232]: Нужна
+    - emphasis [ref=e2233]: классификация по Флинну
+    - emphasis [ref=e2234]: (схема).
+  - list [ref=e2235]:
+    - listitem [ref=e2236]:
+      - strong [ref=e2237]: Гранулярность
+      - text: "— мера отношения объёма вычислений к объёму коммуникаций (обмена сообщениями). Виды (с указанием, кто обеспечивает):"
+      - strong [ref=e2238]: крупнозернистый
+      - text: (coarse, тысячи команд, обеспечивает ОС) /
+      - strong [ref=e2239]: среднезернистый
+      - text: (medium, сотни команд, программист или компилятор) /
+      - strong [ref=e2240]: мелкозернистый
+      - text: (fine, ~10 команд, векторизирующий компилятор). При малой коммуникац. задержке выигрывает мелкозернистое разбиение, при большой — крупнозернистое.
+    - listitem [ref=e2241]:
+      - strong [ref=e2242]: "Уровни параллелизма (4, по лекции):"
+      - text: микроуровень (фазы команды перекрыты конвейером) → уровень команд (несколько конвейеров — суперскаляр) → уровень потоков (на параллельных ВС) → уровень заданий (независимые задания на разных процессорах).
+    - listitem [ref=e2243]:
+      - strong [ref=e2244]: "Уровни комплексирования машин (5):"
+      - text: 1) прямого управления (процессор–процессор, короткие приказы-сообщения); 2) общей оперативной памяти (через быстрый коммутатор, лучший для оперативного взаимодействия); 3) комплексируемых каналов ВВ (адаптер «канал–канал»); 4) устройств управления внешними устройствами (УВУ, двухканальный переключатель); 5) общих внешних устройств.
+    - listitem [ref=e2245]:
+      - text: "Доп. классификации (могут спросить):"
+      - strong [ref=e2246]: Джонсона
+      - text: "(для MIMD: GMSV/DMSV/GMMP/DMMP — общая/распределённая память × разделяемые переменные/передача сообщений) и"
+      - strong [ref=e2247]: Скилликорна
+      - text: (процессоры IP/DP, память IM/DM, переключатели; всего 28 классов).
+    - listitem [ref=e2248]:
+      - strong [ref=e2249]: Классификация Флинна
+      - text: "— по числу потоков команд (Instruction) и данных (Data):"
+  - table [ref=e2250]:
+    - rowgroup [ref=e2251]:
+      - row "один поток данных (SD) много потоков данных (MD)" [ref=e2252]:
+        - columnheader [ref=e2253]
+        - columnheader "один поток данных (SD)" [ref=e2254]
+        - columnheader "много потоков данных (MD)" [ref=e2255]
+    - rowgroup [ref=e2256]:
+      - row "один поток команд (SI) SISD — обычный фон-Нейман SIMD — векторные, матричные" [ref=e2257]:
+        - cell "один поток команд (SI)" [ref=e2258]:
+          - strong [ref=e2259]: один поток команд (SI)
+        - cell "SISD — обычный фон-Нейман" [ref=e2260]:
+          - strong [ref=e2261]: SISD
+          - text: — обычный фон-Нейман
+        - cell "SIMD — векторные, матричные" [ref=e2262]:
+          - strong [ref=e2263]: SIMD
+          - text: — векторные, матричные
+      - row "много потоков команд (MI) MISD — конвейер/систолич. (редко) MIMD — мультипроцессоры, кластеры" [ref=e2264]:
+        - cell "много потоков команд (MI)" [ref=e2265]:
+          - strong [ref=e2266]: много потоков команд (MI)
+        - cell "MISD — конвейер/систолич. (редко)" [ref=e2267]:
+          - strong [ref=e2268]: MISD
+          - text: — конвейер/систолич. (редко)
+        - cell "MIMD — мультипроцессоры, кластеры" [ref=e2269]:
+          - strong [ref=e2270]: MIMD
+          - text: — мультипроцессоры, кластеры
+  - document [ref=e2272]:
+    - generic [ref=e2275]:
+      - paragraph [ref=e2282]:
+        - text: SISD
+        - text: 1 команда → 1 поток данных
+      - paragraph [ref=e2289]:
+        - text: SIMD
+        - text: 1 команда → много данных
+      - paragraph [ref=e2296]:
+        - text: MISD
+        - text: много команд → 1 данные
+      - paragraph [ref=e2303]:
+        - text: MIMD
+        - text: много команд → много данных
+  - heading "45. Метрики параллельных вычислений, закон Амдала" [level=2] [ref=e2304]
+  - paragraph [ref=e2305]:
+    - emphasis [ref=e2306]: Нужны
+    - emphasis [ref=e2307]: 7 метрик с формулами
+    - emphasis [ref=e2308]: и
+    - emphasis [ref=e2309]: закон Амдала с выводами
+    - emphasis [ref=e2310]: .
+  - paragraph [ref=e2311]:
+    - text: "Обозначения:"
+    - code [ref=e2312]: T(1)=O(1)
+    - text: — время/объём операций на 1 процессоре;
+    - code [ref=e2313]: T(n)
+    - text: ","
+    - code [ref=e2314]: O(n)
+    - text: — время и объём операций на n процессорах.
+  - list [ref=e2315]:
+    - listitem [ref=e2316]:
+      - strong [ref=e2317]: Степень параллелизма
+      - code [ref=e2318]: P(t)
+      - text: — число процессоров, одновременно выполняющих программу в момент t (даёт
+      - strong [ref=e2319]: профиль параллелизма
+      - text: ).
+    - listitem [ref=e2320]:
+      - strong [ref=e2321]: Индекс параллелизма
+      - code [ref=e2322]: PI(n) = O(n) / T(n)
+      - text: — средняя скорость (операций в единицу времени).
+    - listitem [ref=e2323]:
+      - strong [ref=e2324]: Ускорение
+      - code [ref=e2325]: S(n) = T(1) / T(n)
+      - text: — во сколько раз быстрее. Идеал
+      - code [ref=e2326]: S = n
+      - text: .
+    - listitem [ref=e2327]:
+      - strong [ref=e2328]: Эффективность
+      - code [ref=e2329]: E(n) = S(n)/n = T(1) / (n·T(n))
+      - text: — доля ускорения на один процессор (0…1).
+    - listitem [ref=e2330]:
+      - strong [ref=e2331]: Утилизация
+      - code [ref=e2332]: U(n) = O(n) / (n·T(n))
+      - text: (= R·E).
+    - listitem [ref=e2333]:
+      - strong [ref=e2334]: Избыточность
+      - code [ref=e2335]: R(n) = O(n) / O(1)
+      - text: — во сколько раз больше операций.
+    - listitem [ref=e2336]:
+      - strong [ref=e2337]: Сжатие
+      - code [ref=e2338]: C(n) = O(1) / O(n)
+      - text: (величина, обратная избыточности).
+    - listitem [ref=e2339]:
+      - strong [ref=e2340]: Качество
+      - code [ref=e2341]: Q(n) = T³(1) / (n·T²(n)·O(n)) = S·E·C
+      - text: — обобщённый показатель.
+  - paragraph [ref=e2342]:
+    - strong [ref=e2343]: "Пример из лекции:"
+    - code [ref=e2344]: n=8
+    - text: ","
+    - code [ref=e2345]: T(1)=O(1)=O(8)=93
+    - text: ","
+    - code [ref=e2346]: T(8)=25
+    - text: →
+    - code [ref=e2347]: S=PI=3.72
+    - text: ;
+    - code [ref=e2348]: E=U=0.465
+    - text: ;
+    - code [ref=e2349]: R=C=1
+    - text: ;
+    - code [ref=e2350]: Q=1.73
+    - text: .
+  - list [ref=e2351]:
+    - listitem [ref=e2352]:
+      - strong [ref=e2353]: Закон Амдала.
+      - text: Если доля
+      - strong [ref=e2354]: последовательного
+      - text: кода
+      - code [ref=e2355]: f
+      - text: "(не распараллеливается), то максимальное ускорение:"
+  - code [ref=e2357]: S(n) = 1 / ( f + (1 − f)/n ) ↓ при n → ∞ S_max = 1 / f
+  - list [ref=e2358]:
+    - listitem [ref=e2359]:
+      - strong [ref=e2360]: "Вывод:"
+      - text: ускорение ограничено последовательной частью. Если
+      - code [ref=e2361]: f = 10%
+      - text: ", то даже на ∞ процессорах"
+      - code [ref=e2362]: S_max = 10
+      - text: .
+      - strong [ref=e2363]: "Главный смысл: распараллеливать бесполезно, пока велика последовательная доля"
+      - text: — наращивание процессоров упирается в потолок
+      - code [ref=e2364]: 1/f
+      - text: .
+  - 'heading "46. ВС: UMA и NORMA" [level=2] [ref=e2365]'
+  - paragraph [ref=e2366]:
+    - emphasis [ref=e2367]: Нужны
+    - emphasis [ref=e2368]: схемы и принципы
+    - emphasis [ref=e2369]: .
+  - list [ref=e2370]:
+    - listitem [ref=e2371]:
+      - strong [ref=e2372]: UMA (Uniform Memory Access)
+      - text: — общая память,
+      - strong [ref=e2373]: одинаковое время доступа
+      - text: для всех процессоров. Связь через общую шину/коммутатор. К UMA относятся
+      - strong [ref=e2374]: SMP
+      - text: (симметричная мультипроцессорная) и
+      - strong [ref=e2375]: PVP
+      - text: "(на векторных процессорах). Минус: шина — узкое место, плохо масштабируется."
+  - document [ref=e2377]:
+    - generic [ref=e2383]:
+      - paragraph [ref=e2390]: ЦП
+      - paragraph [ref=e2397]: общая шина
+      - paragraph [ref=e2404]: ЦП
+      - paragraph [ref=e2411]: ЦП
+      - paragraph [ref=e2418]:
+        - text: общая память
+        - text: (время доступа одинаково)
+  - list [ref=e2419]:
+    - listitem [ref=e2420]:
+      - strong [ref=e2421]: NORMA (No Remote Memory Access)
+      - text: — у каждого процессора
+      - strong [ref=e2422]: только своя локальная память
+      - text: ", чужую напрямую читать нельзя —"
+      - strong [ref=e2423]: только обмен сообщениями
+      - text: по сети. Это основа
+      - strong [ref=e2424]: кластеров и MPP
+      - text: . Хорошо масштабируется.
+  - document [ref=e2426]:
+    - generic [ref=e2428]:
+      - generic [ref=e2429]:
+        - paragraph [ref=e2435]: сеть
+        - paragraph [ref=e2441]: сеть
+      - generic [ref=e2442]:
+        - paragraph [ref=e2449]: ЦП + память
+        - paragraph [ref=e2456]: ЦП + память
+        - paragraph [ref=e2463]: ЦП + память
+  - 'heading "47. ВС: NUMA, COMA, DSM" [level=2] [ref=e2464]'
+  - paragraph [ref=e2465]:
+    - emphasis [ref=e2466]: Для
+    - emphasis [ref=e2467]: NUMA — схема
+    - emphasis [ref=e2468]: .
+  - list [ref=e2469]:
+    - listitem [ref=e2470]:
+      - strong [ref=e2471]: NUMA (Non-Uniform Memory Access)
+      - text: — общее адресное пространство, но память
+      - strong [ref=e2472]: физически распределена
+      - text: ": доступ к своей памяти быстрый (напрямую), к чужой (удалённой) — медленнее (через коммутатор/сеть). Масштабируется лучше UMA."
+      - strong [ref=e2473]: "Подвиды:"
+      - strong [ref=e2474]: ccNUMA
+      - text: (cache coherent — с обеспечением когерентности кэшей) и
+      - strong [ref=e2475]: nccNUMA
+      - text: (без когерентности).
+  - document [ref=e2477]:
+    - generic [ref=e2479]:
+      - paragraph [ref=e2486]:
+        - text: сеть (общее адр. пространство)
+        - text: своя — быстро, чужая — медленно
+      - generic [ref=e2487]:
+        - generic [ref=e2488]:
+          - paragraph [ref=e2496]: узел 1
+          - generic [ref=e2497]:
+            - paragraph [ref=e2504]: ЦП
+            - paragraph [ref=e2511]: лок. память
+        - generic [ref=e2512]:
+          - paragraph [ref=e2520]: узел 0
+          - generic [ref=e2521]:
+            - paragraph [ref=e2528]: ЦП
+            - paragraph [ref=e2535]: лок. память
+  - list [ref=e2536]:
+    - listitem [ref=e2537]:
+      - strong [ref=e2538]:
+        - text: COMA (Cache Only Memory
+        - emphasis [ref=e2539]: Architecture
+        - text: )
+      - text: — вся локальная память работает как
+      - strong [ref=e2540]: большой кэш
+      - text: ; данные мигрируют к процессору, который их использует. Нет фиксированной «домашней» памяти.
+    - listitem [ref=e2541]:
+      - strong [ref=e2542]: DSM (Distributed Shared Memory)
+      - text: — физически распределённая память программно представляется как
+      - strong [ref=e2543]: общая
+      - text: (виртуальное общее адр. пространство поверх сети).
+  - 'heading "48. SIMD: векторные и матричные" [level=2] [ref=e2544]'
+  - paragraph [ref=e2545]:
+    - emphasis [ref=e2546]: Нужны
+    - emphasis [ref=e2547]: общие схемы
+    - emphasis [ref=e2548]: ", для векторных — классификация."
+  - list [ref=e2549]:
+    - listitem [ref=e2550]:
+      - strong [ref=e2551]: SIMD
+      - text: — одна команда над множеством данных одновременно.
+    - listitem [ref=e2552]:
+      - strong [ref=e2553]: Векторные
+      - text: —
+      - strong [ref=e2554]: векторный процессор
+      - text: ": операндами команд могут быть массивы (векторы)."
+      - strong [ref=e2555]: "Классификация обработки (по лекции):"
+      - text: векторно-
+      - strong [ref=e2556]: параллельная
+      - text: (несколько конвейерных ФБ параллельно над векторами) и векторно-
+      - strong [ref=e2557]: конвейерная
+      - text: .
+  - code [ref=e2559]: "Векторный: вектор A ─►[конвейерное АЛУ]─► вектор C вектор B ─► (поэлементно)"
+  - list [ref=e2560]:
+    - listitem [ref=e2561]:
+      - strong [ref=e2562]: Матричные
+      - text: —
+      - strong [ref=e2563]: массив одинаковых процессорных элементов (ПЭ)
+      - text: ", каждый со своей памятью."
+      - strong [ref=e2564]: Контроллер массива ПЭ (КМП)
+      - text: выполняет последовательный код и транслирует команды/данные всем ПЭ по шине широковещательной рассылки; результаты идут по шине результата.
+      - strong [ref=e2565]: Фронтальная ВМ
+      - text: "загружает программы и данные в КМП. Состав ПЭ: АЛУ, регистры данных, сетевой интерфейс, номер ПЭ,"
+      - strong [ref=e2566]: регистр флага маскирования F
+      - text: ", локальная память (маска отключает часть ПЭ от выполнения команды)."
+  - document [ref=e2568]:
+    - generic [ref=e2576]:
+      - paragraph [ref=e2583]: общий УУ — одна команда всем
+      - paragraph [ref=e2590]: ПЭ + память
+      - paragraph [ref=e2597]: ПЭ + память
+      - paragraph [ref=e2604]: ПЭ + память
+      - paragraph [ref=e2611]: ПЭ + память
+  - 'heading "49. SIMD: ассоциативные и систолические" [level=2] [ref=e2612]'
+  - paragraph [ref=e2613]:
+    - emphasis [ref=e2614]: Нужны
+    - emphasis [ref=e2615]: концептуальные схемы
+    - emphasis [ref=e2616]: .
+  - list [ref=e2617]:
+    - listitem [ref=e2618]:
+      - strong [ref=e2619]: Ассоциативные ВС
+      - text: —
+      - strong [ref=e2620]: ассоциативный процессор
+      - text: на базе
+      - strong [ref=e2621]: АЗУ
+      - text: "(ассоциативного ЗУ): доступ к данным не по адресу, а по"
+      - strong [ref=e2622]: отличительным признакам в самом операнде
+      - text: ". Две особенности (отличие от обычного АЗУ): наличие"
+      - strong [ref=e2623]: средств обработки данных
+      - text: и
+      - strong [ref=e2624]: мультизапись
+      - text: (параллельная запись во все ячейки, где совпал ассоциативный признак).
+  - document [ref=e2626]:
+    - generic [ref=e2629]:
+      - paragraph [ref=e2636]: признак поиска
+      - paragraph [ref=e2643]:
+        - text: сравнение со ВСЕМИ ячейками сразу
+        - text: (по содержимому)
+      - paragraph [ref=e2650]: совпавшие ячейки
+  - list [ref=e2651]:
+    - listitem [ref=e2652]:
+      - strong [ref=e2653]: Систолические ВС
+      - text: — однородная среда из ПЭ, сочетает свойства
+      - strong [ref=e2654]: конвейерной и матричной
+      - text: обработки. Данные
+      - strong [ref=e2655]: ритмично прокачиваются
+      - text: от ПЭ к ПЭ без запоминания промежуточных результатов; каждый элемент входных данных читается из памяти
+      - strong [ref=e2656]: однократно
+      - text: и используется столько раз, сколько нужно по алгоритму; ПЭ однотипны, связи локальные.
+      - strong [ref=e2657]: "Конфигурации матриц:"
+      - text: "линейная, прямоугольная, гексагональная, трёхмерная. Пример ПЭ:"
+      - code [ref=e2658]: c_вых = c_вх + a_вх × b_вх
+      - text: (накопление произведений — умножение матриц).
+  - document [ref=e2660]:
+    - generic [ref=e2663]:
+      - paragraph [ref=e2670]: данные
+      - paragraph [ref=e2677]: ПЭ
+      - paragraph [ref=e2684]: ПЭ
+      - paragraph [ref=e2691]: ПЭ
+      - paragraph [ref=e2698]: результат
+  - 'heading "50. MIMD: PVP и MPP" [level=2] [ref=e2699]'
+  - paragraph [ref=e2700]:
+    - emphasis [ref=e2701]: Нужны
+    - emphasis [ref=e2702]: схемы и принципы
+    - emphasis [ref=e2703]: .
+  - list [ref=e2704]:
+    - listitem [ref=e2705]:
+      - strong [ref=e2706]: PVP (Parallel Vector Processor)
+      - text: —
+      - strong [ref=e2707]: SMP-система
+      - text: ", где роль ПЭ играют"
+      - strong [ref=e2708]: векторно-конвейерные
+      - text: процессоры, связанные широкополосным коммутатором типа
+      - strong [ref=e2709]: «кроссбар»
+      - text: "с разделяемой памятью. Число процессоров: типично"
+      - strong [ref=e2710]: 8–16
+      - text: ", до 512. Cray, NEC."
+  - document [ref=e2712]:
+    - generic [ref=e2718]:
+      - paragraph [ref=e2725]: вект. ЦП
+      - paragraph [ref=e2732]: коммутатор (кроссбар)
+      - paragraph [ref=e2739]: вект. ЦП
+      - paragraph [ref=e2746]: вект. ЦП
+      - paragraph [ref=e2753]: разделяемая память
+  - list [ref=e2754]:
+    - listitem [ref=e2755]:
+      - strong [ref=e2756]: MPP (Massively Parallel Processing)
+      - text: —
+      - strong [ref=e2757]: массово-параллельная
+      - text: ": тысячи узлов (NORMA, обмен"
+      - strong [ref=e2758]: сообщениями
+      - text: "). Узел содержит: процессор, локальный банк ОП,"
+      - strong [ref=e2759]: 2 коммуникационных процессора (маршрутизатора)
+      - text: — отдельно для команд и данных, диски/устройства ВВ.
+      - strong [ref=e2760]: Хост-компьютер
+      - text: — ядро системы (планировщик заданий). На каждом узле своя ОС (или урезанная). Отлично масштабируется, но сложное ПО.
+  - document [ref=e2762]:
+    - generic [ref=e2768]:
+      - paragraph [ref=e2775]: "узел: ЦП + память"
+      - paragraph [ref=e2782]: высокоскоростная сеть
+      - paragraph [ref=e2789]: "узел: ЦП + память"
+      - paragraph [ref=e2796]: "узел: ЦП + память"
+  - 'heading "51. MIMD: кластерные ВС" [level=2] [ref=e2797]'
+  - paragraph [ref=e2798]:
+    - emphasis [ref=e2799]: Нужны
+    - emphasis [ref=e2800]: схема, топологии, характеристики топологий
+    - emphasis [ref=e2801]: .
+  - list [ref=e2802]:
+    - listitem [ref=e2803]:
+      - strong [ref=e2804]: Кластер
+      - text: — группа взаимно соединённых
+      - strong [ref=e2805]: самостоятельных
+      - text: узлов, работающих совместно как единый ресурс (иллюзия единой ВМ). Дешевле MPP (готовые ПК + сеть). Связь — обмен сообщениями через коммутатор (switch).
+    - listitem [ref=e2806]:
+      - strong [ref=e2807]: "Преимущества (4):"
+      - text: абсолютная масштабируемость (десятки узлов-мультипроцессоров), наращиваемая масштабируемость (добавление узлов малыми порциями), высокий
+      - strong [ref=e2808]: коэффициент готовности
+      - text: (отказ узла не валит кластер), низкое
+      - strong [ref=e2809]: цена/производительность
+      - text: .
+    - listitem [ref=e2810]:
+      - strong [ref=e2811]: "Кластеры и созвездия:"
+      - text: N узлов, M процессоров в узле — если N < M это кластер, если N > M —
+      - strong [ref=e2812]: созвездие
+      - text: . Топология «
+      - strong [ref=e2813]: Fat-tree
+      - text: » (толстое дерево) — частая для суперкластеров.
+  - document [ref=e2815]:
+    - generic [ref=e2821]:
+      - paragraph [ref=e2828]: узел — целый ПК
+      - paragraph [ref=e2835]: сеть / коммутатор (switch)
+      - paragraph [ref=e2842]: узел — целый ПК
+      - paragraph [ref=e2849]: узел — целый ПК
+  - list [ref=e2850]:
+    - listitem [ref=e2851]:
+      - strong [ref=e2852]: "Топологии сети:"
+      - text: шина, кольцо, звезда, решётка (mesh), тор, гиперкуб, дерево, полносвязная.
+    - listitem [ref=e2853]:
+      - strong [ref=e2854]: "Характеристики топологий:"
+      - list [ref=e2855]:
+        - listitem [ref=e2856]:
+          - strong [ref=e2857]: Диаметр
+          - text: — макс. расстояние между узлами (определяет задержку).
+        - listitem [ref=e2858]:
+          - strong [ref=e2859]: Связность (connectivity)
+          - text: — число путей между узлами (отказоустойчивость).
+        - listitem [ref=e2860]:
+          - strong [ref=e2861]: Ширина бисекции (bisection width)
+          - text: — мин. число линий при разрезе сети пополам (пропускная способность).
+        - listitem [ref=e2862]:
+          - strong [ref=e2863]: Стоимость
+          - text: — общее число линий связи.
+  - 'heading "52. ВС: dataflow и reduction" [level=2] [ref=e2864]'
+  - paragraph [ref=e2865]:
+    - emphasis [ref=e2866]: Нужны
+    - emphasis [ref=e2867]: принципы, потоковый граф, классификация
+    - emphasis [ref=e2868]: .
+  - list [ref=e2869]:
+    - listitem [ref=e2870]:
+      - strong [ref=e2871]: Потоковые (dataflow)
+      - text: —
+      - strong [ref=e2872]: управление данными
+      - text: ": команда выполняется, как только готовы её"
+      - strong [ref=e2873]: операнды
+      - text: (нет счётчика команд, нет PC). Естественный параллелизм. Программа =
+      - strong [ref=e2874]: потоковый граф
+      - text: .
+  - document [ref=e2876]:
+    - generic [ref=e2886]:
+      - paragraph [ref=e2893]: a
+      - paragraph [ref=e2900]: +
+      - paragraph [ref=e2907]: b
+      - paragraph [ref=e2914]: c
+      - paragraph [ref=e2921]: ×
+      - paragraph [ref=e2928]: d
+      - paragraph [ref=e2935]: −
+      - paragraph [ref=e2942]: результат
+  - list [ref=e2943]:
+    - listitem [ref=e2944]:
+      - strong [ref=e2945]: Редукционные (reduction)
+      - text: —
+      - strong [ref=e2946]: управление по запросу
+      - text: ": вычисление запускается, когда его результат"
+      - strong [ref=e2947]: затребован
+      - text: другим (ленивые вычисления, demand-driven).
+    - listitem [ref=e2948]:
+      - strong [ref=e2949]: "Классификация потоковых:"
+      - text: статические (1 токен на дуге) и динамические (с метками — несколько токенов).
+  - heading "53. Перспективные процессоры" [level=2] [ref=e2950]
+  - list [ref=e2951]:
+    - listitem [ref=e2952]:
+      - strong [ref=e2953]: Ассоциативные
+      - text: — доступ к памяти по содержимому, параллельный поиск.
+    - listitem [ref=e2954]:
+      - strong [ref=e2955]: Клеточные (ДНК-процессоры)
+      - text: — вычисления на молекулах ДНК, массовый параллелизм химических реакций.
+    - listitem [ref=e2956]:
+      - strong [ref=e2957]: Нейронные (нейропроцессоры/NPU)
+      - text: — структура из нейронов, параллельная обработка, обучение, для ИИ/распознавания.
+    - listitem [ref=e2958]:
+      - strong [ref=e2959]: С многозначной логикой
+      - text: — не 2, а больше состояний на сигнал (троичная и др.) → выше плотность информации.
+    - listitem [ref=e2960]:
+      - strong [ref=e2961]: Квантовые
+      - text: — кубиты в
+      - strong [ref=e2962]: суперпозиции
+      - text: (0 и 1 одновременно) +
+      - strong [ref=e2963]: запутанность
+      - text: → экспоненциальный параллелизм для некоторых задач (факторизация, поиск).
+  - heading "54. Когерентность кэша в ВС, протокол MESI" [level=2] [ref=e2964]
+  - paragraph [ref=e2965]:
+    - emphasis [ref=e2966]: Нужны
+    - emphasis [ref=e2967]: общая схема
+    - emphasis [ref=e2968]: и
+    - emphasis [ref=e2969]: граф переходов MESI
+    - emphasis [ref=e2970]: .
+  - list [ref=e2971]:
+    - listitem [ref=e2972]:
+      - strong [ref=e2973]: Проблема когерентности
+      - text: — в SMP у каждого ЦП свой кэш; одна ячейка ОП может иметь разные копии → нужно согласование.
+    - listitem [ref=e2974]:
+      - strong [ref=e2975]: "Способы (по лекции):"
+      - text: программные (компилятор+ОС, некэшируемые данные); протоколы сквозной/обратной записи;
+      - strong [ref=e2976]: запись с аннулированием (write invalidate)
+      - text: — при записи в свой кэш копии блока в других кэшах помечаются недостоверными (бит достоверности → 0);
+      - strong [ref=e2977]: запись с обновлением (write update)
+      - text: — запись дублируется во все кэши с копией (широковещательно); разделяемая кэш-память; стандарт SCI.
+    - listitem [ref=e2978]:
+      - strong [ref=e2979]: "Аппаратные механизмы реализации:"
+      - list [ref=e2980]:
+        - listitem [ref=e2981]:
+          - strong [ref=e2982]: Снупинг (наблюдение, snooping)
+          - text: — контроллер каждого кэша следит за шиной; процессоры широковещательно шлют запросы, локальный контроллер аннулирует/обновляет свою копию.
+        - listitem [ref=e2983]:
+          - strong [ref=e2984]: Справочниковый (directory)
+          - text: — централизованный справочник в ОП хранит, у кого какие копии (для больших систем без общей шины).
+    - listitem [ref=e2985]:
+      - text: Предшественник MESI —
+      - strong [ref=e2986]: протокол однократной записи (write-once)
+      - text: ": состояния I (Invalid) / V (Valid) / R (Reserved, однократное изменение, учтено в ОЗУ) / D (Dirty)."
+    - listitem [ref=e2987]:
+      - strong [ref=e2988]: Протокол MESI
+      - text: "— 4 состояния строки кэша:"
+      - list [ref=e2989]:
+        - listitem [ref=e2990]:
+          - strong [ref=e2991]: M (Modified)
+          - text: — изменена, только здесь, не совпадает с ОП («грязная»).
+        - listitem [ref=e2992]:
+          - strong [ref=e2993]: E (Exclusive)
+          - text: — только здесь, совпадает с ОП (чистая).
+        - listitem [ref=e2994]:
+          - strong [ref=e2995]: S (Shared)
+          - text: — есть копии в других кэшах, совпадает с ОП.
+        - listitem [ref=e2996]:
+          - strong [ref=e2997]: I (Invalid)
+          - text: — недействительна.
+  - document [ref=e2999]:
+    - generic [ref=e3001]:
+      - generic [ref=e3022]:
+        - paragraph [ref=e3028]: чтение (копия есть у других)
+        - paragraph [ref=e3034]: чтение (ни у кого нет)
+        - paragraph [ref=e3040]: запись (своя)
+        - paragraph [ref=e3046]: запись (инвалидация чужих)
+        - paragraph [ref=e3052]: чужая запись
+        - paragraph [ref=e3058]: чужое чтение
+        - paragraph [ref=e3064]: чужая запись
+      - generic [ref=e3065]:
+        - paragraph [ref=e3074]: I
+        - paragraph [ref=e3081]: S
+        - paragraph [ref=e3088]: E
+        - paragraph [ref=e3095]: M
+        - paragraph [ref=e3104]: Modified — грязная, только здесь
+        - paragraph [ref=e3113]: Exclusive — чистая, только здесь
+        - paragraph [ref=e3122]: Shared — есть копии
+        - paragraph [ref=e3131]: Invalid — недействительна
+  - list [ref=e3132]:
+    - listitem [ref=e3133]:
+      - strong [ref=e3134]: "Принцип:"
+      - text: запись разрешена только из состояния M или E; перед записью в S — рассылается инвалидация другим кэшам (→ их строки в I), своя → M.
+  - heading "55. Современные суперкомпьютеры" [level=2] [ref=e3135]
+  - paragraph [ref=e3136]:
+    - emphasis [ref=e3137]: По лекции 14 (рейтинг TOP500, top500.org). Метрика — производительность в
+    - emphasis [ref=e3138]: PFlop/s
+    - emphasis [ref=e3139]:
+      - text: "на тесте LINPACK:"
+      - code [ref=e3140]: Rmax
+      - text: (реальная) и
+      - code [ref=e3141]: Rpeak
+      - text: (пиковая).
+  - list [ref=e3142]:
+    - listitem [ref=e3143]:
+      - strong [ref=e3144]: Суперкомпьютер
+      - text: — система максимальной производительности; современные —
+      - strong [ref=e3145]: экзафлопсные
+      - text: (≥ 10¹⁸ Flop/s),
+      - strong [ref=e3146]: гибридные
+      - text: узлы CPU + GPU-ускорители, быстрая сеть (Slingshot, InfiniBand).
+    - listitem [ref=e3147]:
+      - strong [ref=e3148]: "TOP500 (ноябрь 2023), первая тройка:"
+      - list [ref=e3149]:
+        - listitem [ref=e3150]:
+          - strong [ref=e3151]: El Capitan
+          - text: (США, HPE Cray,
+          - strong [ref=e3152]: AMD EPYC 4-го пок. + AMD Instinct MI300A
+          - text: ) —
+          - strong [ref=e3153]: 1.809 EFlop/s
+          - text: ", ~11.3 млн ядер, 29 МВт, 2024 г."
+        - listitem [ref=e3154]:
+          - strong [ref=e3155]: Frontier
+          - text: (США, HPE Cray,
+          - strong [ref=e3156]: AMD EPYC + Instinct MI250X
+          - text: ) — ~1.35 EFlop/s, первый экзафлопсный (2022).
+        - listitem [ref=e3157]:
+          - strong [ref=e3158]: Aurora
+          - text: (США, HPE Cray,
+          - strong [ref=e3159]: Intel Xeon Max + Intel GPU Max
+          - text: ") — ~1.0 EFlop/s. - Также:"
+          - strong [ref=e3160]: Fugaku
+          - text: (Япония, ARM
+          - strong [ref=e3161]: A64FX
+          - text: ", без GPU), Eagle (Microsoft, NVIDIA H100), JUPITER (Германия, NVIDIA GH200)."
+    - listitem [ref=e3162]:
+      - strong [ref=e3163]: "Российские (в TOP500):"
+      - strong [ref=e3164]: Червоненкис
+      - text: ", Галушкин, Ляпунов (Yandex, AMD EPYC + NVIDIA A100),"
+      - strong [ref=e3165]: Christofari / Christofari Neo
+      - text: (СберCloud, NVIDIA DGX).
+    - listitem [ref=e3166]:
+      - strong [ref=e3167]: "Пути развития:"
+      - text: эволюция (экстраполяция);
+      - strong [ref=e3168]: Grid-технологии и облака
+      - text: ; параллелизм многих уровней;
+      - strong [ref=e3169]: сопроцессоры-ускорители
+      - text: (неоднородная структура); обработка на
+      - strong [ref=e3170]: ПЛИС/FPGA
+      - text: ; специализация на заказных микросхемах.
+    - listitem [ref=e3171]:
+      - strong [ref=e3172]: "Основные сложности:"
+      - text: задержки и узкая полоса «процессор–память» и межпроцессорных связей; издержки ОС, растущие с числом процессоров; трудности распараллеливания; слабая поддержка параллелизма языками.
+  - separator [ref=e3173]
+  - heading "Шпаргалка-минимум (если совсем мало времени — выучи это)" [level=2] [ref=e3174]
+  - list [ref=e3175]:
+    - listitem [ref=e3176]:
+      - strong [ref=e3177]: "Флинн:"
+      - text: SISD / SIMD / MISD / MIMD (по потокам команд × данных).
+    - listitem [ref=e3178]:
+      - strong [ref=e3179]: "Амдал:"
+      - code [ref=e3180]: S = 1/(f + (1−f)/n)
+      - text: ", потолок"
+      - code [ref=e3181]: 1/f
+      - text: . Последовательная доля всё губит.
+    - listitem [ref=e3182]:
+      - strong [ref=e3183]: "Память ВС:"
+      - text: UMA (общая, равный доступ, SMP) · NUMA (распределённая, общее адр., неравный доступ) · NORMA (только своя память + сообщения, кластеры/MPP).
+    - listitem [ref=e3184]:
+      - strong [ref=e3185]: SIMD
+      - text: = векторные/матричные/ассоциативные/систолические.
+      - strong [ref=e3186]: MIMD
+      - text: = PVP/MPP/кластеры.
+    - listitem [ref=e3187]:
+      - strong [ref=e3188]: "MESI:"
+      - text: Modified / Exclusive / Shared / Invalid — когерентность кэшей.
+    - listitem [ref=e3189]:
+      - strong [ref=e3190]: CISC
+      - text: (микропрограммное УУ, сложные команды) vs
+      - strong [ref=e3191]: RISC
+      - text: (аппаратное УУ, простые, 1 такт, load/store) vs
+      - strong [ref=e3192]: VLIW
+      - text: (параллелизм задаёт компилятор).
+    - listitem [ref=e3193]:
+      - strong [ref=e3194]: "Фон Нейман:"
+      - text: двоичное кодирование, программное управление, однородность памяти, адресуемость.
+    - listitem [ref=e3195]:
+      - strong [ref=e3196]: "Кэш-отображение:"
+      - text: прямое / ассоциативное / множественно-ассоциативное.
+    - listitem [ref=e3197]:
+      - strong [ref=e3198]: DMA
+      - text: — обмен ПУ↔память минуя ЦП.
+    - listitem [ref=e3199]:
+      - strong [ref=e3200]: "Intel vs AMD:"
+      - text: AMD первой ввела 64-бит и встроенный контроллер памяти; сейчас Intel = гибрид P+E ядра, AMD = чиплеты + Infinity Fabric + 3D V-Cache.

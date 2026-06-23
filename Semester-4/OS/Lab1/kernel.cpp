@@ -1,6 +1,4 @@
-// ConvertOS kernel. Вариант 15: g++ -m32, freestanding.
 // Команды: info, clear, shutdown, nsconv, posixtime, wintime.
-// Параметры от загрузчика: атрибут цвета по 0x7E00, индекс цвета по 0x7E01.
 
 typedef unsigned char      u8;
 typedef unsigned short     u16;
@@ -16,29 +14,29 @@ extern "C" __attribute__((naked, section(".text.entry"))) void _start()
 
 extern "C" {
 
-// Беззнаковое 64-битное деление с остатком (long division). Нужно gcc для u64 / и %.
-u64 __udivmoddi4(u64 num, u64 den, u64* rem_out)
-{
-    u64 q = 0, r = 0;
-    for (int i = 63; i >= 0; --i) {
-        r = (r << 1) | ((num >> i) & 1);
-        if (r >= den) { r -= den; q |= (u64)1 << i; }
+    // Беззнаковое 64-битное деление с остатком (long division). Нужно gcc для u64 / и %.
+    u64 __udivmoddi4(u64 num, u64 den, u64* rem_out)
+    {
+        u64 q = 0, r = 0;
+        for (int i = 63; i >= 0; --i) {
+            r = (r << 1) | ((num >> i) & 1);
+            if (r >= den) { r -= den; q |= (u64)1 << i; }
+        }
+        if (rem_out) *rem_out = r;
+        return q;
     }
-    if (rem_out) *rem_out = r;
-    return q;
-}
 
-// Беззнаковое 64-битное деление.
-u64 __udivdi3(u64 a, u64 b) { return __udivmoddi4(a, b, 0); }
+    // Беззнаковое 64-битное деление.
+    u64 __udivdi3(u64 a, u64 b) { return __udivmoddi4(a, b, 0); }
 
-// Беззнаковый 64-битный остаток от деления.
-u64 __umoddi3(u64 a, u64 b) { u64 r; __udivmoddi4(a, b, &r); return r; }
+    // Беззнаковый 64-битный остаток от деления.
+    u64 __umoddi3(u64 a, u64 b) { u64 r; __udivmoddi4(a, b, &r); return r; }
 
-// Заполнение блока памяти байтом (для зануления статических массивов компилятором).
-void* memset(void* p, int c, unsigned n)
-{
-    u8* d = (u8*)p; while (n--) *d++ = (u8)c; return p;
-}
+    // Заполнение блока памяти байтом (для зануления статических массивов компилятором).
+    void* memset(void* p, int c, unsigned n)
+    {
+        u8* d = (u8*)p; while (n--) *d++ = (u8)c; return p;
+    }
 
 } // extern "C"
 
@@ -388,7 +386,7 @@ static void cmd_info()
     puts(" color.\n");
 }
 
-// Команда shutdown: запись в порты выключения для QEMU / Bochs / VirtualBox.
+// Команда shutdown: запись в порты выключения для QEMU 
 static void cmd_shutdown()
 {
     puts("Powering off...\n");
