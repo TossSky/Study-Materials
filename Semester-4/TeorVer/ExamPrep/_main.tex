@@ -1,0 +1,27 @@
+\documentclass[11pt]{article}
+\usepackage{fontspec}
+\setmainfont{cmunrm.otf}[Path=fonts/,
+  ItalicFont=cmunti.otf, BoldFont=cmunbx.otf, BoldItalicFont=cmunbi.otf]
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{enumitem}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\setlist{topsep=2pt,itemsep=1pt,parsep=0pt,leftmargin=1.6em}
+\linespread{1.04}
+\begin{document}
+
+\begin{center}{\LARGE\bfseries ТВиМС — ответы к экзамену}\par
+\vskip 4pt {\large Блоки 1–4 (вопросы 1–24). Промежуточная сборка}\par
+\end{center}\vskip 10pt
+\renewcommand{\contentsname}{Содержание}\tableofcontents\newpage
+\input{blocks/block01.tex}
+
+\input{blocks/block02.tex}
+
+\input{blocks/block03.tex}
+
+\input{blocks/block04.tex}
+
+\end{document}

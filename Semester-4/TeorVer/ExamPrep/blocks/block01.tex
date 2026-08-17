@@ -1,0 +1,75 @@
+\section*{Вопрос 1. Вероятностное пространство. Аксиомы. Дискретное и классическое определения}
+\addcontentsline{toc}{section}{Вопрос 1. Вероятностное пространство. Аксиомы}
+
+\textit{Элементарное событие} $\omega_i$ — исход эксперимента; $\Omega=\{\omega_i\}$ — \textit{пространство элементарных событий}; \textit{событие} $A\subseteq\Omega$; $\Omega$ — достоверное, $\varnothing$ — невозможное.
+
+Операции: $A\cup B$, $A\cap B$, $A\setminus B$, $\bar A=\Omega\setminus A$. События несовместны, если $A\cap B=\varnothing$.
+
+$\mathcal{F}$ — \textit{$\sigma$-алгебра событий}:
+\begin{enumerate}
+  \item $\Omega\in\mathcal{F}$;
+  \item $A\in\mathcal{F}\Rightarrow\bar A\in\mathcal{F}$;
+  \item $A_n\in\mathcal{F}\Rightarrow\bigcup_n A_n\in\mathcal{F}$.
+\end{enumerate}
+
+\textit{Вероятность} $P\colon\mathcal{F}\to\mathbb{R}$ — аксиомы:
+\begin{enumerate}
+  \item $0\le P(A)\le 1$;
+  \item $P(\Omega)=1$;
+  \item для попарно несовместных $A_n$:\ \ $P\!\left(\bigcup_n A_n\right)=\sum_n P(A_n)$.
+\end{enumerate}
+
+$(\Omega,\mathcal{F},P)$ — \textit{вероятностное пространство} (Колмогоров, 1933).
+
+\textit{Дискретное:} $\Omega$ счётно, $p_i=P(\omega_i)\ge0$, $\sum_i p_i=1$, $P(A)=\sum_{\omega_i\in A}p_i$.
+
+\textit{Классическое:} при равновозможных исходах $P(A)=\dfrac{m}{n}$ ($n=|\Omega|$, $m=|A|$).
+
+\section*{Вопрос 2. Свойства вероятностей. Формула включения-исключения}
+\addcontentsline{toc}{section}{Вопрос 2. Свойства вероятностей. Включение-исключение}
+
+\begin{enumerate}
+  \item $P(\bar A)=1-P(A)$.\quad \textit{Док-во:}\ $A\cup\bar A=\Omega$, $A\cap\bar A=\varnothing$, поэтому $1=P(\Omega)=P(A)+P(\bar A)$. \hfill$\square$
+  \item $P(A)=P(A\setminus B)+P(A\cap B)$.
+  \item Монотонность: $A\subseteq B\Rightarrow P(A)\le P(B)$.
+  \item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$.
+\end{enumerate}
+
+\textit{Включение-исключение.} При $P_s=\sum_{i_1<\dots<i_s}P(A_{i_1}\cap\dots\cap A_{i_s})$:
+\[ P\!\left(\bigcup_{k=1}^{n}A_k\right)=P_1-P_2+\cdots+(-1)^{n-1}P_n. \]
+
+\section*{Вопрос 3. Условная вероятность. Свойства. Формула умножения}
+\addcontentsline{toc}{section}{Вопрос 3. Условная вероятность. Формула умножения}
+
+\textit{Условная вероятность} ($P(B)>0$):
+\[ P(A\mid B)=\frac{P(A\cap B)}{P(B)}. \]
+
+Свойства (это вероятность на $\mathcal{F}$): $0\le P(A\mid B)\le1$;\ \ $P(\Omega\mid B)=1$;\ \ аддитивность для несовместных.
+
+\textit{Формула умножения:}\ $P(A\cap B)=P(A)\,P(B\mid A)$, в общем виде
+\[ P\!\left(\bigcap_{k=1}^{n}A_k\right)=P(A_1)\,P(A_2\mid A_1)\cdots P(A_n\mid A_1\cap\dots\cap A_{n-1}). \]
+
+\section*{Вопрос 4. Независимые события. Попарная и взаимная независимость. Замена на противоположные}
+\addcontentsline{toc}{section}{Вопрос 4. Независимые события. Замена на противоположные}
+
+$A,B$ \textit{независимы}, если $P(A\cap B)=P(A)\,P(B)$ (равносильно $P(A\mid B)=P(A)$).
+
+\textit{Попарная} независимость: $P(A_i\cap A_j)=P(A_i)P(A_j)$ при $i\ne j$.
+\textit{Взаимная} (в совокупности): для любого поднабора $P(A_{i_1}\cap\dots\cap A_{i_m})=\prod_{l}P(A_{i_l})$. Взаимная сильнее попарной.
+
+\textit{Теорема.} Замена любых событий взаимно независимого набора на противоположные сохраняет взаимную независимость.
+
+\textit{Док-во} ($n=2$):
+\[ P(\bar A_1\cap\bar A_2)=1-P(A_1\cup A_2)=(1-P(A_1))(1-P(A_2))=P(\bar A_1)P(\bar A_2). \quad\square \]
+
+\section*{Вопрос 5. Полная система событий. Формула полной вероятности. Формула Байеса}
+\addcontentsline{toc}{section}{Вопрос 5. Полная вероятность. Формула Байеса}
+
+\textit{Полная система} $\{H_k\}$: $\bigcup_k H_k=\Omega$ и $H_i\cap H_j=\varnothing$ ($i\ne j$).
+
+\textit{Формула полной вероятности:}
+\[ P(A)=\sum_k P(A\mid H_k)\,P(H_k). \]
+\textit{Док-во:}\ $A=\bigcup_k(A\cap H_k)$ — несовместные, отсюда $P(A)=\sum_k P(A\cap H_k)=\sum_k P(A\mid H_k)P(H_k)$. \hfill$\square$
+
+\textit{Формула Байеса} (апостериорные вероятности гипотез):
+\[ P(H_i\mid A)=\frac{P(A\mid H_i)\,P(H_i)}{\sum_k P(A\mid H_k)\,P(H_k)}. \]
