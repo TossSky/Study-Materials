@@ -1,0 +1,100 @@
+\section*{Вопрос 19. Теорема Чебышёва. Неравенство Чебышёва. Правило трёх сигм}
+\addcontentsline{toc}{section}{Вопрос 19. Неравенство Чебышёва. Правило трёх сигм}
+
+\textit{Теорема Чебышёва.} Если $\xi\ge0$ и $\exists\,\mathbf{E}\xi$, то
+\[ P\{\xi\ge t\}\le\frac{\mathbf{E}\xi}{t}\qquad\forall t>0. \]
+\textit{Док-во:} для $\eta=\begin{cases}0,&\xi<t,\\ t,&\xi\ge t,\end{cases}$ имеем $\mathbf{E}\eta=t\,P\{\xi\ge t\}$ и $\eta\le\xi$, значит $\mathbf{E}\eta\le\mathbf{E}\xi$, откуда $t\,P\{\xi\ge t\}\le\mathbf{E}\xi$. \hfill$\square$
+
+\textit{Неравенство Чебышёва.} Если $\exists\,\mathbf{D}\xi$, то
+\[ P\{|\xi-\mathbf{E}\xi|\ge t\}\le\frac{\mathbf{D}\xi}{t^2}\qquad\forall t>0. \]
+\textit{Док-во:} $|\xi-\mathbf{E}\xi|\ge t\Leftrightarrow(\xi-\mathbf{E}\xi)^2\ge t^2$; полагая $\xi'=(\xi-\mathbf{E}\xi)^2$, $t'=t^2$ и применяя теорему Чебышёва,
+\[ P\{\xi'\ge t'\}\le\frac{\mathbf{E}\xi'}{t'}=\frac{\mathbf{E}(\xi-\mathbf{E}\xi)^2}{t^2}=\frac{\mathbf{D}\xi}{t^2}. \quad\square \]
+
+\textit{Правило трёх сигма.} Если существует $\sigma=\sigma(\xi)$, то при $t=3\sigma$
+\[ P\{|\xi-\mathbf{E}\xi|\ge3\sigma\}\le\frac{\mathbf{D}\xi}{9\sigma^2}=\frac{1}{9}\approx0{,}111. \]
+Для $\xi\in N(0,1)$: $P\{|\xi-\mathbf{E}\xi|\ge3\sigma\}\approx0{,}003$. Если закон распределения неизвестен, а известны лишь $\mathbf{E}\xi$ и $\mathbf{D}\xi$, то $[\mathbf{E}\xi-3\sigma,\ \mathbf{E}\xi+3\sigma]$ — участок практически возможных значений $\xi$.
+
+\section*{Вопрос 20. Закон больших чисел (Бернулли, Чебышёва, Маркова). Усиленный ЗБЧ}
+\addcontentsline{toc}{section}{Вопрос 20. Закон больших чисел. Усиленный ЗБЧ}
+
+\textit{ЗБЧ в форме Бернулли.} Если $p$ — вероятность успеха в $n$ испытаниях Бернулли, $\mu_n$ — число успехов, то $\forall\varepsilon>0$
+\[ P\!\left\{\left|\tfrac{\mu_n}{n}-p\right|\ge\varepsilon\right\}\xrightarrow[n\to\infty]{}0 \qquad\left(\tfrac{\mu_n}{n}\xrightarrow{P}p\right). \]
+\textit{Док-во:} $\mathbf{E}\tfrac{\mu_n}{n}=p$, по неравенству Чебышёва
+\[ P\!\left\{\left|\tfrac{\mu_n}{n}-p\right|\ge\varepsilon\right\}\le\frac{\mathbf{D}\tfrac{\mu_n}{n}}{\varepsilon^2}=\frac{1}{\varepsilon^2}\cdot\frac{\mathbf{D}\mu_n}{n^2}=\frac{pq}{\varepsilon^2}\cdot\frac1n\xrightarrow[n\to\infty]{}0. \quad\square \]
+
+\textit{ЗБЧ в форме Чебышёва.} Пусть $\xi_1,\dots,\xi_n$ — попарно независимые с.в., $a_k=\mathbf{E}\xi_k$, $\mathbf{D}\xi_k\le c$. Тогда $\forall\varepsilon>0$
+\[ P_n=P\!\left\{\left|\tfrac1n\sum_{k=1}^n\xi_k-\tfrac1n\sum_{k=1}^n a_k\right|\ge\varepsilon\right\}\xrightarrow[n\to\infty]{}0. \]
+\textit{Док-во:} по неравенству Чебышёва $P_n\le\dfrac{\mathbf{D}\!\left(\sum_{k=1}^n\xi_k\right)}{\varepsilon^2 n^2}$; из независимости $\mathbf{D}\!\left(\sum\xi_k\right)=\sum\mathbf{D}\xi_k\le nc$, поэтому $P_n\le\dfrac{nc}{\varepsilon^2n^2}=\dfrac{c}{\varepsilon^2n}\xrightarrow[n\to\infty]{}0$. \hfill$\square$
+
+Частный случай: если $a_k=a$ $\forall k$, то $P\!\left\{\left|\tfrac1n\sum_{k=1}^n\xi_k-a\right|\ge\varepsilon\right\}\xrightarrow[n\to\infty]{}0$.
+
+\textit{ЗБЧ в форме Маркова.} Если для зависимых с.в. $\xi_1,\dots,\xi_n$
+\[ \frac{\mathbf{D}\!\left(\sum_{k=1}^n\xi_k\right)}{n^2}\xrightarrow[n\to\infty]{}0, \]
+то для них справедлив ЗБЧ в форме Чебышёва.
+\textit{Док-во:} для $\eta=\tfrac1n\sum_{k=1}^n\xi_k$ имеем $\mathbf{D}\eta=\tfrac1{n^2}\mathbf{D}\!\left(\sum\xi_k\right)$, и по неравенству Чебышёва $P\{|\eta-\mathbf{E}\eta|\ge\varepsilon\}\le\dfrac{\mathbf{D}\eta}{\varepsilon^2}\xrightarrow[n\to\infty]{}0$. \hfill$\square$
+
+\textit{Усиленный ЗБЧ.} Пусть $\xi_1,\xi_2,\dots$ — независимые одинаково распределённые с.в. Если $A$ — множество исходов $\omega$, для которых $\eta_n(\omega)=\tfrac1n\sum_{k=1}^n\xi_k(\omega)\nrightarrow a$, и $P(A)=0$, то выполняется усиленный ЗБЧ:
+\[ P\!\left\{\lim_{n\to\infty}\tfrac1n\sum_{k=1}^n\xi_k(\omega)=a\right\}=1 \]
+(\textit{сходимость почти наверное}). Существование м.о. $\Leftrightarrow$ выполнение усиленного ЗБЧ для последовательности независимых одинаково распределённых с.в.
+
+\section*{Вопрос 21. Теорема Пуассона. Распределение Пуассона}
+\addcontentsline{toc}{section}{Вопрос 21. Теорема Пуассона}
+
+\textit{Распределение Пуассона} с параметром $\lambda>0$: $\xi=k$ с вероятностями
+\[ p_k=\frac{\lambda^k}{k!}\,e^{-\lambda},\qquad k=0,1,2,\dots \]
+
+\textit{Теорема Пуассона.} Последовательность биномиальных распределений
+\[ \{P_n(k)=C_n^k p^k q^{n-k},\ k=0,\dots,n\},\quad n=1,2,\dots, \]
+слабо сходится к распределению Пуассона $P(k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$.
+
+\textit{Док-во:} по формуле Бернулли $P_n(k)=C_n^k p^k(1-p)^{n-k}$. Пусть $\lambda_n=np$, тогда $p=\tfrac{\lambda_n}{n}$ и
+\[ P_n(k)=\frac{1}{k!}\cdot\frac{n}{n}\cdot\frac{n-1}{n}\cdots\frac{n-(k-1)}{n}\cdot\lambda_n^{\,k}\left(1-\frac{\lambda_n}{n}\right)^{\frac{n}{\lambda_n}\cdot\frac{\lambda_n}{n}(n-k)}. \]
+При $n\to\infty$ каждый множитель $\tfrac{n-r}{n}\to1$ и $\left(1-\tfrac{\lambda_n}{n}\right)^{n/\lambda_n}\to e^{-1}$, откуда $P_n(k)\to\dfrac{\lambda^k}{k!}e^{-\lambda}$. \hfill$\square$
+
+\section*{Вопрос 22. Слабая сходимость распределений. Примеры. Теорема непрерывности}
+\addcontentsline{toc}{section}{Вопрос 22. Слабая сходимость. Теорема непрерывности}
+
+\textit{Слабая сходимость (целочисленный случай).} Пусть $\xi_1,\xi_2,\dots$ — целочисленные с.в., $P_n(k)=P\{\xi_n=k\}$. Последовательность $\{P_n(k)\}$ слабо сходится к предельному распределению $P(k)$, $k=0,1,\dots$, если
+\[ \lim_{n\to\infty}P_n(k)=P(k)\quad\forall k=0,1,\dots \]
+(\textit{сходимость по распределению}).
+
+\textit{Слабая сходимость (непрерывный случай).} Последовательность распределений с.в. $\xi_1,\xi_2,\dots$ слабо сходится к распределению с плотностью $p(x)$, если $\forall x',x''\in\mathbb{R}$, $x'\le x''$,
+\[ \lim_{n\to\infty}P\{x'\le\xi_n\le x''\}=\int_{x'}^{x''}p(x)\,dx. \]
+
+\textit{Примеры:}
+\begin{enumerate}
+  \item Биномиальные распределения слабо сходятся к распределению Пуассона (теорема Пуассона).
+  \item Производящие функции $F_n(z)=(q+pz)^n=(1+p(z-1))^n$ при $p=\tfrac{\lambda}{n}$ равномерно сходятся к $e^{\lambda(z-1)}$ — производящей функции распределения Пуассона.
+\end{enumerate}
+
+\textit{Теорема непрерывности (через производящие функции).} Слабая сходимость распределений $\Leftrightarrow$ $\lim_{n\to\infty}F_n(z)=F(z)$, где $F_n(z)=\sum_{k=0}^\infty P_n(k)z^k$ — производящая функция $\xi_n$, $F(z)=\sum_{k=0}^\infty P(k)z^k$ — производящая функция предельного распределения; сходимость равномерная в круге $|z|\le r<1$.
+
+\textit{Теорема непрерывности (через характеристические функции).} Слабая сходимость распределений $\Leftrightarrow$ $\lim_{n\to\infty}f_n(t)=f(t)$, где $f(t)=\int_{-\infty}^{+\infty}e^{ixt}p(x)\,dx$ — характеристическая функция предельного распределения с плотностью $p(x)$; сходимость равномерная в каждом конечном интервале.
+
+\section*{Вопрос 23. Центральная предельная теорема}
+\addcontentsline{toc}{section}{Вопрос 23. Центральная предельная теорема}
+
+\textit{ЦПТ (в форме Ляпунова).} Пусть $\xi_1,\xi_2,\dots$ — независимые одинаково распределённые с.в., $\mathbf{E}\xi_n=a$, $\mathbf{D}\xi_n=\sigma^2$, $S_n=\sum_{k=1}^n\xi_k$. Тогда
+\[ P\!\left\{\frac{S_n-na}{\sqrt{n\sigma^2}}<x\right\}\xrightarrow[n\to\infty]{}\Phi(x), \]
+где $\Phi(x)$ — функция стандартного нормального распределения.
+
+\textit{Док-во:} характеристическая функция с.в. $\dfrac{S_n-na}{\sqrt{n\sigma^2}}$:
+\[ g_n(t)=\left(f\!\left(\tfrac{t}{\sqrt{n\sigma^2}}\right)e^{-\frac{iat}{\sqrt{n\sigma^2}}}\right)^{\!n}, \]
+где $f(t)$ — характеристическая функция $\xi_n$. Разлагая логарифм,
+\[ \ln f\!\left(\tfrac{t}{\sqrt{n\sigma^2}}\right)=\ln f(0)+\frac{t}{\sqrt{n\sigma^2}}\frac{f'(0)}{f(0)}+\frac{t^2}{2n\sigma^2}\!\left(\frac{f''(0)}{f(0)}-\Big(\tfrac{f'(0)}{f(0)}\Big)^2\right)+o\!\left(\tfrac1n\right)=\frac{iat}{\sqrt{n\sigma^2}}-\frac{\sigma^2t^2}{2n\sigma^2}+o\!\left(\tfrac1n\right). \]
+Отсюда $\ln g_n(t)\approx-\dfrac{t^2}{2}$, то есть $g_n(t)\xrightarrow[n\to\infty]{}e^{-t^2/2}$ — характеристическая функция $N(0,1)$. \hfill$\square$
+
+\textit{Следствие.} Если $\xi_1,\dots,\xi_n$ независимы, $\exists\,\mathbf{E}\xi_i,\mathbf{D}\xi_i$ и выполнены условия ЦПТ, то $\tau=\xi_1+\dots+\xi_n$ распределена приближённо нормально и
+\[ P\{\alpha<\tau<\beta\}=\Phi\!\left(\frac{\beta-\mathbf{E}\tau}{\sqrt{\mathbf{D}\tau}}\right)-\Phi\!\left(\frac{\alpha-\mathbf{E}\tau}{\sqrt{\mathbf{D}\tau}}\right). \]
+
+\section*{Вопрос 24. Локальная и интегральная теоремы Муавра--Лапласа}
+\addcontentsline{toc}{section}{Вопрос 24. Теоремы Муавра--Лапласа}
+
+Пусть $\mu_n$ — число успехов в $n$ испытаниях Бернулли с вероятностью успеха $p$ ($0<p<1$, $q=1-p$), $\mathbf{E}\mu_n=np$, $\mathbf{D}\mu_n=npq$. Это частный случай ЦПТ для биномиального распределения.
+
+\textit{Локальная теорема Муавра--Лапласа.} При $n\to\infty$ равномерно по $k$, для которых $x_k=\dfrac{k-np}{\sqrt{npq}}$ ограничено,
+\[ P_n(k)=C_n^k p^k q^{n-k}\sim\frac{1}{\sqrt{npq}}\,\varphi(x_k),\qquad \varphi(x)=\frac{1}{\sqrt{2\pi}}\,e^{-x^2/2}. \]
+
+\textit{Интегральная теорема Муавра--Лапласа.} При $n\to\infty$
+\[ P\{a\le\mu_n\le b\}\xrightarrow[n\to\infty]{}\Phi\!\left(\frac{b-np}{\sqrt{npq}}\right)-\Phi\!\left(\frac{a-np}{\sqrt{npq}}\right), \]
+где $\Phi(x)$ — функция стандартного нормального распределения. Эквивалентно, $\dfrac{\mu_n-np}{\sqrt{npq}}$ слабо сходится к $N(0,1)$.

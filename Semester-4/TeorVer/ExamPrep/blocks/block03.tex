@@ -1,0 +1,191 @@
+\section*{Вопрос 11. Математическое ожидание и его свойства. Связь со средним арифметическим}
+\addcontentsline{toc}{section}{Вопрос 11. Математическое ожидание}
+
+\textit{Дискретная} с.в. $\xi$ имеет \textit{м.о.}, если $\sum_{-\infty}^{\infty}|x|\,P\{\xi=x\}<+\infty$; тогда
+\[ \mathbf{E}\xi=\sum_{-\infty}^{\infty}x\,P\{\xi=x\}. \]
+
+\textit{Непрерывная} с.в. с плотностью $p_\xi(x)$ имеет м.о., если $\int_{-\infty}^{+\infty}|x|p_\xi(x)\,dx<+\infty$; тогда
+\[ \mathbf{E}\xi=\int_{-\infty}^{+\infty}x\,p_\xi(x)\,dx. \]
+
+М.о. функции $\eta=\phi(\xi)$:\quad $\mathbf{E}\phi(\xi)=\sum_{-\infty}^{+\infty}\phi(x)P_\xi(x)$\ \ (дискр.),\ \ $\mathbf{E}\eta=\int_{-\infty}^{+\infty}\phi(x)p_\xi(x)\,dx$\ \ (непр.).
+
+\textit{Примеры:} для $\xi\in N(a,\sigma^2)$\ $\mathbf{E}\xi=a$; распределение Коши не имеет м.о.
+
+\textit{Свойства:}
+\begin{enumerate}
+  \item для вырожденного распределения $\mathbf{E}\xi=a$;
+  \item $\mathbf{E}(C\xi)=C\,\mathbf{E}\xi$;
+  \item монотонность: $\xi_1\le\xi_2\Rightarrow\mathbf{E}\xi_1\le\mathbf{E}\xi_2$;
+  \item $\mathbf{E}(\xi_1+\xi_2)=\mathbf{E}\xi_1+\mathbf{E}\xi_2$;
+  \item для независимых $\xi_1,\xi_2$:\ $\mathbf{E}(\xi_1\xi_2)=\mathbf{E}\xi_1\cdot\mathbf{E}\xi_2$.
+\end{enumerate}
+
+\textit{Связь со средним арифметическим.} Пусть $\xi$ принимает значения $\{a_k,p_k\}$. Если в $n$ независимых испытаниях $a_k$ появилось $m_k$ раз, то среднее
+\[ \mathbf{E}^{*}\xi=\frac{\sum_{k=1}^{d}a_k m_k}{n}=\sum_{k=1}^{d}a_k\frac{m_k}{n}. \]
+При $n\to\infty$ имеем $\frac{m_k}{n}\to p_k$, поэтому $\mathbf{E}^{*}\xi\xrightarrow[n\to\infty]{}\mathbf{E}\xi$.
+
+\section*{Вопрос 12. Дисперсия и её свойства. Среднеквадратичное отклонение}
+\addcontentsline{toc}{section}{Вопрос 12. Дисперсия. СКО}
+
+\textit{Дисперсия} (от лат. dispersio — рассеяние):
+\[ \mathbf{D}\xi=\mathbf{E}(\xi-\mathbf{E}\xi)^2. \]
+
+\textit{Среднеквадратичное отклонение:}\ $\sigma=\sigma(\xi)=\sqrt{\mathbf{D}\xi}$.
+
+\textit{Свойства:}
+\begin{enumerate}
+  \item $\mathbf{D}\xi=\mathbf{E}\xi^2-(\mathbf{E}\xi)^2$.\quad \textit{Док-во:}\ $\mathbf{D}\xi=\mathbf{E}(\xi^2-2\xi\mathbf{E}\xi+(\mathbf{E}\xi)^2)=\mathbf{E}\xi^2-(\mathbf{E}\xi)^2$. \hfill$\square$
+  \item $\mathbf{D}\xi\ge0$;\ \ $\mathbf{D}\xi=0\Leftrightarrow\xi=\mathrm{const}$.
+  \item $\mathbf{D}(\xi+C)=\mathbf{D}\xi$;\ в частности $\mathbf{D}(\xi-\mathbf{E}\xi)=\mathbf{D}\xi$.
+  \item $\mathbf{D}(C\xi)=C^2\mathbf{D}\xi$;\ в частности $\mathbf{D}(-\xi)=\mathbf{D}\xi$.
+  \item для независимых $\xi,\eta$:\ $\mathbf{D}(\xi+\eta)=\mathbf{D}\xi+\mathbf{D}\eta$.
+  \item для независимых $\xi,\eta$:\ $\mathbf{D}(\xi\eta)=(\mathbf{E}\xi^2)(\mathbf{E}\eta^2)-(\mathbf{E}\xi)^2(\mathbf{E}\eta)^2$.
+\end{enumerate}
+
+\textit{Примеры:} для $\xi\in N(a,\sigma^2)$\ $\mathbf{D}\xi=\sigma^2$; для числа успехов $\mu_n$ в $n$ испытаниях Бернулли $\mathbf{D}\mu_n=npq$\ ($q=1-p$).
+
+\section*{Вопрос 13. Квантиль, медиана, мода, наивероятнейшее значение. Мода биномиального распределения}
+\addcontentsline{toc}{section}{Вопрос 13. Квантиль, медиана, мода}
+
+\textit{$\alpha$-квантиль} ($0<\alpha<1$) с.в. $\xi$ — число $Q_\alpha$:
+\[ P\{\xi<Q_\alpha\}\le\alpha,\qquad P\{\xi>Q_\alpha\}\le1-\alpha. \]
+
+\textit{Медиана} $\mathcal{M}$ — это $\tfrac12$-квантиль:\ $P\{\xi<\mathcal{M}\}=P\{\xi>\mathcal{M}\}$.
+
+\textit{Пример.} Для показательного распределения $F_\xi(x)=1-e^{-\lambda x}$:\ $Q_\alpha=-\dfrac{\ln(1-\alpha)}{\lambda}$,\ $\mathcal{M}=Q_{1/2}=\dfrac{\ln2}{\lambda}$.
+
+\textit{Мода.} Для непрерывной с.в. — точка (локального) максимума плотности $p_\xi(x)$. Для дискретной с.в. ($x_1<\dots<x_n$, $p_i=P\{\xi=x_i\}$) — значение $x_k$, для которого $p_{k-1}<p_k$ и $p_{k+1}<p_k$. Распределения: унимодальные, бимодальные, мультимодальные; если плотность имеет минимум, но не максимум — антимодальное.
+
+\textit{Наивероятнейшее значение} — мода, доставляющая глобальный максимум вероятности (дискр.) или плотности (непр.).
+
+Для $\xi\sim N(a,\sigma^2)$ значение $a$ — это $\mathbf{E}\xi$, мода, медиана и наивероятнейшее значение.
+
+\textit{Мода биномиального распределения.} Рассмотрим отношение
+\[ \frac{p_k}{p_{k+1}}=\frac{C_n^k p^k q^{n-k}}{C_n^{k+1}p^{k+1}q^{n-k-1}}=\frac{(k+1)q}{(n-k)p}. \]
+Тогда $p_{k+1}<p_k$, если $(k+1)q>(n-k)p$, т.е. при $k>np-q$.
+\begin{itemize}
+  \item Если $np-q\notin\mathbb{Z}$: мода (и наивероятнейшее значение) — $k$, удовлетворяющее $np-q<k<np-q+1$.
+  \item Если $np-q\in\mathbb{Z}$: две моды — $np-q$ и $np-q+1$.
+\end{itemize}
+
+\section*{Вопрос 14. Теоретические моменты. Начальный и центральный моменты. Асимметрия и эксцесс. Смешанный момент}
+\addcontentsline{toc}{section}{Вопрос 14. Моменты. Асимметрия и эксцесс}
+
+\textit{Начальный момент} порядка $k$:\ $m_k=\mathbf{E}\xi^k$.
+
+\textit{Центральный момент} порядка $k$:\ $M_k=\mathbf{E}(\xi-\mathbf{E}\xi)^k$. При этом для любой с.в.
+\[ M_1=\mathbf{E}(\xi-\mathbf{E}\xi)=0,\qquad M_2=\mathbf{E}(\xi-\mathbf{E}\xi)^2=\mathbf{D}\xi. \]
+
+\textit{Асимметрия} (третий центральный момент — характеристика асимметрии относительно м.о.):
+\[ A=\frac{M_3}{\sigma^3}. \]
+
+\textit{Эксцесс} (четвёртый центральный момент — «крутизна» распределения):
+\[ Ex(\xi)=\frac{M_4}{\sigma^4}-3. \]
+Для стандартного нормального распределения $\dfrac{M_4}{\sigma^4}=3$, т.е. $Ex=0$; с ним и сравнивают остальные с.в.
+
+\textit{Смешанный момент} порядка $k+l$ относительно пары $a,b$ — числовая характеристика совместного распределения $\xi,\eta$:
+\[ \mathbf{E}(\xi-a)^k(\eta-b)^l. \]
+
+\section*{Вопрос 15. Ковариация и её свойства. Матрица ковариаций. Коэффициент корреляции}
+\addcontentsline{toc}{section}{Вопрос 15. Ковариация и корреляция}
+
+\textit{Ковариация} с.в. $\xi_1,\xi_2$ (при существовании $\mathbf{E}\xi_1,\mathbf{E}\xi_2$):
+\[ \mathrm{cov}(\xi_1,\xi_2)=\mathbf{E}\big((\xi_1-\mathbf{E}\xi_1)(\xi_2-\mathbf{E}\xi_2)\big)=\mathbf{E}(\xi_1\xi_2)-\mathbf{E}\xi_1\,\mathbf{E}\xi_2. \]
+
+Связь с дисперсией суммы:\ $\mathbf{D}(\xi_1+\xi_2)=\mathbf{D}\xi_1+\mathbf{D}\xi_2+\mathrm{cov}(\xi_1,\xi_2)$ (множитель $2$ входит в определение через раскрытие; здесь по лекции).
+
+\textit{Свойства:}
+\begin{enumerate}
+  \item $\mathrm{cov}(\xi,\xi)=\mathbf{D}\xi$.
+  \item если $\xi_1,\xi_2$ независимы, то $\mathrm{cov}(\xi_1,\xi_2)=0$.
+  \item $\mathrm{cov}(a_1\xi_1+b_1,\,a_2\xi_2+b_2)=a_1a_2\,\mathrm{cov}(\xi_1,\xi_2)$.
+  \item $-\sqrt{\mathbf{D}\xi_1\,\mathbf{D}\xi_2}\le\mathrm{cov}(\xi_1,\xi_2)\le\sqrt{\mathbf{D}\xi_1\,\mathbf{D}\xi_2}$.
+\end{enumerate}
+\textit{Док-во п.\,4:}\ для $\eta_x=x\xi_1-\xi_2$\ $\mathbf{D}\eta_x=x^2\mathbf{D}\xi_1-2x\,\mathrm{cov}(\xi_1,\xi_2)+\mathbf{D}\xi_2\ge0$, значит дискриминант $\mathrm{cov}(\xi_1,\xi_2)^2-\mathbf{D}\xi_1\mathbf{D}\xi_2\le0$. \hfill$\square$
+
+Равенство достигается, когда есть линейная зависимость $\xi_2=x_0\xi_1-c$: при $x_0>0$\ $\mathrm{cov}=\sqrt{\mathbf{D}\xi_1\mathbf{D}\xi_2}$, при $x_0<0$\ $\mathrm{cov}=-\sqrt{\mathbf{D}\xi_1\mathbf{D}\xi_2}$.
+
+\textit{Матрица ковариаций} случайного вектора $(\xi_1,\dots,\xi_n)$:\ $\big\|\mathrm{cov}(\xi_i,\xi_j)\big\|_{i,j=1}^{n}$.
+
+\textit{Коэффициент корреляции:}
+\[ r_{\xi_1,\xi_2}=\frac{\mathrm{cov}(\xi_1,\xi_2)}{\sqrt{\mathbf{D}\xi_1\,\mathbf{D}\xi_2}}. \]
+Из свойства 4 следует $-1\le r_{\xi_1,\xi_2}\le1$.
+
+\section*{Вопрос 16. Энтропия случайной величины}
+\addcontentsline{toc}{section}{Вопрос 16. Энтропия}
+
+\textit{Энтропия} дискретной с.в. $\xi$ с рядом распределения $\{x_i,p_i\}$, $i=1,\dots,k$:
+\[ H(\xi)=-\sum_{i=1}^{k}p_i\log_2 p_i. \]
+
+\textit{Граничные значения:}
+\begin{itemize}
+  \item максимум — при равновероятных значениях $p_i=\tfrac1k$:\ $H(\xi)=-\sum_{i=1}^{k}\tfrac1k\log_2\tfrac1k=\log_2 k$;
+  \item минимум — при вырожденном распределении:\ $H(\xi)=-1\cdot\log_2 1=0$.
+\end{itemize}
+
+Для двумерной с.в.:\ $H(\xi,\eta)=-\sum_{i,j}p_{i,j}\log_2 p_{i,j}$, причём $H(\xi,\eta)\le H(\xi)+H(\eta)$.
+
+Для независимых с.в. достигается равенство:
+\[ H(\xi,\eta)=-\sum_{i,j}p_ip_j(\log_2 p_i+\log_2 p_j)=H(\xi)+H(\eta). \]
+
+\textit{Непрерывная} с.в. с плотностью $p_\xi(x)$:
+\[ H(\xi)=-\int_{-\infty}^{\infty}p_\xi(x)\log_2 p_\xi(x)\,dx, \]
+для двумерной:\ $H(\xi,\eta)=-\iint_{-\infty}^{\infty}p_{\xi,\eta}(x,y)\log_2 p_{\xi,\eta}(x,y)\,dx\,dy$. При заданной дисперсии $\sigma^2$ максимальную энтропию $\log_2\sqrt{2\pi e\sigma^2}$ имеет нормально распределённая с.в.
+
+\section*{Вопрос 17. Производящая функция. Выражение M и D через неё. ПФ суммы независимых СВ}
+\addcontentsline{toc}{section}{Вопрос 17. Производящая функция}
+
+Пусть $\xi$ — целочисленная с.в. (значения $0,1,2,\dots$, $P_\xi(k)=P\{\xi=k\}$). \textit{Производящая функция}:
+\[ F_\xi(z)=\sum_{k=0}^{\infty}P_\xi(k)z^k,\qquad |z|\le1. \]
+При этом $F_\xi(1)=\sum_{k=0}^{\infty}P_\xi(k)=1$.
+
+\textit{Восстановление вероятностей:}\ $P\{\xi=k\}=\dfrac{F_\xi^{(k)}(0)}{k!}$.
+
+\textit{Выражение $\mathbf{E}$ и $\mathbf{D}$:}
+\begin{align*}
+F'_\xi(1)&=\sum_{k=0}^{\infty}kP_\xi(k)=\mathbf{E}\xi,\\
+F''_\xi(1)&=\sum_{k=1}^{\infty}k(k-1)P_\xi(k)=\mathbf{E}\xi^2-\mathbf{E}\xi,\\
+\mathbf{D}\xi&=F''_\xi(1)-(F'_\xi(1))^2+F'_\xi(1).
+\end{align*}
+
+\textit{ПФ суммы независимых с.в.} Если $\xi,\eta$ независимы, то
+\[ F_{\xi+\eta}(z)=\sum_k P\{\xi+\eta=k\}z^k=\sum_l P\{\xi=l\}z^l\sum_m P\{\eta=m\}z^m=F_\xi(z)F_\eta(z). \]
+
+\textit{Примеры:}
+\begin{itemize}
+  \item одно испытание Бернулли:\ $F_\xi(z)=q+pz$;
+  \item биномиальное $\mu_n$:\ $F_{\mu_n}(z)=(q+pz)^n$;
+  \item Пуассон с параметром $\lambda$:\ $F_\xi(z)=e^{-\lambda(1-z)}$;
+  \item геометрическое:\ $F_\xi(z)=\dfrac{pz}{1-qz}$.
+\end{itemize}
+
+\section*{Вопрос 18. Характеристическая функция. Примеры. Выражение M и D. ХФ суммы независимых СВ}
+\addcontentsline{toc}{section}{Вопрос 18. Характеристическая функция}
+
+\textit{Характеристическая функция} $f_\xi(t)$, $t\in\mathbb{R}$ ($i^2=-1$):
+\[ f_\xi(t)=\mathbf{E}e^{i\xi t}=\mathbf{E}\cos(\xi t)+i\,\mathbf{E}\sin(\xi t). \]
+Дискретная с.в.:\ $f_\xi(t)=\sum_{k=0}^{\infty}e^{ikt}P_\xi(k)$;\ непрерывная:\ $f_\xi(t)=\int_{-\infty}^{\infty}e^{ixt}p_\xi(x)\,dx$.
+
+\textit{Свойства:}
+\begin{enumerate}
+  \item $|f_\xi(t)|\le1$\ $\forall t$;\ $f_\xi(0)=1$.
+  \item $f_\xi(t)$ непрерывна.
+  \item $f_\xi(-t)=\overline{f_\xi(t)}$, т.к. $\overline{e^{it\xi}}=e^{-it\xi}$.
+  \item если $\eta=C_1\xi+C_2$, то $f_\eta(t)=f_\xi(C_1 t)\,e^{iC_2 t}$.
+  \item для независимых $\xi,\eta$:\ $f_{\xi+\eta}(t)=f_\xi(t)\,f_\eta(t)$.
+  \item если $\exists\,\mathbf{E}|\xi|^3$, то $f_\xi(t)=1+i\mathbf{E}\xi\cdot t-\tfrac12\mathbf{E}\xi^2\cdot t^2+R(t)$, $|R(t)|\le C\mathbf{E}|\xi|^3|t|^3$, а $f_\xi^{(k)}(0)=i^k m_k$.
+\end{enumerate}
+
+\textit{Выражение $\mathbf{E}$ и $\mathbf{D}$:}
+\[ \mathbf{E}\xi=-i\,f'_\xi(0),\qquad \mathbf{D}\xi=-f''_\xi(0)+(f'_\xi(0))^2. \]
+
+\textit{Примеры:}
+\begin{itemize}
+  \item одно испытание Бернулли:\ $f_\xi(t)=q+e^{it}p$;
+  \item $\xi\in N(0,1)$:\ $f_\xi(t)=e^{-t^2/2}$;\quad $\xi\in N(a,\sigma^2)$:\ $f_\xi(t)=e^{ita-\sigma^2 t^2/2}$;
+  \item равномерное на $[a,b]$:\ $f_\xi(t)=\dfrac{e^{itb}-e^{ita}}{it(b-a)}$;
+  \item показательное:\ $f_\xi(t)=\dfrac{1}{1-it/\lambda}$;\quad гамма:\ $f_\xi(t)=\dfrac{1}{(1-it/\lambda)^\alpha}$.
+\end{itemize}
+
+\textit{Пример вычисления.} Для $\xi\in N(0,1)$, $f_\xi(t)=e^{-t^2/2}$:
+\[ \mathbf{E}\xi=-i\big(-t\,e^{-t^2/2}\big)\big|_{t=0}=0,\qquad \mathbf{D}\xi=-\big(-e^{-t^2/2}+e^{-t^2/2}t^2\big)\big|_{t=0}=1. \]

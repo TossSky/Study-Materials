@@ -1,0 +1,138 @@
+\section*{Вопрос 6. Испытания. Независимые испытания. Бернулли. Формула Бернулли. Биномиальная и полиномиальная схемы}
+\addcontentsline{toc}{section}{Вопрос 6. Испытания Бернулли. Формула Бернулли}
+
+\textit{Испытание} $T$ — произвольная полная система событий $A_1,A_2,\dots\in\mathcal{F}$ на $(\Omega,\mathcal{F},P)$.
+
+Испытания $T_1=(A_{11},A_{12},\dots),\ \dots,\ T_n=(A_{n1},A_{n2},\dots),\dots$ \textit{независимы}, если независимы события, взятые по одному из каждого испытания.
+
+\textit{Испытания Бернулли:}
+\begin{enumerate}
+  \item каждое испытание состоит ровно из двух исходов — \textit{успех} и \textit{неудача}: $T=(A,\bar A)$;
+  \item вероятности исходов постоянны и не зависят от номера испытания: $P(A)=p$, $P(\bar A)=1-p=q$.
+\end{enumerate}
+
+\textit{Формула Бернулли} — вероятность получить $k$ успехов в $n$ испытаниях:
+\[ P_n(k)=C_n^k\,p^k q^{\,n-k}. \]
+\textit{Док-во:}\ $1$ — успех, $0$ — неудача, $\Omega=\{(\varepsilon_1,\dots,\varepsilon_n)\}$. Для $\omega$ с $k$ единицами и $n-k$ нулями (число успехов $\mu_n=k$) в силу независимости $P(\omega)=p^k q^{\,n-k}$; таких $\omega$ ровно $C_n^k$, поэтому $P_n(k)=\sum_{\omega\,|\,\mu_n=k}P(\omega)=C_n^k p^k q^{\,n-k}$. \hfill$\square$
+
+\textit{Биномиальная схема:}\ последовательность $\{C_n^k p^k q^{\,n-k},\ k=0,1,\dots,n\}$ — \textit{биномиальное распределение}.
+
+\textit{Связь с биномом Ньютона:}\ это слагаемые разложения
+\[ (p+q)^n=\sum_{k=0}^{n}C_n^k p^k q^{\,n-k}, \]
+откуда $\sum_{k=0}^{n}P_n(k)=(p+q)^n=1^n=1$ — нормировка.
+
+\textit{Полиномиальная схема:}\ каждое испытание имеет $m$ исходов $A_1,\dots,A_m$ с вероятностями $p_1,\dots,p_m$ ($\sum_j p_j=1$). Вероятность того, что в $n$ испытаниях исход $A_j$ появится $k_j$ раз ($\sum_j k_j=n$):
+\[ P_n(k_1,\dots,k_m)=\frac{n!}{k_1!\cdots k_m!}\,p_1^{k_1}\cdots p_m^{k_m} \]
+— слагаемые полинома Ньютона $(p_1+\dots+p_m)^n$.
+
+\section*{Вопрос 7. Случайная величина. Распределение. Дискретное распределение. Примеры}
+\addcontentsline{toc}{section}{Вопрос 7. Дискретные распределения}
+
+\textit{Случайная величина} (с.в.) — функция $\xi\colon\Omega\to\mathbb{R}$, измеримая относительно $\sigma$-алгебры $\mathcal{F}$: $\forall x\in\mathbb{R}\ \ A=\{\omega\mid\xi(\omega)<x\}\in\mathcal{F}$, т.е. определена $P(A)=P\{\xi<x\}$.
+
+\textit{Распределение вероятностей} с.в. $\xi$ задано, если определены вероятности $P\{x'\le\xi\le x''\}$ для всех $x'\le x''$.
+
+С.в. $\xi$ имеет \textit{дискретное распределение}, если принимает конечное или счётное число значений $\{x_k\}$ с вероятностями
+\[ P_\xi(x)=P\{\xi=x\},\qquad \sum_{x=-\infty}^{\infty}P_\xi(x)=1,\qquad P\{x'\le\xi\le x''\}=\sum_{x=x'}^{x''}P_\xi(x). \]
+
+\textit{Ряд распределения} ($p_k=P\{\xi=x_k\}$, $\sum_k p_k=1$):
+\[
+\begin{array}{c|c|c|c}
+ x_1 & x_2 & \cdots \\ \hline
+ p_1 & p_2 & \cdots
+\end{array}
+\]
+
+\textit{Примеры:}
+\begin{enumerate}
+  \item \textit{Вырожденное} с параметром $a$: $P\{\xi=a\}=1$.
+  \item \textit{Равномерное дискретное}: значения $x_1,\dots,x_n$, $p_k=P\{\xi=x_k\}=\dfrac1n$.
+  \item \textit{Бернулли (биномиальное)} с параметром $p$ ($0<p\le1$): $p_k=C_n^k p^k q^{\,n-k}$, $k=0,1,\dots,n$.
+  \item \textit{Пуассона} с параметром $\lambda>0$: $p_k=\dfrac{\lambda^k}{k!}e^{-\lambda}$, $k=0,1,2,\dots$
+  \item \textit{Гипергеометрическое}: в урне $K$ белых и $L$ чёрных шаров, без возвращения берут $m=k+l$ шаров: $P\{\xi=k\}=\dfrac{C_K^k C_L^l}{C_{K+L}^{k+l}}$, $k=0,1,\dots,\min(m,K)$.
+  \item \textit{Геометрическое}: число опытов в схеме Бернулли до первого успеха: $p_k=P\{\xi=k\}=p(1-p)^{k-1}$, $k=1,2,\dots$
+\end{enumerate}
+
+\section*{Вопрос 8. Плотность. Непрерывные распределения. Функция распределения и её свойства}
+\addcontentsline{toc}{section}{Вопрос 8. Плотность. Функция распределения}
+
+С.в. $\xi$ имеет \textit{непрерывное распределение}, если для всех $x'\le x''$
+\[ P\{x'\le\xi\le x''\}=\int_{x'}^{x''}p_\xi(x)\,dx, \]
+где $p_\xi(x)\ge0$ — интегрируемая функция, $\int_{-\infty}^{\infty}p_\xi(x)\,dx=1$ — \textit{плотность распределения вероятностей} величины $\xi$.
+
+\textit{Примеры:}
+\begin{enumerate}
+  \item Равномерное $\xi\in U[a,b]$: $p(x)=\dfrac1{b-a}$ при $a\le x\le b$, иначе $0$.
+  \item Нормальное $\xi\in N(a,\sigma^2)$: $p_\xi(x)=\dfrac1{\sqrt{2\pi\sigma^2}}\,e^{-\frac{(x-a)^2}{2\sigma^2}}$; при $a=0,\sigma=1$ — стандартное: $p_\xi(x)=\dfrac1{\sqrt{2\pi}}e^{-x^2/2}$.
+  \item Показательное $\xi\in Exp(\lambda)$: $p_\xi(x)=\lambda e^{-\lambda x}$ при $x\ge0$, иначе $0$ ($\lambda>0$).
+  \item Коши: $p_\xi(x)=\dfrac1\pi\cdot\dfrac{\lambda}{\lambda^2+(x-\mu)^2}$.
+  \item Гамма: $p_\xi(x)=\dfrac{\lambda^\alpha x^{\alpha-1}}{\Gamma(\alpha)}e^{-\lambda x}$ при $x>0$, $\Gamma(\alpha)=\int_0^\infty x^{\alpha-1}e^{-x}\,dx$.
+\end{enumerate}
+
+\textit{Функция распределения} с.в. $\xi$: $F_\xi\colon\mathbb{R}\to\mathbb{R}$, $F_\xi(x)=P\{\xi<x\}$.
+
+\textit{Свойства:}
+\begin{enumerate}
+  \item $0\le F_\xi(x)\le1$;
+  \item при $x_1\le x_2$ верно $F_\xi(x_1)\le F_\xi(x_2)$ (неубывание);
+  \item $\lim\limits_{x\to-\infty}F_\xi(x)=0$,\ \ $\lim\limits_{x\to+\infty}F_\xi(x)=1$;
+  \item $P\{x_1\le\xi<x_2\}=F_\xi(x_2)-F_\xi(x_1)$;
+  \item $F_\xi(x)$ непрерывна слева.
+\end{enumerate}
+
+\textit{Построение $F_\xi$ дискретной с.в. по ряду распределения} ($\{x_k\}$ упорядочены):
+\[ F_\xi(x)=\sum_{x_k<x}P_\xi(x_k), \]
+т.е. $F_\xi$ — ступенчатая функция: $F_\xi(x)=0$ при $x\le x_1$; на $(x_k,\,x_{k+1}]$ постоянна и равна $p_1+\dots+p_k$; в каждой точке $x_k$ скачок величины $p_k$ (для непрерывной с.в. $F_\xi(x)=\int_{-\infty}^{x}p_\xi(t)\,dt$).
+
+\section*{Вопрос 9. Совместное распределение вероятностей. Функция совместного распределения}
+\addcontentsline{toc}{section}{Вопрос 9. Совместное распределение}
+
+С.в. $\xi_1,\dots,\xi_n$ образуют случайный вектор $\bar\xi$ в $n$-мерном пространстве. \textit{Функция совместного распределения:}
+\[ F(x_1,\dots,x_n)=F_{\xi_1,\dots,\xi_n}(x_1,\dots,x_n)=P\{\xi_1<x_1,\dots,\xi_n<x_n\}. \]
+
+\textit{Свойства} (на примере $n=2$):
+\begin{enumerate}
+  \item $0\le F(x_1,x_2)\le1$;
+  \item $F(x_1,x_2)$ неубывающая по каждому аргументу;
+  \item $F(-\infty,x_2)=F(x_1,-\infty)=0$;
+  \item $F(+\infty,+\infty)=1$;
+  \item $\lim\limits_{x_2\to+\infty}F_{\xi_1,\xi_2}(x_1,x_2)=F_{\xi_1}(x_1)$ (маргинальное распределение).
+\end{enumerate}
+
+Вероятность попадания $(\xi_1,\xi_2)$ в прямоугольник $\{a_1\le x_1<b_1,\ a_2\le x_2<b_2\}$:
+\[ F(b_1,b_2)-F(b_1,a_2)-F(a_1,b_2)+F(a_1,a_2). \]
+
+Вероятность попадания вектора в область $\Pi$:
+\begin{itemize}
+  \item дискретный случай: $P\{\bar\xi\in\Pi\}=\sum_{(x_1,\dots,x_n)\in\Pi}P_{\bar\xi}(\bar x)$;
+  \item непрерывный случай: $P\{\bar\xi\in\Pi\}=\int_\Pi p_{\bar\xi}(\bar x)\,d\bar x$.
+\end{itemize}
+
+\section*{Вопрос 10. Независимые случайные величины. Распределение суммы независимых СВ}
+\addcontentsline{toc}{section}{Вопрос 10. Независимые с.в. Сумма}
+
+С.в. $\xi_1,\dots,\xi_n$ \textit{независимы}, если для всех $x'_1,\dots,x'_n,x''_1,\dots,x''_n$ события $\{x'_1\le\xi_1\le x''_1\},\dots,\{x'_n\le\xi_n\le x''_n\}$ независимы.
+
+Критерии независимости:
+\begin{itemize}
+  \item дискретные: $P_{\xi_1,\dots,\xi_n}(x_1,\dots,x_n)=P_{\xi_1}(x_1)\cdots P_{\xi_n}(x_n)$;
+  \item непрерывные: $p_{\xi_1,\dots,\xi_n}(x_1,\dots,x_n)=p_{\xi_1}(x_1)\cdots p_{\xi_n}(x_n)$;
+  \item через функции распределения: $F_{\xi_1,\dots,\xi_n}(x_1,\dots,x_n)=F_{\xi_1}(x_1)\cdots F_{\xi_n}(x_n)$.
+\end{itemize}
+
+\textit{Распределение суммы} $\tau=\xi+\eta$ независимых $\xi,\eta$ (свёртка):
+
+\textit{a) Дискретный случай} ($\xi,\eta$ целочисленные, $p_k=P\{\xi=k\}$, $q_l=P\{\eta=l\}$):
+\begin{align*}
+ r_n=P\{\tau=n\}&=P\{\xi+\eta=n\}=P\!\Big\{\textstyle\bigcup_{k\in\mathbb{Z}}\{\xi=k,\eta=n-k\}\Big\}\\
+ &=\sum_{k\in\mathbb{Z}}P\{\xi=k,\eta=n-k\}=\sum_{k\in\mathbb{Z}}p_k\,q_{n-k}.
+\end{align*}
+
+\textit{б) Непрерывный случай} ($p_\xi,p_\eta$ — плотности):
+\[ P\{z'\le\tau\le z''\}=\iint\limits_{z'\le x+y\le z''}p_\xi(x)p_\eta(y)\,dx\,dy=\int_{z'}^{z''}\!\Big(\int_{-\infty}^{+\infty}p_\xi(t-s)p_\eta(s)\,ds\Big)dt, \]
+откуда плотность суммы:
+\[ p_\tau(t)=\int_{-\infty}^{+\infty}p_\xi(t-s)\,p_\eta(s)\,ds. \]
+
+\textit{Пример.} $\xi,\eta\in U[0,1]$ ($p_\xi=p_\eta=1$ на $[0,1]$). Тогда $p_{\xi+\eta}(t)=\int_0^1 p_\xi(t-s)\,ds$; пересечение $[0,1]\cap[t-1,t]$ даёт
+\[ p_{\xi+\eta}(t)=\begin{cases} t, & 0\le t\le1,\\ 2-t, & 1\le t\le2,\\ 0, & t<0\ \text{или}\ t>2,\end{cases} \]
+— \textit{треугольное распределение Симпсона}.
