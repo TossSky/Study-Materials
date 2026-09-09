@@ -1,1 +1,23 @@
 graphify-out/
+
+# Инструменты и кэш
+.playwright-mcp/
+.vs/
+*.atsuo
+
+# Промежуточные объекты сборки
+Debug/
+*.obj
+*.tmp
+*.map
+*.o
+*.exe
+!**/simulators/**/*.exe
+
+# Lock-файлы Word/Excel
+~$*
+
+# Крупные зависимости, которые качаются отдельно
+*.jar
+jre-*.dmg
+jre-*.exe
